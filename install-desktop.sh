@@ -152,6 +152,7 @@ sudo apt-get install \
 sudo apt-get install \
     calligra \
     calligragemini \
+    chromium-browser \
     diffpdf \
     okular-extra-backends
 
