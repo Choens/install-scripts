@@ -6,6 +6,8 @@
 # Collection of general purpose applications I have installed on Optimus.
 #
 # Sections:
+# - Initial
+# - Boot
 # - CLI / Fonts
 # - Laptop / Power Management
 # - Desktop Applications
@@ -23,6 +25,19 @@ sudo apt-get install git
 mkdir Git
 cd Git
 git clone https://github.com/Choens/system-install-scripts.git
+
+
+
+# ===============================================================================
+# Boot
+# UEFI systems benefit from having a few things.
+# ===============================================================================
+sudo apt-get install \
+     grub2-splashimages \
+     kde-config-grub2 \
+     shim-signed
+
+## Find the kde-config-module
 
 
 
