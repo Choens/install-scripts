@@ -1,36 +1,12 @@
-git
-kdevelop
         
 ninja-build
 imgsizer
-tidy orlint
-
-
-document jekyll
-
-
-myrepos - git tool
 
 qgit
-jgit
-giggle
-legit
 gitmagic
 
 
-git-ftp
-
-
-kdevelop-python
-kdev-python
-
-
-openrpt
-q
-
 commonlisp sql
-sqliteman
-spatialite-gui
 
 lua
 
@@ -38,12 +14,6 @@ yasnippet
 
 whatweb  ooooh shiny
 
-linkchecker
-linkchecker-gui
-
-
-jed text editor
-
-read more about sisu
+nodejs
 
 qtiplot        
