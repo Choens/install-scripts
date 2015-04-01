@@ -129,7 +129,6 @@ sudo apt-get install \
 
 # Office & PIM -----------------------------------------------------------------
 sudo apt-get install \
-     chromium-browser \
      diffpdf
 
 # Tablet -----------------------------------------------------------------------
