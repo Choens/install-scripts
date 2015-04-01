@@ -123,6 +123,17 @@ sudo apt-get install \
      leocad \
      stellarium
 
+# Mozilla ----------------------------------------------------------------------
+# I would prefer to install these via Ubuntu, but the versions available tend
+# to be old and outdated.
+sudo apt-get install \
+     #enigmail \
+     #xul-ext-calendar-timezones \
+     #xul-ext-gdata-provider \
+     #xul-ext-lightning \
+     xul-ext-password-editor \
+     xul-ext-video-without-flash
+
 # Multimedia -------------------------------------------------------------------
 sudo apt-get install \
      vlc
