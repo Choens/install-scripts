@@ -17,3 +17,44 @@ whatweb  ooooh shiny
 nodejs
 
 qtiplot        
+
+shutter
+
+speedcrunch
+
+gcolor2
+
+quiterss
+
+meld
+
+frogatto
+
+cherrytree
+
+screen ruler
+
+spyder
+
+pdf mod
+
+pdf-shuffler
+
+pdfsam
+
+pdf presenter console
+
+qpdfview
+
+retext
+
+veusz
+
+font manager
+
+fontmatrix
+
+jabref
+
+
+
