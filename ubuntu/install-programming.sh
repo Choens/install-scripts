@@ -31,6 +31,10 @@ sudo apt-get install \
      r-doc-info \
      r-recommended
 
+sudo apt-get install \
+     libcurl4-openssl-dev \
+     openjdk-7-jdk
+     
 # Install RStudio:
 # http://www.rstudio.com/ide/download/desktop
 # TODO: automate this.
