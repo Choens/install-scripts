@@ -5,13 +5,13 @@ Linux perfectly?
 
 Hell No.
 
-But I typed this README file on Emacs, inside a Kubuntu session
-running a beta version of Kubuntu. It works well enough, and support
+But I typed this README file on Emacs, inside a Ubuntu session
+running a beta version of Ubuntu. It works well enough, and support
 will only improve over time. This document is a work in progress. As I
 learn more about my new hardware, I may adjust some of what I have
 said tonight.
 
-Current installation instructions are for Kubuntu 15.04, Vivid using
+Current installation instructions are for Ubuntu 15.04, Vivid using
 the 3.19 kernel. As I proceed, I am going to open "bugs" against the
 repo, to track my ideas and progress in resolving problems. Should be
 fun. Please come back and check on my progress.
@@ -31,8 +31,8 @@ personal preference. When I buy a new computer, I have always wiped
 Windows and used the entire harddrive for Linux, until I installed
 Linux onto the Surface Pro 3.
 
-After successfully installing Kubuntu, I was unable to boot from the
-SSD. I assumed (incorrectly) that Kubuntu's installer would replace
+After successfully installing Ubuntu, I was unable to boot from the
+SSD. I assumed (incorrectly) that Ubuntu's installer would replace
 the Windows UEFI partition with something functional. It did
 not. Thus, I have a 64 GB Windows partition and a 209 MB Windows UEFI
 partition in addition to my Linux partitions. Frustrating, but Windows
@@ -55,27 +55,34 @@ helpful and I am still seeing some people report that the Type Cover 3
 is problematic, so having a backup keyboard is also probably a good
 idea.
 
-- Type Cover 3 Keyboard: It worked for me.
-- Speakers
-- Wireless
+The 4.0 kernel promises to be better, especially with some useful
+patches.
 
-The keyboard is one of the best things about this laptop.
+Kernel 3.19:
+
+- Screen: Worked, had to tweak the scaling.
+- Type Cover 3 Keyboard: It worked for me.
+- Speakers: Fine
+- Wireless: Fine, but I installed the Marvell firmware for bluetooth
+  which also affects wireless.
 
 ## Some Configuration Required
 
 - Bluetooth: Marvell firmware required.
-- Touch Screen: Multitouch is a work in progress.
+- Touch Screen: Multitouch is a work in progress. Seems much better on
+  the 4.0 kernel.
 
 ## Limited Functionality
 
-- Surface Pen
-- Type Cover Trackpad
+- Surface Pen: It works, but I can't connect to it via bluetooth or
+  use it to wake.
+- Type Cover Trackpad: This is soooooo much better under 4.0.
 
 ## Does Not Work
 
-- Webcam
+- Webcam: Limited functionality under Linux 4.
 - Accelerometers
-- Orientation
+- Orientation: There is a python script, but I haven't used it yet.
 
 ## Untested
 
@@ -85,12 +92,11 @@ The keyboard is one of the best things about this laptop.
 
 The files that start with "installation-" are a series of installation
 bash scripts (and one markdown comments file) I use to quickly
-reinstall / re-configure my system. Unless you happen to use Kubuntu
+reinstall / re-configure my system. Unless you happen to use Ubuntu
 and have similar tastes in software, these may or may not be useful to
 you. But they are useful for me.
 
-They should be run in the
-following order:
+They should be "run" manually in the following order:
 
 - install-desktop.sh
 - install-programming.sh
