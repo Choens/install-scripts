@@ -103,6 +103,7 @@ sudo apt-get install --install-suggests \
 # I"m going to install on any system I use.
 sudo apt-get install \
      bleachbit \
+     dconf-tools \
      icedtea-plugin \
      mc \
      owncloud-client \
