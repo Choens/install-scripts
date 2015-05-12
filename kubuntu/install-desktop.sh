@@ -1,5 +1,5 @@
 # ##############################################################################
-# Desktop Applications
+# Desktop Applications- Kubuntu
 #
 # Author: Andy Choens
 #
@@ -20,6 +20,10 @@
 # Initial
 # ===============================================================================
 
+# Just make sure its all there -------------------------------------------------
+sudo apt-get install --install-recommends kubuntu-desktop
+
+# Get youself some git ---------------------------------------------------------
 sudo apt-get install git
 
 mkdir Git
@@ -32,12 +36,11 @@ git clone https://github.com/Choens/system-install-scripts.git
 # Boot
 # UEFI systems benefit from having a few things.
 # ===============================================================================
+
 sudo apt-get install \
      grub2-splashimages \
      kde-config-grub2 \
      shim-signed
-
-## Find the kde-config-module
 
 
 
@@ -54,40 +57,32 @@ sudo apt-get install \
 
 # CLI / Libs --------------------------------------------------------------------
 sudo apt-get install \
-    deborphan \
-    kde-cli-tools \
-    kgpg \
-    kio-ftps \
-    konsolekalendar \
-    kubuntu-restricted-extras \
-    kwalletcli \
-    p7zip-full \
-    pwgen \
-    sshuttle
+     deborphan \
+     kde-cli-tools \
+     kgpg \
+     kio-ftps \
+     konsolekalendar \
+     kubuntu-restricted-extras \
+     kwalletcli \
+     p7zip-full \
+     pwgen \
+     sshuttle
 
-# install the following if you need / use VPN services.
-# openvpn is needed to connect to my VPN service.
-#sudo apt-get install \
-    #openconnect \
-    #openswan \
-    #openvpn
-# IF you install any of these, be sure to install the network-manager frontend.
-    
 # Fonts ------------------------------------------------------------------------
 sudo apt-get install --install-suggests \
-    fonts-droid \
-    fonts-inconsolata \
-    fonts-liberation
+     fonts-droid \
+     fonts-inconsolata \
+     fonts-liberation
 
 # Laptop Tools -----------------------------------------------------------------
 sudo apt-get install --install-suggests \
-    laptop-mode-tools
+     laptop-mode-tools
 
 # Power Management -------------------------------------------------------------
 sudo apt-get install --install-suggests \
-    cpufrequtils \
-    htop \
-    powertop
+     cpufrequtils \
+     htop \
+     powertop
 
 
 
@@ -109,65 +104,73 @@ sudo apt-get install --install-suggests \
 # Used to be KDE specific stuff here, but now I include a lot of the software
 # I"m going to install on any system I use.
 sudo apt-get install \
-    debconf-kde-helper \
-    filelight \
-    icedtea-plugin \
-    kdeconnect \
-    kdepim \
-    kdewallpapers \
-    kde-service-menu-fuseiso \
-    kde-telepathy-call-ui \
-    kget \
-    konq-plugins \
-    konqueror \
-    kpart-webkit \
-    marble \
-    marble-plugins \
-    owncloud-client \
-    plasma-widget-message-indicator \
-    plasma-widget-quickaccess \
-    plasma-widget-weatherforecast \
-    plasma-widget-cwp \
-    ubuntu-wallpapers-vivid \
-    yakuake
+     bleachbit \
+     debconf-kde-helper \
+     filelight \
+     icedtea-plugin \
+     kdeconnect \
+     kdepim \
+     kdewallpapers \
+     kde-service-menu-fuseiso \
+     kde-telepathy-call-ui \
+     kget \
+     konq-plugins \
+     konqueror \
+     kpart-webkit \
+     marble \
+     marble-plugins \
+     owncloud-client \
+     plasma-widget-message-indicator \
+     plasma-widget-quickaccess \
+     plasma-widget-weatherforecast \
+     plasma-widget-cwp \
+     ubuntu-wallpapers-vivid \
+     vokoscreen \
+     yakuake
 
-    # I had to remove this temporarily because of a problem in the archives.
-    #qtcurve \
-    
+sudo apt-get install lxde xfce4 xfce4-goodies xfce4-power-manqager
+
+# Athletics --------------------------------------------------------------------
+sudo apt-get install \
+     cyclograph-qt4
+
 # Education & Games ------------------------------------------------------------
 sudo apt-get install \
-    gnugo \
-    kajongg \
-    knights \
-    konquest \
-    kstars
+     gnugo \
+     kajongg \
+     knights \
+     konquest \
+     kstars \
+     ldraw-parts \
+     leocad \
 
 # Multimedia -------------------------------------------------------------------
 sudo apt-get install \
-    juk \
-    kamerka \
-    vlc
+     juk \
+     kamerka \
+     vlc
 
 # Office & PIM -----------------------------------------------------------------
 sudo apt-get install \
-    calligra \
-    calligragemini \
-    chromium-browser \
-    diffpdf \
-    okular-extra-backends
+     calligra \
+     calligragemini \
+     chromium-browser \
+     diffpdf \
+     okular-extra-backends
+
+-- remove mypaint, gimp
 
 # Tablet -----------------------------------------------------------------------
 # Only useful on smaller screen systems or systems you intend to use, at least
 # part time, as a tablet.
 sudo apt-get install --install-recommends \
-    kubuntu-active \
-    kdepim-mobile \
-    marble-mobile\
-    nemo-keyboard \
-    notes-mobile \
-    powerstat\
-    tasks-mobile    
-     
+     kubuntu-active \
+     kdepim-mobile \
+     marble-mobile\
+     notes-mobile \
+     powerstat\
+     tasks-mobile    
+
 
 
 # ==============================================================================
@@ -176,4 +179,6 @@ sudo apt-get install --install-recommends \
 
 # LibreOffice ------------------------------------------------------------------
 sudo apt-get autoremove --purge flashplugin* libflash*
+
 rm -rf ~/.adobe
+

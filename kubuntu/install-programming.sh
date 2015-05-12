@@ -132,11 +132,12 @@ sudo apt-get install \
     kdewebdev \
     kdesdk-dolphin-plugins \
     kdesdk-kio-plugins \
-    kdesdk-scripts \
     vokoscreen
 
+kdesdk-scripts \
+    
 # Desktop ----------------------------------------------------------------------
-sudo apt-get install kdiff3 krename krusader
+sudo apt-get install kompare krename krusader
 
 
 
@@ -152,6 +153,7 @@ sudo apt-get install \
     lacheck \
     latexdiff \
     latex-beamer \
+    kbibtex \
     texlive-latex-extra \
     texlive-latex-recommended \
     texlive-luatex \
@@ -181,3 +183,8 @@ sudo apt-get install \
     python-rope \
     python3-scipy \
     python3-doc
+
+fatrat
+
+gparted
+

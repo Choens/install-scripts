@@ -1,5 +1,5 @@
 # ##############################################################################
-# Desktop Applications
+# Desktop Applications - Ubuntu
 #
 # Author: Andy Choens
 #
@@ -20,6 +20,10 @@
 # Initial
 # ===============================================================================
 
+# Just make sure its all there -------------------------------------------------
+sudo apt-get install --install-recommends kubuntu-desktop
+
+# Get youself some git ---------------------------------------------------------
 sudo apt-get install git
 
 mkdir Git
@@ -57,14 +61,6 @@ sudo apt-get install \
      pwgen \
      sshuttle \
      ubuntu-restricted-extras
-
-# install the following if you need / use VPN services.
-# openvpn is needed to connect to my VPN service.
-#sudo apt-get install \
-#openconnect \
-#openswan \
-#openvpn
-# If you install any of these, be sure to install the network-manager frontend.
 
 # Fonts ------------------------------------------------------------------------
 sudo apt-get install --install-suggests \
@@ -107,8 +103,6 @@ sudo apt-get install \
      icedtea-plugin \
      mc \
      owncloud-client \
-     tomahawk \
-     ubuntu-desktop-next \
      uget \
      vokoscreen
 
@@ -151,6 +145,12 @@ sudo apt-get install --install-recommends \
 
 # Web Apps ---------------------------------------------------------------------
 sudo apt-get install \
+     address-book-app \
+     camera-app \
+     gallery-app \
+     mediaplayer-app \
+     messaging-app \
+     notes-app \
      unity-webapps-amazoncloudreader \
      unity-webapps-gmail \
      unity-webapps-googlecalendar \
