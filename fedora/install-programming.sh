@@ -120,6 +120,7 @@ dnf install \
     texlive-apa.noarch \
     texlive-beamer.noarch \
     texlive-bibtex-bin.x86_64 texlive-bibtex-doc.noarch \
+    texlive-chktex.noarch \
     texlive-ecv.noarch \
     texlive-elpres.noarch \
     texlive-lacheck.noarch texlive-lacheck-bin.x86_64 \
