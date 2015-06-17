@@ -132,6 +132,7 @@ dnf install \
     texlive-tabulary.noarch \
     texlive-texlive-en-doc.noarch \
     texlive-tex.noarch \
+    texlive-titling.noarch \
     texworks.x86_64
     
 
