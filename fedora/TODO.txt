@@ -1,0 +1,39 @@
+List of Program I need to reivew
+
+INSTALL
+FreeCad
+
+
+Investigate / Use
+Nomacs
+Blender
+Gimp
+MyPaint
+Darktable / UFRaw
+Photo Collage
+Phatch
+Photo Layout Editor
+Rapid Photo Downloader
+Tintii
+Urban Light
+SimpleScan
+Inkskape
+Irfanview
+Converseen
+Entangle
+Hugin
+ImageJ
+Panini
+Panorama
+PyPDF
+QPDFView
+DiffPDF
+PDF-Tools
+PDF Edit
+podofo
+
+parcellite/clipit/clipman or GNOME3 Extension?
+
+
+bugwarrior
+hub.noarch

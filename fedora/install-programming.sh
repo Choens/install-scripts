@@ -121,8 +121,10 @@ dnf install \
     texlive-beamer.noarch \
     texlive-bibtex-bin.x86_64 texlive-bibtex-doc.noarch \
     texlive-chktex.noarch \
+    texlive-droid.noarch \
     texlive-ecv.noarch \
     texlive-elpres.noarch \
+    texlive-inconsolata-fonts.noarch \
     texlive-lacheck.noarch texlive-lacheck-bin.x86_64 \
     texlive-latexdiff-bin.noarch texlive-latexdiff-doc.noarch \
     texlive-latexdiff.noarch \
