@@ -32,6 +32,15 @@ dnf install \
 # Install RStudio:
 # http://www.rstudio.com/ide/download/desktop
 
+# Dev Stuff needed to compile useful R packages.
+
+dnf install \
+     curl.x86_64 \
+     cyrus-sasl.x86_64 cyrus-sasl-devel.x86_64 \
+     libcurl.x86_64 libcurl-devel.x86_64 \
+     libjpeg-turbo.x86_64 libjpeg-turbo-devel.x86_64 \
+     libxml2.x86_64 libxml2-devel.x86_64  \
+     openssl-libs.x86_64 openssl-devel.x86_64
 
 
 # ==============================================================================
