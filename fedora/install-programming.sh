@@ -61,10 +61,14 @@ dnf install \
 # ==============================================================================
 
 dnf install \
+    libmongo-client.x86_64 libmongo-client-devel.x86_64 \
+    mongo-java-driver.noarch \
+    nodejs-mongodb.noarch \
     pgadmin3.x86_64 \
     postgresql.x86_64 \
     postgresql-odbc.x86_64 \
     postgresql-jdbc.noarch \
+    python-pymongo.x86_64\
     unixODBC-gui-qt.x86_64
 
 
@@ -145,14 +149,20 @@ dnf install \
     texlive-tex.noarch \
     texlive-titling.noarch \
     texworks.x86_64
+
+
+# ==============================================================================
+# Node.js
+# ==============================================================================
+dnf install \
+    nodejs.x86_64 \
     
+
 
 
 # ==============================================================================
 # Python
 # ==============================================================================
-
-# CLI ---------------------------------------------------------------------
 dnf install \
     emacs-pymacs.noarch \
     pychecker.noarch \
@@ -169,3 +179,9 @@ dnf install \
     python3-scipy.x86_64 \
     python-ropemode.noarch python-rope.noarch python-ropemacs.noarch
 
+# ==============================================================================
+# Ruby
+# ==============================================================================
+dnf install \
+    ruby.x86_64 \
+    rubygems.noarch \
