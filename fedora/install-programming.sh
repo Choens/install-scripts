@@ -193,7 +193,7 @@ sudo dnf install \
 # Ruby
 # ==============================================================================
 sudo dnf install \
-    ruby.x86_64 \
+    ruby.x86_64 ruby-devel.x86_64 \
     rubygems.noarch
-    
-    ??jekyll??
+
+sudo gem install jekyll
