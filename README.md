@@ -61,6 +61,12 @@ Kernel 4.x(shvr):
 - Webcam: Works
 - Accelerometers: Not sure.
 - Orientation: There is a python script, but I haven't used it yet.
+- Encrypted LVM: I saw several people on the Internet (as recently as
+  May 2015) claim the Keyboard cover does not work with encrypted
+  LVM. They are wrong. It works fine. My laptop is
+  encrypted. Sometimes I start and the keyboard cover isn't
+  recognized. When this happens, all I have to do is a hard reset and
+  everything is fine.
 
 ## Untested
 
