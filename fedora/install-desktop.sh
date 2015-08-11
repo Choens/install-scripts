@@ -82,6 +82,15 @@ sudo dnf install  \
     htop.x86_64 \
     powertop.x86_64
 
+# This will run powerttop --auto-tune every time your system comes on.
+# This is only recommended for laptops and, I DO NOT recommend you run
+# this blindly. Check this with YOUR HARDWARE first to make sure it doesn't
+# cause problems. To test, just run (from the command line)
+# sudo powertop --auto-tune
+# Note: I am assuming your user is in sudoers. Modify as necessary.
+@reboot /usr/sbin/powertop --auto-tune > /dev/null 2>&1
+
+
 
 
 # ===============================================================================
