@@ -127,6 +127,7 @@ sudo dnf install \
     gimp-help-browser.x86_64 gimp-high-pass-filter.noarch \
     gnome-photos.x86_64 \
     gpick.x86_64 \
+    gthumb.x86_64 \
     hugin.x86_64 \
     inkscape.x86_64 inkscape-view.x86_64 \
     photoprint.x86_64 \
