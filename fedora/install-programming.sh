@@ -110,6 +110,7 @@ sudo dnf install \
 # ==============================================================================
 
 sudo dnf install \
+    aspell-en.x86_64 \
     gedit-plugin-git.x86_64 \
     git-email.noarch \
     git-extras.noarch \
