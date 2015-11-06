@@ -224,7 +224,10 @@ sudo dnf install \
 # ===============================================================================
 # Video
 # ===============================================================================
-sudo dnf install mpv.x86_64 snappy-player.x86_64
+sudo dnf install \
+     mpv.x86_64 \
+     pavucontrol.x86_64 \
+     snappy-player.x86_64
 
 
 
@@ -256,3 +259,19 @@ sudo dnf install \
 #heidelberg # F03
 #tettnang # F02
 #yarrow # F01 
+
+# ==============================================================================
+# Upgrading
+# https://fedoraproject.org/wiki/DNF_system_upgrade
+# ==============================================================================
+
+# Make sure you have what you need to upgrade.
+sudo dnf install dnf-plugin-system-upgrade
+
+# New packages.
+sudo dnf system-upgrade download --releasever=23 --distro-sync --best --allowerasing
+
+# Do the upgrade.
+sudo dnf system-upgrade reboot
+
+# HAd to remove gstreamer ugly.
