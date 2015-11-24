@@ -67,6 +67,7 @@ sudo dnf install \
     libmongo-client.x86_64 libmongo-client-devel.x86_64 \
     mongo-java-driver.noarch \
     nodejs-mongodb.noarch \
+    npm.noarch
     pgadmin3.x86_64 \
     postgresql.x86_64 \
     postgresql-odbc.x86_64 \
@@ -188,14 +189,34 @@ sudo dnf install \
     python3-scipy.x86_64 \
     python-ropemode.noarch python-rope.noarch python-ropemacs.noarch
 
+sudo dnf install \
+     python3-pelican.noarch    python-pelican.noarch \
+     python3-virtualenv.noarch python-virtualenv.noarch \
+     python3-markdown.noarch   python-markdown.noarch \  
+     python3-jinja2.noarch     python-jinja2.noarch \    
+     python3-pygments.noarch   python-pygments.noarch \  
+     python3-docutils.noarch   python-docutils.noarch \  
+     python3-pytz.noarch       pytz.noarch \      
+     python3-blinker.noarch    python-blinker.noarch \   
+     python3-unidecode.noarch  python-unidecode.noarch \ 
+     python3-six.noarch        python-six.noarch \       
+     python3-markupsafe.x86_64 python-markupsafe.x86_64 \
+     python3-dateutil.noarch   python-dateutil.noarch    
 
+ 
+pip install typogrify
 
 # ==============================================================================
 # Ruby
 # ==============================================================================
 sudo dnf install \
-    ruby.x86_64 ruby-devel.x86_64 \
+    ruby.x86_64 ruby-devel.x86_64 ruby-irb.noarch \
     rubygems.noarch \
     rubygem-rdiscount.x86_64
 
-sudo gem install jekyll
+gem install bundler
+gem install jekyll
+gem install jekyll-paginate
+gem install github-pages
+gem install rake
+gem install rouge
