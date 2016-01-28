@@ -75,7 +75,8 @@ sudo dnf install \
     
 # Laptop Tools -----------------------------------------------------------------
 sudo dnf install \
-    office-runner.x86_64
+     office-runner.x86_64 ## Helps you keep an active wifi session when moving
+                          ## from place A to place B.
 
 # Power Management -------------------------------------------------------------
 sudo dnf install  \
@@ -145,14 +146,17 @@ sudo dnf install \
 sudo dnf install \
     epiphany.x86_64 \
     filezilla.x86_64 \
-    icedtea-web.x86_64 \
-    geary.x86_64
+    icedtea-web.x86_64
 
 # Chromium ---------------------------------------------------------------------
 # Installing Chromium is a multi-step piece of joy.
 su -c "wget http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-chromium-stable.repo -O /etc/yum.repos.d/fedora-chromium-stable.repo"
 sudo rpm --import http://repos.fedorapeople.org/repos/spot/chromium-stable/spot.gpg
 sudo dnf install chromium
+
+# Thunderbird: This bird still rules -------------------------------------------
+# I'm using a lot of other Gnome tools, but the Evolution is hopeless.
+sudo dnf install thunderbird.x86_64 thunderbird-enigmail.x86_64 thunderbird-lightning-gdata.x86_64
 
 
 
@@ -167,7 +171,6 @@ sudo dnf install \
 # Office
 # ===============================================================================
 sudo dnf install \
-    california.x86_64 \
     gnome-books.x86_64 \
     gnome-calendar.x86_64 \
     gnome-contacts.x86_64 \
@@ -213,10 +216,7 @@ sudo dnf install \
     gnome-shell-theme-zukitwo.noarch \
     gnome-sound-recorder.noarch \
     gnome-tweak-tool.noarch \
-    revelation.x86_64 \
-    rodent.x86_64 \
     shutter.noarch \
-    sushi.x86_64 \
     system-config-network.x86_64
 
 
@@ -226,8 +226,7 @@ sudo dnf install \
 # ===============================================================================
 sudo dnf install \
      mpv.x86_64 \
-     pavucontrol.x86_64 \
-     snappy-player.x86_64
+     pavucontrol.x86_64
 
 
 
@@ -274,4 +273,11 @@ sudo dnf system-upgrade download --releasever=23 --distro-sync --best --allowera
 # Do the upgrade.
 sudo dnf system-upgrade reboot
 
-# HAd to remove gstreamer ugly.
+# Had to remove gstreamer ugly.
+
+# ==============================================================================
+# Things I do not need
+# ==============================================================================
+
+## This basically makes room for Eclipse, which I am interested in.
+sudo dnf remove libreoffice*

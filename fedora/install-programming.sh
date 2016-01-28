@@ -11,7 +11,6 @@
 # - Databases
 # - Editors / IDEs
 # - Git
-# - KDE
 # - Markup Languages
 # - Python
 #
@@ -27,9 +26,9 @@
 # This is larger than it seems like it needs to be because it includes so many
 # texlive packages, in addition to the R packages.
 sudo dnf install \
-    R \
-    R-java \
-    R-RODBC
+     R \
+     R-java \
+     R-RODBC
 
 # Install RStudio:
 # http://www.rstudio.com/ide/download/desktop
@@ -51,11 +50,11 @@ sudo dnf install \
 # ==============================================================================
 
 sudo dnf install \
-    automake \
-    dos2unix.x86_64 \
-    gcc gcc-c++.x86_64 \
-    make.x86_64 \
-    tmux.x86_64
+     automake \
+     dos2unix.x86_64 \
+     gcc gcc-c++.x86_64 \
+     make.x86_64
+
 
 
 
@@ -64,16 +63,30 @@ sudo dnf install \
 # ==============================================================================
 
 sudo dnf install \
-    libmongo-client.x86_64 libmongo-client-devel.x86_64 \
-    mongo-java-driver.noarch \
-    nodejs-mongodb.noarch \
-    npm.noarch
-    pgadmin3.x86_64 \
+     libmongo-client.x86_64 libmongo-client-devel.x86_64 \
+     mongo-java-driver.noarch \
+     nodejs-mongodb.noarch \
+     npm.noarch
+pgadmin3.x86_64 \
     postgresql.x86_64 \
     postgresql-odbc.x86_64 \
     postgresql-jdbc.noarch \
     python-pymongo.x86_64\
     unixODBC-gui-qt.x86_64
+
+
+#sudo npm install --global gulp
+# And something about foundation.
+
+#sudo npm install --save-dev gulp
+
+sudo npm install -g foundation-cli bower gulp
+sudo gem install bundler
+
+# In the project . . . 
+npm install gulp-watch gulp-sass gulp-minify-css gulp-rename gulp-gzip gulp-livereload run-sequence
+
+npm install gulp-watch gulp-sass gulp-css-nano gulp-rename gulp-gzip gulp-livereload
 
 
 
@@ -88,39 +101,71 @@ sudo dnf install lsb-core-noarch
 
 sudo rpm --install ~/Downloads/atom.x86_64.rpm
 
-# Emacs ------------------------------------------------------------------------
+# Eclipse ----------------------------------------------------------------------
 sudo dnf install \
-    emacs-auctex.noarch \
-    emacs-auctex-doc.noarch \
-    emacs-auto-complete.noarch \
-    emacs-magit.noarch \
-    emacs-ess.noarch \
-    emacs-git.noarch \
-    emacs-goodies.noarch \
-    emacs-global.noarch \
-    emacs.x86_64 \
-    global.x86_64 \
-    python-ropemacs.noarch
+     eclipse-anyedit.noarch \
+     eclipse-color-theme.noarch \
+     eclipse-dltk-mylyn.noarch \
+     eclipse-dltk-ruby.noarch \
+     eclipse-dltk.noarch \
+     eclipse-dtp.noarch \
+     eclipse-egit-github.noarch \
+     eclipse-egit-mylyn.noarch \
+     eclipse-manpage.noarch \
+     eclipse-mpc.noarch \
+     eclipse-mylyn-context-java.noarch \
+     eclipse-mylyn-docs-wikitext.noarch \
+     eclipse-mylyn-fedora-integration.noarch \
+     eclipse-mylyn-tasks-web.noarch \
+     eclipse-mylyn-versions-git.noarch \
+     eclipse-mylyn-versions.noarch \
+     eclipse-mylyn.noarch \
+     eclipse-pde.x86_64 \
+     eclipse-platform.x86_64 \
+     eclipse-pydev-mylyn.x86_64 \
+     eclipse-pydev.x86_64 \
+     eclipse-quickrex.noarch \
+     eclipse-remote.noarch \
+     eclipse-shelled.noarch \
+     eclipse-texlipse.noarch \
+     eclipse-tm-terminal.noarch \
+     eclipse-webtools-sourceediting.noarch \
+
+     ## Followed by statet, dbeaver, 
+
+     # Emacs ------------------------------------------------------------------------
+     sudo dnf install \
+     emacs-auctex.noarch \
+     emacs-auctex-doc.noarch \
+     emacs-auto-complete.noarch \
+     emacs-magit.noarch \
+     emacs-ess.noarch \
+     emacs-git.noarch \
+     emacs-goodies.noarch \
+     emacs-global.noarch \
+     emacs.x86_64 \
+     global.x86_64 \
+     python-ropemacs.noarch
 
 # Other ------------------------------------------------------------------------
 sudo dnf install \
-    meld.noarch
+     meld.noarch
 
 # ==============================================================================
 # Git
 # ==============================================================================
 
 sudo dnf install \
-    aspell-en.x86_64 \
-    gedit-plugin-git.x86_64 \
-    git-email.noarch \
-    git-extras.noarch \
-    git-gui.noarch \
-    git-ftp.noarch \
-    gitg.x86_64 \
-    git.x86_64  \
-    gitk.noarch \
-    tig.x86_64
+     aspell-en.x86_64 \
+     ##gedit-plugin-git.x86_64 \
+     git-email.noarch \
+     git-extras.noarch \
+     git-gui.noarch \
+     git-ftp.noarch \
+     gitg.x86_64 \
+     git.x86_64  \
+     gitk.noarch \
+     tig.x86_64
 
 
 
@@ -130,89 +175,96 @@ sudo dnf install \
 
 # CLI ---------------------------------------------------------------------
 sudo dnf install \
-    discount.x86_64 \
-    html2text.x86_64 \
-    pandoc.x86_64 \
-    pandoc-citeproc.x86_64 \
-    pandoc-pdf.x86_64  
+     html2text.x86_64 \
+     linkchecker.x86_64 \
+     pandoc.x86_64 \
+     pandoc-citeproc.x86_64 \
+     pandoc-pdf.x86_64  
 
 # LaTeX ------------------------------------------------------------------------
 # Thanks to the large number of packages installed with R, this is quick.
 sudo dnf install \
-    emacs-common-ebib.noarch \
-    texlive-apa.noarch \
-    texlive-beamer.noarch \
-    texlive-bibtex-bin.x86_64 texlive-bibtex-doc.noarch \
-    texlive-chktex.noarch \
-    texlive-droid.noarch \
-    texlive-ecv.noarch \
-    texlive-elpres.noarch \
-    texlive-inconsolata.noarch \
-    texlive-lacheck.noarch texlive-lacheck-bin.x86_64 \
-    texlive-latexdiff-bin.noarch texlive-latexdiff-doc.noarch \
-    texlive-latexdiff.noarch \
-    texlive-luatex.noarch \
-    texlive-paper.noarch \
-    texlive-pdftex.noarch \
-    texlive-tabulary.noarch \
-    texlive-texlive-en-doc.noarch \
-    texlive-tex.noarch \
-    texlive-titling.noarch \
-    texworks.x86_64
+     emacs-common-ebib.noarch \
+     texlive-apa.noarch \
+     texlive-beamer.noarch \
+     texlive-bibtex-bin.x86_64 texlive-bibtex-doc.noarch \
+     texlive-chktex.noarch \
+     texlive-droid.noarch \
+     texlive-ecv.noarch \
+     texlive-elpres.noarch \
+     texlive-inconsolata.noarch \
+     texlive-lacheck.noarch texlive-lacheck-bin.x86_64 \
+     texlive-latexdiff-bin.noarch texlive-latexdiff-doc.noarch \
+     texlive-latexdiff.noarch \
+     texlive-luatex.noarch \
+     texlive-paper.noarch \
+     texlive-pdftex.noarch \
+     texlive-tabulary.noarch \
+     texlive-texlive-en-doc.noarch \
+     texlive-tex.noarch \
+     texlive-titling.noarch \
+     texworks.x86_64
 
-
+sudo yum install texlive-tufte-latex texlive-titlesec texlive-units texlive-lipsum
+texlive-ulem.noarch 
+texlive-morefloats.noarch 
 
 # ==============================================================================
 # Node.js
 # ==============================================================================
 sudo dnf install \
-    nodejs.x86_64
-    
+     nodejs.x86_64 \
+     npm.noarch 
+
 
 
 # ==============================================================================
 # Python
 # ==============================================================================
 sudo dnf install \
-    emacs-pymacs.noarch \
-    pychecker.noarch \
-    pylint.noarch pylint-gui.noarch \
-    python3-docs.noarch \
-    python3-ipython-console.noarch \
-    python3-ipython-gui.noarch \
-    python3-ipython.noarch \
-    python3-ipython-notebook.noarch \
-    python3-ipython-sphinx.noarch \
-    python3-numpy.x86_64 \
-    python3-pandas.x86_64 \
-    python3-reportlab.x86_64 \
-    python3-scipy.x86_64 \
-    python-ropemode.noarch python-rope.noarch python-ropemacs.noarch
+     emacs-pymacs.noarch \
+     pychecker.noarch \
+     pylint.noarch pylint-gui.noarch \
+     python3-docs.noarch \
+     python3-ipython-console.noarch \
+     python3-ipython-gui.noarch \
+     python3-ipython.noarch \
+     python3-ipython-notebook.noarch \
+     python3-ipython-sphinx.noarch \
+     python3-numpy.x86_64 \
+     python3-pandas.x86_64 \
+     python3-reportlab.x86_64 \
+     python3-scipy.x86_64 \
+     python-ropemode.noarch python-rope.noarch python-ropemacs.noarch
 
+sudo dnf install python3-jupyter_core-4.0.2-1.fc23.noarch 
+
+## Python packages needed to dev on Pelican
+## Would like to eventually remove the python- stuff.
 sudo dnf install \
      python3-pelican.noarch    python-pelican.noarch \
      python3-virtualenv.noarch python-virtualenv.noarch \
-     python3-markdown.noarch   python-markdown.noarch \  
-     python3-jinja2.noarch     python-jinja2.noarch \    
-     python3-pygments.noarch   python-pygments.noarch \  
-     python3-docutils.noarch   python-docutils.noarch \  
-     python3-pytz.noarch       pytz.noarch \      
-     python3-blinker.noarch    python-blinker.noarch \   
-     python3-unidecode.noarch  python-unidecode.noarch \ 
-     python3-six.noarch        python-six.noarch \       
+     python3-markdown.noarch   python-markdown.noarch \
+     python3-jinja2.noarch     python-jinja2.noarch \
+     python3-pygments.noarch   python-pygments.noarch \
+     python3-docutils.noarch   python-docutils.noarch \
+     python3-pytz.noarch       pytz.noarch \
+     python3-blinker.noarch    python-blinker.noarch \
+     python3-unidecode.noarch  python-unidecode.noarch \
+     python3-six.noarch        python-six.noarch \
      python3-markupsafe.x86_64 python-markupsafe.x86_64 \
      python3-dateutil.noarch   python-dateutil.noarch    
 
- 
+
 pip install typogrify
 
 # ==============================================================================
 # Ruby
 # ==============================================================================
 sudo dnf install \
-    ruby.x86_64 ruby-devel.x86_64 ruby-irb.noarch \
-    rubygems.noarch \
-    rubygem-rdiscount.x86_64
+     ruby.x86_64 ruby-devel.x86_64 ruby-irb.noarch \
+     rubygems.noarch \
+     rubygem-rdiscount.x86_64
 
 gem install bundler
 gem install jekyll
@@ -220,3 +272,8 @@ gem install jekyll-paginate
 gem install github-pages
 gem install rake
 gem install rouge
+github-pages
+jekyll-mentions
+pigments
+uri
+json
