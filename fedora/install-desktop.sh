@@ -1,5 +1,5 @@
 # ##############################################################################
-# Desktop Applications- Kubuntu
+# Desktop Applications- Fedora Workstation (Gnome)
 #
 # Author: Andy Choens
 #
@@ -7,98 +7,94 @@
 #
 # Sections:
 # - Init
-# - Addons
-# - Audio
+# - Desktop
 # - Games
 # - Graphics
 # - Internet
-# - Office
-# - Science
-# - System
-# - Utilities
-# - Video
-# - Wallpapers
+# - Multimedia
 #
-# Instructions here assume you are using an administrator. If you aren't,
-# you will need to alter the instructions.
+# Uses sudo. Your user must be in the /etc/sudoers file.
 #
 # ##############################################################################
 
+# ===============================================================================
+# Repos
+# ===============================================================================
+
+# https://github.com/UnitedRPMs/unitedrpms.github.io/blob/master/README.md
+su -c 'dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/RPM/unitedrpms-24-1.noarch.rpm'
+
 
 
 # ===============================================================================
-# Init
+# Desktop
 # ===============================================================================
-
-# This step may not be necessary if you are copying files from another computer.
-# Just copy this file too.
-sudo dnf install git
-cd ~
-mkdir Git
-cd Git
-git clone https://github.com/Choens/system-install-scripts.git
-
-
-sudo dnf copr enable shvr/surface-pro-3-kernel
-
-# Go to RPM Fusion and download the appropriate RPM.
-# Be sure to get the RPMs for both FREE and NON-FREE.
-# This should only take a moment or so.
-http://rpmfusion.org/Configuration
-
-# Depending on circumstances, this can take a while to complete.
-# Be patient.
-sudo dnf update
-
-## After updating your computer, it is best to reset.
-
-# ===============================================================================
-# Add Ons
-# ===============================================================================
-
-# CLI / Libs --------------------------------------------------------------------
-sudo dnf install \
-    gstreamer-plugins-bad.x86_64 \
-    gstreamer-plugins-good.x86_64 \
-    gstreamer-plugins-ugly.x86_64 \
-    p7zip.x86_64 p7zip-plugins.x86_64 \
-    pwgen.x86_64
 
 # Fonts ------------------------------------------------------------------------
-# TODO: This isn't working.
-sudo dnf install \
-    google-android-emoji-fonts.noarch \
-    google-droid-sans-* \
-    google-droid-serif-fonts.noarch \ 
-    google-roboto-fonts.noarch \
-    levien-inconsolata-fonts.noarch 
-    
-# Laptop Tools -----------------------------------------------------------------
-sudo dnf install \
-     office-runner.x86_64 ## Helps you keep an active wifi session when moving
-                          ## from place A to place B.
+#dnf install \
+#    google-android-emoji-fonts.noarch \
+#    google-droid-sans-* \
+#    google-droid-serif-fonts.noarch \
+#    google-roboto-fonts.noarch \
+#    levien-inconsolata-fonts.noarch 
 
 # Power Management -------------------------------------------------------------
-sudo dnf install  \
-    htop.x86_64 \
-    powertop.x86_64
+dnf install  \
+     htop.x86_64 \
+     powertop.x86_64 \
+     pwgen.x86_64
 
-# This will run powerttop --auto-tune every time your system comes on.
-# This is only recommended for laptops and, I DO NOT recommend you run
-# this blindly. Check this with YOUR HARDWARE first to make sure it doesn't
-# cause problems. To test, just run (from the command line)
-# sudo powertop --auto-tune
-# Note: I am assuming your user is in sudoers. Modify as necessary.
-@reboot /usr/sbin/powertop --auto-tune > /dev/null 2>&1
+## Turns powertop service on. Test this. IF it is OK . . . 
+systemctl start powertop.service
 
+## This will make powertop automatic on startup.
+systemctl enable powertop.service
 
+## Useful Laptop Utilities -----------------------------------------------------
+dnf install \
+     gnome-power-manager.x86_64 \
+     office-runner.x86_64
 
+## Useful Utilities ------------------------------------------------------------
+dnf install \
+     bleachbit.noarch \
+     fonts-tweak-tool.x86_64 \
+     gnome-books.x86_64 \
+     gnome-dictionary.x86_64 \
+     gnome-logs.x86_64 \
+     gnome-maps.x86_64 \
+     gnome-nettool.x86_64 \
+     gnome-shell-extension-pomodoro.x86_64 \
+     gnome-shell-extension-calc.noarch \
+     gnome-tweak-tool.noarch \
+     p7zip-gui.x86_64 p7zip.x86_64 p7zip-plugins.x86_64
 
-# ===============================================================================
-# Audio
-# ===============================================================================
+# Do Not install until I can replace Evolution.
+#dnf install \
+#    gnome-calendar.x86_64 \
+#    gnome-contacts.x86_64
 
-sudo dnf install gnome-music.x86_64
+# Wallpapers --------------------------------------------------------------------
+dnf install \
+     f23-backgrounds-gnome.noarch \
+     f22-backgrounds-gnome.noarch \
+     f21-backgrounds-gnome.noarch
+
+# For old times sake!
+#dnf install \
+#     heisenbug-backgrounds-gnome \
+#     schroedinger-cat-backgrounds-gnome \
+#     spherical-cow-backgrounds-gnome \
+#     beefy-miracle-backgrounds-gnome \
+#     verne-backgrounds-gnome \
+#     lovelock-backgrounds-gnome \
+#     laughlin-backgrounds-gnome \
+#     goddard-backgrounds-gnome \
+#     constantine-backgrounds.noarch \
+#     leonidas-backgrounds.noarch \
+#     solar-backgrounds.noarch \
+#     desktop-backgrounds-waves.noarch \
+#     fedorainfinity-backgrounds.noarch
 
 
 
@@ -106,178 +102,111 @@ sudo dnf install gnome-music.x86_64
 # Games
 # ===============================================================================
 
-sudo dnf install \
-    gnome-chess.x86_64 \
-    gnome-mahjongg.x86_64 \
-    gnome-mines.x86_64 \
-    gnome-robots.x86_64 \
-    gnugo.x86_64 \
-    quadrapassel.x86_64
+# Desktop Games (time wasters) --------------------------------------------------
+dnf install \
+     gnome-chess.x86_64 \
+     gnome-mahjongg.x86_64
+
+#dnf install \
+#    gnome-mines.x86_64 \
+#    gnome-robots.x86_64 \
+#    gnugo.x86_64 \
+#    quadrapassel.x86_64
 
 
-    
+
 # ===============================================================================
 # Graphics
 # ===============================================================================
 
-sudo dnf install \
-    blender.x86_64 \
-    darktable.x86_64 \
-    entangle.x86_64 \
-    gimp.x86_64 gimp-data-extras.noarch \
-    gimp-help-browser.x86_64 gimp-high-pass-filter.noarch \
-    gnome-photos.x86_64 \
-    gpick.x86_64 \
-    gthumb.x86_64 \
-    hugin.x86_64 \
-    inkscape.x86_64 inkscape-view.x86_64 \
-    photoprint.x86_64 \
-    rapid-photo-downloader.noarch \
-    rawtherapee.x86_64 \
-    photocollage.noarch \
-    simple-scan.x86_64
+dnf install \
+     darktable.x86_64 \
+     entangle.x86_64
+     gimp.x86_64 gimp-data-extras.noarch \
+     gimp-help-browser.x86_64 gimp-high-pass-filter.noarch \
+     gnome-photos.x86_64 \
+     gpick.x86_64 \
+     gthumb.x86_64 \
+     hugin.x86_64 \
+     inkscape.x86_64 inkscape-view.x86_64 \
+     photocollage.noarch
+     photoprint.x86_64 \
+     rapid-photo-downloader.noarch \
+     rawtherapee.x86_64 \
+     simple-scan.x86_64
+
+# HIDPI Theme for Gimp
+#https://github.com/jedireza/gimp-hidpi
+
+# For 3D
+dnf install \
+     blender.x86_64 \
 
 
-    
+
 # ===============================================================================
 # Internet
 # ===============================================================================
 
-sudo dnf install \
-    epiphany.x86_64 \
-    filezilla.x86_64 \
-    icedtea-web.x86_64
+# Epiphany has really turned into a decent browser.
+dnf install \
+     corebird.x86_64 \
+     epiphany.x86_64
 
-# Chromium ---------------------------------------------------------------------
-# Installing Chromium is a multi-step piece of joy.
-su -c "wget http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-chromium-stable.repo -O /etc/yum.repos.d/fedora-chromium-stable.repo"
-sudo rpm --import http://repos.fedorapeople.org/repos/spot/chromium-stable/spot.gpg
-sudo dnf install chromium
+# From United RPMs
+# I'm trying to wean myself off Chromium.
+#dnf install chromium
 
-# Thunderbird: This bird still rules -------------------------------------------
-# I'm using a lot of other Gnome tools, but the Evolution is hopeless.
-sudo dnf install thunderbird.x86_64 thunderbird-enigmail.x86_64 thunderbird-lightning-gdata.x86_64
+
+# ===============================================================================
+# Multimedia
+# ===============================================================================
+
+# Libs/ Utils -------------------------------------------------------------------
+# Comes out of the default Fedora repos
+#dnf install gstreamer-plugins-good.x86_64 pavucontrol.x86_64
+
+## Music Players ----------------------------------------------------------------
+dnf install gnome-music.x86_64
+
+#https://copr.fedorainfracloud.org/coprs/gnumdk/lollypop/
+dnf copr enable gnumdk/lollypop 
+
+dnf install lollypop.noarch
+
+# Video Players -----------------------------------------------------------------
+dnf install snappy.x86_64
+
+# Comes from United RPMs.
+dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
+dnf install mpv.x86_64 ffmpeg.x86_64 gnome-mpv.x86_64
+
+# Record ------------------------------------------------------------------------
+# I don't usually need this.
+#dnf install gnome-sound-recorder.noarch
+
+# SE Linux Policies
+# https://docs.fedoraproject.org/en-US/Fedora/13/html/Security-Enhanced_Linux/sect-Security-Enhanced_Linux-Working_with_SELinux-Enabling_and_Disabling_SELinux.html
+# http://www.cyberciti.biz/faq/howto-turn-off-selinux/
 
 
 
 # ===============================================================================
-# Mapping
-# I did not install markaartor because of the large number of dependencies.
-# ===============================================================================
-sudo dnf install \
-     josm.noarch
-
-# ===============================================================================
-# Office
-# ===============================================================================
-sudo dnf install \
-    gnome-books.x86_64 \
-    gnome-calendar.x86_64 \
-    gnome-contacts.x86_64 \
-    gnome-dictionary.x86_64
-
-
-
-# ===============================================================================
-# Science
+# Custom Config
 # ===============================================================================
 
-sudo dnf install engauge-digitizer.x86_64s.x86_64
+# Tweaks (Using Gnome Tweak Tool ------------------------------------------------
+# Appearance:           None
+# Desktop:              None
+# Extensions:           Alternate Tab
+# Fonts:                None
+# Keyboard & Mouse:     None
+# Power:                None
+# Startup Applications: None
+# Top Bar:              Show Date
+# Typing:               None
+# Windows:              Maximize, Minimize
+# Workspaces:           None
 
-## This one seems too big to justify.
-##sudo dnf install freecad.x86_64
-
-sudo dnf install spatialite-gui.x86_64 spatialite-tools.x86_64
-
-
-    
-# ===============================================================================
-# System
-# ===============================================================================
-sudo dnf install \
-    gnome-logs.x86_64 \
-    gnome-nettool.x86_64 \
-    gnome-power-manager.x86_64
-
-    
-    
-# ===============================================================================
-# Utilities
-# ===============================================================================
-sudo dnf install \
-    bleachbit.noarch \
-    font-manager.x86_64 \
-    fonts-tweak-tool.x86_64 \
-    gnome-characters.x86_64 \
-    gnome-font-viewer.x86_64 \
-    gnome-search-tool.x86_64 \
-    gnome-shell-extension-pomodoro.x86_64 \
-    gnome-shell-extension-calc.noarch \
-    gnome-shell-theme-zukitwo.noarch \
-    gnome-sound-recorder.noarch \
-    gnome-tweak-tool.noarch \
-    shutter.noarch \
-    system-config-network.x86_64
-
-
-
-# ===============================================================================
-# Video
-# ===============================================================================
-sudo dnf install \
-     mpv.x86_64 \
-     pavucontrol.x86_64
-
-
-
-# ==============================================================================
-# Wallpapers
-# ==============================================================================
-sudo dnf install \
-     f22-backgrounds-gnome.noarch \
-     f21-backgrounds-gnome.noarch \
-     heisenbug-backgrounds-gnome \
-     schroedinger-cat-backgrounds-gnome \
-     spherical-cow-backgrounds-gnome \
-     beefy-miracle-backgrounds-gnome \
-     verne-backgrounds-gnome \
-     lovelock-backgrounds-gnome \
-     laughlin-backgrounds-gnome \
-     goddard-backgrounds-gnome \
-     constantine-backgrounds.noarch \
-     leonidas-backgrounds.noarch \
-     solar-backgrounds.noarch \
-     desktop-backgrounds-waves.noarch \
-     fedorainfinity-backgrounds.noarch
-
-# todo
-#moonshine # F07
-#zod # F06
-#bordeaux # F05
-#stentz # F04
-#heidelberg # F03
-#tettnang # F02
-#yarrow # F01 
-
-# ==============================================================================
-# Upgrading
-# https://fedoraproject.org/wiki/DNF_system_upgrade
-# ==============================================================================
-
-# Make sure you have what you need to upgrade.
-sudo dnf install dnf-plugin-system-upgrade
-
-# New packages.
-sudo dnf system-upgrade download --releasever=23 --distro-sync --best --allowerasing
-
-# Do the upgrade.
-sudo dnf system-upgrade reboot
-
-# Had to remove gstreamer ugly.
-
-# ==============================================================================
-# Things I do not need
-# ==============================================================================
-
-## This basically makes room for Eclipse, which I am interested in.
-sudo dnf remove libreoffice*
+# Mouse / Touchap
+# Enable Tap to Click

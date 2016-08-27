@@ -1,5 +1,30 @@
 List of Program I need to reivew
 
+nuntius
+
+gnome-themes.noarch
+
+
+gnome-todo.x86_64
+verbiste-gnome.x86_64
+gnome-shell-theme-selene.noarch
+gnome-web-photo.x86_64
+gnome-battery-bench.x86_64
+
+steadyflow
+mousetweaks.x86_64
+
+guake.noarch 
+terminator.noarch
+
+office-runner.x86_64
+
+-- examine --
+teamgit.x86_64
+gitg.x86_64
+giggle.x86_64
+ 	
+
 INSTALL
 FreeCad
 
