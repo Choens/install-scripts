@@ -17,6 +17,9 @@
 #
 # ##############################################################################
 
+sudo ausearch -c 'wpa_supplicant' --raw | audit2allow -M my-wpasupplicant
+sudo semodule -X 300 -i my-wpasupplicant.pp
+
 # ===============================================================================
 # Repos
 # ===============================================================================
@@ -39,24 +42,24 @@ su -c 'dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/ma
 #    levien-inconsolata-fonts.noarch 
 
 # Power Management -------------------------------------------------------------
-dnf install  \
+sudo dnf install  \
      htop.x86_64 \
      powertop.x86_64 \
      pwgen.x86_64
 
 ## Turns powertop service on. Test this. IF it is OK . . . 
-systemctl start powertop.service
+sudo systemctl start powertop.service
 
 ## This will make powertop automatic on startup.
-systemctl enable powertop.service
+sudo systemctl enable powertop.service
 
 ## Useful Laptop Utilities -----------------------------------------------------
-dnf install \
+sudo dnf install \
      gnome-power-manager.x86_64 \
      office-runner.x86_64
 
 ## Useful Utilities ------------------------------------------------------------
-dnf install \
+sudo dnf install \
      bleachbit.noarch \
      fonts-tweak-tool.x86_64 \
      gnome-books.x86_64 \
@@ -64,8 +67,11 @@ dnf install \
      gnome-logs.x86_64 \
      gnome-maps.x86_64 \
      gnome-nettool.x86_64 \
-     gnome-shell-extension-pomodoro.x86_64 \
+     gnome-packagekit-updater.x86_64 \
      gnome-shell-extension-calc.noarch \
+     gnome-shell-extension-pomodoro.x86_64 \
+     gnome-shell-extension-do-not-disturb-button.noarch \
+     gnome-shell-extension-no-topleft-hot-corner.noarch \
      gnome-tweak-tool.noarch \
      p7zip-gui.x86_64 p7zip.x86_64 p7zip-plugins.x86_64
 
@@ -74,8 +80,13 @@ dnf install \
 #    gnome-calendar.x86_64 \
 #    gnome-contacts.x86_64
 
+sudo dnf install \
+     thunderbird.x86_64 \
+     thunderbird-enigmail.noarch \
+     thunderbird-lightning-gdata.x86_64
+
 # Wallpapers --------------------------------------------------------------------
-dnf install \
+sudo dnf install \
      f23-backgrounds-gnome.noarch \
      f22-backgrounds-gnome.noarch \
      f21-backgrounds-gnome.noarch
@@ -210,3 +221,9 @@ dnf install mpv.x86_64 ffmpeg.x86_64 gnome-mpv.x86_64
 
 # Mouse / Touchap
 # Enable Tap to Click
+
+# Manual Installation VIA Software App
+# - Kindle Cloud Reader
+# - Google Drive
+# - Google Maps
+# - Ask Fedora

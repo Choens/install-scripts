@@ -16,7 +16,32 @@
 #
 # ##############################################################################
 
+tryton
 
+google-noto-mono-fonts.noarch : Mono font
+google-noto-sans-fonts.noarch : Sans font
+google-droid-sans-fonts.noarch : A humanist sans serif typeface
+google-noto-serif-fonts.noarch : Serif font
+google-noto-fonts-common.noarch : Common files for Noto fonts
+google-droid-serif-fonts.noarch : A contemporary serif typeface
+google-droid-sans-mono-fonts.noarch : A humanist monospace sans serif typeface
+grive2.x86_64
+protobuf-emacs-el.noarch
+fedora-user-agent-chrome.noarch
+
+nuvola-app-amazon-cloud-player.noarch
+clamz.x86_64 : Amazon Downloader
+glacier-cli.noarch
+s3cmd.noarch
+python3-boto.noarch
+python-postman.noarch
+fuse-s3fs.noarch
+sendKindle.noarch
+acd_cli.noarch
+
+python-dopy.noarch
+
+WALinuxAgent.noarch
 
 # ==============================================================================
 # Analysis
@@ -24,10 +49,22 @@
 
 # CLI ---------------------------------------------------------------------
 # This is BIG because it includes many texlive packages.
-dnf install \
+sudo dnf install \
+     libdbi-dbd-pgsql.x86_64 libdbi-dbd-sqlite.x86_64 \
      R \
+     R-DBI \
      R-java \
-     R-RODBC
+     
+sudo dnf install texlive-framed.noarch texlive-titling.noarch
+
+sudo dnf install gdal.x86_64 gdal-devel.x86_64 proj-devel.x86_64 proj-epsg-4.9.2-2.fc24.x86_64 proj-nad-4.9.2-2.fc24.x86_64 libicu-devel.x86_64
+
+sudo dnf install geos.x86_64 geos-devel.x86_64
+
+sudo dnf install udunits2.x86_64 udunits2-devel.x86_64
+
+## This can help with problems installing stringi.
+R CMD INSTALL stringi_1.1.1.tar.gz --configure-args='--disable-pkg-config'
 
 # Install RStudio:
 # http://www.rstudio.com/ide/download/desktop
@@ -35,7 +72,7 @@ dnf install \
 #rpm --install ~/Downloads/rstudio
 
 # Dev Stuff needed to compile useful R packages.
-dnf install \
+sudo dnf install \
      curl.x86_64 \
      cyrus-sasl.x86_64 cyrus-sasl-devel.x86_64 \
      libcurl.x86_64 libcurl-devel.x86_64 \
@@ -49,7 +86,7 @@ dnf install \
 # Build Essentials / CLI
 # ==============================================================================
 
-dnf install \
+sudo dnf install \
      automake \
      dos2unix.x86_64 \
      gcc gcc-c++.x86_64 \
@@ -70,14 +107,16 @@ dnf install \
 
 # Postrges & Other SQL ---------------------------------------------------------
 # Removed pgadmin3, in order to install the BETA of pgadmin4 which looks awesome
-dnf install \
+sudo dnf install \
+    libdbi-dbd-pgsql.x86_64 \
     postgresql.x86_64 \
-    postgresql-odbc.x86_64 \
-    postgresql-jdbc.noarch \
-    unixODBC-gui-qt.x86_64
+    postgresql-jdbc.noarch
+
+
 
 # https://pgadmin.org/download/
-
+#sudo dnf install \
+#     pgadmin3.x86_64
 
 # Front Ends -------------------------------------------------------------------
 # It is hard to beat the beaver
@@ -126,28 +165,38 @@ dnf install \
 ## Followed by statet, dbeaver, 
 
 # Emacs ------------------------------------------------------------------------
-dnf install \
-     emacs-auctex.noarch \
-     emacs-auctex-doc.noarch \
+sudo dnf install \
+     emacs-auctex.noarch emacs-auctex-doc.noarch \
      emacs-auto-complete.noarch \
-     emacs-magit.noarch \
-     emacs-ess.noarch \
+     emacs-ess.noarch emacs-ess-doc.noarch\
      emacs-goodies.noarch \
+     emacs-magit.noarch \
+     python-ropemacs.noarch \
+     emacs-slime-el.noarch \
+     emacs-yaml-mode.noarch \
      emacs.x86_64
 
 # Gedit ------------------------------------------------------------------------
 # It ain't glamorous, but it can be effective
-dnf install gedit-plugin* gedit-latex*
+# sudo dnf install gedit-plugin* gedit-latex*
 
+
+# Visual Studio Code -----------------------------------------------------------
+# https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+dnf check-update
+sudo dnf install code
+         
 # Other ------------------------------------------------------------------------
-dnf install meld.noarch
+sudo dnf install meld.noarch
 
 # ==============================================================================
 # Git
 # ==============================================================================
 
 # CLI --------------------------------------------------------------------------
-dnf install \
+sudo dnf install \
      aspell-en.x86_64 \
      git.x86_64  \
      git-extras.noarch \
@@ -155,10 +204,13 @@ dnf install \
      tig.x86_64
 
 # GUI --------------------------------------------------------------------------
-dnf install \
+sudo dnf install \
      git-gui.noarch \
      gitg.x86_64 \
-     gitk.noarch
+     gitk.noarch \
+     python3-rabbitvcs.noarch  \
+     rabbitvcs-cli.noarch \
+     rabbitvcs-nautilus.noarch
 
 
 
@@ -179,22 +231,27 @@ sudo dnf install \
 # CLI -----------------------------------------------------
 sudo dnf install \
      emacs-common-ebib.noarch \
+     fontawesome-fonts.noarch \
      texlive-apa.noarch \
      texlive-beamer.noarch \
      texlive-bibtex-bin.x86_64 texlive-bibtex-doc.noarch \
      texlive-chktex.noarch \
+     texlive-ctablestack.noarch \
+     texlive-datenumber.noarch \
      texlive-droid.noarch \
      texlive-ecv.noarch \
      texlive-elpres.noarch \
+     texlive-fontawesome.noarch \
      texlive-inconsolata.noarch \
      texlive-lacheck.noarch texlive-lacheck-bin.x86_64 \
      texlive-latexdiff-bin.noarch texlive-latexdiff-doc.noarch \
      texlive-latexdiff.noarch \
      texlive-luatex.noarch \
      texlive-lipsum \
-     texlive-morefloats.noarch 
+     texlive-morefloats.noarch \
      texlive-paper.noarch \
      texlive-pdftex.noarch \
+     texlive-siunitx.noarch \
      texlive-tabulary.noarch \
      texlive-texlive-en-doc.noarch \
      texlive-titlesec \
@@ -215,10 +272,10 @@ sudo dnf install \
 # ==============================================================================
 dnf install nodejs.x86_64
 
-npm install -g bower 
-npm install -g foundation-cli 
-npm install -g gulp
-npm install -g grunt
+sudo npm install -g bower 
+sudo npm install -g foundation-cli 
+sudo npm install -g gulp
+sudo npm install -g grunt
 
 
 
@@ -226,27 +283,34 @@ npm install -g grunt
 # Python
 # ==============================================================================
 
-dnf install \
+sudo dnf install \
      emacs-pymacs.noarch \
      pychecker.noarch \
-     pylint.noarch pylint-gui.noarch \
+     python-rope.noarch python-ropemacs.noarch \
+     python3-autopep8.noarch \
      python3-docs.noarch \
-     python3-ipdb.noarch \
-     python3-ipython-console.noarch \
-     python3-ipython-gui.noarch \
-     python3-ipython.noarch \
-     python3-ipython-notebook.noarch \
-     python3-ipython-sphinx.noarch \
+     python3-flake8.noarch \
+     python3-importmagic.noarch \
+     python3-jedi.noarch \
      python3-numpy.x86_64 \
      python3-pandas.x86_64 \
+     python3-pylint.noarch \
      python3-reportlab.x86_64 \
      python3-scipy.x86_64 \
-     python3-statsmodels.x86_64
-     python-ropemode.noarch python-rope.noarch python-ropemacs.noarch
+     python3-statsmodels.x86_64 \
+     python3-virtualenv.noarch
 
-dnf install python3-jupyter_core.noarch
+sudo dnf install \
+     python3-ipykernel.noarch \
+     python3-metakernel-bash.noarch \
+     python3-nbconvert.noarch \
+     python3-qtconsole.noarch
 
-dnf install czmq.x86_64 czmq-devel.x86_64
+## Jupyter Stuff
+pip3 install --upgrade --user jupyter jupyter_kernel_gateway jupyterlab
+
+## If yapf makes it into Fedora drop this.
+pip3 install --upgrade --user epc yapf
 
 ## R Kernel
 ## https://github.com/IRkernel/IRkernel
@@ -264,11 +328,11 @@ sudo dnf install \
      rubygem-bundler.noarch \
      ruby.x86_64 ruby-devel.x86_64 ruby-irb.noarch \
      rubygems.noarch \
+     rubygem-rake \
      rubygem-rdiscount.x86_64
 
 # TODO: For 1st Friday, etc. I need to have working gemfiles.
 gem install bigdecimal
-gem install bundler
 gem install jekyll
 gem install jekyll-mentions
 gem install jekyll-paginate

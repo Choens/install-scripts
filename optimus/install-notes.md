@@ -24,13 +24,3 @@ Requires authentication: Yes
 - User Name - xxxx.xxxxxx@gmail.com
 - Password - Get a one-time use password from Google.
 
-KMail Config
- - Turn line wrap OFF 
- - Use HTML by default.
-
-KOrganizer Setup
- - Just log in to the Google Account Resource.
-
-KAddressbook
- - It will recognize the KOrganizer account. 
- - I prefer the two column layout.

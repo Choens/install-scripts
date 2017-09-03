@@ -1,0 +1,60 @@
+List of Program I need to reivew
+
+nuntius
+rhn-setup-gnome.noarch
+gnome-todo.x86_64
+gnome-web-photo.x86_64
+gnome-battery-bench.x86_64
+steadyflow
+terminator.noarch
+
+Investigate / Use
+Nomacs
+Blender
+Gimp
+Darktable / UFRaw
+Photo Collage
+Photo Layout Editor
+Rapid Photo Downloader
+Tintii
+Urban Light
+SimpleScan
+Inkskape
+Irfanview
+Converseen
+Entangle
+Hugin
+Panini
+Panorama
+PyPDF
+QPDFView
+DiffPDF
+PDF-Tools
+PDF Edit
+podofo
+parcellite/clipit/clipman or GNOME3 Extension?
+bugwarrior
+hub.noarch
+rhn-client-tools.noarch
+spacecmd.noarch
+
+Last metadata expiration check: 24 days, 21:08:20 ago on Mon 24 Jul 2017 11:00:14 PM EDT.
+====================== Summary & Name Matched: spacewalk =======================
+spacewalk-config.noarch : Spacewalk Configuration
+dnf-plugin-spacewalk.noarch : DNF plugin for Spacewalk
+spacewalk-proxy-docs.noarch : Spacewalk Proxy Server Documentation
+spacewalk-proxy-html.noarch : The HTML component for Spacewalk Proxy
+spacewalk-koan.noarch : Support package for spacewalk koan interaction
+spacewalk-pylint.noarch : Pylint configuration for spacewalk python packages
+========================== Summary Matched: spacewalk ==========================
+rhnsd.x86_64 : Spacewalk query daemon
+yum-rhn-plugin.noarch : Spacewalk support for yum
+rhnmd.noarch : Spacewalk Monitoring Daemon
+python3-rhnlib.noarch : Python libraries for the Spacewalk project
+rhnlib.noarch : Python libraries for the Spacewalk project
+rhn-setup.noarch : Configure and register an RHN/Spacewalk client
+rhn-setup-gnome.noarch : A GUI interface for RHN/Spacewalk Registration
+rhn-client-tools.noarch : Support programs and libraries for Red Hat Satellite
+                        : or Spacewalk
+spacecmd.noarch : Command-line interface to Spacewalk and Red Hat Satellite
+                : servers

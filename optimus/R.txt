@@ -1,0 +1,194 @@
+R-praise.noarch : Praise Users
+R-ROC.x86_64 : Utilities for ROC
+R-qcc.noarch : SQC package for R
+R-COPASI.x86_64 : COPASI R Bindings
+R-shogun.x86_64 : R-plugin for shogun
+perl-PAR-Packer.x86_64 : PAR Packager
+R-RUnit.noarch : R Unit test framework
+R-Rcpp-examples.x86_64 : Rcpp Examples
+R-testthat.x86_64 : Unit Testing for R
+texlive-ocr-b.noarch : Fonts for OCR-B
+R-crayon.noarch : Colored Terminal Output
+R-highlight.x86_64 : R Syntax Highlighter
+R-libSBML.x86_64 : R bindings for libSBML
+R-RInside-examples.x86_64 : RInside Examples
+R-Rcpp-devel.i686 : Rcpp Development Files
+R-Rcpp-devel.x86_64 : Rcpp Development Files
+R-Rsamtools.i686 : R interface to samtools
+R-Rsamtools.x86_64 : R interface to samtools
+R-TH-data.noarch : Data for other R packages
+DecodeIR-javadoc.noarch : Javadoc for DecodeIR
+R-DBI.noarch : Database interface module for R
+R-Rcpp.i686 : Seamless R and C++ Integration
+R-Rcpp.x86_64 : Seamless R and C++ Integration
+R-littler-examples.x86_64 : R-littler Examples
+OpenEXR-libs.i686 : OpenEXR runtime libraries
+OpenEXR-libs.x86_64 : OpenEXR runtime libraries
+R-combinat.noarch : R routines for combinatorics
+R-xtable.noarch : Export tables to LaTeX or HTML
+R-zoo-devel.i686 : Development files for R-zoo
+R-zoo-devel.x86_64 : Development files for R-zoo
+R-DynDoc.noarch : Functions for dynamic documents
+R-RODBC.x86_64 : An ODBC database interface for R
+R-abind.noarch : Combine multi-dimensional arrays
+ExchangeIR-javadoc.noarch : Javadoc for ExchangeIR
+R-Biobase.x86_64 : Base functions for Bioconductor
+R-RInside-devel.i686 : RInside Development Files
+R-RInside-devel.x86_64 : RInside Development Files
+R-RSQLite.x86_64 : SQLite database interface for R
+R-bitops.x86_64 : Functions for Bitwise operations
+R-qtl.x86_64 : Tools for analyzing QTL experiments
+auto-factory.noarch : JSR-330-compatible factories
+R-GeneR.x86_64 : R for genes and sequences analysis
+R-RM2.noarch : Revenue Management and Pricing for R
+R-biomaRt.noarch : R Interface to BioMart databases
+DecodeIR-devel.i686 : Development files for DecodeIR
+DecodeIR-devel.x86_64 : Development files for DecodeIR
+R-AnnotationDbi.noarch : Annotation Database Interface
+R-Rsolid-devel.i686 : Development files for R-Rsolid
+R-Rsolid-devel.x86_64 : Development files for R-Rsolid
+R-pls.noarch : Multivariate regression by PLSR and PCR
+R-nws.noarch : R functions for NetWorkSpaces and Sleigh
+R-sandwich.noarch : Robust Covariance Matrix Estimators
+R-IRanges-devel.i686 : Development files for R-IRanges
+R-IRanges-devel.x86_64 : Development files for R-IRanges
+R-XVector-devel.i686 : Development files for R-XVector
+R-XVector-devel.x86_64 : Development files for R-XVector
+R-lmtest.x86_64 : Testing Linear Regression Models for R
+R-mvtnorm-devel.i686 : Development files for R-mvtnorm
+R-mvtnorm-devel.x86_64 : Development files for R-mvtnorm
+R-affyio.x86_64 : Tools for parsing Affymetrix data files
+R-littler.x86_64 : littler: R at the Command-Line via 'r'
+php-guzzlehttp-psr7.noarch : PSR-7 message implementation
+R-BiocGenerics.noarch : Generic functions for Bioconductor
+R-Rcompression.x86_64 : R Package for in-memory compression
+R-S4Vectors.i686 : S4 implementation of vectors and lists
+R-S4Vectors.x86_64 : S4 implementation of vectors and lists
+R-devel.i686 : Full R development environment metapackage
+R-devel.x86_64 : Full R development environment metapackage
+R-Rsamtools-devel.i686 : Development files for R-Rsamtools
+R-Rsamtools-devel.x86_64 : Development files for R-Rsamtools
+R-S4Vectors-devel.i686 : Development files for R-S4Vectors
+R-S4Vectors-devel.x86_64 : Development files for R-S4Vectors
+R-car.noarch : Companion to Applied Regression package for R
+R-rlecuyer.x86_64 : R interface to RNG with multiple streams
+R-RInside.i686 : C++ Classes to Embed R in C++ Applications
+R-RInside.x86_64 : C++ Classes to Embed R in C++ Applications
+R-affy.x86_64 : Methods for Affymetrix Oligonucleotide Arrays
+R-affydata.noarch : Affymetrix data for demonstration purpose
+iguanaIR-devel.i686 : Library and header files for iguanaIR
+iguanaIR-devel.x86_64 : Library and header files for iguanaIR
+R-Biostrings-devel.i686 : Development files for R-Biostrings
+R-Biostrings-devel.x86_64 : Development files for R-Biostrings
+R-SEDML.x86_64 : R library that fully supports SED-ML for SBML
+perl-PAR-Packer-Tk.noarch : Front-end to pp written in Perl/Tk
+R-digest.i686 : Create Cryptographic Hash Digest of R Objects
+R-digest.x86_64 : Create Cryptographic Hash Digest of R Objects
+R-java.x86_64 : R with Fedora provided Java Runtime Environment
+R-systemfit.noarch : Simultaneous Equation Estimation R Package
+antlr3-C.i686 : C run-time support for ANTLR-generated parsers
+antlr3-C.x86_64 : C run-time support for ANTLR-generated parsers
+R-digest-devel.i686 : Header files for compiling against digest
+R-digest-devel.x86_64 : Header files for compiling against digest
+R-zoo.i686 : Z's ordered observations for irregular time series
+R-zoo.x86_64 : Z's ordered observations for irregular time series
+perl-CBOR-XS.x86_64 : Concise Binary Object Representation (CBOR)
+texlive-ocr-b-outline.noarch : OCR-B fonts in Type 1 and OpenType
+R-RCurl.x86_64 : General network (HTTP/FTP) client interface for R
+R-preprocessCore.i686 : A collection of pre-processing functions
+R-preprocessCore.x86_64 : A collection of pre-processing functions
+R-widgetTools.noarch : Bioconductor tools to support tcltk widgets
+R-mvtnorm.i686 : Multivariate normal and T distribution R Package
+R-mvtnorm.x86_64 : Multivariate normal and T distribution R Package
+R-biglm.x86_64 : Bounded memory linear and generalized linear models
+R-timeDate.noarch : Rmetrics - chronological and calendrical objects
+R-qvalue.noarch : Q-value estimation for false discovery rate control
+R-Biostrings.x86_64 : String objects representing biological sequences
+R-BufferedMatrix-devel.i686 : Development files for R-BufferedMatrix
+R-BufferedMatrix-devel.x86_64 : Development files for R-BufferedMatrix
+R-preprocessCore-devel.i686 : Development files for R-preprocessCore
+R-preprocessCore-devel.x86_64 : Development files for R-preprocessCore
+R-sciplot.noarch : Scientific Graphing Functions for Factorial Designs
+antlr3-java.noarch : Java run-time support for ANTLR-generated parsers
+R-XML.x86_64 : Tools for parsing and generating xml within r and s-plus
+R-fibroEset.noarch : ExprSet for karaman et al. (2003) fibroblasts data
+antlr32-java.noarch : Java run-time support for ANTLR-generated parsers
+R-XVector.i686 : Representation and manipulation of external sequences
+R-XVector.x86_64 : Representation and manipulation of external sequences
+R-core-devel.i686 : Core files for development of R packages (no Java)
+R-core-devel.x86_64 : Core files for development of R packages (no Java)
+antlr-python.noarch : Python runtime support for ANTLR-generated parsers
+iguanaIR-reflasher.noarch : Reflasher for Iguanaworks USB IR transceiver
+php-psr-http-message.noarch : Common interface for HTTP messages (PSR-7)
+R-maanova.x86_64 : Analysis of N-dye Micro Array using mixed model effect
+R-multtest.x86_64 : Multiple hypothesis testing library from Bioconductor
+R-tkWidgets.noarch : Widgets to provide user interfaces from bioconductor
+antlr3-C++-devel.i686 : C++ runtime support for ANTLR-generated parsers
+antlr3-C++-devel.x86_64 : C++ runtime support for ANTLR-generated parsers
+iguanaIR-python.x86_64 : Python module for Iguanaworks USB IR transceiver
+R-IRanges.x86_64 : Low-level containers for storing sets of integer ranges
+mingw32-OpenEXR-tools.noarch : Tools for the MinGW Windows OpenEXR library
+mingw64-OpenEXR-tools.noarch : Tools for the MinGW Windows OpenEXR library
+R-caTools.x86_64 : Tools: moving window statistics, gif, base64, roc auc...
+R-core.i686 : The minimal R components necessary for a functional runtime
+R-core.x86_64 : The minimal R components necessary for a functional runtime
+R-inline.noarch : Functions to Inline C, C++, Fortran Function Calls from R
+R-BSgenome.noarch : Infrastructure for Biostrings-based genome data packages
+R-expm.x86_64 : Computation of the matrix exponential and related quantities
+antlr32-tool.noarch : Command line tool for creating ANTLR-generated parsers
+R-GenomicRanges.x86_64 : Representation and manipulation of genomic intervals
+R-hgu95av2probe.noarch : Probe sequence data for microarrays of type hgu95av2
+R-msm.x86_64 : Multi-state Markov and hidden Markov models in continuous time
+memoryfilesystem.noarch : An in memory implementation of a JSR-203 file system
+OpenEXR-devel.i686 : Headers and libraries for building apps that use OpenEXR
+OpenEXR-devel.x86_64 : Headers and libraries for building apps that use OpenEXR
+R-BufferedMatrix.i686 : A matrix data storage object method from bioconductor
+R-BufferedMatrix.x86_64 : A matrix data storage object method from bioconductor
+R-acepack.x86_64 : ACE and AVAS methods for choosing regression transformations
+R-java-devel.i686 : Development package for use with Java enabled R components
+R-java-devel.x86_64 : Development package for use with Java enabled R components
+antlr32-maven-plugin.noarch : Maven plug-in for creating ANTLR-generated parsers
+perl-Tree-R.noarch : Perl extension for the R-tree data structure and algorithms
+php-pear-PEAR-Command-Packaging.noarch : Create RPM spec files from PEAR modules
+R-rtracklayer.x86_64 : R interface to genome browsers and their annotation
+R-multcomp.noarch : Simultaneous inference for general linear hypotheses R
+antlr3-javascript.noarch : Javascript run-time support for ANTLR-generated
+perl-Net-CIDR-Lite.noarch : Perl extension for merging IPv4 or IPv6 CIDR
+antlr3-C-devel.i686 : Header files for the C bindings for ANTLR-generated
+antlr3-C-devel.x86_64 : Header files for the C bindings for ANTLR-generated
+extra166y.noarch : Concurrency JSR-166 - Collections supporting parallel
+mingw32-OpenEXR-static.noarch : Static version of the MinGW Windows OpenEXR
+mingw64-OpenEXR-static.noarch : Static version of the MinGW Windows OpenEXR
+perl-PAR-Dist.noarch : Toolkit for creating and manipulating Perl PAR
+R-wavethresh.x86_64 : R module, Software to perform wavelet statistics and
+R-BSgenome.Celegans.UCSC.ce2.noarch : Caenorhabditis elegans genome (UCSC
+R-mAr.x86_64 : R module to evaluate functions for multivariate AutoRegressive
+fonts-KOI8-R-75dpi.noarch : A set of 75 dpi Russian and Ukrainian language fonts
+fonts-KOI8-R-100dpi.noarch : KOI8-R fonts in 100 dpi resolution for the X Window
+R-BufferedMatrixMethods.x86_64 : Microarray Data related methods that utlize
+R-GenomicFeatures.noarch : Tools for making and manipulating transcript centric
+R-GenomeInfoDb.noarch : Utilities for manipulating chromosome and other
+R-Rsolid.i686 : Quantile normalization and base calling for second generation
+R-Rsolid.x86_64 : Quantile normalization and base calling for second generation
+                     : ANTLR-generated parsers
+R-waveslim.x86_64 : R module, Basic wavelet routines for 1,2 and 3-dimensional
+weld-core.noarch : Reference Implementation for JSR-299: Contexts and Dependency
+                             : Injection (JSR-299) Spec API
+R-ALL.noarch : Data of T- and B-cell Acute Lymphocytic Leukemia
+R-memoise.noarch : Memoise functions
+R-statmod.x86_64 : Statistical modeling
+R-hgu133acdf.noarch : HG-U133A.cdf data file
+R-hgu95av2cdf.noarch : HG_U95Av2.CDF data file
+glassfish-saaj.noarch : JSR-67 implementation
+jboss-jacc-1.5-api.noarch : JACC 1.5 API (JSR-115)
+time-api.noarch : JSR-310 - Date and Time API
+jboss-websocket-1.0-api.noarch : JSR-356: Java WebSocket 1.0 API
+jboss-websocket-1.1-api.noarch : JSR-356: Java WebSocket 1.1 API
+jboss-el-3.0-api.noarch : JSR-341 Expression Language 3.0 API
+annogen.noarch : Java framework for JSR-175 annotations
+openwebbeans.noarch : Implementation of the JSR-299 WebBeans
+texlive-ae.noarch : Virtual fonts for T1 encoded CMR-fonts
+bluecove.x86_64 : Implementation of JSR-82 Java Bluetooth API
+atinject-tck.noarch : TCK for testing atinject compatibility with JSR-330
+atinject.noarch : Dependency injection specification for Java (JSR-330)
+jgettext.noarch : An ANTLR-based parser and generator for GNU Gettext PO/POT
