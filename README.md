@@ -1,86 +1,67 @@
-Installation and setup notes for Optimus, my laptop. It is a Microsoft
-Surface Pro 3 (i7, 8 GB Ram, 256 GB SSD). People are gonna hate on the
-folks in Redmond, but this is some really nice hardware. Does it run
-Linux perfectly?
+# README:
 
-Hell No.
+Contains installation notes/scripts/etc. for my various laptops and
+workstations. The master branch contains scripts common to all
+systems. Each computer has a separate branch for things which are
+different or which I think will diverge over time.
 
-But I typed this README file on Emacs, which is running on a Fedora
-Gnome session. It works well enough, and support will only improve
-over time. This document is a work in progress. As I learn more about
-my new hardware, I may adjust some of what I have said tonight.
+Files are numbered in the order in which they should be applied.
 
-Current installation instructions are for Ubuntu 15.04 and
-Fedora 22. I've been using both. As I proceed, I am going to open
-"bugs" against the repo, to track my ideas and progress in resolving
-problems. Should be fun.
+- **00-init.sh:** Installs git and copies installation repo to local PC
+- **01-base.sh:** CLI / libraries
+- **02-gnome.sh:** Software related to the GNOME project
+- **03-desktop.sh:** Other desktop tools.
+- **04-setup.sh:** Useful commands to set things up MY way.
+- **notes.md:** Collection of things I do manually.
 
-## Installation Comments
+Additional scripts which may be helpful:
 
-I followed these instructions from geek.com:
-<a href="http://www.geek.com/microsoft/linux-users-rejoice-heres-ubuntu-on-the-surface-pro-3-1594864/">
-Linux Users Rejoice Heres Ubuntu On The Surface Pro 3
-</a>
+- **sudoers:** Make current user a member of the sudoers group.
+  - This is only necessary if your user _isn't_ in the sudoers
+    group. If you are, skip this step.
+- **upgrade.sh:** CLI instructions for upgrading a Fedora
+  system. Obviously only useful when there is a newer version of
+  Fedora, but that comes along every ~6 months.
+  - Less useful than it was not that Fedora can be upgraded via Gnome
+    Software.
+  - In the script, change 2x to the version of Fedora you want to
+    upgrade to BEFORE running the script or you will get an error.
 
-Your mileage may vary, but it worked for me.
+This organization is entirely arbitrary. For example, emacs is
+installed as part of `03-desktop.sh` because I really like emacs. So,
+feel free to use any of this that is useful, but realize it is
+arbitrary.
 
-# Hardware Support
+Because I only run these scripts when I install/reinstall a PC, things
+may be a little bit-rotted. If you find a bug, feel free to open a bug
+report.
 
-## Works Out Of The Box
+PC-specific problems/bugs will be in GH Issues in the appropriate
+branch.
 
-Using the 3.19 kernel, the _basics_ work. I was able to type, connect
-to my wireless network, and listen to some tunes. I STRONGLY recommend
-using a USB hub when you install. Having an operational mouse was very
-helpful and I am still seeing some people report that the Type Cover 3
-is problematic, so having a backup keyboard is also probably a good
-idea.
+# Workstations:
 
-Kernel 3.19:
+*Personal* workstations are named after Autobots. *Professional*
+workstations are named after Decepticons, because work is sometimes
+evil.
 
-- Screen: Worked, had to tweak the scaling.
-- Type Cover 3 Keyboard: It worked for me.
-- Speakers: Fine
-- Wireless: Fine, but I installed the Marvell firmware for bluetooth
-  which also affects wireless.
+## Optimus: 
 
-The 4.x kernel is better. The
-[shvr kernel](https://github.com/shvr/fedora-surface-pro-3-kernel) on
-GitHub is much better.
+Primary personal laptop.
 
-Kernel 4.x(shvr):
+- **Model:** Dell XPS 13 (P54G)
+- **Branch:** optimus
+- Includes programming tools, data analysis tools, and photography
+  tools.
 
-- Screen: Worked
-- Type Cover 3 Keyboard: It worked for me.
-- Speakers: Fine
-- Wireless: Works great.
-- Bluetooth: Works
-- Touch Screen: Works
-- Surface Pen: It works, but I can't connect to it via bluetooth or
-  use it to wake.
-- Type Cover Trackpad: Works
-- Webcam: Works
-- Accelerometers: Not sure.
-- Orientation: There is a python script, but I haven't used it yet.
-- Encrypted LVM: I saw several people on the Internet (as recently as
-  May 2015) claim the Keyboard cover does not work with encrypted
-  LVM. They are wrong. It works fine. My laptop is
-  encrypted. Sometimes I start and the keyboard cover isn't
-  recognized. When this happens, all I have to do is a hard reset and
-  everything is fine.
+## Sentinel:
 
-## Untested
+Personal workstations.
 
-- Microphone
+## Megatron:
 
-# Software
+Acuitas Health owned laptop.
 
-The files that start with "installation-" are a series of installation
-bash scripts (and one markdown comments file) I use to quickly
-reinstall / re-configure my system. Unless you happen to use Ubuntu
-and have similar tastes in software, these may or may not be useful to
-you. But they are useful for me.
-
-They should be "run" manually in the following order:
-
-- install-desktop.sh
-- install-programming.sh
+- **Model:** Dell XPS 15 (9560)
+- **Branch:** megatron
+- Contains programming tools and data analysis tools.
