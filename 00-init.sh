@@ -48,16 +48,12 @@ git clone https://github.com/Choens/install-scripts.git
 #http://rpmfusion.org/Configuration
 
 # United RPMs ------------------------------------------------------------------
-
-# Sets up repo
-sudo dnf config-manager --add-repo=https://unitedrpms.github.io/unitedrpms.repo
-sudo dnf upgrade
-
-
-
+# https://unitedrpms.github.io/
+sudo rpm --import https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/URPMS-GPG-PUBLICKEY-Fedora-24
+sudo dnf -y install https://github.com/UnitedRPMs/unitedrpms/releases/download/6/unitedrpms-$(rpm -E %fedora)-6.fc$(rpm -E %fedora).noarch.rpmsudo dnf upgrade
 
 # Depending on circumstances, this can take a while to complete.
 # Be patient.
-sudo dnf update
+sudo dnf update -y
 
 ## After updating your computer, it is best to reset.
