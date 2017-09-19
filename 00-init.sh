@@ -50,7 +50,7 @@ git clone https://github.com/Choens/install-scripts.git
 # United RPMs ------------------------------------------------------------------
 # https://unitedrpms.github.io/
 sudo rpm --import https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/URPMS-GPG-PUBLICKEY-Fedora-24
-sudo dnf -y install https://github.com/UnitedRPMs/unitedrpms/releases/download/6/unitedrpms-$(rpm -E %fedora)-6.fc$(rpm -E %fedora).noarch.rpmsudo dnf upgrade
+sudo dnf -y install https://github.com/UnitedRPMs/unitedrpms/releases/download/6/unitedrpms-$(rpm -E %fedora)-6.fc$(rpm -E %fedora).noarch.rpm
 
 # Depending on circumstances, this can take a while to complete.
 # Be patient.
