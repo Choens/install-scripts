@@ -18,14 +18,20 @@
 # Anything new / interesting?
 dnf grouplist
 
+# Install Gnome Tweak Tool
+sudo dnf install gnome-tweak-tool xclip
 
-# This step may not be necessary if you are copying files from another computer.
-# Just copy this file too.
-sudo dnf install git
+# After you have goten an RSA Key: https://help.github.com/articles/connecting-to-github-with-ssh/
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-add ~/.ssh/id_rsa
+xclip -sel clip < ~/.ssh/id_rsa.pub
+# Copies the contents of the id_rsa.pub file to your clipboard.
+# Give this to GitHub, then proceed.
+# ONLY THEN May you clone this repo
 cd ~
 mkdir Git
 cd Git
-git clone https://github.com/Choens/system-install-scripts.git
+git clone https://github.com/Choens/install-scripts.git
 
 
 # ===============================================================================
