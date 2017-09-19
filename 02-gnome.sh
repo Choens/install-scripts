@@ -31,16 +31,16 @@ sudo dnf install \
      gnome-packagekit-updater.x86_64 \
      gnome-photos.x86_64 \
      gnome-power-manager.x86_64 \
+     gnome-shell-extension-alternate-tab.noarch \
      gnome-shell-extension-calc.noarch \
+     gnome-shell-extension-do-not-disturb-button \
+     gnome-shell-extension-media-player-indicator.noarch \
      gnome-shell-extension-pomodoro.x86_64 \
-     gnome-shell-extension-do-not-disturb-button.noarch \
-     gnome-shell-extension-no-topleft-hot-corner.noarch \
-     gnome-tweak-tool.noarch
-
-# Do Not install until I can replace Thunderbird / Evolution.
-#sudo dnf install \
-#    gnome-calendar.x86_64 \
-#    gnome-contacts.x86_64
+     gnome-shell-extension-topicons-plus \
+     gnome-tweak-tool.noarch \
+     united-gnome-shell-theme.noarch \
+     united-dark-gnome-shell-theme.noarch \
+     united-light-gnome-shell-theme.noarch
 
 # I don't usually need this.
 #dnf install gnome-sound-recorder.noarch

@@ -13,8 +13,9 @@
 #
 # ##############################################################################
 
-sudo ausearch -c 'wpa_supplicant' --raw | audit2allow -M my-wpasupplicant
-sudo semodule -X 300 -i my-wpasupplicant.pp
+# FAILED!
+#sudo ausearch -c 'wpa_supplicant' --raw | audit2allow -M my-wpasupplicant
+#sudo semodule -X 300 -i my-wpasupplicant.pp
 
 
 # ===============================================================================

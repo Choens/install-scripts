@@ -2,7 +2,6 @@
 # Desktop Applications- Fedora Workstation (Gnome)
 #
 # Sections:
-# - Repos: I use software from the Fedora and UnitedRPM repos.
 # - Fonts: I do like me some nice fonts.
 # - Power/Application Management
 # - CLI Applications
@@ -10,15 +9,6 @@
 # Uses sudo. Your user must be in the /etc/sudoers file.
 #
 # ##############################################################################
-
-
-
-# ===============================================================================
-# Repos
-# ===============================================================================
-
-# https://github.com/UnitedRPMs/unitedrpms.github.io/blob/master/README.md
-sudo -c 'dnf -y install https://raw.githubusercontent.com/UnitedRPMs/unitedrpms/master/RPM/unitedrpms-24-1.noarch.rpm'
 
 
 
@@ -65,6 +55,6 @@ sudo dnf install  \
      ranger
 
 ## From United RPMs, everything I need to play some funky white-tunes.
-sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
+## sudo dnf install gstreamer{1,}-{ffmpeg,libav,plugins-{good,ugly,bad{,-free,-nonfree}}} --setopt=strict=0
 
 ## Of course, other CLI apps get pulled in later as dependencies.
