@@ -6,6 +6,7 @@
 # - Mongo
 # - Postgres
 # - SQLite
+# - SQL Server
 # ##############################################################################
 
 
@@ -36,10 +37,10 @@
 # Postgres
 # ==============================================================================
 
-sudo dnf install \
-     libdbi-dbd-pgsql.x86_64 \
-     postgresql.x86_64 \
-     postgresql_autodoc
+#sudo dnf install \
+#     libdbi-dbd-pgsql.x86_64 \
+#     postgresql.x86_64 \
+#     postgresql_autodoc
 
 ## DBeaver comes with its own JDBC drivers.
 ## Only necessary if you want to use another JDBC-based connection.
@@ -64,3 +65,10 @@ sudo dnf install \
      spatialite-tools.x86_64 \
      sqlcipher.x86_64 \
      sqlitebrowser
+
+
+
+# ==============================================================================
+# SQL Server
+# ==============================================================================
+

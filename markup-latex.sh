@@ -14,7 +14,6 @@
 # ==============================================================================
 
 sudo dnf install \
-     emacs-common-ebib \
      fontawesome-fonts \
      latex2html \
      latexmk \

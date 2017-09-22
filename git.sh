@@ -22,7 +22,6 @@ sudo dnf install \
      tig.x86_64
 
 
-
 # ==============================================================================
 # Git
 # ==============================================================================
@@ -34,3 +33,6 @@ sudo dnf install \
      python3-rabbitvcs  \
      rabbitvcs-cli \
      rabbitvcs-nautilus
+
+git config --global user.name "Andy Choens"
+git config --global user.email andy.choens@acuitashealth.com
