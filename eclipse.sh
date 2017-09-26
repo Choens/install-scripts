@@ -43,7 +43,6 @@ sudo dnf remove eclipse-abrt.noarch
 # DLTK ------------------------------------------------------------------------
 sudo dnf install \
      eclipse-dltk.noarch \
-     eclipse-dltk-ruby.noarch \
      eclipse-dltk-sh.noarch
 
 # DTP -------------------------------------------------------------------------
@@ -52,7 +51,8 @@ sudo dnf install \
 #      eclipse-dtp.noarch
 
 # Python ---------------------------------------------------------------------
-sudo dnf install eclipse-pydev.x86_64 eclipse-pydev-mylyn.x86_64 
+# Decided to install via Eclipse Marketplace
+# sudo dnf install eclipse-pydev.x86_64 eclipse-pydev-mylyn.x86_64 
 
 # Web --------------------------------------------------------------------------
 sudo dnf install eclipse-webtools-sourceediting.noarch
@@ -62,10 +62,10 @@ sudo dnf install eclipse-webtools-sourceediting.noarch
 # Packages installed via the Eclipse Marketplace.
 # - DBeaver
 # - Eclipse Zip Editor
-# - Liclipse
+# - Liclipse Text
 # - PDF4Eclipse
 # - StartExplorer
 # - Statet
 # - Wicked Shell
-# - WikiText
+# - Mylyn WikiText
 # - Yedit
