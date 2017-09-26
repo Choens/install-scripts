@@ -38,11 +38,8 @@ sudo dnf install \
      python3-statsmodels.x86_64 \
      python3-virtualenv
 
-
 ## Jupyter Lab!
 pip3 install --upgrade --user jupyterlab rope
 
 ## If yapf makes it into Fedora drop this.
 pip3 install --upgrade --user epc yapf
-
-
