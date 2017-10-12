@@ -17,8 +17,9 @@
 sudo dnf install \
      emacs-pymacs \
      pychecker \
-     python-rope python-ropemacs \
+     python-rope \
      python3-autopep8 \
+     python3-Cython.x86_64 \
      python3-docs \
      python3-flake8 \
      python3-importmagic \
@@ -33,13 +34,16 @@ sudo dnf install \
      python3-pylint \
      python3-qtconsole
      python3-reportlab.x86_64 \
+     python-rope python-ropemacs \
      python3-scipy.x86_64 \
+     python3-sympy \
      python3-spyder \
      python3-statsmodels.x86_64 \
-     python3-virtualenv
+     python3-virtualenv \
+     sympy
 
 ## Jupyter Lab!
-pip3 install --upgrade --user jupyterlab rope
+pip3 install --upgrade --user feather-format jupyterlab rope
 
 ## If yapf makes it into Fedora drop this.
 pip3 install --upgrade --user epc yapf
