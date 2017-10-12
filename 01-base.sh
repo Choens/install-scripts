@@ -41,7 +41,11 @@ sudo systemctl start powertop.service
 ## Enable powertop on startup.
 sudo systemctl enable powertop.service
 
-
+## Make sure you aren't plugged in!
+## There may be some screen flicker.
+## More to learn: https://hobo.house/2015/12/18/linux-laptop-power-usage-tuning-with-powertop/
+sudo powertop --calibrate --html
+sudo powertop --autotune
 
 # ===============================================================================
 # CLI Applications
