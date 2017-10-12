@@ -20,7 +20,3 @@
 sudo dnf install \
      chromium.x86_64 \
      fedora-user-agent-chrome \
-     
-
-
-
