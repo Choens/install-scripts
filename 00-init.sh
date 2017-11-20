@@ -1,5 +1,5 @@
 # ##############################################################################
-# First- Fedora Workstation (Gnome)
+# 00 - Init
 #
 # Author: Andy Choens
 #
@@ -37,9 +37,6 @@ git clone https://github.com/Choens/install-scripts.git
 # ===============================================================================
 # Sources
 # ===============================================================================
-
-# SHVR Kernel -----------------------------------------------------------------
-#sudo dnf copr enable shvr/surface-pro-3-kernel
 
 # RPM Fusion ------------------------------------------------------------------
 # Go to RPM Fusion and download the appropriate RPM.

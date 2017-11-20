@@ -1,5 +1,5 @@
 # ##############################################################################
-# GNOME Applications
+# 02 - GNOME Applications
 #
 # Sections:
 # - GNOME
@@ -44,6 +44,7 @@ sudo dnf install \
 
 # I don't usually need this.
 #dnf install gnome-sound-recorder.noarch
+
 
 
 # ##############################################################################

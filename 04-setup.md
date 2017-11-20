@@ -1,0 +1,83 @@
+
+# 04 - Setup
+- Sections:
+    - Settings
+    - Tweaks
+    - Gnome Software
+    - SE Linux
+
+**Uses sudo. Your user must be in the /etc/sudoers file.**
+
+# Settings
+
+- Wifi                  Join local Wifi networks. Details vary.
+- Bluetooth             Setup headphones / phone.
+- Background            I might change the background.
+- Notifications         NA
+- Search                NA
+- Region & Language     NA
+- Universl Access       I prefer a mediu sized mouse cursor.
+- Online Accounts       As needed.
+- Privacy               NA
+- Sharing               I usually allow remote SSH login.
+- Sound                 NA
+- Power                 NA
+- Network               NA
+
+
+## Devices
+
+- Printers              As appropriate
+- Keyboard              NA
+- Mouse / Touchpad:     Enable Tap to Click
+- Displays              As appropriate
+- Removable Media       NA
+- Wacom Table           Don't own one
+- Color                 NA
+
+ - Disable Guest Login System:
+   - Settings -> Login Screen (Bottom) -> Genderal -> Uncheck Allow
+   guest login
+
+
+# Tweaks
+
+Organized By Tab.
+
+- Appearance:           NA
+- Desktop:              NA
+- Extensions:           Alternate Tab
+- Fonts:                NA
+- Keyboard & Mouse:     Caps Lock is also mapped to Ctrl
+- Power:                NA
+- Startup Applications: NA
+- Top Bar:              Show Date
+- Typing:               NA
+- Windows:              NA
+- Workspaces:           NA
+
+## Details
+
+- About                 NA
+- Date & Time           NA
+- Users                 NA
+- Default Applications
+    - Web: Firefox
+    - Mail: Evolution (until someone makes something better!)
+    - Calendar: Calendar
+    - Music: Rhythmbox (odd how Gnome Music is not an option?)
+    - Video: Videos
+    - Photos: Image Viewer
+
+# Gnome Software
+
+Install the following:
+
+- Kindle Cloud Reader
+- Google Drive
+- Google Maps
+- Ask Fedora
+
+# SE Linux Policies
+- https://docs.fedoraproject.org/en-US/Fedora/13/html/Security-Enhanced_Linux/sect-Security-Enhanced_Linux-Working_with_SELinux-Enabling_and_Disabling_SELinux.html
+- http://www.cyberciti.biz/faq/howto-turn-off-selinux/

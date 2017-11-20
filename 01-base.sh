@@ -1,5 +1,5 @@
 # ##############################################################################
-# Desktop Applications- Fedora Workstation (Gnome)
+# 01 - Base
 #
 # Sections:
 # - Fonts: I do like me some nice fonts.
@@ -16,12 +16,8 @@
 # Fonts
 # ===============================================================================
 
-#sudo dnf install \
-#    google-android-emoji-fonts.noarch \
-#    google-droid-sans-* \
-#    google-droid-serif-fonts.noarch \
-#    google-roboto-fonts.noarch \
-#    levien-inconsolata-fonts.noarch 
+sudo dnf install \
+    adobe-source-code-pro-fonts.noarch
 
 
 
@@ -43,9 +39,13 @@ sudo systemctl enable powertop.service
 
 ## Make sure you aren't plugged in!
 ## There may be some screen flicker.
-## More to learn: https://hobo.house/2015/12/18/linux-laptop-power-usage-tuning-with-powertop/
+## https://hobo.house/2015/12/18/linux-laptop-power-usage-tuning-with-powertop/
 sudo powertop --calibrate --html
+
+## Sets Everything Up Nicely.
 sudo powertop --autotune
+
+
 
 # ===============================================================================
 # CLI Applications
