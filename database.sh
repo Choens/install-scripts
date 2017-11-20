@@ -62,5 +62,14 @@ sudo dnf install \
      libspatialite.x86_64 \
      perl-DBD-SQLite.x86_64 perl-DateTime-Format-SQLite \
      spatialite-tools.x86_64 \
-     sqlcipher.x86_64 \
-     sqlitebrowser
+     sqlcipher.x86_64
+
+
+# ==============================================================================
+# SQL Server
+# ==============================================================================
+
+sudo dnf install \
+     freetds.x86_64 \
+     jtds.noarch \
+     unixODBC-gui-qt.x86_64
