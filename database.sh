@@ -36,10 +36,10 @@
 # Postgres
 # ==============================================================================
 
-sudo dnf install \
-     libdbi-dbd-pgsql.x86_64 \
-     postgresql.x86_64 \
-     postgresql_autodoc
+# sudo dnf install \
+#      libdbi-dbd-pgsql.x86_64 \
+#      postgresql.x86_64 \
+#      postgresql_autodoc
 
 ## DBeaver comes with its own JDBC drivers.
 ## Only necessary if you want to use another JDBC-based connection.
@@ -73,3 +73,17 @@ sudo dnf install \
      freetds.x86_64 \
      jtds.noarch \
      unixODBC-gui-qt.x86_64
+
+## Adds sqlcmd and bcp
+sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+
+## Only necessary if you previously installed any of these tools
+#sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
+
+## Completes installation
+sudo dnf install mssql-tools unixODBC-devel
+sudo dnf check-update
+sudo dnf upgrade
+
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
