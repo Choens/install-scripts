@@ -1,4 +1,3 @@
-
 # 04 - Setup
 - Sections:
     - Settings
@@ -81,3 +80,15 @@ Install the following:
 # SE Linux Policies
 - https://docs.fedoraproject.org/en-US/Fedora/13/html/Security-Enhanced_Linux/sect-Security-Enhanced_Linux-Working_with_SELinux-Enabling_and_Disabling_SELinux.html
 - http://www.cyberciti.biz/faq/howto-turn-off-selinux/
+
+# Fixes!
+
+- I have laptops with hipdi screens and external monitors which are
+  not (SAD). If you are having weird scaling problems with Firefox,
+  etc., open dconf-editor and look for xsettings -> overrides and make
+  sure it is BLANK! If there's anything in it - remove it and your
+  problems will probably go away.
+- If you need to tweak the boot params (UEFI)
+    - Edit: /etc/default/grub
+    - Run: sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+    - Reboot: Enjoy!
