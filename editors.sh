@@ -49,6 +49,16 @@ sudo dnf install \
 sudo dnf install gedit-plugin* gedit-latex*
 
 
+# ==============================================================================
+# Vim
+# An oldie, but goodie. You know you want it.
+# ==============================================================================
+sudo dnf install \
+    	vim-powerline \
+	vim-X11 \
+	vim-latex \
+	vim-enhanced 
+
 
 # ==============================================================================
 # Visual Studio Code
