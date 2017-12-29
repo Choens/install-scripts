@@ -32,6 +32,7 @@ sudo dnf install \
      texlive-luatex \
      texlive-lipsum \
      texlive-morefloats \
+     texlive-multirow \
      texlive-paper \
      texlive-pdftex \
      texlive-siunitx \
