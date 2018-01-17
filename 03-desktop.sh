@@ -19,5 +19,10 @@
 
 # Install the Fedora version, not the UnitedRPM version.
 sudo dnf install \
-     chromium.x86_64 \
-     fedora-user-agent-chrome \
+     chromium \
+     fedora-user-agent-chrome
+
+# - Open chromium-browser, go to chrome://flags
+# - Search for "media" and "cast"
+# - Make sure things are turned on.
+     
