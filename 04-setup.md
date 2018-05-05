@@ -16,10 +16,9 @@
 - Notifications         NA
 - Search                NA
 - Region & Language     NA
-- Universl Access       I prefer a mediu sized mouse cursor.
 - Online Accounts       As needed.
 - Privacy               NA
-- Sharing               I usually allow remote SSH login.
+- Sharing               On some machines, I allow this. On others I do not.
 - Sound                 NA
 - Power                 NA
 - Network               NA

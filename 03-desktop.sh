@@ -14,10 +14,18 @@
 # Internet
 # ===============================================================================
 
-## For work - I install Google Chrome because Chromium does not seem to have
-## reliable chromecast support.
+## At work - I install Chrome because Chromium lacks chromecast support.
 
-# Install the Fedora version, not the UnitedRPM version.
+# Chromium -----------------------------
 sudo dnf install \
      chromium.x86_64 \
-     fedora-user-agent-chrome \
+     fedora-user-agent-chrome
+
+# Chrome -------------------------------
+sudo dnf install \
+     chrome.x86_64 \
+     fedora-user-agent-chrome
+     
+# Other --------------------------------
+sudo dnf install \
+     mellowplayer

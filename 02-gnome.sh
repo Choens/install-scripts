@@ -14,11 +14,12 @@
 # ##############################################################################
 ## GNOME
 # ##############################################################################
-
 sudo dnf install \
      bleachbit.noarch \
      epiphany.x86_64 \
+     evince-nautilus.x86_64 \
      fonts-tweak-tool.x86_64 \
+     gnome-tweaks \
      gnome-books.x86_64 \
      gnome-chess.x86_64 \
      gnome-dictionary.x86_64 \
@@ -35,12 +36,7 @@ sudo dnf install \
      gnome-shell-extension-calc.noarch \
      gnome-shell-extension-do-not-disturb-button \
      gnome-shell-extension-media-player-indicator.noarch \
-     gnome-shell-extension-pomodoro.x86_64 \
-     gnome-shell-extension-topicons-plus \
-     gnome-tweak-tool.noarch \
-     united-gnome-shell-theme.noarch \
-     united-dark-gnome-shell-theme.noarch \
-     united-light-gnome-shell-theme.noarch
+     gnome-shell-extension-topicons-plus
 
 # I don't usually need this.
 #dnf install gnome-sound-recorder.noarch
@@ -50,13 +46,12 @@ sudo dnf install \
 # ##############################################################################
 # Wallpapers
 # ##############################################################################
-
-sudo dnf install \
-     f25-backgrounds-gnome.noarch \
-     f24-backgrounds-gnome.noarch \
-     f23-backgrounds-gnome.noarch \
-     f22-backgrounds-gnome.noarch \
-     f21-backgrounds-gnome.noarch
+#sudo dnf install \
+#     f25-backgrounds-gnome.noarch \
+#     f24-backgrounds-gnome.noarch \
+#     f23-backgrounds-gnome.noarch \
+#     f22-backgrounds-gnome.noarch \
+#     f21-backgrounds-gnome.noarch
 
 # For old times sake!
 #dnf install \
