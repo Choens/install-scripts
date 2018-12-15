@@ -2,7 +2,8 @@
 # Markup LaTeX
 #
 # Sections:
-# - CLI
+# - LaTeX
+# - LaTeX Classes
 # - GUI
 #
 # ##############################################################################
@@ -12,8 +13,7 @@
 # LaTeX
 # Because of the large number of packages installed with R, this is quick.
 # ==============================================================================
-sudo dnf install \
-     emacs-common-ebib \
+sudo dnf install -y \
      fontawesome-fonts \
      latex2html \
      latexmk \
@@ -43,8 +43,11 @@ sudo dnf install \
      texlive-ulem \
      texlive-units
 
-# Classes ------------------------------
-sudo dnf install \
+# ==============================================================================
+# LaTeX Classes
+# ==============================================================================
+
+sudo dnf install -y \
      texlive-apa \
      texlive-beamer \
      texlive-ecv \
@@ -57,4 +60,4 @@ sudo dnf install \
 # ==============================================================================
 # GUI
 # ==============================================================================
-sudo dnf install texworks.x86_64
+sudo dnf install -y texworks

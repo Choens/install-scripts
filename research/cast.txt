@@ -1,0 +1,116 @@
+Last metadata expiration check: 13 days, 11:51:24 ago on Wed 28 Feb 2018 09:00:01 PM EST.
+========================= Name & Summary Matched: cast =========================
+hazelcast-wm.noarch : Hazelcast WebFilter
+hazelcast-client.noarch : Hazelcast Client
+hazelcast-javadoc.noarch : Javadoc for hazelcast
+hazelcast-ra.noarch : Hazelcast Resource Adapter
+bouncycastle-pg.noarch : Bouncy Castle OpenPGP API
+hazelcast.noarch : Hazelcast CE In-Memory DataGrid
+bouncycastle-mail.noarch : Bouncy Castle S/MIME API
+icecast-doc.noarch : Documentation files for icecast
+castor-javadoc.noarch : API documentation for castor
+hazelcast-cloud.noarch : Hazelcast EC2 Auto Discovery
+python-castellan-doc.noarch : castellan documentation
+bouncycastle-javadoc.noarch : Javadoc for bouncycastle
+udpcast-devel.i686 : Development headers for udpcast
+udpcast-devel.x86_64 : Development headers for udpcast
+ghc-network-multicast.x86_64 : Simple multicast library
+pulsecaster.noarch : A PulseAudio-based podcast recorder
+icecast.x86_64 : ShoutCast compatible streaming media server
+perl-Crypt-CAST5_PP.noarch : CAST5 block cipher in pure Perl
+shiro-hazelcast.noarch : Apache Shiro :: Support :: Hazelcast
+bouncycastle.noarch : Bouncy Castle Cryptography APIs for Java
+mono-bouncycastle.x86_64 : Bouncy Castle Crypto Package for Mono
+trytond-stock-forecast.noarch : stock-forecast module for Tryton
+fence-virtd-multicast.x86_64 : Multicast listener for fence-virtd
+udpcast.x86_64 : UDP broadcast file distribution and installation
+castor-maven-plugin-javadoc.noarch : Javadoc for castor-maven-plugin
+bouncycastle-tls.noarch : Bouncy Castle JSSE provider and TLS/DTLS API
+hazelcast-hibernate.noarch : Integration of Hazelcast with Hibernate 3
+castor-maven-plugin.noarch : Maven plugin for Castor XML's code generator
+nuvola-app-jupiter-broadcasting.noarch : Jupiter Broadcasting plugin for Nuvola
+                                       : Player
+ghc-network-multicast-devel.x86_64 : Haskell network-multicast library
+                                   : development files
+python3-chromecast.noarch : Library for Python 3 to communicate with the Google
+                          : Chromecast
+globus-xio-gridftp-multicast.i686 : Globus Toolkit - Globus XIO GridFTP
+                                  : Multicast Driver
+globus-xio-gridftp-multicast.x86_64 : Globus Toolkit - Globus XIO GridFTP
+                                    : Multicast Driver
+golang-github-spf13-cast-unit-test.x86_64 : Unit tests for
+                                          : golang-github-spf13-cast package
+perl-IO-Socket-Multicast.x86_64 : Perl library for sending and receiving
+                                : multicast messages
+bouncycastle-pkix.noarch : Bouncy Castle PKIX, CMS, EAC, TSP, PKCS, OCSP, CMP,
+                         : and CRMF APIs
+golang-github-spf13-cast-devel.noarch : Safe and easy casting from one type to
+                                      : another in Go
+python2-chromecast.noarch : Library for Python 2 and 3 to communicate with the
+                          : Google Chromecast
+globus-xio-gridftp-multicast-devel.i686 : Globus Toolkit - Globus XIO GridFTP
+                                        : Multicast Driver Development Files
+globus-xio-gridftp-multicast-devel.x86_64 : Globus Toolkit - Globus XIO GridFTP
+                                          : Multicast Driver Development Files
+============================== Name Matched: cast ==============================
+castor.noarch : An open source data binding framework for Java
+castxml.x86_64 : C-family abstract syntax tree XML output tool
+sugar-castle.noarch : A game of discovery and strategy inspired by the Adventure
+                    : games of the 70s
+nodejs-recast.noarch : JavaScript syntax tree transformer
+python2-castellan.noarch : Generic Key Manager interface for OpenStack
+python3-castellan.noarch : Generic Key Manager interface for OpenStack
+python2-podcastparser.noarch : Simplified, fast RSS parsing library
+python3-podcastparser.noarch : Simplified, fast RSS parsing library
+============================ Summary Matched: cast =============================
+ices.x86_64 : Source streaming for Icecast
+open-mtools.x86_64 : Tools for testing IP multicast
+libshout.x86_64 : Icecast source streaming library
+obs-studio.x86_64 : Open Broadcaster Software Studio
+libshout.i686 : Icecast source streaming library
+python2-feedgen.noarch : Feed Generator (ATOM, RSS, Podcasts)
+python3-feedgen.noarch : Feed Generator (ATOM, RSS, Podcasts)
+jmdns.noarch : Java implementation of multi-cast DNS
+qmdnsengine.i686 : Library for multicast DNS as per RFC 676
+qmdnsengine.x86_64 : Library for multicast DNS as per RFC 676
+obs-studio-libs.x86_64 : Open Broadcaster Software Studio libraries
+gpodder.noarch : Podcast receiver/catcher written in Python
+omping.x86_64 : Utility to test IP multicast functionality
+udpxy.x86_64 : UDP-to-HTTP multicast traffic relay daemon
+jgroups.noarch : Toolkit for reliable multicast communication
+pimd.x86_64 : The original PIM-SM multicast routing daemon
+obs-studio-devel.x86_64 : Open Broadcaster Software Studio header files
+vocal.x86_64 : Powerful, beautiful, and simple podcast client
+jgroups212.noarch : A toolkit for reliable multicast communication
+asterisk-ices.x86_64 : Stream audio from Asterisk to an IceCast server
+ballerburg.x86_64 : Two players, two castles, and a hill in between
+flamp.x86_64 : Amateur Multicast Protocol - file transfer program
+python-blinker.noarch : Fast, simple object-to-object and broadcast signaling
+python2-zeroconf.noarch : Pure Python 2 Multicast DNS Service Discovery Library
+python3-blinker.noarch : Fast, simple object-to-object and broadcast signaling
+python3-zeroconf.noarch : Pure Python 3 Multicast DNS Service Discovery Library
+netresolve-backends-avahi.i686 : Multicast DNS backend for netresolve based on
+                               : libavahi
+netresolve-backends-avahi.x86_64 : Multicast DNS backend for netresolve based on
+                                 : libavahi
+openpgm.x86_64 : An implementation of the PGM reliable multicast protocol
+github2fedmsg.noarch : Pubsubhubbub app that rebroadcasts GH events over fedmsg
+openpgm.i686 : An implementation of the PGM reliable multicast protocol
+xsc.x86_64 : A clone of the old vector graphics video game Star Castle
+cryptacular.noarch : Java Library that complement to the Bouncy Castle crypto
+                   : API
+ezstream.x86_64 : Command line source client for Icecast media streaming servers
+fros-recordmydesktop.noarch : fros plugin for screencasting using
+                            : recordmydesktop as a backend
+multicat.x86_64 : Simple and efficient multicast and transport stream
+                : manipulation
+fros-gnome.noarch : fros plugin for screencasting using Gnome3 integrated
+                  : screencaster
+key-mon.noarch : A screen cast utility that displays your keyboard and mouse
+               : status
+mlt.x86_64 : Toolkit for broadcasters, video editors, media players, transcoders
+mlt.i686 : Toolkit for broadcasters, video editors, media players, transcoders
+avahi-dnsconfd.x86_64 : Configure local unicast DNS settings based on
+                      : information published in mDNS
+fros.noarch : Universal screencasting frontend with pluggable support for
+            : various backends

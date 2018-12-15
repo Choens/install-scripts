@@ -20,7 +20,7 @@
 # Copies the contents of the id_rsa.pub file to your clipboard.
 # Give this to GitHub, then proceed.
 # ONLY THEN May you clone this repo
-sudo dnf install xclip
+sudo dnf install -y xclip
 ssh-keygen -t rsa -b 4096 -C "andy.choens@gmail.com"
 ssh-add ~/.ssh/id_rsa
 xclip -sel clip < ~/.ssh/id_rsa.pub
@@ -40,18 +40,13 @@ git clone https://github.com/Choens/install-scripts.git
 # - Google Chrome: Optional
 # - Openh264: Important
 
-# Add the following:
-# - https://packages.microsoft.com/rhel/7/prod/
-# - https://packages.microsoft.com/yumrepos/vscode
+# After enabling the above, update the system.
+sudo dnf upgrade -y
 
 # RPM Fusion ------------------------------------------------------------------
-# Go to RPM Fusion and download the appropriate RPM.
-# Be sure to get the RPMs for both FREE and NON-FREE.
-# This should only take a moment or so.
-http://rpmfusion.org/Configuration
+# http://rpmfusion.org/Configuration
+# Either install the RPM file from above OR install as per below.
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# Depending on circumstances, this can take a while to complete.
-# Be patient.
-sudo dnf update -y
-
-## After updating your computer, it is best to reset.
+# After updating your computer, it is best to reset.
+# But - honestly - I usually just go on.

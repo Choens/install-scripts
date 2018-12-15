@@ -1,0 +1,21 @@
+Last metadata expiration check: 12 days, 18:02:53 ago on Wed 04 Apr 2018 11:19:12 PM EDT.
+Available Packages
+Name         : q-text-as-data
+Version      : 1.6.3
+Release      : 2.fc27
+Arch         : noarch
+Size         : 46 k
+Source       : q-text-as-data-1.6.3-2.fc27.src.rpm
+Repo         : fedora
+Summary      : Direct execution of SQL-like queries on tabular text files
+URL          : https://github.com/harelba/q
+License      : GPLv3
+Description  : q-text-as-data is a command line tool that allows direct
+             : execution of SQL-like queries on CSVs/TSVs (and any other tabular
+             : text files).
+             : 
+             : q-text-as-data treats ordinary files as database tables, and
+             : supports all SQL constructs, such as WHERE, GROUP BY, JOINs etc.
+             : It supports automatic column name and column type detection, and
+             : provides full support for multiple encodings.
+

@@ -1,0 +1,244 @@
+sqlite3-zlib-adapter (0.1.0)                                     - sqlite3_zlip_adapter is a custom class with adapter and convert function to store strings into a SQLite column as zlib blobs.
+addok-sqlite-store (1.0.0)                                       - Store documents in Sqlite.
+odoo10-addon-base-external-dbsource-sqlite (10.0.1.0.0.99.dev4)  - External Database Source - SQLite
+adhocracy-pysqlite (2.6.3)                                       - DB-API 2.0 interface for SQLite 3.x
+aiopg-sqlite (0.0.1a0)                                           - Drop-in replacement for aiopg for various (mostly test) purposes
+aiosqlite (0.2.0)                                                - asyncio bridge to the standard sqlite3 module
+aiosqlite3 (0.1.1)                                               - sqlite3 support for asyncio.
+apsw-cledoux (3.9.2-r1)                                          - Another Python SQLite Wrapper
+bayeslite-apsw (3.9.2-r1)                                        - Another Python SQLite Wrapper -- bayeslite custom edition
+apsw (3.9.2-r1)                                                  - Another Python SQLite Wrapper
+bamutil_tool (0.18)                                              - call bamutil tools and store time/mem metrics in sqlitedb
+bayeslite (0.1.8)                                                - BQL database built on SQLite3
+biobambam_tool (0.25)                                            - call biobambam tools and store time/mem metrics in sqlitedb
+bottle-sqlite (0.1.3)                                            - SQLite3 integration for Bottle.
+news-corpus-builder (0.1.4)                                      - Quickly build a news/web corpus with specifc topics or terms automatically from Google News or by specifying                 article links in a file. This module automatically extracts the body and title from each article and saves                the result to either flatfiles or sqlite database.
+bunny_runtime_metrics_sqlite (0.5)                               - store bunny runtime metrics in sqlite
+radicale-storage-by-index (1.0.1)                                - A regular radicale storage with an additional sqlite index on specified fields.
+byte-pysqlite (0.3.0)                                            - PySQLite executor for byte
+byte-sqlite (0.3.1)                                              - SQLite compiler and executor for byte
+ca-sqlite-manager (1.0)                                          - A SQLite manager that helps you to take control of your database.
+python-sqlite-cache (0.0.1)                                      - SQLite cache for Python.
+cachecontrol-sqlite (0.1.0)                                      - SQLite backend for requests CacheControl
+sqlite-cake (0.1)                                                - A simple SQLite Model Definition Helper.
+caribou (0.2.1)                                                  - python migrations for sqlite databases
+cloud_wiki (1.1)                                                 - A wiki engine backed by sqlite that provides its own http server, user authentication and is easy to administer from the command line.
+cruzdb (0.5.6)                                                   - Interface to UCSC genomic databases.
+Also allows things like up/downstream/k-nearest-neighbor queries and mirroring
+of tables to local sqlite databases
+csv-to-sqlite (1.0.2)                                            - A script that processes the input CSV files and copies them into a SQLite database.
+csvs-to-sqlite (0.7)                                             - Convert CSV files into a SQLite database
+csvsqlite3 (0.1.1)                                               - Csv data access package like PEP 249 api.
+CSVtoSQLite (0.2.1)                                              - Loads a CSV file a creates a preloaded SQLite database
+DancingPeasant (0.1.6)                                           - Utilities that allow a batch of CSV files to be passed as a single SQLITE db
+DatabasePipe (2.2.1)                                             - A pipe to connect various SQL databases to a PipeStack application. Supports PostgreSQL, SQLite and SQLServer 2000 via plugins.
+datafolder (0.3.6)                                               - Install and access data files (conf, json, sqlite3, ...) in an easy way.
+datasette (0.14)                                                 - An instant JSON API for your SQLite databases
+datoms (0.1.0)                                                   - A simplistic, Datomic inspired, SQLite backed, REST influenced, schemaless auditable facts storage.
+db-sqlite3 (0.0.1)                                               - sqlite3 driver for db
+sqlite-db-tools (0.1)                                            - Tools for managing sqlite3 databases.
+lsm-db (0.6.0)                                                   - Python bindings for the SQLite4 LSM database.
+dbbot (0.1)                                                      - A tool for serializing Robot Framework test run results into an sqlite3 database.
+scrapy-dblite (0.2.7)                                            - Simple library for storing Scrapy Items in sqlite database
+DbMother (0.2)                                                   - A python library to manage sqlite and postgresl connectivity
+dbpost (0.2.21)                                                  - proxy for save db data. support mysql、sqlite、mongodb
+dbTable (0.0.4)                                                  - A library to provide Table data constructs over SQLite Databases
+dbtools (0.4.0)                                                  - Lightweight SQLite interface
+dbviewer (0.2.1.0)                                               - SQLite database editor/viewer
+DBWrapper (1.1)                                                  - Thread-safe wrapper for Python sqlite3 bindings.
+DictLiteStore (0.9.3)                                            - A (Dynamic-Schema) dict -> sqlite3 library
+digimarks (1.1.0)                                                - Simple bookmarking service, using a SQLite database to store bookmarks, supporting tags and automatic title fetching.
+django-partial-index (0.4.0)                                     - PostgreSQL and SQLite partial indexes for Django models
+djorm-ext-pool (0.8.2)                                           - DB-API2 connection pool for Django (for postgresql, mysql and sqlite)
+dolphinlog (0.2.3)                                               - Yet another HAM radio logger using SQLite with ADIF-3 export support.
+doxytag2zealdb (0.2.6)                                           - doxytag2zealdb creates a SQLite3 database from a Doxygen tag file to enable searchable Doxygen docsets with categorized entries in tools like helm-dash, Zeal, and Dash.
+dumptruck (0.1.6)                                                - Relaxing interface to SQLite
+easy_sqlite (1.0.15)                                             - This Library makes using the sqlite3 library much easier and faster.
+easydb (0.2)                                                     - Simple SQLite wrapper to make it easier to manage your database
+emadb (1.0.9)                                                    - A package to collect measurements published by EMA using MQTT and a SQlite database
+eventstream-sqlite (1.0.0-alpha)                                 - simple persisted events
+excel-export (0.4.2)                                             - A command-line tool (and python library) to extract sqlite db from excel files
+execsql (1.24.4.3)                                               - Runs a SQL script against a PostgreSQL, MS-Access, SQLite, MS-SQL-Server, MySQL, MariaDB, or Firebird database, or an ODBC DSN.  Provides metacommands to import and export data, copy data between databases, conditionally execute SQL and metacommands, and dynamically alter SQL and metacommands with substitution variables.  Data can be exported in 13 different formats, including CSV, TSV, ODS, HTML, JSON, LaTeX, and Markdown tables, and using custom templates.
+fake2db (0.5.4)                                                  - Generate test databases filled with fake data (NOW CUSTOM SCHEMA CREATION SUPPORTED)(current support - sqlite, mysql, postgresql, mongodb, redis, couchdb)
+fastqc_db (0.34)                                                 - store FastQC data/summary in sqlitedb
+fastqc_sqlite (0.13)                                             - store FastQC data/summary in sqlitedb
+fastqc_tool (0.21)                                               - call fastqc tools and store time/mem metrics in sqlitedb
+fastqvalidator_sqlite (0.2)                                      - store fastqvalidator metrics in sqlite
+flask-sqlite_admin (0.3)                                         - SQLite DB Management Blueprint for Flask Applications
+GatherNews (0.2.1)                                               - Gathers unstructured News data into a SQLite3 db
+geminisqlite (0.11.0)                                            - A database framework for exploring genetic variation
+geonameszip (0.3.0)                                              - Quick and dirty script/api for syncing postal codes / zip codes with a local sqlite3 database.
+goatfish (0.1)                                                   - A small, schemaless ORM that is backed by SQLite.
+GoldSaxCreateTablesGFinance (1.04)                               - Auto Createe Tablesppaces in Sqlite3 To retrieve Capital Market quotes directly into an sqlite Database. This can be used by any Trader, Market Maker, a Retail Investor, Instituitional Investor, Hedge Fund Managers, and Asset Managers.
+GoldSaxMarketsEngine (0.5)                                       - A Capital Markets Engine for a Retail Investor, Instituitional Investor, Hedge Fund Managers, and Asset Managers to aggregate real-time data from numerous sources to SQLite Database.
+graphdb (2018.1.18)                                              - sqlite based graph database for storing native python objects and their relationships to each other
+gsqlite3 (0.1.3)                                                 - A wrapper for 'sqlite3' to make it play better with 'gevent'
+halt (0.1.1)                                                     - very light wieght db helper for sqlite, has some small mashconfig magic
+hamster-sqlite (0.3)                                             - Minimal dependency nicely abstracted sqlite backend of hamster time tracker - lets you connect to your hamster db and do stuff in python
+historydict (1.2.1)                                              - A persistent dictionary with history backed by sqlite
+HTSQL (2.3.3)                                                    - A Database Query Language (core & SQLite backend)
+importlite (0.1.0)                                               - Import CSV files into SQLite databases
+influxsql (0.0.16)                                               - Query INFLUXDB with SQL compatible with SQLITE.
+insights.py (1.0)                                                - A Python package for reading, storing, & analyzing data from Public Data APIs.It provides modules for reading & parsing data from URL, storing data using a wrapper for SQLite, and performing some statistics.
+integrity_to_sqlite (0.9)                                        - store `ls -l`, `md5sum` and `sha256sum` to sqlite
+jblite (0.4.3)                                                   - J-Ben SQLite parsing scripts
+json-to-sqlite (0.13)                                            - convert to json to column based sqlite
+jx-sqlite (0.10.17243)                                           - JSON query expressions using SQLite
+jython-sqlite3 (0.1.3.3)                                         - Lightweight wrapper for using sqlite3 in Jython (JVM alternative to C Python's sqlite3 extension module - 'pysqlite')
+karellen-sqlite (0.0.3)                                          - Karellen Sqlite Extensions
+kv (0.3)                                                         - KV provides a dictionary-like interface on top of SQLite.
+kvlite (0.6.3)                                                   - key-value database wrapper for SQL database (MySQL, SQLite)
+lazy_record (0.6.0)                                              - Generic Model Layer for Python Web Applications using Sqlite3
+lazytable (0.4.0)                                                - A basic sqlite table wrapper for python
+limigrations (1.1.0)                                             - Lightweight migrations system for python / sqlite3
+litecache (1.0.6)                                                - Thread safe query cache and async write for sqlite databases
+LiteMap (0.2.1)                                                  - Mapping class which stores in SQLite database.
+litesimple (0.1.0)                                               - Simple python ORM micro-framework for sqlite3
+Mopidy-Local-SQLite (1.0.0)                                      - Mopidy SQLite local library extension
+ltable (0.0.2)                                                   - lite table, not depden on numpy or sqliteoperations,.. find, filter, group, sort, top, tail ..
+macaron (0.3.1)                                                  - Simple object-relational mapper for SQLite3, includes plugin for Bottle web framework
+mandb (0.1.4)                                                    - Mandb is a lightweight wrapper around MySQLdb and sqlite3.
+merge_sqlite (0.37)                                              - merge arbitrary number of sqlite files
+microcosm-sqlite (0.1.0)                                         - Opinionated persistence with SQLite
+Micromigrate (0.1.0)                                             - Minimal Migration Manager for sqlite
+micropython-sqlite3 (0.2.4)                                      - sqlite3 module for MicroPython
+migranto (0.1.9)                                                 - Simple SQL migration tool for SQLite and PostgreSQL
+migrantpy (1.0.0)                                                - Simple SQLite database migrations
+minidb (2.0.2)                                                   - A simple SQLite3-based store for Python objects
+minimalKB (0.9)                                                  - A SQLite-backed minimalistic knowledge based for robotic application. Mostly KB-API conformant.
+minpubsub (0.3)                                                  - A minimal PubSub messaging model with multiple persistence options - SQLite, MySQL, MongoDB
+mir.sqlite3m (1.0.0)                                             - Simple sqlite3 migration management
+pastebin-mirror (0.0.1)                                          - Mirror Pastebin to an SQLite DB
+mongoenginelite (1.1)                                            - This is a lite version of MongoEngine ORM that persists the information in a JSON file, similar to SQLite to SQL databases
+monsql (0.2.0)                                                   - MonSQL - Lightweight and use-friendly wrapper for multiple relational databases. Currently supporting MySQL, SQLite3, PostgreSQL
+morango (0.2.4)                                                  - Pure Python sqlite-based Django DB replication engine.
+MqttSqliteLogger (1.0)                                           - Simple Sqlite logger for MQTT Brokers.
+myorm (0.0.11)                                                   - Provides a simple ORM for MySQL, PostgreSQL and SQLite.
+neopysqlite (0.2.3)                                              - Python wrapper around SQLite
+nonsqlite (0.6.12)                                               - Non SQL Database
+noorm (0.1.0)                                                    - Easy pythonic access to SQLite Databases. (Not an ORM)
+nose-perfdump (1.7)                                              - Dump per-test performance metrics to an SQLite database for querying.
+nosqlite (0.0.3)                                                 - A wrapper for sqlite3 to have schemaless, document-store features
+python-object-persistence (0.9.5)                                - Easily save, load, query your Python objects with SQLite3.
+optityper_to_sqlite (0.4)                                        - store optityper metrics in sqlite
+sqlite-orm (0.0.2b0)                                             - A Python object relational mapper for SQLite.
+ORMithorynque (0.1.1)                                            - ORMithorynque is an ORM (Object Relational Mapper) for Python and SQLite3 with excellent performances and multiple inheritance support.
+pdict (1.3)                                                      - pdict has a dictionary like interface and a sqlite backend
+permadict (1.0.1)                                                - A trivial, persistent, dictionary-like object, backed by SQLite.
+pglite (1.0.6)                                                   - PostgreSQLite
+phovea_data_sql (0.1.0)                                          - Data provider plugin for loading tabular data stored in an SQLite database.
+picard_metrics_sqlite (0.42)                                     - store picard metrics in sqlite
+picard_tool (0.107)                                              - call picard tools and store time/mem metrics in sqlitedb
+plasoscaffolder (0.1)                                            - This is a scaffolder for sqlite plugins for plaso.
+pod (0.54.2)                                                     - A Python Object Database Implemented Using cPickle and SQLite - An easy way to store and fetch Python objects
+Postamt (0.1.0)                                                  - Maintain postamt sqlite db
+Products.ZSQLiteDA (0.6.1)                                       - SQLite database adapter for Zope2
+prom (0.9.103)                                                   - A lightweight orm for PostgreSQL or SQLite
+puchikarui (0.1a0)                                               - A minimalist SQLite wrapper library for Python which supports ORM features.
+pydap.handlers.sqlite (0.1.0)                                    - A SQLite handler for Pydap
+pyormish (1.0.7)                                                 - A simple, ultra-lightweight ORM for MySQL, SQLite, and Postgres
+pypdx (0.0.1b3)                                                  - Extract information from a PDX XML file into a SQLite or PostgreSQL database
+pyRSKTools (0.1.5)                                               - A simple Python toolbox to open RSK SQLite files generated by RBR instruments.
+PySave (1.0)                                                     - All in one data saving from sqlite, mysql, sql, serialization, ini
+pyspatialite (3.0.1-alpha-0)                                     - DB-API 2.0 interface for SQLite 3.x with Spatialite 3.0.1
+pysqlite (2.8.3)                                                 - DB-API 2.0 interface for SQLite 3.x
+pysqlite3 (0.1.0)                                                - DB-API 2.0 interface for Sqlite 3.x
+pystaggrelite3 (0.1.3)                                           - Pure Python sqlite3 statistics aggregate functions
+pytablereader (0.15.0)                                           - A Python library to load structured table data from files/strings/URL with various data format: CSV/Excel/Google-Sheets/HTML/JSON/LTSV/Markdown/SQLite/TSV.
+pytablewriter (0.27.2)                                           - A Python library to write a table in various formats: CSV / Elasticsearch / HTML / JavaScript / JSON / Jupyter Notebook / LaTeX / LTSV / Markdown / MediaWiki / NumPy / Excel / Pandas / Python / reStructuredText / SQLite / TOML / TSV.
+randomdataloader (0.1.1.dev1)                                    - A random data loader which loads random data to a user input MySQL or sqlite3 database
+rdflib-sqlite (0.1)                                              - rdflib extension adding SQLite as back-end store
+readgroup_json_db (0.27)                                         - read readgroup data as json and store in sqlitedb
+reahl-sqlitesupport (3.2.0)                                      - Support for using Sqlite with Reahl.
+recent (0.1.3)                                                   - log bash history to an sqlite database
+RecSQL (0.7.11)                                                  - Treat SQLite tables as recarrays
+redmine_migrator (0.3)                                           - Migrate Redmine data from SQLite to Postgres with consistent type conversion.
+redturtle.entiterritoriali (0.4.0)                               - Package contatins all italian enti territoriali in sqlite db
+remove_qcfailed_mapped (0.4)                                     - call remove_qcfailed_mapped and store time/mem metrics in sqlitedb
+rove-sqlite (0.0.0)                                              - 
+s3m (1.0.5)                                                      - sqlite3 wrapper for multithreaded applications
+samtools_metrics_sqlite (0.6)                                    - store samtools metrics in sqlite
+samtools_tool (0.15)                                             - call samtools tools and store time/mem metrics in sqlitedb
+sqlite-schemaless (0.1.2)                                        - schemaless database on top of sqlite
+scout (3.0.2)                                                    - scout - a lightweight search server powered by SQLite
+scrapy-sqlitem (0.1.2)                                           - Scrapy extension to save items to a sql database
+SimpleORM (0.2.1)                                                - Simple SQLite3 Object Relational Mapper for Python.
+SimpleSQLite (0.19.0)                                            - SimpleSQLite is a Python library to simplify SQLite database operations: table creation, data insertion and get data as other data formats.
+
+simplite (0.0.1)                                                 - Intract with sqlite3 in python as simple as it can be.
+skylark (0.9.1)                                                  - A micro python orm for mysql and sqlite.
+Skyperious (3.5)                                                 - Skype SQLite database viewer, merger and exporter
+sostore (0.7)                                                    - SQLite Object Store - An absurdly simple object "database" for Python
+sqbrite (0.16)                                                   - SQBrite is a data recovery tool for SQLite databases
+sqdb (0.1)                                                       - A lightweight wrapper around sqlite3.
+sqlight (1.0.0)                                                  - A lightweight wrapper around SQLite.
+sqlist (0.2.2)                                                   - List-like wrapper for SQLite
+sqlit (0.1.6)                                                    - Run quick queries over multiple sqlite dbs
+switrs-to-sqlite (1.0.0)                                         - Script for converting SWITRS reports to SQLite.
+sqlite-web (0.2.0)                                               - Web-based SQLite database browser.
+sqlite2json (1.0.1)                                              - SQLite to JSON converter
+SQLite3Database (0.2.0)                                          - sqlite3 driver for the DatabasePipe package
+sqlite3dbm (0.1.4)                                               - sqlite-backed dictionary
+sqlite3ndarray (0.3.1)                                           - sqlite3 helpers for numpy ndarrays
+sqlite3paramstyle (0.0.2)                                        - Extended paramstyle for sqlite3 module
+sqlite3server (0.1.3)                                            - A SQLite client/server wrapper
+sqlite3tools (0.0.1dev)                                          - Tools for SQLite database processing
+sqlite3worker (1.1.7)                                            - ('Thread safe sqlite3 interface',)
+sqlite4dummy (0.0.6)                                             - A high performance and easy to use sqlite API for Data Scientist.
+sqlite_bro (0.8.11)                                              - a graphic SQLite Client in 1 Python file
+sqlite_cache (0.0.3)                                             - UNKNOWN
+sqlite_checkforeignkeys (1.0.3)                                  - A sqlite engine that checks foreign keys
+sqlite_dbm (3.2.0)                                               - Dict-style DBM based on sqlite3.
+sqlite_influx (0.0.1.dev7)                                       - UNKNOWN
+sqlite_object (0.3)                                              - Sqlite-backed set, list, and dict objects using JSON serialization
+sqlite_queue (0.01)                                              - 
+sqlite_to_postgres (0.41)                                        - write sqlite file to postgres
+sqlite_ucf (1.0.0)                                               - An alternate sqlite3.connect function that adds unicode case folding functionality.
+sqliteanalyzer (0.1)                                             - Extract space-usage statistics from an SQLite database
+sqlitebck (1.3)                                                  - Sqlite3 online backup API implementation.
+sqlitebiter (0.12.0)                                             - A CLI tool to convert CSV/Excel/HTML/JSON/LTSV/Markdown/SQLite/TSV/Google-Sheets to a SQLite database file.
+sqlitecli (0.0.0)                                                - 
+sqlitecookiejar (1.0)                                            - FileCookieJar using SQLite files for persistence
+sqlitedict (1.5.0)                                               - Persistent dict in Python, backed up by sqlite3 and pickle, multithread-safe.
+sqlitefktg (0.1.1)                                               - SQLite foreign key trigger generator
+SQLiteFKTG4SA (0.1.1)                                            - SQLite Foreign Key Trigger Generator for SQLAlchemy
+sqlitefts (0.4.9.2)                                              - A Python binding for tokenizers of SQLite Full Text Search
+SQLiteHelper (0.7)                                               - Wrapper of the sqlite3 module for easy of use
+sqlitehouse (1.2)                                                - Simple library for reading/writing records in a SQLite database.
+sqliteJson (0.1)                                                 - Convert sqlite query results into json consumable dicts
+sqlitelist (0.1)                                                 - SQLite3 wrapper with a list-like interface
+sqlitemgr (1.2.6)                                                - A wrapper class for basic setup and management of an SQLite database.
+sqliteminor (1.1.2)                                              - a python wrapper class for reading, updating, and deleting from tables of an sqlite database
+sqlitemodel (0.1.3)                                              - Wrapper for the sqlite3 database that enables you to create models you can easily query, save and update.
+sqlitent (0.2.1)                                                 - namedtuples inside set-like sqlite databases
+sqliter (0.1)                                                    - A iterator which filters list of dicts with sql syntax
+sqliteschema (0.9.5)                                             - A Python library to dump table schema of a SQLite database file. 
+sqliteshell (0.1.0)                                              - Just-about-tolerable sqlite shell for use with in-memory sqlite.
+sqlitestructure (0.2.0)                                          - sqlitestructure is a Python library to dump table structure of
+    a SQLite database file.
+sqlitex (0.0)                                                    - sqlite explorer via web
+sqlkit (0.9.6)                                                   - GUI to edit databases. Many backend supported (Postgres, Sqlite, MySql,...).
+Based on python, GTK, sqlalchemy. It's split into a GUI and a very rich package to create
+database interfaces
+sqlqueue (1.0.2)                                                 - A simple queue lib base on sqlite3
+sqlShort (0.3)                                                   - A tiny wrapper for the Python modules MySQLdb and Sqlite
+sqmediumlite (2.1.6)                                             - SQLite network connection
+sra_hs_lookup (0.1)                                              - call remove_qcfailed_mapped and store time/mem metrics in sqlitedb
+star_metrics_sqlite (0.15)                                       - store star metrics in sqlite
+swadr (1.2.1)                                                    - Import data from CSV, TSV, etc. files into SQLite3 database.
+table_string_sqlite_cell (0.5)                                   - create a single cell table with a value
+tabledata (0.0.5)                                                - A Python library to represent tabular data for pytablewriter/pytablereader/SimpleSQLite.
+
+tabql (0.0.2-dev)                                                - Use SQLite to query tab-delimited text files
+TaliffDB (0.2)                                                   - A server for python3 sqlite3
+taxonomylite (1.0.4)                                             - Traverse NCBI Taxonomy data using SQLite
+tbucket (1.1.0)                                                  - A sqlite-backed token bucket rate limiter implementation.
+tessdb (1.0.4)                                                   - A package to collect measurements published by TESS instruments into a SQlite database
+timesquirrel (0.7)                                               - A simple interface between timeseries data and SQLite3 databases
+tv_viewer (1.1.3)                                                - Python PyQt5 GUI to view tv program details using tvmaze API and SQLite
+upsert (0.0.1)                                                   - Upsert for MySQL, PostgreSQL, SQLite3.
+vtfunc (0.2.2)                                                   - Tabular user-defined functions for SQLite3.
+wgetdb (0.1.4)                                                   - Download and store webpages in a sqlite database
+xls2db (0.0.8)                                                   - Convert excel files following a particular schema into sqlite database files.
+y_serial (v0.60)                                                 - warehouse compressed Python objects with SQLite
+yapdict (0.0.0)                                                  - Yet Another Persistent Dict: sqlite-backed storage with a Python dict API.

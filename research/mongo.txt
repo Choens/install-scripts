@@ -1,0 +1,105 @@
+======================== Name & Summary Matched: mongo =========================
+mongo-tools.x86_64 : MongoDB Tools
+mongo-tools-devel.noarch : MongoDB Tools
+mongodb-test.x86_64 : MongoDB test suite
+php-mongodb.noarch : MongoDB driver library
+rubygem-mongo.noarch : Ruby driver for MongoDB
+perl-MongoDB.x86_64 : A MongoDB Driver for Perl
+mongo-java-driver2.noarch : MongoDB Java Driver
+php-pecl-mongodb.x86_64 : MongoDB driver for PHP
+poco-mongodb.i686 : The MongoDB POCO component
+poco-mongodb.x86_64 : The MongoDB POCO component
+nodejs-mongodb.noarch : A node driver for MongoDB
+python2-pymongo.x86_64 : Python driver for MongoDB
+python3-pymongo.x86_64 : Python driver for MongoDB
+rsyslog-mongodb.x86_64 : MongoDB support for rsyslog
+mongo-cxx-driver-devel.i686 : MongoDB header files
+mongo-cxx-driver-devel.x86_64 : MongoDB header files
+mongo-java-driver.noarch : A Java driver for MongoDB
+querydsl-mongodb.noarch : Querydsl - Mongodb support
+querydsl3-mongodb.noarch : Querydsl - Mongodb support
+php-alcaeus-mongo-php-adapter.noarch : Mongo PHP Adapter
+php-horde-Horde-Mongo.noarch : Horde Mongo Configuration
+syslog-ng-mongodb.x86_64 : mongodb support for syslog-ng
+almas-mongolian-title-fonts.noarch : Mongolian Title font
+libmongo-client.i686 : Alternative C driver for MongoDB
+libmongo-client.x86_64 : Alternative C driver for MongoDB
+mongo-cxx-driver.i686 : A legacy C++ Driver for MongoDB
+mongo-cxx-driver.x86_64 : A legacy C++ Driver for MongoDB
+mongo-java-driver-driver.noarch : The MongoDB Java Driver
+rubygem-mongo-doc.noarch : Documentation for rubygem-mongo
+python-pymongo-doc.noarch : Documentation for python-pymongo
+google-noto-sans-mongolian-fonts.noarch : Sans Mongolian font
+libmongo-client-doc.noarch : Documentation for libmongo-client
+nodejs-mongodb-core.noarch : Core MongoDB driver functionality
+rubygem-mongoid-doc.noarch : Documentation for rubygem-mongoid
+uwsgi-logger-mongodb.x86_64 : uWSGI - mongodblog logger plugin
+mongo-c-driver.i686 : Client library written in C for MongoDB
+mongo-c-driver.x86_64 : Client library written in C for MongoDB
+mongo-c-driver-libs.i686 : Shared libraries for mongo-c-driver
+mongo-c-driver-libs.x86_64 : Shared libraries for mongo-c-driver
+python2-pymongo-gridfs.x86_64 : Python GridFS driver for MongoDB
+python3-pymongo-gridfs.x86_64 : Python GridFS driver for MongoDB
+rubygem-mongoid.noarch : Elegant Persistance in Ruby for MongoDB
+mongo-tools-unit-test.x86_64 : Unit tests for mongo-tools package
+collectd-write_mongodb.x86_64 : MongoDB output plugin for collectd
+golang-github-3rf-mongo-lint-devel.noarch : MongoDB fork of Golint
+mongo-java-driver2-javadoc.noarch : Javadoc for mongo-java-driver2
+texlive-lshort-mongol-doc.noarch : Documentation for lshort-mongol
+libmongo-client-devel.i686 : Development files for libmongo-client
+libmongo-client-devel.x86_64 : Development files for libmongo-client
+python-mongoengine-doc.noarch : Documentation for python-mongoengine
+mongo-java-driver-driver-async.noarch : The MongoDB Java Async Driver
+springframework-data-mongodb.noarch : MongoDB support for Spring Data
+python2-mongoquery.noarch : A python implementation of mongodb queries
+python3-mongoquery.noarch : A python implementation of mongodb queries
+texlive-mongolian-babel-doc.noarch : Documentation for mongolian-babel
+fawkes-plugin-mongodb-log.x86_64 : Fawkes plugin to log data to MongoDB
+fawkes-plugin-mongodb.i686 : Fawkes plugin to access MongoDB databases
+fawkes-plugin-mongodb.x86_64 : Fawkes plugin to access MongoDB databases
+mongo-java-driver-driver-core.noarch : The MongoDB Java Operations Layer
+uwsgi-stats-pusher-mongodb.x86_64 : uWSGI - MongoDB Stats Pusher for uWSGI
+mongodb-server.x86_64 : MongoDB server, sharding server and support scripts
+mongoose-devel.i686 : Header files and development libraries for mongoose
+mongoose-devel.x86_64 : Header files and development libraries for mongoose
+springframework-data-mongodb-parent.noarch : Spring Data MongoDB Parent POM
+mongoose-lib.i686 : Shared Object for applications that use mongoose embedded
+mongoose-lib.x86_64 : Shared Object for applications that use mongoose embedded
+springframework-data-mongodb-log4j.noarch : Spring Data MongoDB - Log4J Appender
+texlive-mongolian-babel.noarch : A language definition file for Mongolian in
+                               : Babel
+texlive-hyphen-mongolian.noarch : Mongolian hyphenation patterns in Cyrillic
+                                : script
+fawkes-plugin-mongodb-rrd.x86_64 : Fawkes plugin to generate MongoDB performance
+                                 : data
+python2-mongoengine.noarch : A Python Document-Object Mapper for working with
+                           : MongoDB
+python3-mongoengine.noarch : A Python Document-Object Mapper for working with
+                           : MongoDB
+springframework-data-mongodb-javadoc.noarch : Javadoc for
+                                            : springframework-data-mongodb
+mongo-c-driver-devel.i686 : Header files and development libraries for
+                          : mongo-c-driver
+mongo-c-driver-devel.x86_64 : Header files and development libraries for
+                            : mongo-c-driver
+golang-github-3rf-mongo-lint-unit-test-devel.i686 : Unit tests for
+     ...: golang-github-3rf-mongo-lint package
+golang-github-3rf-mongo-lint-unit-test-devel.x86_64 : Unit tests for
+     ...: golang-github-3rf-mongo-lint package
+============================= Name Matched: mongo ==============================
+mongodb.x86_64 : High-performance, schema-free document-oriented database
+mongoose.x86_64 : An easy-to-use self-sufficient web server
+mongo-java-driver-bson.noarch : A Java-based BSON implementation
+============================ Summary Matched: mongo ============================
+texlive-montex.noarch : Mongolian LaTeX
+golang-github-go-mgo-mgo-devel.noarch : The MongoDB driver for Go
+rubygem-moped.noarch : A MongoDB driver for Ruby
+hyphen-mn.noarch : Mongolian hyphenation rules
+autocorr-mn.noarch : Mongolian auto-correction rules
+hunspell-mn.noarch : Mongolian hunspell dictionaries
+morphia.noarch : A type-safe Java library for MongoDB
+rubygem-origin.noarch : Simple DSL for MongoDB query generation
+perl-Mango.noarch : Pure-Perl non-blocking I/O MongoDB driver
+eclipse-nls-mn.noarch : Eclipse/Babel language pack for Mongolian
+fawkes-plugin-pcl-db.x86_64 : Fawkes plugins to store and retrieve pointclouds
+                            : from MongoDB

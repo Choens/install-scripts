@@ -2,9 +2,8 @@
 # Markup HTML
 #
 # ##############################################################################
-sudo dnf install \
+sudo dnf install -y \
      hevea \
      htmlcleaner \
-     linkchecker.x86_64 \
-     nekohtml \
-     perl-DBIx-XHTML_Table
+     linkchecker \
+     nekohtml

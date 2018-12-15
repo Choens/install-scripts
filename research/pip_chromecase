@@ -1,0 +1,9 @@
+cast (0.1.1)          - Command line utility to control your Google Chromecast.
+cast_convert (0.12)   - Convert and inspect video for Chromecast playback
+castctrl (1.1.0)      - A Python program to simplify casting video to a Chromecast
+caster (0.1)          - Caster is a command line tool for casting media to chromecast
+catt (0.5.2)          - Cast All The Things allows you to send videos from many, many online sources to your Chromecast.
+CM2C (1.1.0)          - Convert Movie To Cast (CM2C) is a Python application to convert any videos files with subtitle(s) to video supported by Google Chromecast.
+lastcast (0.7.0)      - Scrobble music to last.fm from Chromecast.
+PyChromecast (1.0.3)  - Python module to talk to Google Chromecast.
+startcast (0.1.2)     - Start chromecast apps from command line

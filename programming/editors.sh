@@ -29,7 +29,8 @@
 # Emacs
 # This was the first editor I loved.
 # ==============================================================================
-sudo dnf install \
+sudo dnf install -y \
+     adobe-source-code-pro-fonts \
      emacs-auctex emacs-auctex-doc \
      emacs-auto-complete \
      emacs-ess emacs-ess-doc\
@@ -38,7 +39,7 @@ sudo dnf install \
      python-ropemacs \
      emacs-slime-el \
      emacs-yaml-mode \
-     emacs.x86_64
+     emacs
 
 
 
@@ -46,7 +47,7 @@ sudo dnf install \
 # Gedit
 # It ain't glamorous, but it can be effective
 # ==============================================================================
-sudo dnf install gedit-plugin* gedit-latex*
+sudo dnf install -y gedit-plugin* gedit-latex*
 
 
 
@@ -54,11 +55,7 @@ sudo dnf install gedit-plugin* gedit-latex*
 # Vim
 # Because, you can't have too many editors.
 # ==============================================================================
-sudo dnf install \
-	neovim \
-	python3-neovim
-
-npm install neovim
+sudo dnf install -y vim
 
 
 
@@ -69,12 +66,12 @@ npm install neovim
 # ==============================================================================
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-dnf check-update
-sudo dnf install code
+sudo dnf check-update
+sudo dnf install -y code
 
 
 
 # ==============================================================================
 # Other
 # ==============================================================================
-sudo dnf install meld
+sudo dnf install -y meld sequeler

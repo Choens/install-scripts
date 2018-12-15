@@ -1,5 +1,5 @@
+* 04 - Setup
 
-# 04 - Setup
 - Sections:
     - Settings
     - Tweaks
@@ -8,7 +8,7 @@
 
 **Uses sudo. Your user must be in the /etc/sudoers file.**
 
-# Settings
+* Settings
 
 - Wifi                  Join local Wifi networks. Details vary.
 - Bluetooth             Setup headphones / phone.
@@ -24,7 +24,7 @@
 - Network               NA
 
 
-## Devices
+#* Devices
 
 - Printers              As appropriate
 - Keyboard              NA
@@ -39,7 +39,7 @@
    guest login
 
 
-# Tweaks
+* Tweaks
 
 Organized By Tab.
 
@@ -55,7 +55,7 @@ Organized By Tab.
 - Windows:              NA
 - Workspaces:           NA
 
-## Details
+#* Details
 
 - About                 NA
 - Date & Time           NA
@@ -68,7 +68,7 @@ Organized By Tab.
     - Video: Videos
     - Photos: Image Viewer
 
-# Gnome Software
+* Gnome Software
 
 Install the following:
 
@@ -77,6 +77,6 @@ Install the following:
 - Google Maps
 - Ask Fedora
 
-# SE Linux Policies
+* SE Linux Policies
 - https://docs.fedoraproject.org/en-US/Fedora/13/html/Security-Enhanced_Linux/sect-Security-Enhanced_Linux-Working_with_SELinux-Enabling_and_Disabling_SELinux.html
 - http://www.cyberciti.biz/faq/howto-turn-off-selinux/

@@ -13,7 +13,7 @@
 # ==============================================================================
 # Language
 # ==============================================================================
-sudo dnf install \
+sudo dnf install -y \
      emacs-pymacs \
      pychecker \
      python3-autopep8 \
@@ -23,15 +23,9 @@ sudo dnf install \
      python3-flake8 \
      python3-importmagic \
      python3-jedi \
-     python3-numpy.x86_64 \
-     python3-pandas.x86_64 \
      python3-pylint \
-     python3-pymssql \
-     python3-reportlab.x86_64 \
-     python3-seaborn \
-     python3-scipy.x86_64 \
-     python3-statsmodels.x86_64 \
      python3-virtualenv
+
 
 
 
@@ -40,18 +34,25 @@ sudo dnf install \
 # ==============================================================================
 
 ## Complicated by the fact that jupyterlab is not yet in the Fedora repos.
-# sudo dnf install \
-#      python3-ipykernel \
-#      python3-jupyter* \
-#      python3-metakernel python3-metakernel-bash \
-#      python3-nbconvert \
-#      python3-nbsphinx.noarch \
-#      python3-qtconsole
+sudo dnf install -y \
+     python3-ipykernel \
+     python3-jupyterlab-launcher \
+     python3-metakernel python3-metakernel-bash \
+     python3-nbconvert \
+     python3-nbsphinx.noarch \
+     python3-numpy \
+     python3-pandas* \
+     python3-pymssql \
+     python3-reportlab \
+     python3-seaborn \
+     python3-scipy \
+     python3-statsmodels \
+     python3-qtconsole.noarch
 
 ## If/when yapf makes it into Fedora, remove it from this list.
 pip3 install --upgrade --user epc visidata yapf
-pip3 install --upgrade --user bokeh  jupyter jupyter-app jupyter-lab orange3 seaborn
-pip3 install --upgrade --user bokeh  orange3
+pip3 install --upgrade --user bokeh jupyterlab  jupyterlab-launcher jupyterlab_templates jupyterlab-widgets
+pip3 install --upgrade --user orange3
 
 ## R Kernel:
 ## https://github.com/IRkernel/IRkernel

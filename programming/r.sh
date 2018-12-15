@@ -22,13 +22,13 @@
 # I don't install very many packages from Fedora. I
 # download from CRAN so I always have newer versions of the code.
 
-sudo dnf install \
+sudo dnf install -y \
      R \
      R-DBI \
      R-java
 
 # Additional packages you will need to compile Atom packages.
-sudo dnf install \
+sudo dnf install -y \
      curl.x86_64 \
      cyrus-sasl.x86_64 cyrus-sasl-devel.x86_64 \
      gdal.x86_64 gdal-devel.x86_64 \
@@ -43,9 +43,9 @@ sudo dnf install \
      proj-nad.x86_64 \
      udunits2.x86_64 udunits2-devel.x86_64
 
-## Annoying, but necessary for the time being.
-## This can help with problems installing stringi.
-R CMD INSTALL stringi_1.1.1.tar.gz --configure-args='--disable-pkg-config'
+# This was required to install tidyverse, but that no longer seems to be true!
+# So, skip it unless you need it.
+#R CMD INSTALL stringi_1.1.1.tar.gz --configure-args='--disable-pkg-config'
 
 
 
@@ -56,5 +56,13 @@ R CMD INSTALL stringi_1.1.1.tar.gz --configure-args='--disable-pkg-config'
 # Install RStudio:
 # http://www.rstudio.com/ide/download/desktop
 # Unfortunately, the URL will have to be updated over time.
-curl https://download1.rstudio.org/rstudio-1.0.153-x86_64.rpm
-rpm --install ~/Downloads/rstudio
+sudo rpm --install ~/Downloads/rstudio*
+
+
+# ==============================================================================
+# Stupid Fixes
+# ==============================================================================
+
+# I may no longer need these?
+#sudo ln /usr/lib64/libgfortran.so.5 /usr/lib64/libgfortran.so.4
+#sudo ln /usr/lib64/libicui18n.so /usr/lib64/libicui18n.so.57

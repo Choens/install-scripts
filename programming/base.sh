@@ -1,34 +1,26 @@
 # ##############################################################################
-# Git
+# Build Essentials
 #
-# Sections:
-# - CLI
-# - GUI
+# Useful tools for building things.
 #
 # ##############################################################################
-
-
-
 
 # ==============================================================================
 # CLI
 # ==============================================================================
 sudo dnf install -y \
-     aspell-en \
-     git  \
-     git-extras \
-     git-ftp \
-     tig
+     automake \
+     dos2unix \
+     gcc gcc-c++.x86_64 \
+     make \
+     rpmdevtools
 
 
 
 # ==============================================================================
-# Git
+# Desktop
 # ==============================================================================
 sudo dnf install -y \
-     gitg.x86_64 \
-     python3-rabbitvcs  \
-     rabbitvcs-cli \
-     rabbitvcs-nautilus
+     dconf-editor \
+     tilix tilix-nautilus
 
-## Removed git-gui and gitk!
