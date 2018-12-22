@@ -13,22 +13,22 @@
 # ==============================================================================
 # CLI
 # ==============================================================================
-sudo dnf install \
-     aspell-en.x86_64 \
-     git.x86_64  \
+sudo dnf install -y \
+     aspell-en \
+     git  \
      git-extras \
      git-ftp \
-     tig.x86_64
+     tig
 
 
 
 # ==============================================================================
 # Git
 # ==============================================================================
-sudo dnf install \
-     git-gui \
+sudo dnf install -y \
      gitg.x86_64 \
-     gitk \
      python3-rabbitvcs  \
      rabbitvcs-cli \
      rabbitvcs-nautilus
+
+## Removed git-gui and gitk!

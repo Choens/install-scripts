@@ -20,7 +20,7 @@
 # Copies the contents of the id_rsa.pub file to your clipboard.
 # Give this to GitHub, then proceed.
 # ONLY THEN May you clone this repo
-sudo dnf install xclip
+sudo dnf install -y xclip
 ssh-keygen -t rsa -b 4096 -C "andy.choens@gmail.com"
 ssh-add ~/.ssh/id_rsa
 xclip -sel clip < ~/.ssh/id_rsa.pub
@@ -43,6 +43,7 @@ git clone https://github.com/Choens/install-scripts.git
 # - Google Chrome: Optional
 # - Openh264: Important
 
+<<<<<<< HEAD
 # Add the following (check they are current):
 # Reference: https://docs-old.fedoraproject.org/en-US/Fedora/23/html/System_Administrators_Guide/sec-Managing_DNF_Repositories.html
 sudo dnf config-manager --add-repo https://packages.microsoft.com/rhel/7.4/prod/
@@ -53,10 +54,15 @@ sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/vscod
 # Be sure to get the RPMs for both FREE and NON-FREE.
 # This should only take a moment or so.
 # http://rpmfusion.org/Configuration
+=======
+# After enabling the above, update the system.
+sudo dnf upgrade -y
+
+# RPM Fusion ------------------------------------------------------------------
+# http://rpmfusion.org/Configuration
+# Either install the RPM file from above OR install as per below.
+>>>>>>> b4c5932ad725e9456e782598e57691f3eb23a5dc
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# Depending on circumstances, this can take a while to complete.
-# Be patient.
-sudo dnf update -y
-
-## After updating your computer, it is best to reset.
+# After updating your computer, it is best to reset.
+# But - honestly - I usually just go on.

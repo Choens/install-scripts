@@ -1,31 +1,26 @@
 # ##############################################################################
-# Node.js
+# Build Essentials
 #
-# Node.js comes with npm, which is mostly used to handle dependencies.
-#
-# Sections:
-# - DNF
-# - NPM
+# Useful tools for building things.
 #
 # ##############################################################################
 
+# ==============================================================================
+# CLI
+# ==============================================================================
+sudo dnf install -y \
+     automake \
+     dos2unix \
+     gcc gcc-c++.x86_64 \
+     make \
+     rpmdevtools
+
 
 
 # ==============================================================================
-# DNF
+# Desktop
 # ==============================================================================
-<<<<<<< HEAD
-sudo dnf install nodejs.x86_64
-=======
-sudo dnf install -y nodejs.x86_64
->>>>>>> b4c5932ad725e9456e782598e57691f3eb23a5dc
+sudo dnf install -y \
+     dconf-editor \
+     tilix tilix-nautilus
 
-
-
-# ==============================================================================
-# DNF
-# ==============================================================================
-sudo npm install -g bower 
-sudo npm install -g foundation-cli 
-sudo npm install -g gulp
-sudo npm install -g grunt

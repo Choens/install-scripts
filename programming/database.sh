@@ -14,9 +14,10 @@
 # Generic GUI Tools
 # ==============================================================================
 
-# I like DBeaver, but I install it as part of Eclipse.
-# http://dbeaver.jkiss.org/download/
-#rpm --install ~/Downloads/dbeaver*
+# DBeaver - The best generic SQL client I can find on Linux.
+# Download: http://dbeaver.jkiss.org/download/
+sudo dnf install java-1.8.0-openjdk.x86_64
+sudo rpm --install ~/Downloads/dbeaver*
 
 
 
@@ -51,10 +52,18 @@
 # SQLite
 # ==============================================================================
 
+<<<<<<< HEAD
 sudo dnf install \
      libspatialite \
      spatialite-tools \
      sqlcipher
+
+=======
+sudo dnf install -y \
+     libspatialite.x86_64 \
+     spatialite-tools.x86_64 \
+     sqlcipher.x86_64
+>>>>>>> b4c5932ad725e9456e782598e57691f3eb23a5dc
 
 
 
@@ -62,7 +71,11 @@ sudo dnf install \
 # SQL Server
 # ==============================================================================
 
+<<<<<<< HEAD
 sudo dnf install \
+=======
+sudo dnf install -y \
+>>>>>>> b4c5932ad725e9456e782598e57691f3eb23a5dc
      freetds \
      jtds \
      unixODBC.x86_64
