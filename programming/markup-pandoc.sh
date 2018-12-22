@@ -3,6 +3,6 @@
 #
 # ##############################################################################
 sudo dnf install \
-     pandoc.x86_64 \
-     pandoc-citeproc.x86_64 \
-     pandoc-pdf.x86_64  
+     pandoc \
+     pandoc-citeproc \
+     pandoc-pdf  

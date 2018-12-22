@@ -1,0 +1,16 @@
+* TODO Connect to Acuitas VPN
+   - I had to install: NetworkManager-l2tp & NetworkManager-l2tp-gnome to get a NM compliant l2tp
+     client which included libreswan.
+
+   - VPN Notes
+   This information will be required to set up the connection on devices:
+
+   Server Name and IP (you will need one or the other, usually not both):
+   river-street-troy-office-bdzjpwbmtt.dynamic-m.com
+   72.45.182.242
+
+   Preshared Key / Passphrase 
+   A-cu_it@$
+
+  - And then I gave up and installed strongswan
+

@@ -1,0 +1,2 @@
+R-Rcompression
+python3-snappy

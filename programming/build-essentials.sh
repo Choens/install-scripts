@@ -7,7 +7,10 @@
 
 sudo dnf install \
      automake \
-     dos2unix.x86_64 \
+     dos2unix \
      gcc gcc-c++.x86_64 \
-     make.x86_64 \
-     rpmdevtools
+     make \
+     rpmdevtools \
+     p7zip p7zip-plugins \
+     pwgen \
+     ranger

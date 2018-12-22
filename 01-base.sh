@@ -16,7 +16,7 @@
 # Fonts
 # ===============================================================================
 sudo dnf install \
-    adobe-source-code-pro-fonts.noarch
+    adobe-source-code-pro-fonts
 
 
 
@@ -24,16 +24,21 @@ sudo dnf install \
 # Power/Application Management
 # ===============================================================================
 sudo dnf install  \
-     htop.x86_64 \
-     powertop.x86_64
+     htop \
+     powertop \
+     tlp
 
 ## Test to see if powertop is running correctly.
 sudo systemctl start powertop.service
+sudo systemctl start tlp.service  
+sudo systemctl start tlp-sleep.service
 
 ## IF this works OK . . . 
 
 ## Enable powertop on startup.
 sudo systemctl enable powertop.service
+sudo systemctl enable tlp.service  
+sudo systemctl enable tlp-sleep.service
 
 ## Make sure you aren't plugged in!
 ## There may be some screen flicker.
@@ -43,14 +48,5 @@ sudo powertop --calibrate --html
 ## Sets Everything Up Nicely.
 sudo powertop --autotune
 
-
-
-# ===============================================================================
-# CLI Applications
-# ===============================================================================
-sudo dnf install  \
-     ffmpeg.x86_64 \
-     mpv.x86_64 \
-     p7zip.x86_64 p7zip-plugins.x86_64 \
-     pwgen.x86_64 \
-     ranger
+## Settings
+## /etc/default/tlp

@@ -1,0 +1,16 @@
+Last metadata expiration check: 12 days, 18:02:14 ago on Wed 04 Apr 2018 11:19:12 PM EDT.
+Available Packages
+Name         : sqlcli
+Version      : 3
+Release      : 10.fc27
+Arch         : noarch
+Size         : 27 k
+Source       : sqlcli-3-10.fc27.src.rpm
+Repo         : fedora
+Summary      : A command-line SQL query utility
+URL          : http://github.com/larsks/sqlcli/
+License      : GPLv3+
+Description  : This is a tool that uses SQLAlchemy to execute SQL queries
+             : against a SQL database specified via a URL or an INI-style file
+             : (such as those used by most of the OpenStack services).
+

@@ -1,0 +1,11 @@
+======================== Name & Summary Matched: garmin ========================
+garmintools.i686 : Tools for Garmin GPS-devices
+garmintools.x86_64 : Tools for Garmin GPS-devices
+garmintools-devel.i686 : Development-files for garmintools
+garmintools-devel.x86_64 : Development-files for garmintools
+GarminPlugin.x86_64 : Garmin Communicator Plugin port for Linux
+garmin-sync.noarch : Download data from Garmin fitness computers
+garmindev.x86_64 : Drivers for communication with Garmin GPS devices
+=========================== Summary Matched: garmin ============================
+perl-GPS.noarch : Perl interface to a GPS receiver that implements the Garmin
+                : protocol

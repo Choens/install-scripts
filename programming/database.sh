@@ -28,7 +28,7 @@
 #sudo dnf install \
 #     libmongo-client.x86_64 libmongo-client-devel.x86_64 \
 #     mongo-java-driver
-#     mongo-tools.x86_64
+#     mongo-tools
 
 
 
@@ -37,7 +37,6 @@
 # ==============================================================================
 
 # sudo dnf install \
-#      libdbi-dbd-pgsql.x86_64 \
 #      postgresql.x86_64 \
 #      postgresql_autodoc
 
@@ -46,11 +45,6 @@
 #sudo dnf install \
 #    postgresql-jdbc
 
-# 
-# https://pgadmin.org/download/
-#sudo dnf install \
-#     pgadmin3.x86_64
-
 
 
 # ==============================================================================
@@ -58,11 +52,10 @@
 # ==============================================================================
 
 sudo dnf install \
-     libdbi-dbd-sqlite.x86_64 \
-     libspatialite.x86_64 \
-     perl-DBD-SQLite.x86_64 perl-DateTime-Format-SQLite \
-     spatialite-tools.x86_64 \
-     sqlcipher.x86_64
+     libspatialite \
+     spatialite-tools \
+     sqlcipher
+
 
 
 # ==============================================================================
@@ -70,20 +63,21 @@ sudo dnf install \
 # ==============================================================================
 
 sudo dnf install \
-     freetds.x86_64 \
-     jtds.noarch \
-     unixODB.x86_64
+     freetds \
+     jtds \
+     unixODBC.x86_64
 
+## DO I NEED THIS?
 ## Adds sqlcmd and bcp
-sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+#sudo curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
 
 ## Only necessary if you previously installed any of these tools
 #sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
 
 ## Completes installation
-sudo dnf install mssql-tools unixODBC-devel
-sudo dnf check-update
-sudo dnf upgrade
+#sudo dnf install mssql-tools unixODBC-devel.x86_64
+#sudo dnf check-update
+#sudo dnf upgrade
 
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+#echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+#echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc

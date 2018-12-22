@@ -1,0 +1,29 @@
+======================= Summary & Name Matched: pantheon =======================
+pantheon-files.x86_64 : Pantheon file manager
+pantheon-files.i686 : Pantheon file manager
+pantheon-agent-polkit.x86_64 : Pantheon Polkit Agent
+pantheon-greeter.x86_64 : Pantheon's LightDM Login Screen
+pantheon-photos.x86_64 : Pantheon photo manager and viewer
+pantheon-online-accounts-libs.i686 : Pantheon Online Accounts system
+pantheon-online-accounts-libs.x86_64 : Pantheon Online Accounts system
+pantheon-session-settings.noarch : Pantheon session configuration files
+switchboard-plug-pantheon-shell.x86_64 : Switchboard Pantheon Shell plug
+pantheon-files-devel.i686 : Pantheon file manager (development headers)
+pantheon-files-devel.x86_64 : Pantheon file manager (development headers)
+gsignond-pantheon-config.noarch : Pantheon configuration file for gsignond
+pantheon-online-accounts.x86_64 : Pantheon Online Accounts system (plugins)
+gsignond-extension-pantheon.x86_64 : Pantheon extension for the gsignond daemon
+pantheon-session-settings-overrides.noarch : Pantheon session default settings
+                                           : overrides
+pantheon-online-accounts-devel.i686 : Pantheon Online Accounts system
+                                    : (development headers)
+pantheon-online-accounts-devel.x86_64 : Pantheon Online Accounts system
+                                      : (development headers)
+============================ Name Matched: pantheon ============================
+pantheon-terminal.x86_64 : The terminal of the 21st century
+pantheon-calculator.x86_64 : A tiny, simple calculator written in GTK+ and Vala
+========================== Summary Matched: pantheon ===========================
+cerbere.x86_64 : Pantheon session watchdog
+capnet-assist.x86_64 : Captive Portal Assistant for Pantheon
+appcenter.x86_64 : Software Center for the Pantheon desktop
+pandora-wallpapers.noarch : Wallpapers for elementary's Pantheon desktop

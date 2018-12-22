@@ -1,0 +1,36 @@
+====================== Summary & Name Matched: sqlalchemy ======================
+python-sqlalchemy-doc.noarch : Documentation for SQLAlchemy
+python-sqlalchemy-utils.noarch : Various utility functions for SQLAlchemy
+python3-sqlalchemy-utils.noarch : Various utility functions for SQLAlchemy
+python2-flask-sqlalchemy.noarch : Adds SQLAlchemy support to Flask application
+python3-flask-sqlalchemy.noarch : Adds SQLAlchemy support to Flask application
+python-zope-sqlalchemy.noarch : Minimal Zope/SQLAlchemy transaction integration
+python2-sqlalchemy_schemadisplay.noarch : Turn SQLAlchemy DB Model into a graph
+python3-zope-sqlalchemy.noarch : Minimal Zope/SQLAlchemy transaction integration
+                               : with Python 3 support
+=========================== Name Matched: sqlalchemy ===========================
+python3-sqlalchemy.x86_64 : Modular and flexible ORM library for python
+python2-sqlalchemy.x86_64 : Modular and flexible ORM library for python
+========================= Summary Matched: sqlalchemy ==========================
+python-repoze-who-plugins-sa.noarch : repoze.who SQLAlchemy plugin
+python3-repoze-who-plugins-sa.noarch : repoze.who SQLAlchemy plugin
+python-datanommer-models.noarch : SQLAlchemy models for datanommer
+python-elixir.noarch : Declarative mapper for SQLAlchemy
+python-flask-whooshalchemy.noarch : Whoosh extension to Flask/SQLAlchemy
+python2-migrate.noarch : Schema migration tools for SQLAlchemy
+python3-migrate.noarch : Schema migration tools for SQLAlchemy
+python-migrate.noarch : Schema migration tools for SQLAlchemy
+python2-alembic.noarch : Database migration tool for SQLAlchemy
+python3-alembic.noarch : Database migration tool for SQLAlchemy
+python-alembic.noarch : Database migration tool for SQLAlchemy
+python-tw2-sqla.noarch : SQLAlchemy database layer for ToscaWidgets2
+python2-sqlacodegen.noarch : Automatic model code generator for SQLAlchemy
+python3-sqlacodegen.noarch : Automatic model code generator for SQLAlchemy
+python2-alchimia.noarch : A Python library that integrates Twisted with
+                        : SqlAlchemy
+python3-alchimia.noarch : A Python library that integrates Twisted with
+                        : SqlAlchemy
+python2-flask-migrate.noarch : SQLAlchemy database migrations for Flask
+                             : applications using Alembic
+python3-flask-migrate.noarch : SQLAlchemy database migrations for Flask
+                             : applications using Alembic

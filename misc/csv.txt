@@ -1,0 +1,442 @@
+csv-2-json (1.0.1)                                                - A tool for csv to json file conversion
+odoo10-addon-account-balance-ebp-csv-export (10.0.1.0.0.99.dev1)  - Account Balance EBP CSV export
+odoo8-addon-account-export-csv (8.0.1.1.0.99.dev5)                - Account Export CSV
+odoo8-addon-account-balance-ebp-csv-export (8.0.1.1.0.99.dev7)    - Account Balance EBP CSV export
+django-adaptors (0.2.5)                                           - Convert CSV/XML files into python object or django model
+addok-csv (1.0.1)                                                 - Add CSV support to your Addok instance.
+odoo10-addon-report-qweb-txt (10.0.1.0.0.99.dev5)                 - Use Qweb to generate text and CSV reports
+odoo10-addon-sale-order-import-csv (10.0.1.0.0.99.dev1)           - Import CSV sale order files
+odoo8-addon-base-import-security-group (8.0.1.0.0.99.dev1)        - Group-based permissions for importing CSV files
+odoo8-addon-sale-order-import-csv (8.0.1.0.0.99.dev4)             - Import CSV sale order files
+odoo10-addon-base-import-security-group (10.0.1.0.0.99.dev4)      - Group-based permissions for importing CSV files
+odoo9-addon-sql-export (9.0.1.0.0.99.dev11)                       - Export data in csv file with SQL requests
+odoo8-addon-sql-export (8.0.1.0.0.99.dev8)                        - Export data in csv file with SQL requests
+odoo8-addon-product-variant-csv-import (8.0.1.0.0.99.dev15)       - Add menu entry to allow CSV import of templates with variants
+django-admin-csv (0.2)                                            - Adds a "download csv" option to your ModelAdmin.
+django-admin-exporter (0.2.1)                                     - Simple admin actions to download/export selected items in CSV, JSON, XML, etc.
+admincsvimport (0.1)                                              - Add loaddata like csv support at Django Admin Site
+ageliaco.recipe.csvconfig (0.12)                                  - Use a CSV file to populate buildout templates
+CSV-anamoly-detector (1.2.6)                                      - A Python tool to detect Anamolies
+android_sms_exporter (0.1)                                        - Android sent and received sms export to csv file
+CSV-anomaly-detector (1.2.17)                                     - A Python tool to detect Anamolies
+csg-dicoms-anonymizer (1.4.2)                                     - Robust and easy to use generic dicoms anonymizer with demographics csv spreadsheet anonymization by hashed ids
+any2csv (0.3.6)                                                   - A tool to generate csv file from a list of python instances
+anybox.scripts.odoo (0.1.0)                                       - Import CSV Odoo scripts
+django-csv-app (0.1)                                              - A simple Django app to find the crosstabulation from the uploaded csv file.
+asjson (2.0.0)                                                    - A little wrapper around reading and writing of csv file.
+atreal.usersinout (1.2.3)                                         - Import / export users via CSV files
+jupyterhub-remotecsv-authenticator (0.1)                          - Remote CSV Authenticator for JupyterHub
+backports.csv (1.0.5)                                             - Backport of Python 3 csv module
+bars (0.0.1)                                                      - A command-line interface that loads a CSV file and outputs a bar chart.
+ofxstatement-be-triodos (0.0.1)                                   - ofxstatement plugin for parsing Belgian Triodos bank's CSV statements to OFX
+beret (0.2.2)                                                     - Parse a csv file and score through a yhat model
+BetterCSV (1.5)                                                   - Python CSV Parsing tools
+binpacking (1.3)                                                  - Aims at optimal distribution of weighted items to bins (either a fixed number of bins or a fixed number of volume per bin). Data may be in form of list, dictionary, list of tuples or csv-file.
+Biryani (0.10.5.dev0)                                             - Toolbox to convert and validate data (for web forms, CSV files, XML files,
+bmh-update-ueq (0.1)                                              - A purpose made script using docx and pandas to import the content from docx forms and store it within a csv file
+bon-csvAvg (0.2)                                                  - calculate the average of a number of bonnie++ test
+busby (1.0.0)                                                     - Parse a csv file and send through a websocket.
+c2.sample.csvworkflow (1.1)                                       - c2.sample.csvworkflow is sample application using by collective.wtf.
+C3PO (0.3.0)                                                      - C3PO is Python module responsible for converting all .po files from locale directory into one .ods
+file and sending it to the Google Docs (spreadsheet link provided by user), so users with access to that spreadsheet
+can translate expression included there.
+
+This module provides Communicator which deals with uploading, downloading these translations and synchronizing whole
+content by merging it. Package contains basic methods for converting po files into csv, ods formats and back. It also
+provides methods for git push and git checkout po files into repository.
+camog (0.1.1)                                                     - csv file reader
+casava (0.1)                                                      - casava: a csv reader thingy
+django-csv-ccbv (0.1)                                             - Easy to fetch a CSV on a CCBV
+census2dbf (0.2.0)                                                - Convert US Census CSV files into DBFs
+chkcsv (0.8.0.0)                                                  - Check the format of a CSV file
+churchdir (0.3)                                                   - Convert an address book from csv format to a web page.
+django-cl2csv (0.11)                                              - Export what you see in the Django admin list view.
+pyexcel-cli (0.0.3)                                               - A command utility to read and write data in csv, tsv, xls, xlsx and ods format.
+clplot (0.2.1a0)                                                  - clplot is a command line utility to create plots and pages of plots from csv-like files.
+cmdline-csv2keychain (0.1.3)                                      - Tool for adding exported credentials from Chrome to the macOS keychain.
+collectd-csv (0.6.1)                                              - Fetch collectd CSV data matching the given parameters.
+collective.csv2atvocabularymanager (0.1.1)                        - Plone utility for importing your ATVocabularyManager vocabularies from CSV sources (with LinguaPlone support)
+collective.csv2dict (1.1)                                         - Turn a csv into a dictionary with a predefined schema.
+collective.cutandpaste (1.1)                                      - for copy and paste items for plone with an csv file
+collective.googledocsviewer (1.0b1)                               - Use google docs viewer to display embed version of your office files
+collective.localrolespanel (0.2)                                  - Adds a controlpanel to the site to edit local role settings using csv
+collective.pfg.soup (1.6)                                         - PloneFormGen Adapter: store, show/search, edit, csv-export, based on souper.soup
+collective.wtf (1.0b9)                                            - GenericSetup importer and exporter for workflow definitions that uses CSV instead of XML
+colly (0.2.1)                                                     - Colly - mucky pup; util for making comparison between large CSVs/ data dumps.
+comma (0.1)                                                       - CSV library for humans
+condor_csv (0.1.1)                                                - Make HTCondor submit files from CSV files
+csv-convert (0.0.1)                                               - Converts CSV to JSON or the other way aroundin only a few lines.
+csv-map-converter (1.2.1)                                         - It is csv converter to be able to get multi-values.
+hepdata-converter (0.1.31)                                        - Library providing means of conversion between oldhepdata format to new one, and new one to csv / yoda / root etc.
+cordwainer (0.0.2)                                                - A better CSV module
+cow-csvw (0.26)                                                   - Batch converter of large CSVs into CSVW/RDF
+cross (1.0.3)                                                     - Tool to cross CSV/TSV datasets
+cs.csvutils (20160828)                                            - CSV file related facilities
+cs.nodedb (20160828)                                              - a simple and versatile collection of nodes with attributes, accessed as direct Python objects and automatically transcribed to assorted backing stores (CSV, SQL, GDBM, etc); the CSV backend can be (loosely) shared between multiple clients
+csb43 (0.6.1)                                                     - Spanish banks' CSB norm 43 converter to OFX, Homebank, json, yaml, xls, xlsx, ods, csv, tsv
+csv-detective (0.2.1)                                             - Detect CSV column content
+keen-csv (1.0.0)                                                  - Builds a multiline CSV string from a Keen IO response
+onemg-excel-csv (1.0.0)                                           - onemg_excel_csv library is a generic excel or csv files reader
+sphinx-csv-list (0.0.1)                                           - Sphinx extension to render CSV as HTML list
+edict-to-csv (1.0.0)                                              - Convert the EDICT dictionary format into CSV.
+csv (1.0)                                                         - Fast CSV Parser for Python
+trello-csv-schedule (0.0.1)                                       - Tools to two-way sync Trello <> CSV to easily manage due date
+django-csv-export (0.0.3)                                         - django-export-csv is a reusable Django application which provides generic View class for creating and rendering CSV.
+micropython-csv (0.0.1)                                           - Dummy csv module for MicroPython
+sphinx-csv-filter (0.1.1)                                         - Sphinx CSV filter extension for Crate Documentation
+django-csv-utils (1.0.2)                                          - Utilities for working with CSVs in Django
+django-csv (1.02)                                                 - Some CSV Utilities for your django projects
+django-export-csv (0.1.2)                                         - a CSV exporter for Django
+rhumbix-csv-uploader (0.0.4)                                      - Uploads csv data to Rhumbix
+csv-to-sqlite (1.0.2)                                             - A script that processes the input CSV files and copies them into a SQLite database.
+mosaik-csv (1.0.2)                                                - Presents CSV datasets to mosaik as models.
+encoded-csv (0.2)                                                 - Read a CSV file using arbitrary character encodings.
+django-csv-exporter (1.2)                                         - A django package to export data in a csv with File export.
+dict-to-csv (0.1.4)                                               - Transform nested Python dictionaries to CSV lines
+django-csv-export-view (0.4.0)                                    - Django class-based view for CSV exports
+django-inline-csv-importer (0.1.3)                                - A simple django app to import admin inline data from CSV
+Flask-CSV (1.1.0)                                                 - Easily render CSVs within any flask application
+django-csv-importer (0.1.3.5)                                     - Convert csv files into python object or django model
+django-csv-exports (1.0.5)                                        - <Include a description of your project>
+target-csv (0.2.4)                                                - Singer.io target for writing CSV files
+csv-to-dictionary (1.0.6)                                         - Ultra simple csv to dictionary conversion library
+openslides-csv-export (2.0.1)                                     - OpenSlides CSV Export Plugin
+csv-validator (0.1.9)                                             - UNKNOWN
+django-csv-tool (0.3.7)                                           - Tool to help create CSV imports faster
+djangorestframework-csv (2.0.0)                                   - CSV Tools for Django REST Framework
+python-csv (0.0.10)                                               - Python tools for manipulating csv files
+django-queryset-csv (1.0.0)                                       - A simple python module for writing querysets to csv
+django-render-csv (1.1.1)                                         - utilities to render csv in django
+csv.toolkit (0.1.0)                                               - Tools for working with CSV files
+csv23 (0.1.2)                                                     - Python 2/3 unicode CSV compatibility layer
+csv2anki (0.0.3)                                                  - A Anki decks generator
+csv2arff (1.9)                                                    - Csv to Arff converter
+csv2dict (1.0)                                                    - Read a CSV file into a dict
+csv2es (1.0.1)                                                    - Bulk import a CSV or TSV into Elastic Search
+csv2graphite (1.0.0)                                              - Monitor report generator using misc logs.
+csv2json (0.2)                                                    - A command-line tools and module to convert csv to json
+csv2latex (0.11)                                                  - Simple script in python to convert CSV files to LaTeX table
+csv2md (1.0.0)                                                    - Command line tool for converting CSV files into Markdown tables.
+csv2mysql (0.0.2)                                                 - Generate MYSQL scripts to load csv files
+csv2odoo (0.7.5)                                                  - Python CSV to Odoo importation library
+csv2oerp (0.7.3)                                                  - Python CSV to OpenERP importation library
+csv2ofx (0.23.0)                                                  - converts a csv file of transactions to an ofx or qif file
+csv2sql (0.4.1)                                                   - Convert CSV data into SQL.
+csv2table (0.4.2)                                                 - CSV to Grid Table in Markdown
+csv2vcf (0.2)                                                     - Convert CSV to VCF
+csv2xls (0.4)                                                     - Put together some CSV files into a single Excel file, in different sheets.
+csv2xlsx (0.1.2)                                                  - Converts CSV from stdin into XLSX to stdout
+csv2xmlgen (0.3.0)                                                - CVS to XML, a generator based on a simple XML Template method.
+csv2yaml (0.2)                                                    - CSV To JSON, YAML & Pickle Convert Tool
+csv342 (0.2)                                                      - Python 3 like CSV module for Python 2
+csv_generator (0.6.1)                                             - Configurable CSV Generator for Django
+csv_object_reader (0.1.1)                                         - CSV file reader which returns objects
+csv_overview (0.32)                                               - Get the vital statistics of a CSV file
+csv_splitter (0.0.2)                                              - Split csv files.
+csv_to_table (0.0.3)                                              - Generates a CREATE TABLE statement from a CSV file by guessing at column types
+csv_tools (0.4)                                                   - Tools for working with delimited files.
+csvalidate (1.1.1)                                                - CSV reader and writer with validation
+csvbar (1.4)                                                      - Draw bar graphs from CSV files in the terminal.
+csvcat (2.0.2)                                                    - Concatenate comma separated value files
+csvcleaner (1.0.6)                                                - Removes rows containing blacklisted words from a CSV file.
+csvcompare (0.2.2)                                                - CSV file diff and comparison
+csvconvert (0.1)                                                  - A tool to convert between various csv variants
+csvcool (0.3.5)                                                   - Cool way to deal with 'headed' CSV
+csvdatamix (0.4)                                                  - CSV mixing and mapping
+csvdb (0.1.0)                                                     - Csv data access package like PEP 249 api.
+csvddf (1.0)                                                      - Python library for dealing with CSVDDF files
+csvdedupe (0.1.18)                                                - Command line tools for deduplicating and merging csv files
+csvdiff (0.3.3)                                                   - Generate a diff between two CSV files.
+csvdumper (0.1)                                                   - Dump dicts and lists to CSV files or strings, in a similar way to the JSON package.
+csveditor (0.0.0.10)                                              - Edit CSV files from the command line.
+django-csvexport (1.1.2)                                          - Simple model to csv conversions for Django.
+csvfaker (1.0.5)                                                  - Generate CSV files with fake data.
+csvfile (1.0.0)                                                   - A little wrapper around reading and writing of csv file.
+csvfilecleaner (0.6)                                              - A very simple utility class for cleaning csv files
+csvfilter (0.3.1)                                                 - A command-line utility and Python API for manipulating CSV data, eg plucking columns and reordering them.  It's a bit like the unix utility 'cut'
+django-csvimport (2.11)                                           - Import CSV files to django models
+csvImporter (0.1.3.2)                                             - Convert csv files into python object or django model
+csvinsight (0.2.3)                                                - Fast & simple summary for large CSV files
+csvkit (1.0.2)                                                    - A suite of command-line tools for working with CSV, the king of tabular file formats.
+csvlib (1.0.2)                                                    - Python CSV helpers
+robotframework-csvlibrary (0.0.2)                                 - CSV library for Robot Framework
+CSVLintBear (0.10.0)                                              - 'CSVLintBear' bear for coala (http://coala.rtfd.org/)
+csvloader (0.0.2)                                                 - Fast C-implementation for reading CSV data into Python
+csvmapper (0.5)                                                   - CSV parser using pre-defined mapper file
+csvmatch (1.13)                                                   - Find (fuzzy) matches between two CSV files in the terminal.
+csvmerge (1.0.9)                                                  - Merges multiple csv files into a single file
+csvmorph (1.0.1a8)                                                - A fast library for manipulating and CSV files
+csvorm (0.1.5)                                                    - orm for csv
+csvpandas (0.0.7)                                                 - Interface to manipulate csv files as Pandas DataFrames.
+csvparser (0.6.0)                                                 - Library for parsing and validating csv files using declared django-style parser classes.
+csvpivot (1.1)                                                    - Pivot tables for CSV files in the terminal.
+csvplait (0.1)                                                    - Interactive Tool for Manipulating CSV files
+csvposer (0.0.1)                                                  - 
+csvpp (0.2.0)                                                     - CSV reformatter to align columns
+csvputty (0.1.0)                                                  - CSV CLI utility functions and packages in Python.
+csvquerytool (0.0.3)                                              - Execute SQL queries on CSV files.
+CSVrope (1.0.0)                                                   - A set of row-operations for CSV files.
+csvs-to-sqlite (0.7)                                              - Convert CSV files into a SQLite database
+CsvSchema (1.1.1)                                                 - Module for describing CSV data structure.
+csvsed (0.2.4)                                                    - A stream-oriented CSV modification tool
+CSVSee (0.2)                                                      - Visualization and manipulation of CSV files.
+csvshuf (1.0.1)                                                   - Shuffle cells by column in CSV files.
+csvsimple (0.1.1)                                                 - Very simple CSV utility for Python 3.
+csvsort (1.4)                                                     - Sort large CSV files on disk rather than in memory
+csvsorter (1.4)                                                   - Sort large CSV files on disk rather than in memory
+csvsqlite3 (0.1.1)                                                - Csv data access package like PEP 249 api.
+csvt (1.0.0)                                                      - A sample test
+csvtodict (0.1)                                                   - Converts spreadsheets to python OrderedDictionaries
+csvtojson (0.1.3)                                                 - A csv to json tool with schema (data type) auto-detection
+csvtomd (0.3.0)                                                   - Convert your CSV files into Markdown tables.
+csvtools (0.5.1)                                                  - Tools for transforming .csv files
+CSVtoSQLite (0.2.1)                                               - Loads a CSV file a creates a preloaded SQLite database
+csvtotable (2.1.1)                                                - Simple commandline utility to convert CSV filesto searchable and sortable HTML table.
+csvutils (0.1)                                                    - Transformation utilities for csv (or csv-like) generated rows
+csvvalidator (1.2)                                                - A simple library for validating data contained in CSV files or similar row-oriented data sources.
+csvw (1.0)                                                        - 
+csvwlib (0.2.3)                                                   - Python implementation of CSV on the Web
+csvwriter (0.2.2)                                                 - Simple convenience wrapper on top of csv.DictWriter.
+csvx (0.1.1459403998)                                             - csvx: painless csv
+csvxls (0.2)                                                      - Functions to read from CSV or XLS(X) files interchangeably
+DancingPeasant (0.1.6)                                            - Utilities that allow a batch of CSV files to be passed as a single SQLITE db
+darcsver (1.7.4)                                                  - generate a version number from darcs history
+get-hubway-data (1.1)                                             - Extract data from Hubway CSVs
+datarobot_batch_scoring (1.13.0)                                  - A script to score CSV files via DataRobot's prediction API
+datascience-utils (1.0)                                           - Various data analysis scripts, useful for command line data mining and exploration. Most scripts work on csv numeric data with some configurable separator, defaulting to 	, with optional header-handling.
+datconv (0.5.1)                                                   - Universal data converter - pandoc for data; XML, CSV, JSON are supported
+pelican-db (0.0.1b0)                                              - A CSV-backed database for Pelican sites.
+DB2CSV (0.1b3)                                                    - Tool to dump database tables into csv files.
+dbf2csv (1.3)                                                     - Small utility to convert simple *.DBF files to *.CSV
+defusedcsv (1.0.1)                                                - Drop-in replacement for Python's CSV library that tries to mitigate CSV injection attacks
+doc-diff (1.0.0)                                                  - support lib to generate the diff of two CSV files
+digcsv (0.0.2)                                                    - Digest S3 CSV files as DataFrames
+digimat.meteosuisse (0.0.2)                                       - Digimat Meteosuisse CSV File Decoder for Digimat usage
+django-reportato (1.0)                                            - Very simple CSV reports with Django
+tp-django-tables2-reports (0.0.12)                                - With django-tables2-reports you can get a report (CSV, XLS) of any django-tables2 with minimal changes to your project. Fork of abondened https://github.com/goinnn/django-tables2-reports
+django-django_csv_exports (1.0.0)                                 - <Include a description of your project>
+django-exportdata (0.2)                                           - Export model data (with selected fields) to csv file
+django-genericimports (0.1b6)                                     - Import any CSV or XLS file regardless of data types, headers or foreignkeys.
+django-mapped-fields (0.0.4)                                      - Form fields to make it easier to map CSV or JSON files to your own models
+django-model-import (0.2.1)                                       - Fast CSV imports using django model forms.
+django-separated (1.1.0)                                          - Class-based view and mixins for handling CSV with Django.
+django-view-export (0.7.1)                                        - Export CSV reports of database views.
+django-spreadsheetresponsemixin (0.1.10)                          - A mixin for views with a queryset that provides a CSV/Excel export.
+django-tables2-reports (0.1.3)                                    - With django-tables2-reports you can get a report (CSV, XLS) of any django-tables2 with minimal changes to your project
+django-excel-response3 (1.51)                                     - A subclass of HttpResponse which will transform a QuerySet,
+or sequence of sequences, into either an Excel spreadsheet or
+CSV file formatted for Excel, depending on the amount of data.
+http://github.com/danpetrikin/django-excel-response/
+django_csv_tests (0.1.5)                                          - This allows you to use a spreadsheet to define Django units tests that make requests to the Django testing client.
+gwmt-dl (0.1.0)                                                   - Downloads Google WebMaster search queries and top pages data as CSV data.
+tweets-dl (0.1.3)                                                 - Download tweets as csv for a given twitter handle
+docreader (1.0)                                                   - A better csv.DictReader (supporting UTF-8 and type conversion)
+docx2csv (0.1.0)                                                  - Extracts tables from .docx files and saves them as csv or xlsx
+dropcols (1.0.1.0)                                                - Filter a CSV file, extracting columns selected by name or position.
+dsv (0.0.7)                                                       - Automagically read/wrte csv.
+dum (0.4)                                                         - Direct data to object for xml, jon and csv
+easycsv (0.8.0)                                                   - A module that permits to manage a database using csv files.
+easyLDA (0.2.8.6)                                                 - easily bult LDA Topic Models with just a list of docs (e.g. a list of twitter posts in CSV/TXT
+eb2csv (0.1.2)                                                    - A Python (3.6) CLI tool for recording measurement data from Gildemeister Energy Box data loggers into csv files.
+eea.daviz (11.1)                                                  - EEA DaViz is a plone product which uses Exhibit and Google Charts API to easily create data visualizations based on data from csv/tsv, JSON, SPARQL endpoints and more.
+elasticsearch-loader (0.2.2)                                      - A pythonic tool for batch loading data files (json, parquet, csv, tsv) into ElasticSearch
+elv (1.0.14)                                                      - Parser and query API for bank CSV account transactions
+enplot (1.1.0)                                                    - enplot: a one-line command line plotting tool for CSV data
+equityscraper (0.1.1)                                             - Web scraper that stores fundamental stock data, analyst estimates, and earnings surprises as .pkl and/or .csv
+es2csv (5.2.1)                                                    - A CLI tool for exporting data from Elasticsearch into a CSV file.
+esimport (0.1.9)                                                  - Facilitates the indexing of content from a CSV into ElasticSearch
+unihan-etl (0.9.5)                                                - Export UNIHAN to Python, Data Package, CSV, JSON and YAML
+excelcsv (0.0.0)                                                  - excelcsv: CSV utility for Excel
+excellent (0.0.5)                                                 - Python library for writing CSV and XLS files
+excelsior (0.0.5)                                                 - Convert Excel spreadsheets into TSV, CSV, Json or Yaml format.
+ExcelToCsv (0.1.1)                                                - A python package to convert excel spreadsheets to csv files
+execsql (1.24.4.3)                                                - Runs a SQL script against a PostgreSQL, MS-Access, SQLite, MS-SQL-Server, MySQL, MariaDB, or Firebird database, or an ODBC DSN.  Provides metacommands to import and export data, copy data between databases, conditionally execute SQL and metacommands, and dynamically alter SQL and metacommands with substitution variables.  Data can be exported in 13 different formats, including CSV, TSV, ODS, HTML, JSON, LaTeX, and Markdown tables, and using custom templates.
+sydbank-exporter (0.1.0)                                          - Create a CSV file that can be read by Sydbank
+woudc-extcsv (0.2.1)                                              - Python package providing read/write support of the WOUDC Extended CSV format.
+extract_genome_region (0.0.3)                                     - Given a CSV file of variable information defining the regions of interest, return a file that contains a fasta-formatted representation of these regions.
+table-extractor (1.1)                                             - Extract normalized tables from CSVs, Excel Spreadsheets, PDFs, Word Docs, and Web Pages
+fakestockdata (0.0.2)                                             - Generate CSV data for stocks
+fastcsv (0.1.3)                                                   - fastcsv
+fb-to-redshift (0.1.2)                                            - Download Facebook Page post and video data in CSV format, and import into Amazon Redshift tables.
+fencsv (0.0.1)                                                    - convert fen strings into human readable csv and back
+fez.atcsv (0.2)                                                   - Simple AT CSV processing
+filter_word_func (1.0.0)                                          - filter word in a CSV file
+fixed2csv (0.2.4)                                                 - Converts data files formatted in fixed-width columns to CSV.
+fixedwidthwriter (1.0.1)                                          - A class to write fixed-width files with an interface similar to python`s csv writer
+Flask-Locale (1.0.2)                                              - Adds i18n/l10n support to Flask applications easily. Uses CSV files(or database) to load translations.
+flatxml (0.12)                                                    - Transform XML blob, file, or OrderedDict to a flat CSV or dictionary.
+woudc-formats (0.1.0)                                             - Python library for converting non-standard formats to
+WOUDC extended CSV format.
+fr2csv (1.0.1)                                                    - Reads French localized AND normal CSVs, ouputs normal CSVs
+friendly-sonar (0.0.1.dev4)                                       - Python3 library to statically analyze software using SonarLint and collect data in a Python Object, CSV, or JSON data format
+FromXLS2CSV (1.4.2)                                               - Conversor de archivos XLS a CSV
+tablib-garetjax (0.9.12)                                          - Format agnostic tabular data library (XLS, JSON, YAML, CSV)
+gci-validator (0.0.7)                                             - CSV validator for the Google Code-in web API
+geocsvlib (0.1.8)                                                 - IP Geolocation data CSV Parser Library
+geojoin (0.2.1)                                                   - Merge CSV data into GeoJSON features, and more
+geokey-import (0.1.1)                                             - Import data from CSV to GeoKey
+geokey-sapelli (2.0.1)                                            - Read Sapelli project and load data from CSVs to GeoKey
+geoservice (0.0.1)                                                - CSV Parser for IP Geolocation data
+ghcndextractor (0.2)                                              - A simple extractor for the GHCN-Daily dataset .dly files into CSV or dict format.
+giokoda (0.1.2)                                                   - A utility for geocoding csv files.
+gnacs (1.1.0)                                                     - Gnip normalized activity JSON to csv parser (Twitter, Disqus Comments, and Wordpress Posts and Comments)
+GoldenListGenerator (0.4)                                         - Generates a golden list(CSV file) using user specified fields. Program takes in two data sets from the database and finds common fields between them to generate a golden list
+golumn (0.20.2)                                                   - Graphical CSV viewer. `column` with a "g"
+govtrack2csv (1.1a1)                                              - Toolset for converting govtrack data to csv.
+gowbso (1.1.2)                                                    - A tool to generate CSV files for uploading to the WBSO tool
+gpxconverter (0.9.4)                                              - gpx to csv converter. it supports waypoint elements except extensions. Values in extensions will be ignored.
+GrabzIt (3.2.8.1)                                                 - GrabzIt enables allows you to programmatically convert web pages and HTML into images, DOCX documents, PDFs, CSVs and spreadsheets. Additionally GrabzIt allows you to convert online videos into animated GIFs
+guiabolso2csv (0.3)                                               - GuiaBolso2csv is a simple Python program that can be used todownload GuiaBolso transactions in a csv format.
+hathitables (0.0.1)                                               - Turn HathiTrust Collections into CSV
+hipparchos2-io (1.0.2)                                            - A Python library for reading Hipparcos new reduction data, and for writing Hipparcos new reduction data to a CSV.
+hszinc (1.2.1)                                                    - Parser and dumper for Project Haystack ZINC (Zinc is not CSV) file format
+image-inspector (0.3.0)                                           - Simple utility to export exif data from tiff images to csv.
+tadc-import-validator (0.1.1)                                     - Validates CSV files for use in Talis Aspire Digitised Content data imports
+importlite (0.1.0)                                                - Import CSV files into SQLite databases
+incisive (0.1.0)                                                  - A tiny library for handling CSV files.
+interlegis.portalmodelo.transparency (1.0rc5)                     - Tipo de conteúdo do Portal Modelo para publicação de dados estruturados em formato CSV
+intouch_queryset_csv (0.2.1)                                      - Module to export django querysets as csv files
+pyexcel-io (0.5.6)                                                - A python library to read and write structured data in csv, zipped csvformat and to/from databases
+json2csv (0.1.0)                                                  - Module to convert JSON file to CSV file
+json2xml2csv (1.0.0.dev1)                                         - JSON/XML/CSV Converter
+json_to_csv (1.2.9)                                               - A Python project to convert json to csv files
+jsoncsv (2.0.6)                                                   - a command tool easily convert json file to csv or xlsx
+jsonforge (0.1.1.dev0)                                            - Make nice JSON files out of ugly (X|HT)ML, CSV or JSON blobs found on the Internet using JMESPath, CSS and XPath
+jsonify (0.5)                                                     - A csv to json converter
+jsonToCsv (1.0.1)                                                 - Extract data from json and convert to CSV
+repeaterbook-to-kml (0.1)                                         - Convert CHIRP-Format CSV files exported from Repeaterbook into KML files
+ladybug (0.0.2)                                                   - Handle CSV files using table models and queries.
+lens_csv (0.0.1)                                                  - A CSV parser for lens
+libjson2csv (0.1.1)                                               - Converts nested json object to csv and csv back to json
+ListComparator (0.1)                                              - Compares ordered lists, xml and csv application
+listmodel (0.2.1)                                                 - Listmodel is a Python library for object mappings for various list sources (XML documents, CSV documents, text documents, JSON/YAML objects) in a unified manner.
+loadcsv (0.4)                                                     - Load a csv file into a database
+losser (0.0.3)                                                    - Filter, transform and export a list of JSON objects to JSON or CSV
+make_gtfs (0.6.1)                                                 - A Python 3.4 command line program that makes a GTFS Feed
+        from a few CSV files of route information 
+        ('service_windows.csv', 'frequencies.csv', 'meta.csv') 
+        and a GeoJSON file of route shapes ('shapes.geojson').
+us-polygon-mapper (1.0.1)                                         - Create Google Maps US polygon maps from csv's, python dictionaries and pandas dataframes
+markplot (0.1.3)                                                  - Simple script generating plots and csv file from your project's journals
+matrix_parser (1.0.2)                                             - A matrix shaped text (e.g csv) parser
+me.csv (0.0.1)                                                    - Aggregate time and health tracking data
+MetaCSV (0.1.0)                                                   - Tools for documentation-aware data reading, writing, and analysis
+mirus_django_csv (1.0.0)                                          - Takes a django queryset, or a list, or a generator and creates a csv from it
+monique-tables (1.1)                                              - Parse anything into a table - JSON, CSV files, text files, command output.
+movieinfomaker (0.0.6)                                            - A script that looks up all movies and TV shows in a folder and gets the  genre, runtime, plot and IMDB and RottenTomatoes ratings of the movie and stores it as a csv file.
+mr_csv_worker (0.0.2)                                             - Small package for assist telegram bot development
+mycsv (0.1.3)                                                     - Script to export query results into local CSV files
+mysql2csv (1.0)                                                   - Convert some or all tables in a MySQL database into CSV files.
+mysqldump2csv (0.1)                                               - Since AMAZON RDS not allowed `SELECT INTO OUTFILE` this should do the trick
+nacculator (0.1.4)                                                - CSV to NACC's UDS3 format converter
+namestand (0.1.0)                                                 - Standardize any list of strings, but especially database/CSV column-names.
+ncsv (0.15.3)                                                     - Curses based delimited file (CSV) browser and pretty printer
+nikeplusapi (0.4.1)                                               - Export nikeplus data to CSV format
+nmaptocsv (1.2)                                                   - A simple python script to convert Nmap output to CSV
+odbo (0.0.6)                                                      - odbo is a tool to simplify the distribution of pandas DataFrames as CSV and database files.
+odswriter (0.4.0)                                                 - A pure-Python module for writing OpenDocument spreadsheets (similar to csv.writer).
+ossi_tool (0.1.0)                                                 - Tool to creact CSV output from Avaya Communcation Manager commands.
+packetseq (0.1.5)                                                 - Create packet sequence diagram from pcap format csv file
+pantable (0.11.1)                                                 - CSV Tables in Markdown: Pandoc Filter for CSV Tables
+parsebrologs (1.1.3)                                              - A lightweight utility for programmatically reading and manipulating Bro IDS log files and outputting into JSON or CSV format.
+pcsv (1.0.6)                                                      - This module can be used to handle comma-separated values (CSV) files and do lightweight processing of their data with support for row and column filtering
+pcSVM (pre 1.0)                                                   - pcSVM is a framework for support vector machines
+pcSVMdemo (1.0)                                                   - pcSVMdemo demonstrates the operating principles of support vector machines (SMVs)
+pdfforms (1.0.0)                                                  - Populate fillable pdf forms from csv data file
+pengyr (1.0.0)                                                    - filter word in a CSV file
+pgcsv (0.3)                                                       - CSV to Postgres data puncher.
+pglogmon (1.0.0)                                                  - Tool to monitor postgresql CSV logs
+pgreaper (1.0.0a2)                                                - A simple, flexible, and robust wrapper around the Postgres COPY command. Supports loading CSV/JSON files and Python objects with automatic schema inference.
+pingdomexport (0.1.2)                                             - Export your pingom data to CSV or database
+pip2amch (0.1.0)                                                  - Command to transform pip's requirements.txt into a csv for batch upload to https://allmychanges.com
+pivotal2pdf (1.0)                                                 - A utility to generate PDFs from CSV exported from Pivotal
+plotcsv (0.1.2)                                                   - Plot CSV with matplotlib
+pluckr (0.0.9)                                                    - Pluck columns from CSV files in the command line. Like cut or awk, but doesn't choke on delimiter escaping.
+ppcsv (1.1.1)                                                     - ppcsv A prime lister that also saves to primelist.csv
+pptx-template (0.2.6)                                             - The PowerPoint presentation builder using template.pptx and data(json and csv)
+Products.csvreplicata (1.1.13)                                    - CSV import/export for Archetypes or other contents (via plugins for the later). Created by Makina Corpus.
+progressivecsv (0.0.0.7)                                          - Package for writing a CSV with dynamic headers. CSV is completed at end.
+psql2csv (1.1.4)                                                  - A library and a CLI to download PostgreSQL schemas and tables
+psql_to_csv (0.1)                                                 - when you forget to properly format the results of a query that takes forever
+PyComicsViewer (0.9.12)                                           - Python Comics Viewer
+pycsv (0.2.1)                                                     - Simple module for reading csv file
+pycsvdb (2.3)                                                     - Reading CSV file and insert into database
+pycsvjson (0.0.4)                                                 - A utility to transform CSV files into structured JSON
+pycsvw (1.0.2)                                                    - Generate JSON and RDF from csv files with metadata
+pydap.handlers.csv (0.1.1)                                        - A CSV handler for Pydap
+pyexcel-sortable (0.0.2)                                          - Transform your csv file or a sheet of your xls, xlsx and ods into a sortable HTML file using csvtotable
+pyExcelerator (0.6.4a)                                            - generating Excel 97+ files; importing Excel 95+ files; Excel files dumper; OLE2 files dumper; xls2txt, xls2csv, xls2html
+pyf.components.consumers.csvwriter (0.9)                          - PyF CSV Writer
+pyheaderfile (0.4.0)                                              - Enable handle of csv, xls and xlsx files getting column header
+pyramid_tablib (0.2)                                              - tablib renderer (xlsx, xls, csv) for pyramid
+pytablereader (0.15.0)                                            - A Python library to load structured table data from files/strings/URL with various data format: CSV/Excel/Google-Sheets/HTML/JSON/LTSV/Markdown/SQLite/TSV.
+pytablewriter (0.27.2)                                            - A Python library to write a table in various formats: CSV / Elasticsearch / HTML / JavaScript / JSON / Jupyter Notebook / LaTeX / LTSV / Markdown / MediaWiki / NumPy / Excel / Pandas / Python / reStructuredText / SQLite / TOML / TSV.
+pytbar (0.210)                                                    - Library that converts the Japanese Post Office's CSV files into a python class.  These are thereafter added to a database.
+python-spread (1.1.19)                                            - CSV Spreadsheet library
+pyxmdb (0.7)                                                      - Database utility to import/export delimited text files (e.g. CSV)
+qcsv (0.0.6)                                                      - An API to read and analyze CSV files.
+querycsv (0.3.0.0)                                                - Execute SQL code against data contained in one or more comma-separated-value (CSV) files.
+querycsv-redux (4.1.0)                                            - Execute SQL code against data contained in one or more comma-separated-value (CSV) files.
+randomdata (0.1a.dev4)                                            - Random data generator.  Creates CSV data files with generated(random) data.
+rdb2csv (0.1)                                                     - convert redis rdb to csv
+realclearpolitics (0.0.3)                                         - Simple script to scrape polling data from RealClearPolitics and output as .csv
+redwing (0.0.2)                                                   - Inspect a CSV file and determine data types to build a table to contain it.
+Rigidity (1.4.0)                                                  - Data-validating CSV wrapper.
+sample-s3 (0.0.4)                                                 - Create a sample data set from a large CSV file on Amazon S3.
+sc.base.memberdataexport (0.5)                                    - Export Plone member data as CSV file
+scheduleduty (0.3.3)                                              - Tool to import schedules saved as CSV files into PagerDuty
+seaborn-table (1.3.1)                                             - SeabornTable reads and writes tables in csv and md and acts like a list and dict."
+sheetparser (0.3)                                                 - Turns an Excel (or pdf, csv...) workbook made of sheets containing several tables into a usable source of data
+Sheets (0.6)                                                      - A declarative class framework for working with CSV files
+simpledbf (0.2.6)                                                 - Convert DBF files to CSV, DataFrames, HDF5 tables, and SQL tables. Python3 compatible.
+station-simulator (0.1.0)                                         - Tool for generating station CSV data
+slack2csv (1.0.0)                                                 - A Python script to export Slack channel history to csv for reporting
+smart_csv_dictreader (0.0.2)                                      - Produce a csv.DictReader without specifying the column names
+smartcsv (0.2.3)                                                  - CSVs are awesome, yet they're pretty dumb. Let's get them smarter!
+snspoliciestocsv (1.11)                                           - A simple script to extract policies from a Stormshield Network Security device configuration file to CSV
+sparc.apps.cache (0.0.5)                                          - A generic CSV to SQL DB caching utility.
+splitcsv (0.1.0)                                                  - A simple csv splitter
+spotify2csv (0.4.2)                                               - Convert Spotify URLs to tracks info in CSV format
+spread (1.1.20)                                                   - CSV Spreadsheet library
+sqlitebiter (0.12.0)                                              - A CLI tool to convert CSV/Excel/HTML/JSON/LTSV/Markdown/SQLite/TSV/Google-Sheets to a SQLite database file.
+stereo (0.1.2)                                                    - Generate documents from CSV file in batch
+supercsv (0.1)                                                    - csv unicode
+swadr (1.2.1)                                                     - Import data from CSV, TSV, etc. files into SQLite3 database.
+sylk_parser (0.3.1)                                               - Basic SLK (sylk) to CSV parser
+table2csv (0.1.3)                                                 - Extract data from an HTML table and store results to a csv file.
+tabler (2.0)                                                      - Simple interface for tabulated data and .csv files
+tablereader (1.1.0)                                               - Unified abstraction for handling xls, xlsx and CSV files in Python
+tablib (0.12.1)                                                   - Format agnostic tabular data library (XLS, JSON, YAML, CSV)
+unihan-tabular (0.8.1)                                            - Export UNIHAN to Python, Data Package, CSV, JSON and YAML
+tabulator (1.13.0)                                                - Consistent interface for stream reading and writing tabular data (csv/xls/json/etc)
+tabview (1.4.3)                                                   - A curses command-line CSV and list (tabular data) viewer
+tcsv2png (1.0.1)                                                  - Data visualization of csv data with a time column.
+team_city_test_analyzer (1.0)                                     - For use with .csv ouput files from TeamCity
+TempestParser (0.2.3)                                             - Tempest Parser tool used to generate trending reports out of various result formats openstack/tempest produces: CLI, JSON from Rally, XML from PyCharm, CSV
+textbot (0.1.0)                                                   - Read a column of strings from csv, parse wordnet pos_tags to lemmas, enumerate most_common lemmas, weight strings via top scoring lemmas
+tformat (1.2.0)                                                   - Parse text file "tables" to CSV or Excel. See the `GitHub Repo <https://githib.com/Inori-Y/tFormat>` for full documentation.
+TheLoadOfTheLoad (0.1.0)                                          - Load csv file into the database table.
+tiddlywebplugins.csv (0.5)                                        - A csv serializer for TiddlyWeb
+timelog2csv (0.1.1)                                               - Converts a TimeLog calendar to a CSV file.
+transactionpro (0.0.4)                                            - Generate csv files for TransactionPro 6.0
+trf2csv (0.1.4)                                                   - Convert trf file to a csv file.
+trolley (0.1.5)                                                   - Trolley syncs issues between CSV, Github, and Trello.
+ttr.xml.csv2xml (0.1.2dev002)                                     - module, providing conversion of csv file into xml
+twix (1.0.0)                                                      - Simple project that extracts user tweets to csv / json based on the gist of yanofsky
+ucsv (0.1)                                                        - Unicode-aware replacement for Python-2.x CSV module
+udr (1.0)                                                         - A Unicode Dict Reader for CSV files
+unicodecsv (0.14.1)                                               - Python2's stdlib csv module is nice, but it doesn't support unicode. This module is a drop-in replacement which *does*.
+unicodeManager (0.1)                                              - Wrapper for the Python csv module that handles UTF-8 correctly
+unicsv (1.0.0)                                                    - Package for dealing with unicode CSV files
+vdexcsv (1.4)                                                     - Converts CSV files to IMS VDEX XML (Vocabulary Definition Exchange Format)
+vinyl (0.6)                                                       - Mutable record type for dealing with flat files like CSV or pipe-delimited data
+vladiate (0.0.19)                                                 - Vladiate is a strict validation tool for CSV files
+wiki2csv (1.0.1)                                                  - convert wikipedia tables to csv and back for editing in Excel/LibreOffice
+Worklog (0.8.1)                                                   - A Django based, hourly work logging app which supports job coding, view filtering, csv report generation and an e-mail reminder system
+xls2csv (0.4)                                                     - Convert Excel file to CSV file
+xlsx2csv (0.7.3)                                                  - xlsx to csv converter
+xml2csv (0.1)                                                     - Python script that reads any XML file and writes the contents into a CSV file. The usage of this script needs the developer to specify the XML tags from which the value needs to be extracted.
+xrff2csv (0.2.1)                                                  - A Python tool that converts XRFF files to CSV format.
+xsvlib (0.1.1)                                                    - A lightweight library for manipulating CSV files in Python.
+z3c.csvvocabulary (2.0.0)                                         - A package to create vocabularies based on CSV files.
+z3c.gibberish (0.1)                                               - Generate CSV files containing random words from a dictionary

@@ -36,19 +36,24 @@ git clone https://github.com/Choens/install-scripts.git
 # Sources
 # ===============================================================================
 
-# Open Software - Enable the following:
+# Open Software - Install/Enable the following:
+ sudo dnf install fedora-workstation-repositories
+
+# Open the default repo management tool and activate the following:
 # - Google Chrome: Optional
 # - Openh264: Important
 
-# Add the following:
-# - https://packages.microsoft.com/rhel/7/prod/
-# - https://packages.microsoft.com/yumrepos/vscode
+# Add the following (check they are current):
+# Reference: https://docs-old.fedoraproject.org/en-US/Fedora/23/html/System_Administrators_Guide/sec-Managing_DNF_Repositories.html
+sudo dnf config-manager --add-repo https://packages.microsoft.com/rhel/7.4/prod/
+sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/vscode
 
 # RPM Fusion ------------------------------------------------------------------
 # Go to RPM Fusion and download the appropriate RPM.
 # Be sure to get the RPMs for both FREE and NON-FREE.
 # This should only take a moment or so.
-http://rpmfusion.org/Configuration
+# http://rpmfusion.org/Configuration
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Depending on circumstances, this can take a while to complete.
 # Be patient.
