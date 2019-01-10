@@ -13,7 +13,10 @@ sudo dnf install -y \
      dos2unix \
      gcc gcc-c++.x86_64 \
      make \
-     rpmdevtools
+     rpmdevtools \
+     zsh
+
+chsh -s /usr/bin/zsh
 
 
 
