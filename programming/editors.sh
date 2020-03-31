@@ -44,6 +44,8 @@ sudo dnf install \
 # ==============================================================================
 # Emacs
 # This was the first editor I loved.
+# I've added zeromq here so I can better use Jupyter and I need libtool in
+# order to compile some of the stuff Emacs is gonna need.
 # ==============================================================================
 sudo dnf install -y \
      adobe-source-code-pro-fonts \
@@ -54,66 +56,50 @@ sudo dnf install -y \
      emacs-magit \
      emacs-slime-el \
      emacs-yaml-mode \
-     emacs
+     emacs \
+     libtool \
+     zeromq zeromq-devel
 
-<<<<<<< HEAD
-# After installing emacs, clone emacs config: git@github.com:Choens/emacs.d.git
-# into ~/.emacs.d. Then start Emacs and run the script lisp/package-config.el.
-# Once that is done, update all packages from within Emacs. Finally - enjoy.
+emacs-blacken.noarch
+migemo-emacs.noarch
+emacs-filesystem.noarch
+emacs-color-theme.noarch
+emacs-ledger-el.noarch
+emacs-terminal.noarch
+emacs-epix.noarch
+emacs-riece.noarch
+emacs-auto-complete.noarch
+mg.x86_64
+zile.x86_64
+vile.x86_64
+xvile.x86_64
+jove.x86_64
+python3-elpy.noarch
 
-# KWin and Emacs like fight:
-# https://userbase.kde.org/KWin_Rules_Application_Workarounds#Full-screen_Re-size_Error
-# - In Window Management . . . . KWin Rules
-# - Use Detect Window Properties and select the Emacs window. Match
-#   only by primary class name so leave the check boxes unchecked.
-# - Clicking OK in the previous window back-fills the results in the
-#   Window Matching tab. Enter a meaningful text in the Description
-#   text box.
-# - Ignore Emacs's full-screen request by enabling the Obey geometry
-#   restrictions attribute, toggling it to off (No) to ignore and
-#   selecting the Force parameter:
-=======
 
->>>>>>> b4c5932ad725e9456e782598e57691f3eb23a5dc
 
-# ==============================================================================
-# Kate & other KDE
-# It ain't glamorous, but it can be effective
-# ==============================================================================
-<<<<<<< HEAD
-sudo dnf install kate kate-plugins kompare
-=======
-sudo dnf install -y gedit-plugin* gedit-latex*
->>>>>>> b4c5932ad725e9456e782598e57691f3eb23a5dc
 
 
 
 # ==============================================================================
-# Other
-# Other useful bits
-# ==============================================================================
-<<<<<<< HEAD
-sudo dnf install \
-    umbrello \
-    vim
-    
-=======
-sudo dnf install -y vim
->>>>>>> b4c5932ad725e9456e782598e57691f3eb23a5dc
-
+# Vim
+# Not sure how I feel about this.
+# ============================================================================== 
+sudo dnf install neovim python3-neovim
 
 
 # ==============================================================================
 # Visual Studio Code
 # A surprsingly capable editor.
+#
+# WARNING: THIS MAY NOT BE NECESSARY ANY LONGER!!!!!
+#
 # https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions
 # ==============================================================================
-<<<<<<< HEAD
 #sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 #sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > #/etc/yum.repos.d/vscode.repo'
 #dnf check-update
 #sudo dnf install code
-=======
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 sudo dnf check-update
@@ -124,5 +110,5 @@ sudo dnf install -y code
 # ==============================================================================
 # Other
 # ==============================================================================
-sudo dnf install -y meld sequeler
->>>>>>> b4c5932ad725e9456e782598e57691f3eb23a5dc
+sudo dnf install -y meld
+

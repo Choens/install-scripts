@@ -19,6 +19,11 @@
 sudo dnf install java-1.8.0-openjdk.x86_64
 sudo rpm --install ~/Downloads/dbeaver*
 
+sudo dnf install \
+     perl-DBD-CSV perl-DBD-ODBC perl-DBD-SQLite \
+     sqliteodbc \
+     sqlsh
+     
 
 
 # ==============================================================================
@@ -52,18 +57,10 @@ sudo rpm --install ~/Downloads/dbeaver*
 # SQLite
 # ==============================================================================
 
-<<<<<<< HEAD
-sudo dnf install \
-     libspatialite \
-     spatialite-tools \
-     sqlcipher
-
-=======
-sudo dnf install -y \
-     libspatialite.x86_64 \
-     spatialite-tools.x86_64 \
-     sqlcipher.x86_64
->>>>>>> b4c5932ad725e9456e782598e57691f3eb23a5dc
+#sudo dnf install -y \
+#     libspatialite.x86_64 \
+#     spatialite-tools.x86_64 \
+#     sqlcipher.x86_64
 
 
 
@@ -71,11 +68,7 @@ sudo dnf install -y \
 # SQL Server
 # ==============================================================================
 
-<<<<<<< HEAD
-sudo dnf install \
-=======
 sudo dnf install -y \
->>>>>>> b4c5932ad725e9456e782598e57691f3eb23a5dc
      freetds \
      jtds \
      unixODBC.x86_64
@@ -94,3 +87,8 @@ sudo dnf install -y \
 
 #echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
 #echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+
+
+sqlsh
+python3-social-auth-storage-sqlalchemy
+

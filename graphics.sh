@@ -1,12 +1,6 @@
 # ##############################################################################
 # Graphics
-#
-# Graphics/Photography tools
-#
-# Sections:
-# - DNF
-# - NPM
-#
+# Collection of graphics/photography tools
 # ##############################################################################
 
 
@@ -31,5 +25,6 @@ sudo dnf install -y \
 #https://github.com/jedireza/gimp-hidpi
 
 # For 3D
-dnf install \
-     blender.x86_64 \
+#dnf install \
+#     blender.x86_64 \
+#

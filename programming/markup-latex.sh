@@ -19,6 +19,7 @@ sudo dnf install -y \
      latexmk \
      texlive-bibtex-bin.x86_64 texlive-bibtex-doc \
      texlive-chktex \
+     texlive-collection-latexextra \
      texlive-ctablestack \
      texlive-datenumber \
      texlive-droid \
@@ -31,17 +32,23 @@ sudo dnf install -y \
      texlive-latex-make \
      texlive-luatex \
      texlive-lipsum \
+     texlive-makecell \
      texlive-morefloats \
      texlive-paper \
      texlive-pdftex \
      texlive-siunitx \
+     texlive-tabu \
      texlive-tabulary \
+     texlive-threeparttable texlive-threeparttablex \
      texlive-texlive-en-doc \
      texlive-titlesec \
      texlive-tex \
      texlive-titling \
      texlive-ulem \
-     texlive-units
+     texlive-units \
+     texlive-wrapfig
+
+
 
 # ==============================================================================
 # LaTeX Classes

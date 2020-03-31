@@ -8,8 +8,18 @@
 
 Uses sudo. Your user must be in the /etc/sudoers file.
 
+* Firefox
+** GTK 3 Problems
+ To make Firefox look normal again, even if we change the theme,
+ please type about:config in the Firefox address bar, and add the
+ string below!
+ 
+ widget.content.gtk-theme-override
 * Settings
+** KDE
+   - Set mono-font to Adobe Source Code Pro
 
+** Gnome
 - Wifi                  Join local Wifi networks. Details vary.
 - Bluetooth             Setup headphones / phone.
 - Background            I might change the background.
@@ -75,7 +85,7 @@ Install the following:
 - Google Drive
 - Google Maps
 - Ask Fedora
-
+- This seems to fix the stupid scaling problem I'm having: https://askubuntu.com/questions/1073568/preventing-window-resizing-after-resume
 * SE Linux Policies
 - https://docs.fedoraproject.org/en-US/Fedora/13/html/Security-Enhanced_Linux/sect-Security-Enhanced_Linux-Working_with_SELinux-Enabling_and_Disabling_SELinux.html
 - http://www.cyberciti.biz/faq/howto-turn-off-selinux/
