@@ -1,9 +1,0 @@
-========================== Name Exactly Matched: hugo ==========================
-hugo.x86_64 : A Fast and Flexible Static Site Generator built with love in
-            : GoLang
-========================= Summary & Name Matched: hugo =========================
-golang-github-gohugoio-hugo-unit-test-devel.i686 : Unit tests for hugo package
-golang-github-gohugoio-hugo-unit-test-devel.x86_64 : Unit tests for hugo package
-============================== Name Matched: hugo ==============================
-golang-github-gohugoio-hugo-devel.noarch : A Fast and Flexible Static Site
-                                         : Generator built with love in GoLang

@@ -1,2 +1,0 @@
-========================= Name Exactly Matched: sqlsh ==========================
-sqlsh.noarch : Command interpreter for DBI shells

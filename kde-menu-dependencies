@@ -1,0 +1,4 @@
+In arch you need to :
+sudo pacman -S appmenu-gtk-module libdbusmenu-glib
+than reboot
+(Plasma 5.13 or higher)

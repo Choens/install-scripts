@@ -1,9 +1,0 @@
-fdxread (0.9.1)                   - An FDX protocol reader for Garmin GND10
-fitparse (1.0.1)                  - Python library to parse ANT/Garmin .FIT files
-garmin-uploader (1.0.3)           - A tool to upload FIT, GPX, and TCX filesto the Garmin Connect web site.
-GcpUploader (2015.2.28)           - A tool to upload FIT, GPX, and TCX files to the Garmin Connect web site.
-gdownload (0.1.1)                 - Tools for download activities from Garmin Connect.
-ggps (0.2.0)                      - ggps is a python library for parsing and enhancing Garmin gpx and tcx files
-pygarmin (0.8)                    - A Python interface to older Garmin GPS equipment
-python-tcxparser (0.7.2)          - Simple parser for Garmin TCX files
-python_ant_downloader (13.02.24)  - Tools for download from wireless Garmin (ANT) GPS devices.
