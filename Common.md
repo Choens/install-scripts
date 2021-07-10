@@ -31,37 +31,7 @@ git clone https://github.com/Choens/install-scripts.git
 Sections:
 - CLI Applications
 - Power Management
-# Too Much Code
-```bash
 
-
-# Various Gnome things:
-
-# Graphics =====================================================================
-
-
-## The following are usually not installed on my work computer.
-
-
-
-# Internet =====================================================================
-
-
-
-
-
-
-# Office =======================================================================
-
-
-
-# Science & Engineering ========================================================
-# I don't always install this.
-
-
-
-
-```
 ## CLI Applications
 
 ```bash
@@ -107,10 +77,11 @@ Note: You only need to do this if you need to interact with a Meraki VPN.
 ## Neither of these will work with Meraki, so make sure they aren't there.
 sudo dnf remove libreswan openswan
 
+## Then, install all of this.
 sudo dnf install \
     NetworkManager-l2tp\
     NetworkManager-strongswan.x86_64 \
-    plasma-nm-strongswan \
+    plasma-nm-l2tp.x86_64 plasma-nm-strongswan \
     strongswan
 sudo systemctl stop xl2tpd
 ```
@@ -141,4 +112,6 @@ sudo dnf install kmod-nvidia
 - [Configuring Meraki Client VPN on Linux Mint 19 ](https://stuffjasondoes.com/2018/08/16/configuring-meraki-client-vpn-on-linux-mint-19-network-manager/)
 - https://bugzilla.redhat.com/show_bug.cgi?id=1807024
 - https://codepre.com/how-to-install-gdm-sddm-lightdm-display-manager-on-fedora.html
-- https://en.opensuse.org/High_DPI
+- https://dnf.readthedocs.io/en/latest/command_ref.html
+- https://bugzilla.redhat.com/show_bug.cgi?id=1807024
+- https://stuffjasondoes.com/2018/08/16/configuring-meraki-client-vpn-on-linux-mint-19-network-manager/

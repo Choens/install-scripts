@@ -15,8 +15,8 @@ sudo dnf install \
      adobe-source-serif-pro-fonts \
      cascadia-code-fonts \
      fira-code-fonts \
-     ibm-plex*
-
+     ibm-plex*\
+     xdg-desktop-portal.x86_64
 ```
 
 
@@ -57,7 +57,7 @@ sudo dnf install \
 
 # Editors ====================================================================
 sudo dnf install \
-    emacs emacs-terminal \
+    emacs \
     kpcli \
     libtool \
     neovim python3-neovim
@@ -110,10 +110,6 @@ Review/research:
 - elpa-ztreeq
 
 ## Git
-
-TODO:
-- SmartGit
-- GitKraken
 
 ```bash
 sudo dnf install \
@@ -180,6 +176,7 @@ sudo dnf install \
      R-devtools \
      R-ggplot2 \
      R-hunspell \
+     R-R2html
      R-java-devel.x86_64 \
      R-IRkernel.noarch \
      R-lintr \
@@ -214,19 +211,6 @@ git ahead (git client, flatpak)
 
 
 
-# Education
-
-
-```bash
-
-```
-
-# Games
-
-```bash
-
-```
-
 # Graphics
 
 ```bash
@@ -252,8 +236,6 @@ sudo dnf install Wavebox
 
 
 
-# Multimedia
- 
 # Office
 
 ```bash
@@ -273,15 +255,56 @@ sudo dnf install \
     rstudio \
     qgis
 ```
-qgis
-jamovi
-marble
-julia
-freecad v qcad v librecad
-openboard
-cantor
-rkward
-
-
 
 # System Settings
+
+- Map Caps Lock to Ctrl
+- Make sure you get HiDPI squared away.
+- Make dnf faster!
+  - `sudo vim /etc/dnf/dnf.conf`
+```
+# append the following two lines to
+# /etc/dnf/dnf.conf
+fastestmirror=true
+deltarpm=true
+```
+- `sudo dnf group upgrade --with-optional Multimedia`
+
+## Resources
+- https://en.opensuse.org/High_DPI
+
+## Nvidia
+
+If on a laptop, you should probably disable the Nvidia card to save the the 
+battery.
+
+```
+sudo echo "blacklist nouveau" >> /etc/modprobe.d/nouveau.conf
+```
+
+## Firefox
+
+I have multiple profiles:
+
+- Andy (Personal) 
+- Acuitas
+- ACPHS
+
+Each email address has an FireFox account. FF will then send you the code.
+This will sync extensions, bookmarks, etc.
+
+## Chrome
+
+- Use Firefox Developer Theme or some other Dark theme.
+
+## Fixes!
+
+- I have laptops with hipdi screens and external monitors which are
+  not (SAD). If you are having weird scaling problems with Firefox,
+  etc., open dconf-editor and look for xsettings -> overrides and make
+  sure it is BLANK! If there's anything in it - remove it and your
+  problems will probably go away.
+- If you need to tweak the boot params (UEFI)
+    - Edit: /etc/default/grub
+    - Run: sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+    - Reboot: Enjoy!

@@ -3,9 +3,18 @@
 Tools & things installed when I'm focusing on using KDE.
 
 ```bash
+## Consider if this makes sense.
 sudo dnf remove @gnome-desktop
 dnf swap @gnome-desktop @kde-desktop
 sudo systemctl enable sddm.service -f
+
+
+sudo dnf install \
+    gnome-themes-extra \
+    ibus-gtk3.x86_64 \
+    libappindicator-gtk3.x86_64 \
+    libindicator-gtk3.x86_64 \
+    libunity-gtk3-parser.x86_64 
 ```
 
 # Accessories
@@ -118,7 +127,7 @@ flatpak install \
 ```
 
 
-# Multimedia
+# Multimediaxdg-desktop-portal
 
 ```bash
 sudo dnf install \
@@ -141,14 +150,15 @@ flatpak install \
 
 ```bash
 sudo dnf install kmymoney skrooge libreoffice-kf5.x86_64
-
-sudo flatpak install org.onlyoffice
 ```
 
 # System
 
 - Change to Dark Theme
-- 
+- Three Activities:
+  - Default (duh)
+  - IO
+  - Programming
 - On AC Power
   - Dim Screen 30 minutes, Switch screen off after 60 and suspend to sleep after 120
 
