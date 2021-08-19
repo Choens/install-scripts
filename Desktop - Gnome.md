@@ -118,3 +118,16 @@ sudo dnf install lollypop
 # Office
 
 # Settings
+
+## Gnome
+
+- Keyboard Shortcuts:
+    - Set Switch Windows to Alt+Tab.
+    - Set Switch Applications to Super+Tab
+- Set Caps Lock up as an extra Control Key.
+- Set mono-font to Adobe Source Code Pro or Cascadia.
+- Bluetooth: Setup headphones, phone.
+- Touchpad: Enable Tap to Click
+- I set the pixel height/scale of my laptop to be equal to my external monitor.
+    - In this case 1080. YMMV
+    - This is important for apps that don't handle changing scale well.

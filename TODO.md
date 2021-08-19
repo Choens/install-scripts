@@ -2,6 +2,9 @@
 
 List of things I am still working on.
 
+Somehow, I lost my entire latex/html/etc. config? WTG?
+I also need to make sure I have documented texlive-pdfcrop
+
 ## Things To Invesigate
 
 - - RSS Guard

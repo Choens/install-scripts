@@ -60,11 +60,12 @@ sudo dnf install \
     emacs \
     kpcli \
     libtool \
-    neovim python3-neovim
+    neovim neovim-qt python3-neovim 
 
 flatpak install \
-    app/com.visualstudio.code-oss/x86_64/stable \
     io.dbeaver.DBeaverCommunity
+
+TODO: Improve my VS Code instructions.
 
 # No? - I think it might be easier to install all of this via emacs!
 emacs-auctex emacs-auctex-doc \
@@ -108,6 +109,12 @@ Review/research:
 - elpa-tablist
 - elpa-virtualenvwrapper/
 - elpa-ztreeq
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+dnf check-update
+sudo dnf install code
+```
 
 ## Git
 
@@ -156,6 +163,8 @@ sudo dnf install -y \
 ```bash
 sudo dnf install \
      cairo-devel \
+     libcurl-devel \
+     libgit2.x86_64 libgit2-devel.x86_64 \
      openssl-devel \
      R \
      R-DBI \
@@ -205,7 +214,7 @@ sudo dnf install \
      R-zoo-devel.x86_64 \
      rstudio-desktop.x86_64
 
-R -e 'install.packages(c("config", "flexdashboard", "ggiraph", "pins", "shinydashboard", "plotly", "pool", "tidyverse"))'
+R -e 'install.packages(c("config", "flexdashboard", "ggiraph", "httpgd", "later", "pins", "shinydashboard", "plotly", "pool", "tidyverse"))'
 ```
 git ahead (git client, flatpak)
 

@@ -7,6 +7,8 @@ Tools & things installed when I'm focusing on using KDE.
 sudo dnf remove @gnome-desktop
 dnf swap @gnome-desktop @kde-desktop
 sudo systemctl enable sddm.service -f
+sudo dnf install --allowerasing fedora-release-identity-kde fedora-release-kde.noarch
+
 
 
 sudo dnf install \
@@ -24,6 +26,7 @@ sudo dnf install \
     filelight \
     kalarm \
     kbackup \
+    kclock \
     kamoso.x86_64 \
     kate.x86_64 kate-plugins.x86_64 \
     kde-connect.x86_64 \
