@@ -1,9 +1,21 @@
 # About
 
-Tools & things installed when I'm focusing on using Gnome.
+Tools & things installed when I'm focusing on using KDE.
 
 ```bash
+## Consider if this makes sense.
+sudo dnf swap @kde-desktop @gnome-desktop
 sudo systemctl enable display-manager.service -f
+sudo dnf install --allowerasing fedora-release-identity-workstation fedora-release-workstation.noarch
+
+
+
+sudo dnf remove \
+    kde*
+    libunity-gtk3-parser.x86_64 \
+    plasma*
+
+## Then clean up in .config and .local!!!
 ```
 
 # Accessories
@@ -12,28 +24,27 @@ sudo systemctl enable display-manager.service -f
 dnf search icon-theme
 dnf search gtk-theme
 dnf search gnome-shell-theme
-
-# Theme
-# Things specific to the Gnome Desktop that don't fit anywhere.
-# Some of these don't appear to be working???
-sudo dnf install \
-    gnome-shell-extension-dash-to-dock \
-    gnome-shell-extension-user-theme
-
-sudo dnf install \
-    # alacarte \ # Never used it.
-    dconf-editor \
-    # gnome-dictionary \ # Never used it.
-    # gnome-documents \ # Never used it/
-    gnome-extensions-app \
-    # deja-dup* \
-    # gnome-feeds \
-    # gnome-maps \
-    gnome-tweaks \
-    # gnome-weather \
 ```
 
+```bash
+sudo dnf install \
+    dconf-editor \
+    gnome-dictionary \
+    gnome-extensions-app \
+    deja-dup* \
+    gnome-feeds \
+    gnome-maps \
+    gnome-tweaks \
+    gnome-weather \
+    gnome-shell-extension-auto-move-windows.noarch \
+    gnome-shell-extension-caffeine.noarch \
+    gnome-shell-extension-dash-to-dock.noarch \
+    gnome-shell-extension-disconnect-wifi.noarch \
+    gnome-shell-extension-emoji-selector.noarch \
+    gnome-shell-extension-material-shell.noarch
 
+flatpak install work.openpaper.Paperwork
+```
 
 # Developer Tools
 
@@ -62,18 +73,13 @@ sudo dnf install \
     gnome-chess \
     iagno \
     quadrapassel
-
-```
-
-
-```bash
-sudo systemctl enable sddm.service -f
 ```
 
 # Graphics
 
 ```bash
 sudo dnf install \
+    darktable* \
     gimp gimp-data-extras \
     gimp-high-pass-filter \
     gimp-save-for-web \
@@ -88,19 +94,33 @@ sudo dnf install \
 ## Browsers
 
 ```bash
-# For this to work, you must first enable the Google Chrome repo in Software.
-# While you are there, enable openh264
-
-sudo dnf install chrome-gnome-shell epiphany
+sudo dnf install epiphany
 ```
 
+```bash
+sudo dnf install \
+    seafile.x86_64 seafile-client.x86_64
+```
+
+```bash
+sudo dnf install \
+    remmina.x86_64 remmina-gnome-session.x86_64 \
+    remmina-plugins-exec.x86_64 \
+    remmina-plugins-nx.x86_64 \
+    remmina-plugins-rdp.x86_64 \
+    remmina-plugins-secret.x86_64 \
+    remmina-plugins-spice.x86_64 \
+    remmina-plugins-st.x86_64 \
+    remmina-plugins-vnc.x86_64 \
+    remmina-plugins-www.x86_64 \
+    remmina-plugins-xdmcp.x86_64
+```
 
 
 # Email
 
 ```bash
 sudo dnf install \
-    evolution  evolution-ews.x86_64 \
     geary
 
 sudo dnf install \
@@ -113,9 +133,18 @@ sudo dnf install \
 
 ```bash
 sudo dnf install lollypop
+
+flatpak install \
+    co.headsetapp.headset \
+    io.freetubeapp.FreeTube \
+    io.lbry.lbry-app
 ```
 
 # Office
+
+```bash
+flatpak install org.gnome.PasswordSafe fr.free.Homebank
+```
 
 # Settings
 

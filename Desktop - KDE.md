@@ -1,17 +1,17 @@
 # About
 
-Tools & things installed when I'm focusing on using KDE.
+Tools & things removeed when I'm focusing on using KDE.
 
 ```bash
 ## Consider if this makes sense.
 sudo dnf remove @gnome-desktop
-dnf swap @gnome-desktop @kde-desktop
+sudo dnf swap @gnome-desktop @kde-desktop
 sudo systemctl enable sddm.service -f
-sudo dnf install --allowerasing fedora-release-identity-kde fedora-release-kde.noarch
+sudo dnf remove --allowerasing fedora-release-identity-kde fedora-release-kde.noarch
 
 
 
-sudo dnf install \
+sudo dnf remove \
     gnome-themes-extra \
     ibus-gtk3.x86_64 \
     libappindicator-gtk3.x86_64 \
@@ -22,7 +22,8 @@ sudo dnf install \
 # Accessories
 
 ```bash
-sudo dnf install \
+sudo dnf remove \
+    ark \
     filelight \
     kalarm \
     kbackup \
@@ -43,9 +44,10 @@ sudo dnf install \
 # Developer Tools
 
 ```bash
-sudo dnf install \
+sudo dnf remove \
     git-cola \
     kompare \
+    ksshaskpass \
     neovim-qt \
     yakuake
 ```
@@ -56,10 +58,10 @@ sudo dnf install \
 
 ```bash
 ## Something for Leila.
-sudo dnf install marble kstars blinken tuxpaint gcompris kbruch kgeography 
+sudo dnf remove marble kstars blinken tuxpaint gcompris kbruch kgeography 
 
 ## And something for myself.
-sudo dnf install \
+sudo dnf remove \
     LabPlot \
     cantor cantor-R.x86_64 cantor-julia.x86_64 \
     kbibtex \
@@ -73,7 +75,7 @@ sudo dnf install \
 
 ```bash
 # Something for Leila
-sudo dnf install \
+sudo dnf remove \
     frozen-bubble \
     kapman \
     kblocks \
@@ -84,7 +86,7 @@ sudo dnf install \
     supertux \
 
 # And something for me.
-sudo dnf install \
+sudo dnf remove \
     kigo \
     kmahjongg \
     knights \
@@ -96,7 +98,7 @@ sudo dnf install \
 # Graphics
 
 ```bash
-sudo dnf install \
+sudo dnf remove \
     darktable* \
     digikam \
     kcolorchooser \
@@ -113,10 +115,10 @@ ferdi v franz
 
 
 ```bash
-sudo dnf install \
+sudo dnf remove \
     seafile.x86_64 seafile-client.x86_64
 
-sudo dnf install \
+sudo dnf remove \
     falkon.x86_64 falkon-kde.x86_64 falkon-pdfreader.x86_64 \
     krdc \
     otter-browser \
@@ -124,7 +126,7 @@ sudo dnf install \
     qutebrowser \
     rssguard
 
-flatpak install \
+flatpak remove \
     org.kde.angelfish \
     me.hyliu.fluentreader
 ```
@@ -133,12 +135,12 @@ flatpak install \
 # Multimediaxdg-desktop-portal
 
 ```bash
-sudo dnf install \
+sudo dnf remove \
     dragon.x86_64 \
     elisa-player.x86_64 \
     kmplayer
 
-flatpak install \
+flatpak remove \
     co.headsetapp.headset \
     io.freetubeapp.FreeTube \
     io.lbry.lbry-app
@@ -152,7 +154,7 @@ flatpak install \
 
 
 ```bash
-sudo dnf install kmymoney skrooge libreoffice-kf5.x86_64
+sudo dnf remove kmymoney skrooge libreoffice-kf5.x86_64
 ```
 
 # System
@@ -166,7 +168,7 @@ sudo dnf install kmymoney skrooge libreoffice-kf5.x86_64
   - Dim Screen 30 minutes, Switch screen off after 60 and suspend to sleep after 120
 
 ```bash
-sudo dnf install \
+sudo dnf remove \
     filelight \
     ksysguard \
     ksystemlog \
