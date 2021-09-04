@@ -104,16 +104,7 @@ sudo dnf install \
 
 ```bash
 sudo dnf install \
-    remmina.x86_64 remmina-gnome-session.x86_64 \
-    remmina-plugins-exec.x86_64 \
-    remmina-plugins-nx.x86_64 \
-    remmina-plugins-rdp.x86_64 \
-    remmina-plugins-secret.x86_64 \
-    remmina-plugins-spice.x86_64 \
-    remmina-plugins-st.x86_64 \
-    remmina-plugins-vnc.x86_64 \
-    remmina-plugins-www.x86_64 \
-    remmina-plugins-xdmcp.x86_64
+    
 ```
 
 
@@ -135,7 +126,6 @@ sudo dnf install \
 sudo dnf install lollypop
 
 flatpak install \
-    co.headsetapp.headset \
     io.freetubeapp.FreeTube \
     io.lbry.lbry-app
 ```

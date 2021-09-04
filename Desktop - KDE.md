@@ -1,17 +1,17 @@
 # About
 
-Tools & things removeed when I'm focusing on using KDE.
+Tools & things installed when I'm focusing on using KDE.
 
 ```bash
 ## Consider if this makes sense.
-sudo dnf remove @gnome-desktop
+sudo dnf install @gnome-desktop
 sudo dnf swap @gnome-desktop @kde-desktop
 sudo systemctl enable sddm.service -f
-sudo dnf remove --allowerasing fedora-release-identity-kde fedora-release-kde.noarch
+sudo dnf install --allowerasing fedora-release-identity-kde fedora-release-kde.noarch
 
 
 
-sudo dnf remove \
+sudo dnf install \
     gnome-themes-extra \
     ibus-gtk3.x86_64 \
     libappindicator-gtk3.x86_64 \
@@ -22,7 +22,7 @@ sudo dnf remove \
 # Accessories
 
 ```bash
-sudo dnf remove \
+sudo dnf install \
     ark \
     filelight \
     kalarm \
@@ -44,7 +44,7 @@ sudo dnf remove \
 # Developer Tools
 
 ```bash
-sudo dnf remove \
+sudo dnf install \
     git-cola \
     kompare \
     ksshaskpass \
@@ -58,10 +58,10 @@ sudo dnf remove \
 
 ```bash
 ## Something for Leila.
-sudo dnf remove marble kstars blinken tuxpaint gcompris kbruch kgeography 
+sudo dnf install marble kstars blinken tuxpaint gcompris kbruch kgeography 
 
 ## And something for myself.
-sudo dnf remove \
+sudo dnf install \
     LabPlot \
     cantor cantor-R.x86_64 cantor-julia.x86_64 \
     kbibtex \
@@ -75,7 +75,7 @@ sudo dnf remove \
 
 ```bash
 # Something for Leila
-sudo dnf remove \
+sudo dnf install \
     frozen-bubble \
     kapman \
     kblocks \
@@ -86,7 +86,7 @@ sudo dnf remove \
     supertux \
 
 # And something for me.
-sudo dnf remove \
+sudo dnf install \
     kigo \
     kmahjongg \
     knights \
@@ -98,7 +98,7 @@ sudo dnf remove \
 # Graphics
 
 ```bash
-sudo dnf remove \
+sudo dnf install \
     darktable* \
     digikam \
     kcolorchooser \
@@ -115,10 +115,10 @@ ferdi v franz
 
 
 ```bash
-sudo dnf remove \
+sudo dnf install \
     seafile.x86_64 seafile-client.x86_64
 
-sudo dnf remove \
+sudo dnf install \
     falkon.x86_64 falkon-kde.x86_64 falkon-pdfreader.x86_64 \
     krdc \
     otter-browser \
@@ -126,7 +126,7 @@ sudo dnf remove \
     qutebrowser \
     rssguard
 
-flatpak remove \
+flatpak install \
     org.kde.angelfish \
     me.hyliu.fluentreader
 ```
@@ -135,13 +135,12 @@ flatpak remove \
 # Multimediaxdg-desktop-portal
 
 ```bash
-sudo dnf remove \
+sudo dnf install \
     dragon.x86_64 \
     elisa-player.x86_64 \
     kmplayer
 
-flatpak remove \
-    co.headsetapp.headset \
+flatpak install \
     io.freetubeapp.FreeTube \
     io.lbry.lbry-app
 ```
@@ -154,7 +153,7 @@ flatpak remove \
 
 
 ```bash
-sudo dnf remove kmymoney skrooge libreoffice-kf5.x86_64
+sudo dnf install kmymoney skrooge libreoffice-kf5.x86_64
 ```
 
 # System
@@ -168,7 +167,7 @@ sudo dnf remove kmymoney skrooge libreoffice-kf5.x86_64
   - Dim Screen 30 minutes, Switch screen off after 60 and suspend to sleep after 120
 
 ```bash
-sudo dnf remove \
+sudo dnf install \
     filelight \
     ksysguard \
     ksystemlog \
@@ -182,5 +181,5 @@ sudo dnf remove \
 These are things I tend to delete when focusing on a KDE Desktop.
 
 ```bash
-sudo dnf remove *akonadi* evolution geary
+sudo dnf install *akonadi* evolution geary
 ``` 

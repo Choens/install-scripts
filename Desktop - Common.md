@@ -16,6 +16,7 @@ sudo dnf install \
      cascadia-code-fonts \
      fira-code-fonts \
      ibm-plex*\
+     mediawriter.x86_64
      xdg-desktop-portal.x86_64
 ```
 
@@ -233,7 +234,16 @@ sudo dnf install \
 sudo dnf install \
     firefox-wayland \
     google-chrome-stable \
-    remmina
+    remmina.x86_64 remmina-gnome-session.x86_64 \
+    remmina-plugins-exec.x86_64 \
+    remmina-plugins-nx.x86_64 \
+    remmina-plugins-rdp.x86_64 \
+    remmina-plugins-secret.x86_64 \
+    remmina-plugins-spice.x86_64 \
+    remmina-plugins-st.x86_64 \
+    remmina-plugins-vnc.x86_64 \
+    remmina-plugins-www.x86_64 \
+    remmina-plugins-xdmcp.x86_64
 ```
 
 ```bash
