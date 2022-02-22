@@ -8,7 +8,21 @@ Collection of things I need installed to proceed. Anything installed here
 is also listed in 01-cli.sh just in case I skip it here.
 
 ```bash
-# CLI Apps =====================================================================
+sudo dnf upgrade
+```
+
+
+
+# CLI
+
+Sections:
+- Setup
+- CLI Applications
+- Power Management
+
+## Setup & RSA
+
+```bash
 sudo apt install git xclip
 
 # RSA Key ======================================================================
@@ -26,11 +40,7 @@ cd Documents/GitHub
 git clone https://github.com/Choens/install-scripts.git
 ```
 
-# CLI
 
-Sections:
-- CLI Applications
-- Power Management
 
 ## CLI Applications
 

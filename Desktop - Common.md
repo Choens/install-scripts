@@ -6,6 +6,8 @@ Tools & things installed across desktop environments.
 dnf group list
 ```
 
+TODO: Merge Desktop-Common and Common.
+
 # Accessories
 
 ```bash
@@ -27,7 +29,9 @@ sudo dnf install \
 ## Build Tools
 
 ```bash
-sudo dnf group install "C Development Tools and Libraries" 
+sudo dnf group install "C Development Tools and Libraries"
+
+sudo dnf install maven
 ```
 
 ## Command Line Tools
@@ -35,7 +39,9 @@ sudo dnf group install "C Development Tools and Libraries"
 ```bash
 sudo dnf install \
     dos2unix \
+    fd-find \
     htop \
+    libtree-sitter.x86_64 \
     nnn \
     pandoc pandoc-citeproc \
     pwgen \
@@ -55,7 +61,6 @@ sudo dnf install \
 ## Editors
 
 ```bash
-
 # Editors ====================================================================
 sudo dnf install \
     emacs \
@@ -65,8 +70,6 @@ sudo dnf install \
 
 flatpak install \
     io.dbeaver.DBeaverCommunity
-
-TODO: Improve my VS Code instructions.
 
 # No? - I think it might be easier to install all of this via emacs!
 emacs-auctex emacs-auctex-doc \
@@ -112,6 +115,8 @@ Review/research:
 - elpa-ztreeq
 
 ```bash
+## TODO: Improve my VS Code instructions.
+## Because this doesn't actually work . . . . 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 dnf check-update
 sudo dnf install code
@@ -155,6 +160,7 @@ sudo dnf install -y \
     #python3-spyder python3-spyder-kernels python3-pyls-spyder.noarch \
     python3-statsmodels \
     python3-sqlalchemy \
+    python3-venv \
     python3-wheel \
     visidata
 ```
@@ -166,6 +172,7 @@ sudo dnf install \
      cairo-devel \
      libcurl-devel \
      libgit2.x86_64 libgit2-devel.x86_64 \
+     libsodium.x86_64 libsodium-devel.x86_64 \
      openssl-devel \
      R \
      R-DBI \
@@ -186,8 +193,6 @@ sudo dnf install \
      R-devtools \
      R-ggplot2 \
      R-hunspell \
-     R-R2html
-     R-java-devel.x86_64 \
      R-IRkernel.noarch \
      R-lintr \
      R-lubridate.x86_64 \
@@ -213,9 +218,13 @@ sudo dnf install \
      R-xml2-devel.x86_64 \
      R-yaml \
      R-zoo-devel.x86_64 \
-     rstudio-desktop.x86_64
+     rstudio-desktop.x86_64 \
+     texlive-opensans.noarch
 
-R -e 'install.packages(c("config", "flexdashboard", "ggiraph", "httpgd", "later", "pins", "shinydashboard", "plotly", "pool", "tidyverse"))'
+R -e 'install.packages(c("colorout", "config", "flexdashboard", "ggiraph", "httpgd", "R2html", "later", "pins", "shinydashboard", "plotly", "pool", "tidymodels", "tidyverse"))'
+
+# Primarily useful if you plan on using VSC.
+pip install radian
 ```
 git ahead (git client, flatpak)
 
@@ -233,7 +242,6 @@ sudo dnf install \
 ```bash
 sudo dnf install \
     firefox-wayland \
-    google-chrome-stable \
     remmina.x86_64 remmina-gnome-session.x86_64 \
     remmina-plugins-exec.x86_64 \
     remmina-plugins-nx.x86_64 \
@@ -254,7 +262,6 @@ sudo dnf install Wavebox
 
 
 
-
 # Office
 
 ```bash
@@ -262,9 +269,12 @@ sudo dnf install \
     hunspell-en-US.noarch hunspell-en.noarch \
     libreoffice.x86_64
 
-flatpak install org.onlyoffice slack us.zoom.Zoom 
+flatpak install slack us.zoom.Zoom 
 flatpak install com.microsoft.Teams
 ```
+
+
+
 # Science & Engineering
 
 ```bash
@@ -274,6 +284,57 @@ sudo dnf install \
     rstudio \
     qgis
 ```
+
+TODO: Beef up my latex stuff.
+
+```bash
+sudo dnf install \
+        texlive-latexcolors.noarch
+```
+
+Apache Superset:
+
+- This is all from their website.
+- Should only have to install cyrys-sasl-devel and openldap-devel.
+
+```bash
+## Globally installed
+    sudo dnf install \
+        cyrus-sasl-devel \
+        gcc gcc-c++ \
+        libffi-devel \
+        openldap-devel \
+        python3-devel python3-pip python3-wheel \
+        openssl-devel
+
+## Prepare the virtual environment.
+mkdir ~/venv
+python3 -m venv ~/venv/superset
+. venv/superset/bin/activate
+
+# Install Apache Superset
+pip install apache-superset
+
+# Setup Apache Superset Database
+superset db upgrade
+
+# Create an admin user in your metadata database (use `admin` as username to be able to load the examples)
+$ export FLASK_APP=superset
+superset fab create-admin
+
+# Load some data to play with
+superset load_examples
+
+# Create default roles and permissions
+superset init
+
+# To start a development web server on port 8088, use -p to bind to another port
+superset run -p 8088 --with-threads --reload --debugger
+
+
+
+```
+
 
 # System Settings
 
@@ -311,10 +372,6 @@ I have multiple profiles:
 
 Each email address has an FireFox account. FF will then send you the code.
 This will sync extensions, bookmarks, etc.
-
-## Chrome
-
-- Use Firefox Developer Theme or some other Dark theme.
 
 ## Fixes!
 

@@ -1,0 +1,7 @@
+sudo dnf remove libreswan
+sudo dnf install strongswan plasma-nm-strongswan NetworkManager-strongswan-gnome.x86_64
+sudo systemctl stop xl2tpd
+
+
+libreswan.x86_64
+NetworkManager-libreswan-gnome.x86_64

@@ -32,6 +32,7 @@ sudo dnf install \
     gnome-dictionary \
     gnome-extensions-app \
     deja-dup* \
+    file-roller file-roller-nautilus \
     gnome-feeds \
     gnome-maps \
     gnome-tweaks \
@@ -41,9 +42,10 @@ sudo dnf install \
     gnome-shell-extension-dash-to-dock.noarch \
     gnome-shell-extension-disconnect-wifi.noarch \
     gnome-shell-extension-emoji-selector.noarch \
-    gnome-shell-extension-material-shell.noarch
+    gnome-shell-extension-material-shell.noarch \
+    seahorse
 
-flatpak install work.openpaper.Paperwork
+flatpak install com.rafaelmardojai.Blanket work.openpaper.Paperwork
 ```
 
 # Developer Tools
@@ -56,8 +58,10 @@ sudo dnf install \
     rabbitvcs-cli rabbitvcs-nautilus \
     tilix 
 
-flatpak install \
-    net.bartkessels.getit
+flatpak install net.bartkessels.getit org.gaphor.Gaphor org.gnome.Solanum 
+
+flatpak install net.sourceforge.squirrel_sql
+
 ```
 
 
@@ -91,20 +95,12 @@ sudo dnf install \
 
 # Internet
 
-## Browsers
-
-```bash
-sudo dnf install epiphany
-```
-
 ```bash
 sudo dnf install \
+    epiphany \
     seafile.x86_64 seafile-client.x86_64
-```
 
-```bash
-sudo dnf install \
-    
+flatpak install re.sonny.Tangram
 ```
 
 
@@ -113,9 +109,6 @@ sudo dnf install \
 ```bash
 sudo dnf install \
     geary
-
-sudo dnf install \
-    thunderbird thunderbird-wayland
 ```
 
 
@@ -123,17 +116,21 @@ sudo dnf install \
 # Multimedia
 
 ```bash
+## TODO: How to do multiline flatpak commands.
 sudo dnf install lollypop
 
 flatpak install \
     io.freetubeapp.FreeTube \
     io.lbry.lbry-app
+flatpak install com.belmoussaoui.Obfuscate
+flatpak install com.github.hugolabe.Wike com.gitlab.newsflash
+flatpak install de.haeckerfelix.Shortwave org.gnome.Podcasts
 ```
 
 # Office
 
 ```bash
-flatpak install org.gnome.PasswordSafe fr.free.Homebank
+flatpak install org.gnome.Connections org.gnome.PasswordSafe fr.free.Homebank
 ```
 
 # Settings
