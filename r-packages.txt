@@ -1,0 +1,482 @@
+R-Biostrings-devel.i686 : Development files for R-Biostrings
+R-Biostrings-devel.x86_64 : Development files for R-Biostrings
+R-BufferedMatrix-devel.i686 : Development files for R-BufferedMatrix
+R-BufferedMatrix-devel.x86_64 : Development files for R-BufferedMatrix
+R-IRanges-devel.i686 : Development files for R-IRanges
+R-IRanges-devel.x86_64 : Development files for R-IRanges
+R-RcppCCTZ-devel.i686 : Development files for R-RcppCCTZ
+R-RcppCCTZ-devel.x86_64 : Development files for R-RcppCCTZ
+R-RcppDate-devel.noarch : Development files for R-RcppDate
+R-Rhtslib-devel.i686 : Development files for R-Rhtslib
+R-Rhtslib-devel.x86_64 : Development files for R-Rhtslib
+R-Rsolid-devel.i686 : Development files for R-Rsolid
+R-Rsolid-devel.x86_64 : Development files for R-Rsolid
+R-S4Vectors-devel.i686 : Development files for R-S4Vectors
+R-S4Vectors-devel.x86_64 : Development files for R-S4Vectors
+R-XVector-devel.i686 : Development files for R-XVector
+R-XVector-devel.x86_64 : Development files for R-XVector
+R-backports.x86_64 : Reimplementations of Functions Introduced Since R-3.0.0
+R-bindrcpp-devel.i686 : Development files for R-bindrcpp
+R-bindrcpp-devel.x86_64 : Development files for R-bindrcpp
+R-cpp11-devel.noarch : Development files for R-cpp11
+R-crosstalk.noarch : Inter-Widget Interactivity for HTML Widgets
+R-data.table-devel.i686 : Development files for R-data.table
+R-data.table-devel.x86_64 : Development files for R-data.table
+R-gdtools-devel.i686 : Development files for R-gdtools
+R-gdtools-devel.x86_64 : Development files for R-gdtools
+R-geepack-devel.i686 : Development files for R-geepack
+R-geepack-devel.x86_64 : Development files for R-geepack
+R-later-devel.i686 : Development files for R-later
+R-later-devel.x86_64 : Development files for R-later
+R-littler-examples.x86_64 : R-littler Examples
+R-markdown-devel.x86_64 : Development files for R-markdown
+R-markdown-devel.i686 : Development files for R-markdown
+R-mvtnorm-devel.i686 : Development files for R-mvtnorm
+R-mvtnorm-devel.x86_64 : Development files for R-mvtnorm
+R-nanotime-devel.i686 : Development files for R-nanotime
+R-nanotime-devel.x86_64 : Development files for R-nanotime
+R-plogr-devel.noarch : Devel files for R-plogr
+R-preprocessCore-devel.i686 : Development files for R-preprocessCore
+R-preprocessCore-devel.x86_64 : Development files for R-preprocessCore
+R-progress-devel.noarch : Development files for R-progress
+R-rhub.noarch : Connect to 'R-hub'
+R-rversions.noarch : Query 'R' Versions, Including 'r-release' and 'r-oldrel'
+R-simmer-devel.i686 : Development Files for R-simmer
+R-simmer-devel.x86_64 : Development Files for R-simmer
+R-sourcetools-devel.i686 : Development files for R-sourcetools
+R-sourcetools-devel.x86_64 : Development files for R-sourcetools
+R-sp-devel.i686 : Development files for R-sp
+R-sp-devel.x86_64 : Development files for R-sp
+R-stringdist-devel.i686 : Development files for R-stringdist
+R-stringdist-devel.x86_64 : Development files for R-stringdist
+R-stringi-devel.x86_64 : Development files for R-stringi
+R-stringi-devel.i686 : Development files for R-stringi
+R-systemfonts-devel.i686 : Development files for R-systemfonts
+R-systemfonts-devel.x86_64 : Development files for R-systemfonts
+R-textshaping-devel.i686 : Development files for R-textshaping
+R-textshaping-devel.x86_64 : Development files for R-textshaping
+R-vctrs-devel.x86_64 : Development files for R-vctrs
+R-vctrs-devel.i686 : Development files for R-vctrs
+R-xml2-devel.x86_64 : Development files for R-xml2
+R-xml2-devel.i686 : Development files for R-xml2
+R-zoo-devel.x86_64 : Development files for R-zoo
+R-zoo-devel.i686 : Development files for R-zoo
+R-AUC.noarch : Threshold independent performance measures for probabilistic classifiers
+R-AnnotationDbi.noarch : Manipulation of SQLite-based annotations in Bioconductor
+R-AsioHeaders-devel.noarch : Asio C++ Header Files
+R-BH-devel.noarch : Boost C++ Header Files for R
+R-BSgenome.noarch : Infrastructure for Biostrings-based genome data packages
+R-Bessel.x86_64 : Computations and Approximations for Bessel Functions
+R-Biobase.x86_64 : Base functions for Bioconductor
+R-BiocFileCache.noarch : Manage Files Across Sessions
+R-BiocGenerics.noarch : Generic functions for Bioconductor
+R-BiocParallel.x86_64 : Bioconductor facilities for parallel evaluation
+R-Biostrings.x86_64 : String objects representing biological sequences
+R-BufferedMatrix.i686 : A matrix data storage object method from bioconductor
+R-BufferedMatrix.x86_64 : A matrix data storage object method from bioconductor
+R-Cairo.x86_64 : Use Cairo for high-quality bitmap, vector, and display output
+R-DBI.noarch : Database interface module for R
+R-DBItest.noarch : Testing DBI Backends
+R-DT.noarch : R Wrapper of the JavaScript Library 'DataTables'
+R-DelayedArray.x86_64 : Delayed operations on array-like objects
+R-DynDoc.noarch : Functions for dynamic documents
+R-FMStable.x86_64 : Finite Moment Stable Distributions
+R-GenomeInfoDb.noarch : Utilities for manipulating chromosome and other 'seqname' identifiers
+R-GenomeInfoDbData.noarch : Species and taxonomy ID look up tables used by GenomeInfoDb
+R-GenomicAlignments.x86_64 : Representation and manipulation of short genomic alignments
+R-GenomicRanges.x86_64 : Representation and manipulation of genomic intervals
+R-IRanges.x86_64 : Low-level containers for storing sets of integer ranges
+R-IRdisplay.noarch : 'Jupyter' Display Machinery
+R-IRkernel.noarch : Native R Kernel for the 'Jupyter Notebook'
+R-NISTunits.noarch : Fundamental Physical Constants and Unit Conversions from NIST
+R-R.cache.noarch : Fast and Light-Weight Caching (Memoization) of Objects and Results
+R-R.devices.noarch : Unified Handling of Graphics Devices
+R-R.methodsS3.noarch : S3 Methods Simplified
+R-R.oo.noarch : R Object-Oriented Programming with or without References
+R-R.rsp.noarch : Dynamic Generation of Scientific Reports
+R-R.utils.noarch : Various Programming Utilities
+R-R6.noarch : Classes with Reference Semantics
+R-RColorBrewer.noarch : ColorBrewer Palettes
+R-RCurl.x86_64 : General network (HTTP/FTP) client interface for R
+R-RInside.i686 : C++ Classes to Embed R in C++ (and C) Applications
+R-RInside.x86_64 : C++ Classes to Embed R in C++ (and C) Applications
+R-RInside-devel.i686 : RInside Development Files
+R-RInside-devel.x86_64 : RInside Development Files
+R-RInside-examples.x86_64 : RInside Examples
+R-RM2.noarch : Revenue Management and Pricing for R
+R-RMariaDB.x86_64 : Database Interface and 'MariaDB' Driver
+R-RODBC.x86_64 : An ODBC database interface for R
+R-RPostgres.x86_64 : Rcpp Interface to PostgreSQL
+R-RSQLite.x86_64 : SQLite database interface for R
+R-RUnit.noarch : R Unit test framework
+R-Rcompression.x86_64 : R Package for in-memory compression
+R-Rcpp.x86_64 : Seamless R and C++ Integration
+R-Rcpp.i686 : Seamless R and C++ Integration
+R-Rcpp-devel.x86_64 : Rcpp Development Files
+R-Rcpp-devel.i686 : Rcpp Development Files
+R-Rcpp-examples.x86_64 : Rcpp Examples
+R-RcppCCTZ.i686 : 'Rcpp' Bindings for the 'CCTZ' Library
+R-RcppCCTZ.x86_64 : 'Rcpp' Bindings for the 'CCTZ' Library
+R-RcppDate.noarch : 'date' C++ Header Library for Date and Time Functionality
+R-RhpcBLASctl.x86_64 : Control the Number of Threads on BLAS
+R-Rhtslib.i686 : HTSlib high-throughput sequencing library as an R package
+R-Rhtslib.x86_64 : HTSlib high-throughput sequencing library as an R package
+R-Rmpfr.x86_64 : R MPFR - Multiple Precision Floating-Point Reliable
+R-Rsamtools.x86_64 : R interface to samtools
+R-Rsolid.i686 : Quantile normalization and base calling for second generation sequencing data
+R-Rsolid.x86_64 : Quantile normalization and base calling for second generation sequencing data
+R-S4Vectors.i686 : S4 implementation of vectors and lists
+R-S4Vectors.x86_64 : S4 implementation of vectors and lists
+R-SEDML.x86_64 : R library that fully supports SED-ML for SBML
+R-SummarizedExperiment.noarch : SummarizedExperiment container
+R-TH-data.noarch : Data for other R packages
+R-V8.x86_64 : Embedded JavaScript and WebAssembly Engine for R
+R-XML.x86_64 : Tools for Parsing and Generating XML Within R and S-Plus
+R-XVector.i686 : Representation and manipulation of external sequences
+R-XVector.x86_64 : Representation and manipulation of external sequences
+R-abind.noarch : Combine multi-dimensional arrays
+R-acepack.x86_64 : ACE and AVAS methods for choosing regression transformations
+R-affyio.x86_64 : Tools for parsing Affymetrix data files
+R-ape.x86_64 : Analyses of Phylogenetics and Evolution
+R-argon2.x86_64 : Secure Password Hashing
+R-ascii.noarch : Export R Objects to Several Markup Languages
+R-askpass.x86_64 : Safe Password Entry for R, Git, and SSH
+R-assertthat.noarch : Easy Pre and Post Assertions
+R-base64enc.x86_64 : Tools for base64 encoding
+R-bench.x86_64 : High Precision Timing of R Expressions
+R-biglm.x86_64 : Bounded memory linear and generalized linear models
+R-bindr.noarch : Parametrized Active Bindings
+R-bindrcpp.i686 : An 'Rcpp' Interface to Active Bindings
+R-bindrcpp.x86_64 : An 'Rcpp' Interface to Active Bindings
+R-biomaRt.noarch : R Interface to BioMart databases
+R-bit.x86_64 : Classes and Methods for Fast Memory-Efficient Boolean Selections
+R-bit64.x86_64 : A S3 Class for Vectors of 64bit Integers
+R-bitops.x86_64 : Functions for Bitwise operations
+R-blob.noarch : A Simple S3 Class for Representing Vectors of Binary Data ('BLOBS')
+R-bookdown.noarch : Authoring Books and Technical Documents with R Markdown
+R-brew.noarch : Templating Framework for Report Generation
+R-brio.x86_64 : Basic R Input Output
+R-broom.noarch : Convert Statistical Objects into Tidy Tibbles
+R-caTools.x86_64 : Tools: moving window statistics, GIF, Base64, ROC AUC, etc.
+R-callr.noarch : Call R from R
+R-car.noarch : Companion to Applied Regression package for R
+R-cellranger.noarch : Translate Spreadsheet Cell Ranges to Rows and Columns
+R-chron.x86_64 : Chronological Objects which can Handle Dates and Times
+R-cli.noarch : Helpers for Developing Command Line Interfaces
+R-cliapp.noarch : Create Rich Command Line Applications
+R-clipr.noarch : Read and Write from the System Clipboard
+R-clisymbols.noarch : Unicode Symbols at the R Prompt
+R-coda.noarch : Output Analysis and Diagnostics for MCMC
+R-colorspace.x86_64 : A Toolbox for Manipulating and Assessing Colors and Palettes
+R-combinat.noarch : R routines for combinatorics
+R-commonmark.x86_64 : High Performance CommonMark and Github Markdown Rendering in R
+R-conflicted.noarch : An Alternative Conflict Resolution Strategy
+R-core.x86_64 : The minimal R components necessary for a functional runtime
+R-core.i686 : The minimal R components necessary for a functional runtime
+R-core-devel.x86_64 : Core files for development of R packages (no Java)
+R-core-devel.i686 : Core files for development of R packages (no Java)
+R-corpus.x86_64 : Text Corpus Analysis
+R-covr.x86_64 : Test Coverage for Packages
+R-cpp11.noarch : A C++11 Interface for R's C Interface
+R-crayon.noarch : Colored Terminal Output
+R-curl.x86_64 : A Modern and Flexible Web Client for R
+R-cyclocomp.noarch : Cyclomatic Complexity of R Code
+R-data.table.x86_64 : Extension of `data.frame`
+R-data.table.i686 : Extension of `data.frame`
+R-date.x86_64 : Functions for Handling Dates
+R-dbplyr.noarch : A 'dplyr' Back End for Databases
+R-debugme.noarch : Debug R Packages
+R-deldir.x86_64 : Delaunay Triangulation and Dirichlet (Voronoi) Tessellation
+R-desc.noarch : Manipulate DESCRIPTION Files
+R-devel.x86_64 : Full R development environment metapackage
+R-devel.i686 : Full R development environment metapackage
+R-devtools.noarch : Tools to Make Developing R Packages Easier
+R-dichromat.noarch : Color Schemes for Dichromats
+R-diffobj.x86_64 : Diffs for R Objects
+R-digest.x86_64 : Create Cryptographic Hash Digest of R Objects
+R-digest.i686 : Create Cryptographic Hash Digest of R Objects
+R-digest-devel.i686 : Header files for compiling against digest
+R-digest-devel.x86_64 : Header files for compiling against digest
+R-disposables.noarch : Create Disposable R Packages for Testing
+R-doMC.noarch : Foreach Parallel Adaptor for 'parallel'
+R-doParallel.noarch : Foreach Parallel Adaptor for the 'parallel' Package
+R-downlit.noarch : Syntax Highlighting and Automatic Linking
+R-dplyr.x86_64 : A Grammar of Data Manipulation
+R-dtplyr.noarch : Data Table Back-End for 'dplyr'
+R-ellipsis.x86_64 : Tools for Working with ...
+R-errors.noarch : Uncertainty Propagation for R Vectors
+R-evaluate.noarch : Parsing and Evaluation Tools that Provide More Details than the Default
+R-expm.x86_64 : Computation of the matrix exponential and related quantities
+R-fansi.x86_64 : ANSI Control Sequence Aware String Functions
+R-farver.x86_64 : High Performance Colour Space Manipulation
+R-fastmap.x86_64 : Fast Implementation of a Key-Value Store
+R-fastmatch.x86_64 : Fast match() function
+R-filehash.x86_64 : Simple Key-Value Database
+R-filelock.x86_64 : Portable File Locking
+R-flexiblas.x86_64 : FlexiBLAS API Interface for R
+R-foghorn.noarch : Summarize CRAN Check Results in the Terminal
+R-fontBitstreamVera.noarch : Fonts with 'Bitstream Vera Fonts' License
+R-fontLiberation.noarch : Liberation Fonts
+R-forcats.noarch : Tools for Working with Categorical Variables (Factors)
+R-foreach.noarch : Provides Foreach Looping Construct
+R-formatR.noarch : Format R Code Automatically
+R-formattable.noarch : Create 'Formattable' Data Structures
+R-fortunes.noarch : R Fortunes
+R-fs.x86_64 : Cross-Platform File System Operations Based on 'libuv'
+R-fts.x86_64 : R Interface to 'tslib' (a Time Series Library in C++)
+R-futile.logger.noarch : A logging utility for R
+R-futile.options.noarch : Futile options management
+R-future.noarch : Unified Parallel and Distributed Processing in R for Everyone
+R-gamlss.dist.x86_64 : Distributions for Generalized Additive Models for Location Scale and Shape
+R-gapminder.noarch : Data from Gapminder
+R-gargle.noarch : Utilities for Working with Google APIs
+R-gdata.noarch : Various R Programming Tools for Data Manipulation
+R-gdtools.i686 : Utilities for Graphical Rendering
+R-gdtools.x86_64 : Utilities for Graphical Rendering
+R-gee.x86_64 : Generalized Estimation Equation Solver
+R-geepack.i686 : Generalized Estimating Equation Package
+R-geepack.x86_64 : Generalized Estimating Equation Package
+R-generics.noarch : Common S3 Generics not Provided by Base R Methods Related to Model Fitting
+R-getPass.x86_64 : Masked User Input
+R-ggplot2.noarch : Create Elegant Data Visualisations Using the Grammar of Graphics
+R-ggplot2movies.noarch : Movies Data
+R-gh.noarch : GitHub API
+R-git2r.x86_64 : Provides Access to Git Repositories
+R-globals.noarch : Identify Global Objects in R Expressions
+R-glue.x86_64 : Interpreted String Literals
+R-gmailr.noarch : Access the Gmail RESTful API
+R-gmp.x86_64 : Multiple Precision Arithmetic
+R-gplots.noarch : Various R Programming Tools for Plotting Data
+R-gsl.x86_64 : Wrapper for the Gnu Scientific Library
+R-gss.x86_64 : General Smoothing Splines
+R-gtable.noarch : Arrange 'Grobs' in Tables
+R-gtools.x86_64 : Various R Programming Tools
+R-haven.x86_64 : Import and Export 'SPSS', 'Stata' and 'SAS' Files
+R-here.noarch : A Simpler Way to Find Your Files
+R-hexbin.x86_64 : Hexagonal Binning Routines
+R-highlight.x86_64 : R Syntax Highlighter
+R-highr.noarch : Syntax Highlighting for R Source Code
+R-hms.noarch : Pretty Time of Day
+R-htmltools.x86_64 : Tools for HTML
+R-htmlwidgets.noarch : HTML Widgets for R
+R-httpuv.x86_64 : HTTP and WebSocket Server Library
+R-httr.noarch : Tools for Working with URLs and HTTP
+R-hunspell.x86_64 : High-Performance Stemmer, Tokenizer, and Spell Checker
+R-igraph.x86_64 : Network Analysis and Visualization
+R-import.noarch : An Import Mechanism for R
+R-ini.noarch : Read and Write '.ini' Files
+R-inline.noarch : Functions to Inline C, C++, Fortran Function Calls from R
+R-isoband.x86_64 : Generate Isolines and Isobands from Regularly Spaced Elevation Grids
+R-iterators.noarch : Provides Iterator Construct
+R-itertools.noarch : Iterator Tools
+R-java.x86_64 : R with Fedora provided Java Runtime Environment
+R-java-devel.x86_64 : Development package for use with Java enabled R components
+R-java-devel.i686 : Development package for use with Java enabled R components
+R-jose.noarch : JavaScript Object Signing and Encryption
+R-jpeg.x86_64 : Read and write JPEG images
+R-jqr.x86_64 : Client for 'jq', a 'JSON' Processor
+R-jsonlite.x86_64 : A Simple and Robust JSON Parser and Generator for R
+R-keyring.x86_64 : Access the System Credential Store from R
+R-knitr.noarch : A General-Purpose Package for Dynamic Report Generation in R
+R-labeling.noarch : Axis Labeling
+R-lambda.r.noarch : Modeling data with functional programming
+R-later.x86_64 : Utilities for Scheduling Functions to Execute Later with Event Loops
+R-later.i686 : Utilities for Scheduling Functions to Execute Later with Event Loops
+R-lazyeval.x86_64 : Lazy (Non-Standard) Evaluation
+R-libSBML.x86_64 : R bindings for libSBML
+R-lifecycle.noarch : Manage the Life Cycle of your Package Functions
+R-lintr.noarch : A 'Linter' for R Code
+R-listenv.noarch : Environments Behaving (Almost) as Lists
+R-littler.x86_64 : littler: R at the Command-Line via 'r'
+R-lmodel2.noarch : Model II Regression
+R-lmtest.x86_64 : Testing Linear Regression Models for R
+R-lobstr.x86_64 : Visualize R Data Structures with Trees
+R-lokern.x86_64 : Kernel Regression Smoothing with Local or Global Plug-in Bandwidth
+R-lpSolve.x86_64 : Interface to Lp_solve to Solve Linear/Integer Programs
+R-lubridate.x86_64 : Make dealing with dates a little easier
+R-mAr.noarch : R module to evaluate functions for multivariate AutoRegressive analysis
+R-magick.x86_64 : Advanced Graphics and Image-Processing in R
+R-magrittr.noarch : Provides a mechanism for chaining commands with a new forward-pipe operator
+R-mapproj.x86_64 : Map Projections
+R-maps.x86_64 : Draw Geographical Maps
+R-markdown.x86_64 : Render Markdown with the C Library 'Sundown'
+R-markdown.i686 : Render Markdown with the C Library 'Sundown'
+R-matrixStats.x86_64 : Functions that Apply to Rows and Columns of Matrices (and to Vectors)
+R-measurements.noarch : Tools for Units of Measurement
+R-memoise.noarch : Memoise functions
+R-microbenchmark.x86_64 : Accurate Timing Functions
+R-mime.x86_64 : Map Filenames to MIME Types
+R-miniUI.noarch : Shiny UI Widgets for Small Screens
+R-mlbench.x86_64 : Machine Learning Benchmark Problems
+R-mnormt.x86_64 : The Multivariate Normal and t Distributions
+R-mockery.noarch : Mocking Library for R
+R-mockr.noarch : Mocking in R
+R-modelr.noarch : Modelling Functions that Work with the Pipe
+R-msm.x86_64 : Multi-state Markov and hidden Markov models in continuous time
+R-multcomp.noarch : Simultaneous inference for general linear hypotheses R Package
+R-munsell.noarch : Utilities for Using Munsell Colours
+R-mvtnorm.i686 : Multivariate normal and T distribution R Package
+R-mvtnorm.x86_64 : Multivariate normal and T distribution R Package
+R-nanotime.i686 : Nanosecond-Resolution Time Support for R
+R-nanotime.x86_64 : Nanosecond-Resolution Time Support for R
+R-ncdf4.x86_64 : Interface to Unidata netCDF (Version 4 or Earlier) Format Data Files
+R-nws.noarch : R functions for NetWorkSpaces and Sleigh
+R-nycflights13.noarch : Flights that Departed NYC in 2013
+R-odbc.x86_64 : Connect to ODBC Compatible Databases (using the DBI Interface)
+R-openssl.x86_64 : Toolkit for Encryption, Signatures and Certificates Based on OpenSSL
+R-orcutt.noarch : Estimate Procedure in Case of First Order Autocorrelation
+R-packrat.noarch : Dependency Management System for R Projects
+R-pak.noarch : Another Approach to Package Installation
+R-parallelly.noarch : Enhancing the 'parallel' Package
+R-parsedate.x86_64 : Recognize and Parse Dates in Various Formats
+R-pbdRPC.noarch : Programming with Big Data -- Remote Procedure Call
+R-pbdZMQ.x86_64 : Programming with Big Data -- Interface to ZeroMQ
+R-pdftools.x86_64 : Text Extraction, Rendering and Converting of PDF Documents
+R-pillar.noarch : Coloured Formatting for Columns
+R-pingr.x86_64 : Check if a Remote Computer is Up
+R-pkgbuild.noarch : Find Tools Needed to Build R Packages
+R-pkgcache.noarch : Cache 'CRAN'-Like Metadata and R Packages
+R-pkgconfig.noarch : Private Configuration for 'R' Packages
+R-pkgdown.noarch : Make Static HTML Documentation for a Package
+R-pkgload.x86_64 : Simulate Package Installation and Attach
+R-plogr.noarch : C++ Logging Library for R
+R-plyr.x86_64 : Tools for Splitting, Applying and Combining Data
+R-png.x86_64 : Read and write PNG images
+R-poLCA.x86_64 : Polytomous variable Latent Class Analysis
+R-polyclip.x86_64 : Polygon Clipping
+R-polynom.noarch : A Class for Univariate Polynomial Manipulations
+R-praise.noarch : Praise Users
+R-preprocessCore.i686 : A collection of pre-processing functions
+R-preprocessCore.x86_64 : A collection of pre-processing functions
+R-presser.x86_64 : Lightweight Web Server for Testing
+R-prettycode.noarch : Pretty Print R Code in the Terminal
+R-prettydoc.noarch : Creating Pretty Documents from R Markdown
+R-prettyunits.noarch : Pretty, Human Readable Formatting of Quantities
+R-processx.x86_64 : Execute and Control System Processes
+R-procmaps.x86_64 : Portable Address Space Mapping
+R-profmem.noarch : Simple Memory Profiling for R
+R-profvis.x86_64 : Interactive Visualizations for Profiling R Code
+R-progress.noarch : Terminal Progress Bars
+R-promises.x86_64 : Abstractions for Promise-Based Asynchronous Programming
+R-ps.x86_64 : List, Query, Manipulate System Processes
+R-purrr.x86_64 : Functional Programming Tools
+R-qcc.noarch : SQC package for R
+R-qpdf.x86_64 : Split, Combine and Compress PDF Files
+R-qtl.x86_64 : Tools for analyzing QTL experiments
+R-quadprog.x86_64 : Functions to Solve Quadratic Programming Problems
+R-quantities.x86_64 : Quantity Calculus for R Vectors
+R-qvalue.noarch : Q-value estimation for false discovery rate control
+R-ragg.x86_64 : Graphic Devices Based on AGG
+R-randomForest.x86_64 : Breiman and Cutler's Random Forests for Classification and Regression
+R-rappdirs.x86_64 : Determine Where to Save Data, Caches, and Logs
+R-rcmdcheck.noarch : Run 'R CMD check' from 'R' and Capture Results
+R-readr.x86_64 : Read Rectangular Text Data
+R-readxl.x86_64 : Read Excel Files
+R-rematch.noarch : Match Regular Expressions with a Nicer 'API'
+R-rematch2.noarch : Tidy Output from Regular Expression Matching
+R-remotes.noarch : R Package Installation from Remote Repositories
+R-repr.noarch : Serializable Representations
+R-reprex.noarch : Prepare Reproducible Example Code via the Clipboard
+R-repurrrsive.noarch : Examples of Recursive Lists and Nested or Split Data Frames
+R-reshape.noarch : Flexibly Reshape Data
+R-reshape2.x86_64 : Flexibly Reshape Data: A Reboot of the Reshape Package
+R-reticulate.x86_64 : R Interface to 'Python'
+R-rex.noarch : Friendly Regular Expressions
+R-rgdal.x86_64 : Bindings for the 'Geospatial' Data Abstraction Library
+R-rgeos.x86_64 : Interface to Geometry Engine - Open Source ('GEOS')
+R-rlang.x86_64 : Functions for Base Types and Core R and 'Tidyverse' Features
+R-rle.x86_64 : Common Functions for Run-Length Encoded Vectors
+R-rlecuyer.x86_64 : R interface to RNG with multiple streams
+R-rmarkdown.noarch : Dynamic Documents for R
+R-roxygen2.x86_64 : In-Line Documentation for R
+R-rpm-macros.noarch : Macros to help produce R packages
+R-rprintf.noarch : Adaptive Builder for Formatted Strings
+R-rprojroot.noarch : Finding Files in Project Subdirectories
+R-rsconnect.noarch : Deployment Interface for R Markdown Documents and Shiny Applications
+R-rstudioapi.noarch : Safely Access the RStudio API
+R-rsvg.x86_64 : Render SVG Images into PDF, PNG, PostScript, or Bitmap Arrays
+R-rtracklayer.x86_64 : R interface to genome browsers and their annotation tracks
+R-rvest.noarch : Easily Harvest (Scrape) Web Pages
+R-sandwich.noarch : Robust Covariance Matrix Estimators
+R-scales.noarch : Scale Functions for Visualization
+R-scatterplot3d.noarch : 3D Scatter Plot
+R-sciplot.noarch : Scientific Graphing Functions for Factorial Designs
+R-selectr.noarch : Translate CSS Selectors to XPath Expressions
+R-servr.noarch : Simple HTTP Server to Serve Static Files or Dynamic Documents
+R-sessioninfo.noarch : R Session Information
+R-sfsmisc.noarch : Utilities from 'Seminar fuer Statistik' ETH Zurich
+R-shiny.noarch : Web Application Framework for R
+R-showtext.x86_64 : Using Fonts More Easily in R Graphs
+R-showtextdb.noarch : Font Files for the 'showtext' Package
+R-simmer.i686 : Discrete-Event Simulation for R
+R-simmer.x86_64 : Discrete-Event Simulation for R
+R-snow.noarch : Simple Network of Workstations
+R-sodium.x86_64 : A Modern and Easy-to-Use Crypto Library
+R-sourcetools.i686 : Tools for Reading, Tokenizing and Parsing R Code
+R-sourcetools.x86_64 : Tools for Reading, Tokenizing and Parsing R Code
+R-sp.i686 : Classes and Methods for Spatial Data
+R-sp.x86_64 : Classes and Methods for Spatial Data
+R-spelling.noarch : Tools for Spell Checking in R
+R-statnet.common.x86_64 : Common R Scripts and Utilities Used by the Statnet Project Software
+R-stringdist.i686 : Approximate String Matching, Fuzzy Text Search, and String Distance Functions
+R-stringdist.x86_64 : Approximate String Matching, Fuzzy Text Search, and String Distance Functions
+R-stringi.x86_64 : Character String Processing Facilities
+R-stringi.i686 : Character String Processing Facilities
+R-stringr.noarch : Simple, Consistent Wrappers for Common String Operations
+R-styler.noarch : Non-Invasive Pretty Printing of R Code
+R-svglite.x86_64 : An 'SVG' Graphics Device
+R-sys.x86_64 : Powerful and Reliable Tools for Running System Commands in R
+R-sysfonts.x86_64 : Loading Fonts into R
+R-systemfit.noarch : Simultaneous Equation Estimation R Package
+R-systemfonts.i686 : System Native Font Finding
+R-systemfonts.x86_64 : System Native Font Finding
+R-tesseract.x86_64 : Open Source OCR Engine
+R-testit.noarch : A Simple Package for Testing R Packages
+R-testthat.x86_64 : Unit Testing for R
+R-textshaping.i686 : Bindings to the HarfBuzz and Fribidi Libraries for Text Shaping
+R-textshaping.x86_64 : Bindings to the HarfBuzz and Fribidi Libraries for Text Shaping
+R-tibble.x86_64 : Simple Data Frames
+R-tidyr.x86_64 : Tidy Messy Data
+R-tidyselect.noarch : Select from a Set of Strings
+R-tikzDevice.x86_64 : R Graphics Output in LaTeX Format
+R-timeDate.noarch : Rmetrics - chronological and calendar objects
+R-timeSeries.noarch : Financial Time Series Objects (Rmetrics)
+R-tinytest.noarch : Lightweight and Feature Complete Unit Testing Framework
+R-tinytex.noarch : Helper Functions to Install and Maintain TeX Live, and Compile LaTeX Documents
+R-tkWidgets.noarch : Widgets to provide user interfaces from bioconductor
+R-tkrplot.x86_64 : TK Rplot
+R-tmvnsim.x86_64 : Truncated Multivariate Normal Simulation
+R-tufte.noarch : Tufte's Styles for R Markdown Documents
+R-tweenr.x86_64 : Interpolate Data for Smooth Animations
+R-udunits2.x86_64 : Udunits-2 Bindings for R
+R-unitizer.noarch : Interactive R Unit Tests
+R-units.x86_64 : Measurement Units for R Vectors
+R-unix.x86_64 : POSIX System Utilities
+R-usethis.noarch : Automate Package and Project Setup
+R-utf8.x86_64 : Unicode Text Processing
+R-uuid.x86_64 : Tools for generating and handling of UUIDs
+R-vctrs.x86_64 : Vector Helpers
+R-vctrs.i686 : Vector Helpers
+R-viridisLite.noarch : Default Color Maps from 'matplotlib' (Lite Version)
+R-waldo.noarch : Find Differences Between R Objects
+R-waveslim.x86_64 : R module, Basic wavelet routines for 1,2 and 3-dimensional signal processing
+R-wavethresh.x86_64 : R module, Software to perform wavelet statistics and transforms
+R-webp.x86_64 : A New Format for Lossless and Lossy Image Compression
+R-websocket.x86_64 : 'WebSocket' Client Library
+R-webutils.x86_64 : Utility Functions for Developing Web Applications
+R-wesanderson.noarch : Wes Anderson Palette Generator
+R-whisker.noarch : {{mustache}} for R, Logicless Templating
+R-whoami.noarch : Username, Full Name, Email Address, 'GitHub' Username of the Current User
+R-widgetTools.noarch : Bioconductor tools to support tcltk widgets
+R-winch.x86_64 : Portable Native and Joint Stack Traces
+R-withr.noarch : Run Code 'With' Temporarily Modified Global State
+R-xfun.x86_64 : Miscellaneous Functions by 'Yihui Xie'
+R-xml2.x86_64 : Parse XML
+R-xml2.i686 : Parse XML
+R-xmlparsedata.noarch : Parse Data of 'R' Code as an 'XML' Tree
+R-xopen.noarch : Open System Files, 'URLs', Anything
+R-xtable.noarch : Export Tables to LaTeX or HTML
+R-yaml.x86_64 : Methods to Convert R Data to YAML and Back
+R-zeallot.noarch : Multiple, Unpacking, and Destructuring Assignment
+R-zoo.x86_64 : Z's ordered observations for irregular time series
+R-zoo.i686 : Z's ordered observations for irregular time series
