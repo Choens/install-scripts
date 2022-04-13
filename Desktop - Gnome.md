@@ -33,8 +33,10 @@ sudo dnf install \
     gnome-extensions-app \
     deja-dup* \
     file-roller file-roller-nautilus \
+    gnome-console.x86_64 \
     gnome-feeds \
     gnome-maps \
+    gnome-text-editor \
     gnome-tweaks \
     gnome-weather \
     gnome-shell-extension-auto-move-windows.noarch \
@@ -43,22 +45,38 @@ sudo dnf install \
     gnome-shell-extension-disconnect-wifi.noarch \
     gnome-shell-extension-emoji-selector.noarch \
     gnome-shell-extension-material-shell.noarch \
+    gnome-usage.x86_64 \
     seahorse
 
-flatpak install com.rafaelmardojai.Blanket work.openpaper.Paperwork
+sudo dnf remove gnome-system-monitor
+
+flatpak install \
+    com.rafaelmardojai.Blanket \
+    work.openpaper.Paperwork \
+    com.github.maoschanz.drawing \
+    de.haeckerfelix.Shortwave
 ```
 
 # Developer Tools
 
 ```bash
 sudo dnf install \
-    gedit-plugins \
+    ##gedit-plugins \
     gitg.x86_64 \
     meld \
     rabbitvcs-cli rabbitvcs-nautilus \
     tilix 
 
-flatpak install net.bartkessels.getit org.gaphor.Gaphor org.gnome.Solanum 
+sudo dnf remove gedit*
+
+flatpak install \
+    re.sonny.Commit \
+    net.bartkessels.getit \
+    org.gaphor.Gaphor \
+    io.github.seadve.Kooha \
+    com.belmoussaoui.Obfuscate \
+    com.github.emmanueltouzery.projectpad \
+    org.gnome.Solanum 
 
 flatpak install net.sourceforge.squirrel_sql
 

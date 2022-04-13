@@ -46,6 +46,8 @@ git clone https://github.com/Choens/install-scripts.git
 
 ```bash
 sudo dnf install \
+    aspell-en \
+    hunspell-en \
     hwinfo \
     htop \
     p7zip p7zip-plugins \
