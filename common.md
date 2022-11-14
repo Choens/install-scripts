@@ -57,6 +57,7 @@ And copy/paste the following:
 
 **.gitconfig-andy:**
 ```bash
+touch ~/.gitconfig-andy
 gnome-text-editor ~/.gitconfig-andy
 ```
 
@@ -105,40 +106,6 @@ sudo dnf install \
     ranger
 ```
 
-## Docker
-
-Obviously, only useful where I'm going to be doing docker development.
-
-TODO: Cleanup
-
-```bash
-sudo dnf install podman podman-docker podman-compose podman-tui
-
-## Maybe:
-sudo dnf install docker-compose
-
-## To use docker compose:
-sudo systemctl enable podman.socket
-sudo systemctl start podman.socket
-sudo systemctl status podman.socket
-
-## TEST -- You want to see  "OK"
-sudo curl -H "Content-Type: application/json" --unix-socket /var/run/docker.sock http://localhost/_ping
-
-
-## TODO: Learn more about this.
-## To run docker successfully, SELinux needs to be disabled.
-## To do so temporarily:
-sudo setenforce 0 # Or 1 to re-enable.
-
-# To do so permanently, edit /etc/selinux/config and:
-# SELINUX=permissive 
-# or
-# SELINUX=disabled
-#
-# The default (Fedora 36) is:
-# SELINUX=enforcing
-```
 
 
 
