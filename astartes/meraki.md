@@ -11,7 +11,6 @@ sudo dnf remove libreswan openswan
 sudo dnf install \
     NetworkManager-l2tp\
     NetworkManager-strongswan.x86_64 \
-    plasma-nm-l2tp.x86_64 plasma-nm-strongswan \
     strongswan
 sudo systemctl stop xl2tpd
 ```

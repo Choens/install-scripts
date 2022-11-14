@@ -1,0 +1,28 @@
+# About
+
+# Install
+
+```bash
+sudo dnf groupinstall "Headless Management" -y
+sudo dnf install cockpit*
+```
+
+# Setup
+
+https://cockpit-project.org/guide/latest/https.html#https-required
+
+```bash
+sudo systemctl enable --now cockpit.socket
+sudo firewall-cmd --add-service=cockpit
+sudo firewall-cmd --add-service=cockpit --permanent
+
+# What certificate are we using???? Probably self-signed.
+sudo /usr/libexec/cockpit-certificate-ensure --check
+
+# So get something better:
+sudo semanage fcontext -a -t cert_t '/etc/cockpit/ws-certs\.d(/.*)?'
+sudo restorecon -v /etc/cockpit/ws-certs.d
+sudo getcert request -f /etc/cockpit/ws-certs.d/50-certmonger.cert \
+                -k /etc/cockpit/ws-certs.d/50-certmonger.key \
+                -D primarch \
+```

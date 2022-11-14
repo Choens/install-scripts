@@ -1,41 +1,8 @@
-# About
+# Git
 
-Contains tools/software which I commonly install on most of my systems.
+Set of configurations for git.
 
-
-
-# First Boot
-
-Using whatever console/terminal/remote ssh:
-
-```bash
-sudo dnf upgrade
-sudo dnf group upgrade --with-optional Multimedia
-```
-
-And then poke around a little. See if you see anything new.
-
-```bash
-dnf group list
-```
-
-
-
-# First Steps
-
-It is nice to have these scripts locally. You _can_ copy/paste from a browser,
-but a local copy is _nice_. This will help make that happen. Go ahead and set
-yourself up with a RSA key, so you can push/pull from git. First, a couple of
-dependencies.
-
-```bash
-sudo apt install git 
-
-# You don't need this on a server or other system managed via ssh.
-sudo dnf install xclip
-```
-
-Now, create a system-specific RSA key, and copy it to GitHub. I usually label
+Create a system-specific RSA key, and copy it to GitHub. I usually label
 these based on the hostname of the system, so I can later disable access to
 specific systems.
 
@@ -46,6 +13,9 @@ ssh-add ~/.ssh/id_rsa
 
 # Again, maybe not via SSH . . . . 
 xclip -sel clip < ~/.ssh/id_rsa.pub
+
+mkdir ~/Documents/dev-andy
+mkdir ~/Documents/dev-acphs
 ```
 
 Before creating a local copy of the installation scripts, set up my common
@@ -53,17 +23,19 @@ development structure. This helps me manage my different copies of myself and
 makes sure my git commits are appropriate.
 
 **.gitconfig:**
+```bash
+touch ~/.gitconfig
+gnome-text-editor ~/.gitconfig
 ```
-[includeIf "gitdir:dev/acphs/"]
+
+And copy/paste the following:
+```
+[includeIf "gitdir:Documents/dev-acphs/"]
   path = .gitconfig-acphs
-[includeIf "gitdir:dev/acuitas/"]
-  path = .gitconfig-acuitas 
-[includeIf "gitdir:dev/andy/"]
+[includeIf "gitdir:Documents/dev-andy/"]
   path = .gitconfig-andy
 [includeIf "gitdir:.emacs.d/"]
   path = .gitconfig-emacs
-[includeIf "gitdir:Notes/"]
-  path = .gitconfig-notes
 [init]
         defaultBranch = main
 [credential]
@@ -71,20 +43,24 @@ makes sure my git commits are appropriate.
 ```
 
 **.gitconfig-acphs:**
+```bash
+touch ~/.gitconfig-acphs
+gnome-text-editor ~/.gitconfig-acphs
+```
+
+And copy/paste the following:
 ```
 [user]
     name = Andy Choens
     email = andrew.choens@acphs.edu
 ```
 
-**.gitconfig-acuitas:**
-```
-[user]
-    name = Andy Choens
-    email = andy.choens@acuitashealth.com
+**.gitconfig-andy:**
+```bash
+gnome-text-editor ~/.gitconfig-andy
 ```
 
-**.gitconfig-andy:**
+And copy/paste the following:
 ```
 [user]
     name = Andy Choens
@@ -93,6 +69,10 @@ makes sure my git commits are appropriate.
 And now we can create a local copy of these scripts.
 
 **.gitconfig-emacs:**
+```bash
+gnome-text-editor ~/.gitconfig-emacs
+```
+
 ```
 [user]
     name = Andy Choens
@@ -112,15 +92,11 @@ References:
 - https://help.github.com/articles/connecting-to-github-with-ssh/
 
 
-
-
-```bash
-
-```
 ## CLI Applications
 
 ```bash
 sudo dnf install \
+    NetworkManager-tui \
     bpytop \
     hwinfo \
     htop \
@@ -136,7 +112,7 @@ Obviously, only useful where I'm going to be doing docker development.
 TODO: Cleanup
 
 ```bash
-sudo dnf install podman podman-docker podman-compose
+sudo dnf install podman podman-docker podman-compose podman-tui
 
 ## Maybe:
 sudo dnf install docker-compose

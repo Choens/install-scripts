@@ -1,3 +1,27 @@
+# Astartes TODO List
+
+- [ ] RSA Key for GH (common.md)
+- [ ] RSA Key for GL (common.md)
+- [ ] Gnome Extensions??? WTF???
+- [ ] Load Firefox Profiles
+- [ ] Figure out quarto.
+- [ ] https://beancount.github.io/docs/ cool???
+- [ ] AppFlowy
+- [ ] Sublime
+- [ ] RStudio 
+- [ ] https://www.rstudio.com/blog/rstudio-conf-2022-virtual/
+- [ ] https://cli.r-lib.org/reference/style_hyperlink.html
+- [ ] test_that
+- [ ] https://www.rstudio.com/blog/rstudio-glimpse-newsletter-01/
+- [ ] https://www.rstudio.com/blog/how-i-use-stories-to-share-data-at-meetings/
+- [ ] https://www.rstudio.com/blog/10-ways-rstudio-connect/
+- [ ] https://www.rstudio.com/blog/automated-survey-reporting/
+- [ ] https://www.rstudio.com/conference/2022/schedule/
+- [ ] https://www.rstudio.com/blog/changes-for-the-better-in-gt-0-6-0/
+https://www.rstudio.com/blog/announce-vetiver/
+https://www.rstudio.com/blog/grow-your-data-science-skills-with-academy/
+- note the settnig for dark theme
+
 # TODO
 
 List of things I am still working on.
@@ -17,18 +41,6 @@ I also need to make sure I have documented texlive-pdfcrop
 - [D] RDP: remmina
 - [ ] Microsoft Azure Storage Explorer
 - [D] Video: mpv
-- [ ] Theme: 
-  - arc-theme,
-  - bluebird-gtk-theme,
-  - blackbird-gtk-theme,
-  - clearlooks-phenix-theme,
-  - gnome-brave-icon-theme,
-  - gnome-colors,
-  - gnome-humility-icon-theme,
-  - greybird-gtk-theme,q
-  - numix-blue-gtk-theme,
-  - numix-gtk-theme,
-  - materia-gtk-theme 
 - [ ] Gnome: 
   - gnome-color-manager,
   - Photos: [gnome-photos, shotwell?, gthumb],
@@ -65,32 +77,6 @@ I also need to make sure I have documented texlive-pdfcrop
 
 ## Megatron Setup
 
-- [ ] Powertop
-- [ ] TLP
-- [ ] Remina setup
-- [ ] Setup Electerm and compare to Remina
-    - Remina won. Hands down.
-- [D] Slack
-- [D] Thunderbird
-- [ ] Look at my gnome-shell options:
-	- Auto Hide Top Bar
-	- Blue Tooth Quick Conect
-	- Multi Monitors
-	- Weather
-	- G Paste
-- [D] Libre Office Sifr
-- [ ] Setup/Use RSS Application
-- [ ] Evaluate Leo Editor
-- [ ] sqsh & emacs
-- [ ] rerun powertop autotune
-- [ ] Azure Data Studio
-- [ ] Install Adobe Source Code Pro
-- [ ] Wrap on current workspace only (dconf setting)
-
-- fonts-clear-sans
-- node-ytdl-core
-- python3-pafy
-- smtube/focal
 
 # From Things
 
