@@ -175,13 +175,15 @@ sudo dnf install -y \
     python3-pingouin \
     python3-plotly \
     python3-poetry \
+    python3-pyarrow \
     python3-scikit-learn python3-scipy \
     python3-seaborn.noarch \
+    python3-snappy \
     python3-statsmodels \
 	python3-sqlalchemy python3-sqlalchemy+postgresql_asyncpg.x86_64
     
 # I try to keep this as minimal as I can.
-pip install DataProfiler
+pip install DataProfiler debugpy
 ```
 
 ## R
@@ -263,4 +265,29 @@ p <- c(
     "plotly"
     )
 install.packages(p, Ncpus = 4)
+```
+
+And, now we need to install/setup Quarto. And that isn't as easy as it should be
+on Fedora. Go [here](https://quarto.org/docs/get-started/) to download the most
+recent version of the Quarto binary tarball.
+
+The version will, hopefully, advance.
+
+```bash
+wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.2.269/quarto-1.2.269-linux-amd64.tar.gz
+
+mkdir ~/opt
+tar -C ~/opt -xvzf quarto-1.2.269-linux-amd64.tar.gz
+
+mkdir ~/bin
+ln -s ~/opt/quarto-1.2.269/bin/quarto ~/bin/quarto
+
+( echo ""; echo 'export PATH=$PATH:~/bin\n' ; echo "" ) >> ~/.bashrc 
+source ~/.bashrc
+```
+
+To test that it works:
+
+```bash
+quarto check
 ```
