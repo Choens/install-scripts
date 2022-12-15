@@ -30,9 +30,9 @@ gnome-text-editor ~/.gitconfig
 
 And copy/paste the following:
 ```
-[includeIf "gitdir:Documents/dev-acphs/"]
+[includeIf "gitdir:dev/acphs/"]
   path = .gitconfig-acphs
-[includeIf "gitdir:Documents/dev-andy/"]
+[includeIf "gitdir:dev/andy/"]
   path = .gitconfig-andy
 [includeIf "gitdir:.emacs.d/"]
   path = .gitconfig-emacs
