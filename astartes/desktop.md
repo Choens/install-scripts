@@ -203,9 +203,7 @@ sudo dnf install \
 If I'm going to use Wavebox on the system:
 
 ```bash
-sudo rpm --import https://download.wavebox.app/static/wavebox_repo.key
-sudo wget -P /etc/yum.repos.d/ https://download.wavebox.app/stable/linux/rpm/wavebox.repo
-sudo dnf install Wavebox
+flatpak install io.wavebox.Wavebox
 ```
 
 
