@@ -30,10 +30,9 @@ While the above is running, make life a little more comfortable. Gnome is awesom
 
 Open `Settings`:
 
-- Device Name: servitor
+- Device Name: auspex
 - Appearance: Dark
 - Multitasking:
-    - Set `Hot Corner` to FALSE. I never use it.
     - Set `Application Switching` to `Include applications from the current workspace only`.
 - Displays:
     - Set my desktop monitor to be the primary display.
@@ -41,7 +40,7 @@ Open `Settings`:
     - Mouse:
         - Don't change anything.
     - Touchpad:
-        - Set `Natural Scrolling` to FALSE.
+        - Set `Natural Scrolling` to TRUE.
         - Enable "Tap to Click".
 - Accessibility:
     - Set `Always Show Accessibilty Menu` to TRUE
@@ -59,29 +58,22 @@ sudo dnf group upgrade --with-optional Multimedia
 sudo dnf install cockpit
 ```
 
+## Software Setup
+
+- Open gnome software.
+- Enable flathub:
+    - `flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
+    - Reference: https://developer.fedoraproject.org/deployment/flatpak/flatpak-usage.html
+    - As a general rule, I tend to install from Flathub rather than the Fedora flatpacks because I don't want _that_ many copies of the base dependencies.
+
 
 
 # Accessories
 
-## Fonts
-
 ```bash
-# Fonts -------------------------------
 sudo dnf install \
-     adobe-source-sans-pro-fonts \
-     adobe-source-serif-pro-fonts \
-     cascadia-code-fonts \
-     fira-code-fonts \
-     ibm-plex*
-
-sudo dnf install \
-    dconf-editor \
-    gnome-dictionary \
-    deja-dup* \
-    file-roller file-roller-nautilus \
-    gnome-console gnome-console-nautilus \
+    gnome-console \
     gnome-tweaks \
-    gnome-shell-extension-caffeine.noarch \
     gnome-shell-extension-dash-to-dock.noarch \
     gnome-usage \
     solaar  \
@@ -93,15 +85,6 @@ com.mattjakeman.ExtensionManager \
 com.github.tchx84.Flatseal
 ```
 
-## Software Setup
-
-- Open gnome software.
-- Enable flathub:
-    - `flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
-    - Reference: https://developer.fedoraproject.org/deployment/flatpak/flatpak-usage.html
-    - As a general rule, I tend to install from Flathub rather than the Fedora flatpacks because I don't want _that_ many copies of the base dependencies.
-
-
 
 # Developer Tools
 None at the moment.
@@ -111,21 +94,14 @@ None at the moment.
 # Education
 ```bash
 sudo dnf install \
-    artikulate.x86_64 \
     blinken.x86_64 \
     celestia \
-    colobot \
     gcompris* \
-    kalgebra.x86_64 \
-    kalzium.x86_64 \
     kanagram.x86_64 \
     kbruch.x86_64 \
     kgeography.x86_64 \
-    khangman.x86_64 \
     kig.x86_64 \
     klavaro.x86_64 \
-    klettres.x86_64 \
-    kmplot.x86_64 \
     kstars.x86_64 \
     ktouch.x86_64 \
     kturtle.x86_64 \
@@ -133,7 +109,6 @@ sudo dnf install \
     marble.x86_64 \
     minuet.x86_64 \
     pairs.x86_64 \
-    parley.x86_64 \
     scratch.noarch scratch-projects.noarch \
     stellarium.x86_64 \
     step.x86_64 \
@@ -142,7 +117,6 @@ sudo dnf install \
 # Had to install all of these via Discover . . DKW
 flatpak install \
     com.mojang.Minecraft \
-     app.drey.Blurble \
      com.hack_computer.Clubhouse \
      com.endlessnetwork.fablemaker
 
@@ -176,10 +150,8 @@ sudo dnf install \
     klickety.x86_64 \
     klines.x86_64 \
     knavalbattle.x86_64 \
-    knights.x86_64 \
     kolf.x86_64 \
     konquest.x86_64 \
-    kreversi.x86_64 \
     ksirk.x86_64 \
     ksquares.x86_64 \
     ktuberling \
@@ -247,13 +219,3 @@ NA
 # System Settings
 NA
 
-
-
-# Application Addons
-
-## Plasma Addons
-
-## Settings
-
-## KWin Scripts (Discover)
-- Ultrawide Windows or, maybe, Mudeer
