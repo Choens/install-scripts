@@ -27,7 +27,6 @@ Enables you to install flatpaks from Flathub!
 RPM:
 - Fonts: Life is too short for meh fonts.
 - Dconf Editor: Tool for searching/editng the dconf database
-- Deja Dup: Backup tool
 - File Roller: Why is this not installed automatically?
 - GNOME Shell Extensions Some GNOME shell extensions I sometimes use.
 - GNOME-Tweaks: Settings they haven't found a "good" home for
@@ -48,7 +47,6 @@ sudo dnf install \
     NetworkManager-tui \
     dconf-editor \
     gnome-dictionary \
-    deja-dup* \
     file-roller file-roller-nautilus \
     gnome-console \
     gnome-shell-extension-appindicator.noarch \
@@ -72,6 +70,7 @@ Flatpaks:
 - Bitwarden: Manage your gnarly backups.
 - Extension Manager: The GNOME extension manager.
 - Flatseal: Manage permissions for flatpaks.
+- Pika Backup: Backup tool
 
 ```bash
 # This is the first flatpaks installed; it will take a minute.
@@ -79,7 +78,8 @@ flatpak install \
     com.bitwarden.desktop \
     com.mattjakeman.ExtensionManager \
     com.github.tchx84.Flatseal \
-    com.github.GradienceTeam.Gradience
+    com.github.GradienceTeam.Gradience \
+    org.gnome.World.PikaBackup
 ```
 
 From within GNOME Extension Manager, I install:
