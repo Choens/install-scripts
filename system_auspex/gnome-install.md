@@ -14,17 +14,18 @@ Desktop install script for auspex, which is Leila's laptop.
 sudo dnf group upgrade --with-optional Multimedia
 
 # Enable remote management (but don't start the webserver)
-sudo dnf install cockpit
-
 sudo dnf install \
     NetworkManager-tui \
     bpytop \
     cmatrix \
+    cockpit \
+    git \
     hwinfo \
     htop \
     p7zip p7zip-plugins \
     pwgen \
-    ranger
+    ranger \
+    xclip
 ```
 
 While the above is running, make life a little more comfortable. Gnome is awesome, but it needs some TLC to really make it shine.
@@ -37,8 +38,15 @@ While the above is running, make life a little more comfortable. Gnome is awesom
 sudo dnf install \
     gnome-console \
     gnome-tweaks \
+    gnome-shell-extension-appindicator.noarch \
+    gnome-shell-extension-caffeine \
     gnome-shell-extension-dash-to-dock \
+    gnome-shell-extension-gamemode.noarch \
+    gnome-shell-extension-just-perfection \
+    gnome-shell-extension-native-window-placement \
+    gnome-tweaks \
     gnome-usage \
+    htop \
     xdg-desktop-portal-gnome
     
 #This is the first flatpaks installed; it will take a minute.
@@ -47,6 +55,14 @@ com.mattjakeman.ExtensionManager \
 com.github.tchx84.Flatseal
 ```
 
+From within GNOME Extension Manager, I install:
+
+- GNOME Clipboard or Clipboard History
+- Just Perfection
+- Material You Color Theming
+- Tactile
+
+Under Leila's account, setup dash-to-dock.
 
 # Developer Tools
 NA
