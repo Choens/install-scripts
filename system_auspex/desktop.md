@@ -16,7 +16,7 @@ sudo dnf group upgrade --with-optional Multimedia
 # Enable remote management (but don't start the webserver)
 sudo dnf install cockpit
 
-sudo dnf install \
+sudo dnf install\
     NetworkManager-tui \
     bpytop \
     cmatrix \
@@ -127,7 +127,7 @@ sudo dnf install \
     puzzle-master \
     supertux supertuxkart
 
-flatpak install \
+flatpak install -y\
     app.drey.Blurble \
     com.endlessnetwork.fablemaker \
     com.endlessnetwork.missilemath \
@@ -156,7 +156,7 @@ flatpak install \
     com.jgraph.drawio.desktop
 ```
 
-
+TODO: Remove things I don't need on this system right now.
 
 # Internet
 NA
@@ -168,7 +168,10 @@ NA
 
 
 # Office
-NA
+```bash
+sudo dnf autoremove libreoffice*
+
+```
 
 
 
