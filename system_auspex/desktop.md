@@ -16,7 +16,7 @@ sudo dnf group upgrade --with-optional Multimedia
 # Enable remote management (but don't start the webserver)
 sudo dnf install cockpit
 
-sudo dnf install\
+sudo dnf install \
     NetworkManager-tui \
     bpytop \
     cmatrix \
@@ -37,7 +37,7 @@ While the above is running, make life a little more comfortable. Gnome is awesom
 sudo dnf install \
     gnome-console \
     gnome-tweaks \
-    gnome-shell-extension-dash-to-dock.noarch \
+    gnome-shell-extension-dash-to-dock \
     gnome-usage \
     xdg-desktop-portal-gnome
     
@@ -170,7 +170,6 @@ NA
 # Office
 ```bash
 sudo dnf autoremove libreoffice*
-
 ```
 
 
