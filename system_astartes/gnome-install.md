@@ -1,29 +1,18 @@
-# About
-
-Desktop install script for astartes, which is usually the name I give to my primary personal laptop. This system spends most of its time plugged in, but I do use it for teaching, programming in the living room, etc. This is the only system I tend to simply administer directly and it is not connected to cockpit. This is partially a security measure because this laptop leaves the house fairly frequently.
-
-- Operating System: Fedora Workstation
-- Desktop: GNOME
-- Goal: Personal work, teaching, data science, programming
-
-
-
 # First Boot
+
+- Upgrades the system and adds the multimedia stuff.
+- Installs Cockpit (remote management), git, and xclip whichmakes it easier to setup the system.
 
 ```bash
 sudo dnf group upgrade --with-optional Multimedia
 
 # Enable remote management (but don't start the webserver)
-sudo dnf install cockpit
+sudo dnf install cockpit git xclip
 ```
-
-## Reltek
-
-If you ave the . . . displeasure . . . of having a system with a Realtek wireless modem, open [realtek.md](./realtek.md) and 
 
 ## Software Setup
 
-This is an important step. If you don't do it, you can't install flatpak packages.
+Enables you to install flatpaks from Flathub!
 
 - Open GNOME software.
     - Disable Pycharm. Because, meh.
@@ -32,7 +21,6 @@ This is an important step. If you don't do it, you can't install flatpak package
     - `flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
     - Reference: https://developer.fedoraproject.org/deployment/flatpak/flatpak-usage.html
     - As a general rule, I tend to install from Flathub rather than the Fedora flatpacks because I don't want _that_ many copies of the base dependencies.
-
 
 # Accessories
 
@@ -55,16 +43,18 @@ sudo dnf install \
      fira-code-fonts \
      ibm-plex*
 
+# TODO: Check flatpak source
 sudo dnf install \
     NetworkManager-tui \
-    bpytop \
     dconf-editor \
     gnome-dictionary \
     deja-dup* \
     file-roller file-roller-nautilus \
     gnome-console \
+    gnome-shell-extension-appindicator.noarch \
     gnome-shell-extension-caffeine \
     gnome-shell-extension-dash-to-dock \
+    gnome-shell-extension-gamemode.noarch \
     gnome-shell-extension-just-perfection \
     gnome-shell-extension-native-window-placement \
     gnome-tweaks \
@@ -79,24 +69,25 @@ sudo dnf install \
 ```
 
 Flatpaks:
+- Bitwarden: Manage your gnarly backups.
 - Extension Manager: The GNOME extension manager.
 - Flatseal: Manage permissions for flatpaks.
 
 ```bash
 # This is the first flatpaks installed; it will take a minute.
 flatpak install \
+    com.bitwarden.desktop \
     com.mattjakeman.ExtensionManager \
     com.github.tchx84.Flatseal \
     com.github.GradienceTeam.Gradience
 ```
 
-From within GNOME Extensions, I install:
+From within GNOME Extension Manager, I install:
 
 - GNOME Clipboard or Clipboard History
-- Tactile
 - Just Perfection
-
-Remember: If you are running a super-new major release of GNOME, it is likely that none of these will have been updated for that version of GNOME, yet.
+- - Material You Color Theming
+- Tactile
 
 
 
@@ -114,8 +105,8 @@ sudo dnf install \
     fish \
     gitg.x86_64 \
     meld \
-    rabbitvcs-nautilus \
-    tilix
+    rabbitvcs-cli.noarch rabbitvcs-nautilus \
+    tilix tilix-nautilus
 ```
 
 Flatpak:
@@ -128,7 +119,6 @@ Flatpak:
 - Palette: Don't forget your colors.
 - Pick: Color picker
 - Solanum: Tick tock
-- Sequeler: Yet another SQL client.
 
 ```bash
 # This one takes a couple of minutes . . . .
@@ -137,12 +127,12 @@ flatpak install \
     io.dbeaver.DBeaverCommunity \
     io.github.lainsce.Emulsion \
     org.gaphor.Gaphor \
+    re.sonny.Commit \
     rest.insomnia.Insomnia \
     com.belmoussaoui.Obfuscate \
     org.gnome.design.Palette \
     org.kryogenix.Pick \
-    org.gnome.Solanum \
-    com.github.alecaddd.sequeler
+    org.gnome.Solanum
 ```
 
 
@@ -158,6 +148,7 @@ NA
 - Quadrapassel: What it says, for GNOME.
 
 ```bash
+## TODO: Check flatpak options
 sudo dnf install \
     gnome-chess \
     iagno \
@@ -190,6 +181,7 @@ flatpak install org.darktable.Darktable
 - Remmina: A terrific remote client tool (RDP, VNC, etc.).
 
 ```bash
+# TODO: Check flatpak sources
 sudo dnf install \
     epiphany \
     remmina remmina-gnome-session \
@@ -198,6 +190,8 @@ sudo dnf install \
     remmina-plugins-rdp \
     remmina-plugins-secret \
     remmina-plugins-www
+
+flatpak install re.sonny.Tangram
 ```
 
 If I'm going to use Wavebox on the system:
@@ -229,19 +223,19 @@ flatpak install \
 - Geary: GNOME email client.
 
 ```bash
+# TODO: Check flatpak source
 sudo dnf install geary
 ```
 
-- Bitwarden: Manage some gnarly passwords.
 - Slack: You know what this is.
 - Zoom: Whatever could this be?
 
 ```bash
 flatpak install \
-    com.bitwarden.desktop \
     com.slack.Slack \
     us.zoom.Zoom
     
 flatpak install fr.free.Homebank                
 ```
+
 

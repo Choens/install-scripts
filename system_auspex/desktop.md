@@ -19,6 +19,7 @@ sudo dnf install cockpit
 sudo dnf install \
     NetworkManager-tui \
     bpytop \
+    cmatrix \
     hwinfo \
     htop \
     p7zip p7zip-plugins \
@@ -76,7 +77,6 @@ sudo dnf install \
     gnome-tweaks \
     gnome-shell-extension-dash-to-dock.noarch \
     gnome-usage \
-    solaar  \
     xdg-desktop-portal-gnome
     
 #This is the first flatpaks installed; it will take a minute.
@@ -87,7 +87,7 @@ com.github.tchx84.Flatseal
 
 
 # Developer Tools
-None at the moment.
+NA
 
 
 
@@ -108,18 +108,13 @@ sudo dnf install \
     kwordquiz.x86_64 \
     marble.x86_64 \
     minuet.x86_64 \
-    pairs.x86_64 \
-    scratch.noarch scratch-projects.noarch \
     stellarium.x86_64 \
     step.x86_64 \
     tuxtype2.x86_64
 
 # Had to install all of these via Discover . . DKW
 flatpak install \
-    com.mojang.Minecraft \
-     com.hack_computer.Clubhouse \
-     com.endlessnetwork.fablemaker
-
+    com.hack_computer.Clubhouse
 ```
 
 
@@ -138,11 +133,9 @@ sudo dnf install \
     gnome-sudoku \
     gnome-taquin \
     gnome-tetravex \
-    hedgewars.x86_64 \
     iagno \
     kapman.x86_64 \
     katomic.x86_64 \
-    kblocks.x86_64 \
     kbounce.x86_64 \
     kdiamond.x86_64 \
     khangman.x86_64 \
@@ -158,24 +151,15 @@ sudo dnf install \
     kubrick.x86_64 \
     neverball-neverball.x86_64 \
     neverball-neverputt.x86_64 \
-    opensurge \
-    pairs.x86_64 \
     palapeli.x86_64 \
-    plee-the-bear.x86_64 \
     puzzle-master.x86_64 \
     quadrapassel.x86_64 \
-    seahorse-adventures \
     supertux.x86_64 supertuxkart.x86_64 \
     swell-foop.x86_64 \
     tuxtype2.x86_64
 
 
 flatpak install \
-    flathub com.github.k4zmu2a.spacecadetpinball \
-    org.sonic3air.Sonic3AIR \
-    org.srb2.SRB2 \
-    org.srb2.SRB2Kart \
-    com.endlessnetwork.frogsquash \
     org.gottcode.CuteMaze
 ```
 
@@ -189,7 +173,6 @@ sudo dnf install \
     mtpaint.x86_64
 
 flatpak install \
-    org.darktable.Darktable
     com.github.maoschanz.drawing \
     org.gnome.gThumb \
     com.jgraph.drawio.desktop

@@ -1,18 +1,12 @@
 # About
 
-Tools useful for programming. I really only use these lists on desktops/laptops.
-For language/library installation on servers, see server.md.
+Tools useful for programming.
 
 ## Software Search
 
 Is there anything new I should explore?
 ```bash
-dnf search database
-dnf search spreadsheet
-dnf search excel
-dnf search csv
-dnf search schedule
-dnf search automate
+
 ```
 
 
@@ -31,18 +25,26 @@ sudo dnf install libtool
 ```bash
 sudo dnf install \
     litecli \
+    mycli \
     pgcli \
-    postgresql.x86_64 \
     sqlite
 ```
 
+```bash
+sudo systemctl enable mariadb
+sudo systemctl disable mariadb
+
+sudo systemctl start mariadb
+sudo systemctl stop mariadb
+
+sudo mysql_secure_installation
+```
 
 
 # Virtualization
 
 ## Podman
 
-```bash
 Obviously, only useful where I'm going to be doing docker development.
 
 TODO: Cleanup
@@ -99,7 +101,8 @@ sudo dnf install \
     the_silver_searcher
 ```
 
-For full setup instructions, see [Vim](./vim.md)
+For full setup instructions, see:
+- [Vim](./vim.md)
 
 ## VS Code
 
@@ -136,8 +139,9 @@ sudo dnf install \
     git-tools \
     gitui \
     tig
-```
 
+flatpak install io.github.shiftey.Desktop
+```
 
 
 # Languages
@@ -154,6 +158,7 @@ sudo dnf install nodejs.x86_64 npm.x86_64
 # Tools
 sudo dnf install -y \
     black \
+    bpytop \
     conda.noarch \
     python3-bpython \
     python3-jedi  \
@@ -183,21 +188,26 @@ sudo dnf install -y \
 	python3-sqlalchemy python3-sqlalchemy+postgresql_asyncpg.x86_64
     
 # I try to keep this as minimal as I can.
-pip install DataProfiler debugpy
+pip install DataProfiler debugpy polars
 ```
 
 ## R
 
 Installing R on Linux is EASY. All you need is `sudo dnf install R` and you are done. However, having s system set up to then be able to effectively compile packages from CRAN is NOT simple. If you have installed the bsic C development tools and libtool, the folowing will give you a solid basic install capable of interacting with Jupyter notebooks, perform basic analyses, etc.
 
+proj and udunits are for GIS work.
+
 ```bash
 # A basic R setup. I wuold recommend installing the "Basics" packages below.
 sudo dnf install \
+    proj proj-devel \
      R R-devel \
      R-core-devel R-Rcpp-devel R-markdown-devel \
+     R-RMariaDB.x86_64 \
      R-stringi-devel R-vctrs-devel R-xml2-devel R-zoo-devel \
      R-IRdisplay R-IRkernel \
-     sqlite
+     sqlite \
+     udunits2-devel
 ```
 
 If you intend to connect to a Pstgres database, you need to install these two packages.
@@ -213,9 +223,7 @@ If you want to use the built-in version of RStudio, run this. If you want to ins
 sudo dnf install rstudio-desktop.x86_64
 ```
 
-Right now, I'm actually installing this from RStudio directly, so I can get quarto.
-If installing from RSudio, you will have to adjust this, to make sure you are getting the msot recent version.
-Their package has a dependency on sqlite. If you installed the database stuff above, you should be fine. Otherwise, install sqlite. Other than that, it is self-contained.
+If I need to install from RStudio directly . . .
 
 ```bash
 ## Note the exact package name changes over time (of course).
@@ -243,12 +251,16 @@ I find it easier/more stable to install the majority of my packages from CRAN, n
 p <- c(
     "R2HTML",
     "config",
+    "pacman",
+    "rio",
     "tidyverse")
 install.packages(p, Ncpus = 4)
 
 # Database ----------------
-p <- c("RPostgres", "pool")
+p <- c("RMariadb", "RPostgres", "pool")
 install.packages(p, Ncpus = 4)
+
+# GIS
 
 # Modeling/ML ----------------
 p <- c("pins", "tidymodels", "vetiver")
@@ -274,13 +286,13 @@ recent version of the Quarto binary tarball.
 The version will, hopefully, advance.
 
 ```bash
-wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.2.269/quarto-1.2.269-linux-amd64.tar.gz
+wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.2.335/quarto-1.2.335-linux-amd64.tar.gz
 
 mkdir ~/opt
-tar -C ~/opt -xvzf quarto-1.2.269-linux-amd64.tar.gz
+tar -C ~/opt -xvzf quarto-1.2.335-linux-amd64.tar.gz
 
 mkdir ~/bin
-ln -s ~/opt/quarto-1.2.269/bin/quarto ~/bin/quarto
+ln -s ~/opt/quarto-1.2.335/bin/quarto ~/bin/quarto
 
 ( echo ""; echo 'export PATH=$PATH:~/bin\n' ; echo "" ) >> ~/.bashrc 
 source ~/.bashrc
@@ -290,4 +302,14 @@ To test that it works:
 
 ```bash
 quarto check
+```
+
+
+
+# Other
+
+- ARX: Data anonymization tool
+
+```bash
+flatpak install org.deidentifier.arx
 ```
