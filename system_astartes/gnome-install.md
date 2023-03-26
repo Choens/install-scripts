@@ -122,17 +122,22 @@ Flatpak:
 
 ```bash
 # This one takes a couple of minutes . . . .
-flatpak install \
-    org.cockpit_project.CockpitClient \
+flatpak install flathub\
+    com.belmoussaoui.Obfuscate \
+    com.helix_editor.Helix
+    dev.lapce.lapce \
     io.dbeaver.DBeaverCommunity \
     io.github.lainsce.Emulsion \
+    me.iepure.devtoolbox \
+    net.giuspen.cherrytree \
+    org.cockpit_project.CockpitClient \
     org.gaphor.Gaphor \
-    re.sonny.Commit \
-    rest.insomnia.Insomnia \
-    com.belmoussaoui.Obfuscate \
+    org.gnome.Solanum
     org.gnome.design.Palette \
     org.kryogenix.Pick \
-    org.gnome.Solanum
+    org.racket_lang.Racket \
+    re.sonny.Commit \
+    rest.insomnia.Insomnia \
 ```
 
 
