@@ -124,7 +124,7 @@ Flatpak:
 # This one takes a couple of minutes . . . .
 flatpak install flathub\
     com.belmoussaoui.Obfuscate \
-    com.helix_editor.Helix
+    com.helix_editor.Helix \
     dev.lapce.lapce \
     io.dbeaver.DBeaverCommunity \
     io.github.lainsce.Emulsion \
@@ -132,12 +132,12 @@ flatpak install flathub\
     net.giuspen.cherrytree \
     org.cockpit_project.CockpitClient \
     org.gaphor.Gaphor \
-    org.gnome.Solanum
+    org.gnome.Solanum \
     org.gnome.design.Palette \
     org.kryogenix.Pick \
     org.racket_lang.Racket \
     re.sonny.Commit \
-    rest.insomnia.Insomnia \
+    rest.insomnia.Insomnia
 ```
 
 
