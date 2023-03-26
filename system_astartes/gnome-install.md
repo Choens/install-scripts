@@ -67,7 +67,7 @@ sudo dnf install \
 ```
 
 Flatpaks:
-- Bitwarden: Manage your gnarly backups.
+- Bitwarden: Manage passwords.
 - Extension Manager: The GNOME extension manager.
 - Flatseal: Manage permissions for flatpaks.
 - Pika Backup: Backup tool
