@@ -61,6 +61,7 @@ sudo dnf install \
     gnome-usage \
     htop \
     hwinfo \
+    neofetch \
     p7zip p7zip-plugins \
     pwgen \
     ranger \
@@ -143,16 +144,17 @@ NA
 
 # Games
 
-- GNOME Chess: Play some chess, on GNOME!
+- Chess: Play some chess, on GNOME!
 - Iagno: Reversi game for GNOME.
 - Quadrapassel: What it says, for GNOME.
 
 ```bash
 ## TODO: Check flatpak options
-sudo dnf install \
-    gnome-chess \
-    iagno \
-    quadrapassel
+flatpak install \
+    org.gnome.Chess \
+    org.gnome.Mahjongg \
+    org.gnome.Quadrapassel \
+    org.gnome.Reversi \
 ```
 
 
