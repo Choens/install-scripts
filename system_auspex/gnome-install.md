@@ -15,6 +15,7 @@ Desktop install script for auspex, which is Leila's laptop.
 sudo dnf group upgrade --with-optional Multimedia
 
 # Installs the sugar desktop.
+# https://wiki.sugarlabs.org/go/Installation
 sudo dnf groupinstall sugar-desktop
 
 # Enable remote management (but don't start the webserver)
