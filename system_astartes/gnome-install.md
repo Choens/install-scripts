@@ -62,7 +62,6 @@ sudo dnf install \
     htop \
     hwinfo \
     neofetch \
-    p7zip p7zip-plugins \
     pwgen \
     ranger \
     solaar \
@@ -87,7 +86,7 @@ From within GNOME Extension Manager, I install:
 
 - GNOME Clipboard or Clipboard History
 - Just Perfection
-- - Material You Color Theming
+- Material You Color Theming
 - Tactile
 
 

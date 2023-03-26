@@ -75,8 +75,8 @@ Under Leila's account, setup dash-to-dock.
 flatpak install \
     com.hack_computer.Clubhouse \
     io.gitlab.Turtlico \
-    org.laptop.TurtleArtActivity
-
+    org.laptop.TurtleArtActivity \
+    org.sugarlabs.MusicBlocks
 ```
 
 
