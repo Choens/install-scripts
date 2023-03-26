@@ -11,7 +11,11 @@ Desktop install script for auspex, which is Leila's laptop.
 # First Boot
 
 ```bash
+# Update and then restart.
 sudo dnf group upgrade --with-optional Multimedia
+
+# Installs the sugar desktop.
+sudo dnf groupinstall sugar-desktop
 
 # Enable remote management (but don't start the webserver)
 sudo dnf install \
@@ -65,7 +69,14 @@ From within GNOME Extension Manager, I install:
 Under Leila's account, setup dash-to-dock.
 
 # Developer Tools
-NA
+```bash
+# Had to install all of these via Discover . . DKW
+flatpak install \
+    com.hack_computer.Clubhouse \
+    io.gitlab.Turtlico \
+    org.laptop.TurtleArtActivity
+
+```
 
 
 
@@ -96,10 +107,6 @@ sudo dnf install \
 sudo dnf install \
     stellarium \
     tuxtype2
-
-# Had to install all of these via Discover . . DKW
-flatpak install \
-    com.hack_computer.Clubhouse
 ```
 
 
