@@ -113,12 +113,15 @@ Flatpak:
 - Cockpit client: A client for Fedora cockpit.
 - DBeaver: The best SQL client
 - Emulsion: Store color palettes.
+  - Removed because it was  not kept up to date.
 - Gaphor: UML modeling
 - Insomnia: Test those APIs.
 - Obfuscate: Obfuscate screenshots, etc.
 - Palette: Don't forget your colors.
 - Pick: Color picker
+  - Removed because it was  not kept up to date.
 - Solanum: Tick tock
+  - Removed because it was  not kept up to date.
 
 ```bash
 # This one takes a couple of minutes . . . .
@@ -127,15 +130,14 @@ flatpak install flathub\
     com.helix_editor.Helix \
     dev.lapce.lapce \
     io.dbeaver.DBeaverCommunity \
-    io.github.lainsce.Emulsion \
+    #io.github.lainsce.Emulsion \
     me.iepure.devtoolbox \
     net.giuspen.cherrytree \
     org.cockpit_project.CockpitClient \
     org.gaphor.Gaphor \
-    org.gnome.Solanum \
+    #org.gnome.Solanum \
     org.gnome.design.Palette \
-    org.kryogenix.Pick \
-    org.racket_lang.Racket \
+    #org.kryogenix.Pick \
     re.sonny.Commit \
     rest.insomnia.Insomnia
 ```
@@ -150,6 +152,7 @@ NA
 
 - Chess: Play some chess, on GNOME!
 - Iagno: Reversi game for GNOME.
+  - removed because the runtime is OLD
 - Quadrapassel: What it says, for GNOME.
 
 ```bash
@@ -157,8 +160,8 @@ NA
 flatpak install \
     org.gnome.Chess \
     org.gnome.Mahjongg \
-    org.gnome.Quadrapassel \
-    org.gnome.Reversi \
+    org.gnome.Quadrapassel
+    #org.gnome.Reversi
 ```
 
 
@@ -209,12 +212,15 @@ flatpak install io.wavebox.Wavebox
 
 # Multimedia
 
+- gstreamer: Want your multimedia?
 - Clapper: Simple, modern GNOME media player.
 - Lollypop: Play & organize your music collection.
 - PsTube: Youtube client made with flutter.
 - Shortwave: Listen to internet radio.
 
 ```bash
+sudo dnf install gstreamer1-plugins-bad-free
+
 flatpak install \
     com.github.rafostar.Clapper \
     io.github.prateekmedia.pstube \
@@ -240,8 +246,9 @@ sudo dnf install geary
 flatpak install \
     com.slack.Slack \
     us.zoom.Zoom
-    
-flatpak install fr.free.Homebank                
+ 
+# Removed because it isn't being kept up to date   
+#flatpak install fr.free.Homebank                
 ```
 
 
