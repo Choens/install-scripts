@@ -46,7 +46,6 @@ sudo dnf install \
     NetworkManager-tui \
     dconf-editor \
     gnome-dictionary \
-    file-roller file-roller-nautilus \
     gnome-console \
     gnome-shell-extension-appindicator.noarch \
     gnome-shell-extension-caffeine \
