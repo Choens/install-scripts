@@ -42,7 +42,6 @@ sudo dnf install \
      fira-code-fonts \
      ibm-plex*
 
-# TODO: Check flatpak source
 sudo dnf install \
     NetworkManager-tui \
     dconf-editor \
@@ -127,19 +126,10 @@ Flatpak:
 # This one takes a couple of minutes . . . .
 flatpak install flathub\
     com.belmoussaoui.Obfuscate \
-    com.helix_editor.Helix \
-    dev.lapce.lapce \
     io.dbeaver.DBeaverCommunity \
-    #io.github.lainsce.Emulsion \
     me.iepure.devtoolbox \
-    net.giuspen.cherrytree \
     org.cockpit_project.CockpitClient \
-    org.gaphor.Gaphor \
-    #org.gnome.Solanum \
-    org.gnome.design.Palette \
-    #org.kryogenix.Pick \
-    re.sonny.Commit \
-    rest.insomnia.Insomnia
+    org.gaphor.Gaphor 
 ```
 
 
@@ -161,7 +151,6 @@ flatpak install \
     org.gnome.Chess \
     org.gnome.Mahjongg \
     org.gnome.Quadrapassel
-    #org.gnome.Reversi
 ```
 
 
@@ -176,7 +165,6 @@ flatpak install \
 ```bash
 flatpak install \
     com.jgraph.drawio.desktop \
-    com.github.maoschanz.drawing \
     org.gnome.gThumb
 
 flatpak install org.darktable.Darktable
@@ -191,8 +179,8 @@ flatpak install org.darktable.Darktable
 
 ```bash
 # TODO: Check flatpak sources
+sudo dnf install epiphany
 sudo dnf install \
-    epiphany \
     remmina remmina-gnome-session \
     remmina-plugins-exec \
     remmina-plugins-python \
@@ -233,22 +221,24 @@ flatpak install \
 # Office
 
 - Geary: GNOME email client.
+- Evolution: Enterprise GNOME email client
+
+I don't use both on a single system. If/when I need to access Exchange servers,
+I use Evolution because Geary's support is nil for this use-case.
 
 ```bash
 # TODO: Check flatpak source
 sudo dnf install geary
+
+sudo dnf install evolution evolution-ews
 ```
 
 - Slack: You know what this is.
 - Zoom: Whatever could this be?
 
 ```bash
-flatpak install \
-    com.slack.Slack \
-    us.zoom.Zoom
- 
-# Removed because it isn't being kept up to date   
-#flatpak install fr.free.Homebank                
+flatpak install com.slack.Slack
+flatpak install us.zoom.Zoom
 ```
 
 
