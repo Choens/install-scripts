@@ -12,7 +12,7 @@ sudo dnf install cockpit git xclip
 
 ## Software Setup
 
-Enables you to install flatpaks from Flathub!
+Enables you to install flatpaks from Flathub! Not needed on Fedora 38 or later.
 
 - Open GNOME software.
     - Disable Pycharm. Because, meh.
@@ -122,7 +122,6 @@ Flatpak:
   - Removed because it was  not kept up to date.
 
 ```bash
-# This one takes a couple of minutes . . . .
 flatpak install flathub\
     com.belmoussaoui.Obfuscate \
     io.dbeaver.DBeaverCommunity \
@@ -145,7 +144,6 @@ NA
 - Quadrapassel: What it says, for GNOME.
 
 ```bash
-## TODO: Check flatpak options
 flatpak install \
     org.gnome.Chess \
     org.gnome.Mahjongg \
@@ -157,7 +155,6 @@ flatpak install \
 # Graphics
 
 - DrawIO: Drawio, in a wrapper.
-- Drawing: Drawing, on GNOME.
 - gThumb: A nice way to manage pictures/photos.
 - Darktable: A really great RAW photo editing tool. Only install it if you need to do this kind of work.
 
