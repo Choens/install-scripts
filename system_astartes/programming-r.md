@@ -1,39 +1,40 @@
 # About
 
-Simple R installation scripts. Includes instructions for installing R and
-getting it set up for first time use.
+Simple R installation scripts. Includes instructions for installing R and getting it set up for first time use.
 
-Installing R on Linux is EASY. All you _must_ do is `sudo dnf install R` and you are _"done"_. However, having a system set up to then be able to effectively compile packages from CRAN is NOT simple. The following will give you a solid basic install capable of interacting with Jupyter notebooks, perform basic analyses, etc.
+This 
 
-# Pre-requisites
+# Fedora Image
+# Prerequisites
+
+Installing R packages from CRAN is getting harder and harder to actually do. Hopefully, this makes it a _little_ less painful.
 
 ```bash
 sudo dnf group install "C Development Tools and Libraries"
 sudo dnf install libtool
+
+sudo dnf autoremove \
+    cairo-devel \
+    freetype-devel libpng-devel libtiff-devel libjpeg-turbo-devel \
+    fribidi-devel \
+    gdal gdal-devel \
+    harfbuzz-devel \
+    libarrow libarrow-devel \
+    libicu libicu71 libicu-devel \
+    libtool \
+    openssl-devel \
+    proj proj-devel
 ```
 
+## Database-Specific Prerequisites
 
-
-# Install
-
-- proj and udunits are for GIS work
-- stringi is for, everything.
-- libicu71 seems to be a Fedora 38 thing
+### MariaDB 
 
 ```bash
-# A basic R setup. I would recommend installing the "Basics" packages below.
-sudo dnf install \
-    gdal gdal-devel \
-    libicu libicu71 libicu-devel \
-    proj proj-devel \
-    R R-devel \
-    R-core-devel R-Rcpp-devel R-markdown-devel \
-    R-RMariaDB.x86_64 \
-    R-stringi-devel R-vctrs-devel R-xml2-devel R-zoo-devel \
-    R-IRdisplay R-IRkernel \
-    sqlite \
-    udunits2-devel
+sudo dnf install mariadb-connector-c-devel mariadb-devel mysql-devel
 ```
+
+### Postgres
 
 Install these to connect to a postgres database:
 
@@ -42,9 +43,35 @@ Install these to connect to a postgres database:
 sudo dnf install libpq.x86_64 libpq-devel
 ```
 
-If you want to use the built-in version of RStudio, run this. If you want to install frm the RStudio website, see below.
+
+# Install R
+
+## Basics
+
+- proj and udunits are for GIS work
+- stringi is for, everything.
+- libicu71 seems to be a Fedora 38 thing
 
 ```bash
+# A basic R setup.
+sudo dnf install \
+    R \
+    R-IRdisplay R-IRkernel
+    R-Rcpp \
+    R-rlang \
+    R-markdown \
+    R-stringi \
+    R-vctrs \
+    R-xml2 \
+    R-zoo
+
+sudo dnf install \
+    R-devel \
+    R-core-devel R-Rcpp-devel R-markdown-devel \
+    R-stringi-devel R-vctrs-devel R-xml2-devel R-zoo-devel \
+    udunits2-devel
+
+
 sudo dnf install rstudio-desktop
 ```
 
@@ -78,12 +105,21 @@ p <- c(
     "languageserver",
     "pacman",
     "pins",
+    "quarto",
     "rlang",
     "tidyverse")
 install.packages(p, Ncpus = 4)
 
-# rio: Convenient import/output functions.
-install.packages("rio", Ncpus = 4, dependencies = TRUE)
+# arrow: A really nice way to store data
+# https://arrow.apache.org/docs/r/articles/install.html
+Sys.setenv("ARROW_R_DEV" = TRUE, "ARROW_USE_PKG_CONFIG" = FALSE)
+install.packages("arrow", Ncpus = 4)
+
+# rio: Convenient import/output functions
+install.packages("rio", Ncpus = 4)
+rio::install_formats()
+
+
 
 
 # Interoperability with Microsoft office applications.
@@ -99,28 +135,31 @@ p <- c(
     "mschart",
     "officer",
     "openxlsx",
-    "rvg"
+    "rvg")
 install.packages(p, Ncpus = 4)
 
 
 # Database ----------------
 # This section is unusual in that it is broken up into two optional group sets.
 
+# DuckDb
+p <- c("duckdb")
+install.packages(p, Ncpus = 4)
+
 # Maria Database
-# RMariaDB: 
-# pool: 
+# Requires mariadb-connector-c-devel mariadb-devel mysql-devel
 p <- c("RMariaDB", "pool")
 install.packages(p, Ncpus = 4)
 
 # Postgres Database
-# RPostgres: 
-# pool: 
 # Requires libpq and libpq-devel
 p <- c("RPostgres", "pool")
 install.packages(p, Ncpus = 4)
 
 
-# GIS
+# GIS ----------------
+
+
 
 # Modeling/ML ----------------
 # parsnip, workflows, infer, recipes
@@ -146,13 +185,13 @@ recent version of the Quarto binary tarball.
 The version will, hopefully, advance.
 
 ```bash
-wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.336/quarto-1.3.336-linux-amd64.tar.gz
+wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.433/quarto-1.3.433-linux-amd64.tar.gz
 
 mkdir ~/opt
-tar -C ~/opt -xvzf quarto-1.3.336-linux-amd64.tar.gz
+tar -C ~/opt -xvzf quarto-1.3.433-linux-amd64.tar.gz
 
 mkdir ~/bin
-ln -s ~/opt/quarto-1.3.336/bin/quarto ~/bin/quarto
+ln -s ~/opt/quarto-1.3.433/bin/quarto ~/bin/quarto
 ```
 
 To test that it works:

@@ -113,3 +113,28 @@ I have multiple profiles:
 Each email address has an Firefox account. FF will then send you the code.
 This will sync extensions, bookmarks, etc.
 
+
+## Mail
+
+Links:
+- https://sites.utexas.edu/glenmark/2021/02/01/how-to-setup-your-office-365-email-using-evolution-ews-linux/
+- https://wiki.gnome.org/Apps/Evolution/EWS/OAuth2
+
+Instructions:
+
+- Google: This is easily set up using the online accounts tool provided by Gnome.
+- Office 365 Account: This is, harder. This requires Evolution and the EWS
+  extension to work. Open Evolution and create a new mail account. 
+  - email address: whatever @ whatever
+  - Evolution cannot set this up automatically.
+    - It is easier if you skip the auto-setup, but it won't hurt anything.
+  - Server type: Exchange Web Services
+  - User name: Same as email
+  - Host URL: https://outlook.office365.com/EWS/Exchange.asmx
+    - BEFORE asking Evolution to fetch the URL, see below. There is a space for
+      it to check supported authentication. Let it do that BEFORE you try to
+      fetch the URL.
+    - And then let Evolution fetch the URL.
+    - You will need your password.
+  - It works, but it is flakey and may take a couple of tries, especially if you
+    are using Microsoft Authenticator.
