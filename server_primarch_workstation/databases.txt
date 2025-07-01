@@ -1,0 +1,20 @@
+
+nextcloud-postgresql.noarch
+timescaledb.x86_64 : Open-source time-series database powered by PostgreSQL
+.x86_64 : Extension modules distributed with PostgreSQL
+
+postgresql-plpython3.x86_64 : The Python3 procedural language for PostgreSQL
+postgresql-server.x86_64 : The programs needed to create and run a PostgreSQL server
+pgadmin4.x86_64 : Administration tool for PostgreSQL
+pgaudit.x86_64 : PostgreSQL Audit Extension
+
+
+pgcli.noarch : CLI for Postgres Database. With auto-completion and syntax highlighting
+pgmodeler.x86_64 : PostgreSQL Database Modeler
+postgresql.x86_64 : PostgreSQL client programs
+postgresql-jdbc.noarch : JDBC driver for PostgreSQL
+postgresql-jdbc-javadoc.noarch : API docs for postgresql-jdbc
+postgresql-odbc.i686 : PostgreSQL ODBC driver
+postgresql-odbc.x86_64 : PostgreSQL ODBC driver
+pgcli.noarch : CLI for Postgres Database. With auto-completion and syntax highlighting
+pgmodeler.x86_64 : PostgreSQL Database Modeler

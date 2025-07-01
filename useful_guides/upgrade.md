@@ -6,12 +6,12 @@ This works across servers, laptops, workstations, etc.
 sudo dnf upgrade --refresh
 sudo dnf autoremove
 sudo dnf install dnf-plugin-system-upgrade -y
-sudo dnf system-upgrade download --releasever=36
+sudo dnf system-upgrade download --releasever=41
 sudo dnf system-upgrade reboot
 ```
 
 ```bash
-sudo dnf system-upgrade download --releasever=36 --allowerasing
+sudo dnf system-upgrade download --releasever=41 --allowerasing
 ```
 
 And if that fails

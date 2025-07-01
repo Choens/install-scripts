@@ -1,0 +1,190 @@
+# About
+
+- Collection of core utilities/tools installed during the "first boot".
+- The last command in this file will reboot the computer.
+
+
+
+# System Name
+
+```bash
+sudo hostnamectl set-hostname --pretty "Primarch"
+sudo hostnamectl set-hostname --static primarch
+```
+
+
+
+# Software Setup
+
+## Minimize
+
+I should probably migrate over to the server edition of Fedora, but I'm lazy. I do however, minimize the number of things installed.
+
+- Gnome Terminal: Replaced by Ptyxis. Only saves 8 MB.
+- LibreOffice: I don't use it, ever, on the server and it frees up ~640 MB.
+- texlive: I don't use enchant to look at PDFs on the server.
+- 
+
+```bash
+
+sudo dnf remove \
+    gnome-terminal* \
+    libreoffice* \
+    texlive* \
+    
+
+```
+
+## Software Setup
+
+- Open GNOME software.
+    - Disable the PyCharm repo.
+    - Disable the NVIDIA repo, unless this is a system with an NVIDIA card.
+    - Disable the Steam repo because I don't really play many games.
+
+Or run the following:
+
+```bash
+sudo sed -i 's/enabled=1/enabled=0/' \
+    /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:phracek:PyCharm.repo \
+    /etc/yum.repos.d/fedora-cisco-openh264.repo \
+    /etc/yum.repos.d/google-chrome.repo \
+    /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo \
+    /etc/yum.repos.d/rpmfusion-nonfree-steam.repo
+```
+
+
+
+# Update & Install Core Utilities
+
+## System Updates
+
+```bash
+sudo dnf upgrade --assumeyes
+```
+
+## Cockpit/Remote Management
+
+Allows me to connect to and manage the system remotely via Cockpit.
+
+```bash
+sudo dnf groupinstall --assumeyes "Headless Management"
+sudo dnf install certmonger
+
+sudo dnf install --assumeyes \
+    cockpit \
+    cockpit-389-ds \
+    cockpit-bridge \
+    cockpit-composer \
+    cockpit-doc \
+    cockpit-file-sharing \
+    cockpit-kdump \
+    cockpit-machines \
+    cockpit-navigator \
+    cockpit-networkmanager \
+    cockpit-packagekit \
+    cockpit-pcp \
+    cockpit-podman \
+    cockpit-selinux \
+    cockpit-session-recording \
+    cockpit-sosreport \
+    cockpit-storaged \
+    cockpit-system \
+    cockpit-ws
+
+# What certificate are we using???? Probably self-signed.
+sudo /usr/libexec/cockpit-certificate-ensure --check
+
+# So get something better:
+sudo semanage fcontext -a -t cert_t '/etc/cockpit/ws-certs\.d(/.*)?'
+sudo restorecon -v /etc/cockpit/ws-certs.d
+sudo getcert request -f /etc/cockpit/ws-certs.d/50-certmonger.cert \
+                -k /etc/cockpit/ws-certs.d/50-certmonger.key \
+                -D primarch
+
+sudo systemctl enable --now sshd
+sudo systemctl enable --now cockpit.socket
+```
+
+## Fonts
+
+Fonts: I like fancy mono-spaced fonts.
+
+```bash
+sudo dnf install -y \
+    adobe-source-sans-pro-fonts \
+    adobe-source-serif-pro-fonts \
+    cascadia-code-fonts \
+    fira-code-fonts \
+    ibm-plex-mono-fonts ibm-plex-sans-fonts ibm-plex-serif-fonts
+```
+
+## Gnome
+
+I do not install any desktop customizations to gnome shell on a server.
+
+## Utilities
+
+- btop, htop: CLI tools to manage the system.
+- git: Version control
+- xclip: allows cli apps to use the mouse
+- Buildah: Build containers
+- Distrobox: Isolate your tools, using podman.
+- Podman: Like Docker, minus the daemon.
+
+
+```bash
+sudo dnf install \
+    buildah \
+    toolbox \
+    podman \
+    podman-compose \
+    podman-docker \
+    podman-remote \
+    podman-tui
+```
+
+## Tailscale
+
+Sets up the Choens virtual network.
+
+```bash
+# Install Tailscale repo and package:
+sudo dnf config-manager -y --add-repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+sudo dnf install -y tailscale
+
+# Enable the TS service & connect to my Tailscale network
+sudo systemctl enable --now tailscaled
+sudo tailscale up --ssh --accept-risk=lose-ssh
+
+# Auto update Tailscale.
+sudo tailscale set --auto-update
+```
+
+
+
+# Setup
+
+## Sleep
+
+```bash
+# Prevent the blasted machine from going to sleep:
+#systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+    
+# 
+cat /etc/systemd/sleep.conf.d/sus-hib-off.conf 
+
+sudo mkdir /etc/systemd/sleep.conf.d
+
+sudo echo -e "[Sleep]\nAllowSuspend=no\nAllowHibernation=no\nAllowSuspendThenHibernate=no\nAllowHybridSleep=no" >> /etc/systemd/sleep.conf.d/sus-hib-off.conf
+
+cat /etc/systemd/sleep.conf.d/sus-hib-off.conf
+```
+
+
+
+# Shutdown
+
+```bash
+sudo shutdown -r now
+```

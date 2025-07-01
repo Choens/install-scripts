@@ -8,8 +8,10 @@ I run TimescaleDB (TDB) as my database of choice because it scales well for the 
 sudo dnf install \
     pgaudit \
     pgcli \
-    postgresql.x86_64 \
+    postgresql postgresql-contrib postgresql-plpython3 \
     timescaledb 
+
+#sudo dnf install postgis postgis-utils \
 ```
 
 ## Setup
@@ -51,8 +53,8 @@ sudo su postgres -c psql
 ```
 
 ```sql
-CREATE database example;
-\c example
+CREATE database test_tsdb;
+\c test_tsdb
 CREATE EXTENSION IF NOT EXISTS timescaledb;
 ```
 
@@ -60,10 +62,26 @@ And to get myself up and running:
 
 ```bash
 sudo -u postgres createuser --interactive -P andy
+```
 
-# As user andy, create myself a database.
+As user andy, create myself a database.
+
+```bash
 createdb
 ```
+
+And then, using psql, change your password:
+
+```bash
+psql
+```
+
+```sql
+\password
+```
+
+
+
 ### Remote Setup
 
 Open up that firewall!!! The last time I did this, I got a warning that this was
@@ -71,6 +89,8 @@ already enabled, so that's "cool".
 
 ```bash
 sudo firewall-cmd --permanent --add-port=5432/tcp
+sudo firewall-cmd --permanent --add-service=postgresql
+sudo firewall-cmd --reload
 ```
 
 [This](https://docs.fedoraproject.org/en-US/quick-docs/firewalld/) can be
@@ -78,7 +98,7 @@ helpful if you get stuck on this step.
 
 
 Tell postgres to listen for remote connections by editing
-`sudo vi /var/lib/pgsql/data/postgresql.conf` as root.
+`sudo micro /var/lib/pgsql/data/postgresql.conf` as root.
 
 ```
 # Change:
@@ -88,7 +108,9 @@ Tell postgres to listen for remote connections by editing
 listen_addresses = '*'
 ```
 
-And edit `sudo vi /var/lib/pgsql/data/pg_hba.conf` to look like:
+Note: You must uncomment the line or it won't work!
+
+Then edit `sudo micro /var/lib/pgsql/data/pg_hba.conf` to look like:
 
 ```
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
@@ -97,8 +119,7 @@ And edit `sudo vi /var/lib/pgsql/data/pg_hba.conf` to look like:
 local   all             all                                     peer
 # IPv4 local connections:
 host    all             all             127.0.0.1/32            ident
-host    all             all             0.0.0.0/0               md5
-host    all             all             10.10.10.0/24           md5
+host    all             all             0.0.0.0/0               scram-sha-256
 # IPv6 local connections:
 host    all             all             ::1/128                 ident
 # Allow replication connections from localhost, by a user with the

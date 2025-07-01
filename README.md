@@ -1,52 +1,18 @@
 # README
 
-Contains installation notes/scripts/etc. for my personal laptops, workstations,
-and servers. I try to keep my systems semi-consistent. Where there are
-differences, I try to be consistent in how I identify them.
+Contains installation "scripts" and notes for my personal laptops, workstations,
+and servers. From one install to the next, I (try to) keep my systems consistent.
 
-## Why is this public?
+My long-term goal is to embrace containers for my development. This means I'll be able to have a consistent set of containerized apps running on (possibly) more than one machine. I will probably split some of these containers into a separate "containers" repo as this matures.
 
-There are parts of this which are _heavily_ customized for my use, but this
-could useful to you if you just want to get some ideas for how to set up your
-own system.
+After Fedora 40 comes out, I'm going to assess the potential for moving to a "atomic" image. I expect to do this transition incrementally.
 
-Someday, I will port this to Ansible.
-
-
-
-# First Steps
-
-## Installaton
-1. Install Fedora:
-    - Download ISO file, burn to a USB-drive, install.
-    - https://getfedora.org/
-      - I recommend the default Fedora Workstation for new users.
-      - Users working for KDE should download the KDE Spin.
-      - The other spins are also terrific, although the notes here are not
-        helpful or relevant.
-2. During installation, encrypt the HDD
-3. Reboot
-
-
-
-# First Steps
-You can copy/paste this code from GitHub, although it is easier to run locally.
-To get a copy of the install scripts installed locally:
-
-```bash
-sudo dnf install git
-
-# You don't need this on a server or other system managed via ssh.
-sudo dnf install xclip
-
-cd Documents
-git clone https://github.com/Choens/install-scripts
-```
-
+- Useful flatpak documentation: https://docs.flatpak.org/en/latest/using-flatpak.html
 
 # Systems
 
+Each system has a folder, specific to that system. There is significant overlap, but they are unique. The folder, common, contains a set of topic-specific guides which are sometimes useful for more than one system, depending on circumstances.
+
 - Astartes: My primary laptop.
-  - When I have more than one, I use other Warhammer 40K inspired names.
-- Auspex: Old laptop that lives in the living room. Primary use is powering Zoom meetings on my TV.
+- Euphrati: My daughter's laptop.
 - Primarch: Local server
