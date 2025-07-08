@@ -71,4 +71,3 @@ flatpak list | grep org.kde
 sudo systemctl disable sddm.service
 sudo systemctl enable gdm.service
 ```
-
