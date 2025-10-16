@@ -1,0 +1,19 @@
+#! /usr/bin/bash
+
+# Builds the image: "dev-fedora-image".
+# This is a big container, so it takes a while.
+podman build --tag fedora-dev-image . >build.log
+
+# Builds a distrobox
+distrobox assemble create --file distrobox.ini
+
+distrobox enter fedora-dev-distrobox
+
+uv tool install radian
+uv tool install --with openpyxl, h5py, mapbox-vector-tile, pyshp, pandas, sas7bdat, savReaderWriter, pyarrow, lxml, PyYAML, datapackage, numpy, pdfminer.six, odfpy, s3fs, fecfile, tomllib visidata
+
+exit
+
+# Builds a toolbox
+toolbox create --image fedora-dev-image
+

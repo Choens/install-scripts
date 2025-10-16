@@ -1,0 +1,1668 @@
+STEP 1/35: FROM registry.fedoraproject.org/fedora-toolbox:latest
+STEP 2/35: ENV GTK_THEME=Adwaita:dark
+--> c980edc004b7
+STEP 3/35: RUN echo "==== First Steps ============"     && dnf -y makecache     && sudo dnf -y upgrade     && dnf install -y dnf-plugins-core
+==== First Steps ============
+Metadata cache created.
+Package                Arch   Version        Repository                            Size
+Upgrading:
+ libxcrypt             x86_64 4.4.37-1.fc41  updates                          269.6 KiB
+   replacing libxcrypt x86_64 4.4.36-11.fc41 e5a2dc656e744fc5bec18df48a3b3657 271.4 KiB
+ libxml2               x86_64 2.12.9-1.fc41  updates                            1.7 MiB
+   replacing libxml2   x86_64 2.12.8-2.fc41  e4554644eafb420abd6f9956cd0804e5   1.7 MiB
+ setup                 noarch 2.15.0-8.fc41  updates                          720.7 KiB
+   replacing setup     noarch 2.15.0-5.fc41  e4554644eafb420abd6f9956cd0804e5 720.7 KiB
+ tzdata                noarch 2024b-1.fc41   updates                            1.6 MiB
+   replacing tzdata    noarch 2024a-9.fc41   e4554644eafb420abd6f9956cd0804e5   1.7 MiB
+
+Transaction Summary:
+ Upgrading:          4 packages
+ Replacing:          4 package
+
+Package                     Arch   Version         Repository      Size
+Installing:
+ dnf-plugins-core           noarch 4.10.0-1.fc41   updates     22.7 KiB
+Installing dependencies:
+ dnf-data                   noarch 4.22.0-1.fc41   updates     38.6 KiB
+ ima-evm-utils-libs         x86_64 1.6.2-2.fc41    fedora      60.8 KiB
+ libcomps                   x86_64 0.1.21-4.fc41   updates    206.2 KiB
+ libdnf                     x86_64 0.73.4-2.fc41   updates      2.1 MiB
+ libfsverity                x86_64 1.6-1.fc41      fedora      32.6 KiB
+ python3-dateutil           noarch 1:2.8.2-16.fc41 fedora     879.2 KiB
+ python3-dbus               x86_64 1.3.2-8.fc41    fedora     520.7 KiB
+ python3-distro             noarch 1.9.0-5.fc41    fedora     198.7 KiB
+ python3-dnf                noarch 4.22.0-1.fc41   updates      2.6 MiB
+ python3-dnf-plugins-core   noarch 4.10.0-1.fc41   updates      1.2 MiB
+ python3-hawkey             x86_64 0.73.4-2.fc41   updates    297.4 KiB
+ python3-libcomps           x86_64 0.1.21-4.fc41   updates    140.8 KiB
+ python3-libdnf             x86_64 0.73.4-2.fc41   updates      3.8 MiB
+ python3-rpm                x86_64 4.20.0-1.fc41   fedora     175.3 KiB
+ python3-six                noarch 1.16.0-23.fc41  fedora     118.3 KiB
+ python3-systemd            x86_64 235-11.fc41     fedora     356.5 KiB
+ rpm-sign-libs              x86_64 4.20.0-1.fc41   fedora      39.4 KiB
+Installing weak dependencies:
+ python3-unbound            x86_64 1.22.0-8.fc41   updates    522.9 KiB
+ rpm-plugin-systemd-inhibit x86_64 4.20.0-1.fc41   fedora      16.3 KiB
+
+Transaction Summary:
+ Installing:        20 packages
+
+--> 0627c60ac1e1
+STEP 4/35: RUN echo "==== CLI Tools ============"
+==== CLI Tools ============
+--> 865f76379daf
+STEP 5/35: RUN echo "---- Build Tools ------------"     && dnf group install -y c-development development-tools     && dnf install -y python3-doit
+---- Build Tools ------------
+Package                               Arch   Version                Repository      Size
+Installing group/module packages:
+ autoconf                             noarch 2.72-3.fc41            fedora       2.8 MiB
+ automake                             noarch 1.16.5-17.fc41         fedora       1.7 MiB
+ binutils                             x86_64 2.43.1-5.fc41          updates     27.4 MiB
+ bison                                x86_64 3.8.2-9.fc41           fedora       3.5 MiB
+ byacc                                x86_64 2.0.20240109-2.fc41    fedora     377.9 KiB
+ ccache                               x86_64 4.10.2-1.fc41          fedora       1.5 MiB
+ cscope                               x86_64 15.9-26.fc41           fedora       1.4 MiB
+ ctags                                x86_64 6.0.0-6.fc41           fedora       2.0 MiB
+ diffstat                             x86_64 1.66-2.fc41            fedora      76.4 KiB
+ doxygen                              x86_64 2:1.12.0-2.fc41        updates     19.2 MiB
+ elfutils                             x86_64 0.192-7.fc41           updates      2.6 MiB
+ flex                                 x86_64 2.6.4-18.fc41          fedora     805.4 KiB
+ gcc                                  x86_64 14.2.1-3.fc41          fedora     104.3 MiB
+ gcc-c++                              x86_64 14.2.1-3.fc41          fedora      38.2 MiB
+ gdb                                  x86_64 15.2-3.fc41            updates    445.3 KiB
+ gettext                              x86_64 0.22.5-6.fc41          fedora       5.2 MiB
+ glibc-devel                          x86_64 2.40-17.fc41           updates      2.3 MiB
+ indent                               x86_64 2.2.13-8.fc41          fedora     465.4 KiB
+ libtool                              x86_64 2.4.7-12.fc41          fedora       2.6 MiB
+ ltrace                               x86_64 0.7.91-51.fc41         fedora     292.1 KiB
+ make                                 x86_64 1:4.4.1-8.fc41         fedora       1.8 MiB
+ patch                                x86_64 2.7.6-25.fc41          fedora     266.7 KiB
+ patchutils                           x86_64 0.4.2-14.fc41          fedora     209.4 KiB
+ perf                                 x86_64 6.12.6-200.fc41        updates     10.7 MiB
+ strace                               x86_64 6.12-1.fc41            updates      2.5 MiB
+ subversion                           x86_64 1.14.5-1.fc41          updates      5.1 MiB
+ systemtap                            x86_64 5.2-1.fc41             updates      0.0   B
+ valgrind                             x86_64 1:3.24.0-2.fc41        updates     30.1 MiB
+Installing dependencies:
+ adobe-mappings-cmap                  noarch 20231115-1.fc41        updates     15.2 MiB
+ adobe-mappings-cmap-deprecated       noarch 20231115-1.fc41        updates    582.1 KiB
+ adobe-mappings-pdf                   noarch 20190401-8.fc41        fedora       4.4 MiB
+ apr                                  x86_64 1.7.5-1.fc41           fedora     302.3 KiB
+ apr-util                             x86_64 1.6.3-21.fc41          fedora     220.5 KiB
+ boost-atomic                         x86_64 1.83.0-8.fc41          fedora      21.0 KiB
+ boost-filesystem                     x86_64 1.83.0-8.fc41          fedora     147.6 KiB
+ boost-regex                          x86_64 1.83.0-8.fc41          fedora     271.0 KiB
+ boost-system                         x86_64 1.83.0-8.fc41          fedora      16.3 KiB
+ boost-thread                         x86_64 1.83.0-8.fc41          fedora     136.8 KiB
+ cairo                                x86_64 1.18.2-2.fc41          updates      1.7 MiB
+ cairo-gobject                        x86_64 1.18.2-2.fc41          updates     34.1 KiB
+ cmake-filesystem                     x86_64 3.30.5-1.fc41          updates      0.0   B
+ cpp                                  x86_64 14.2.1-3.fc41          fedora      35.0 MiB
+ cups-filesystem                      noarch 1:2.4.11-8.fc41        updates      0.0   B
+ cups-libs                            x86_64 1:2.4.11-8.fc41        updates    613.9 KiB
+ dyninst                              x86_64 12.3.0-7.fc41          fedora      14.3 MiB
+ ed                                   x86_64 1.20.2-2.fc41          fedora     146.9 KiB
+ efivar-libs                          x86_64 39-6.fc41              fedora     393.7 KiB
+ elfutils-devel                       x86_64 0.192-7.fc41           updates    183.1 KiB
+ elfutils-libelf-devel                x86_64 0.192-7.fc41           updates     49.5 KiB
+ emacs-filesystem                     noarch 1:30.0-3.fc41          fedora       0.0   B
+ fontconfig                           x86_64 2.15.0-8.fc41          fedora     791.9 KiB
+ freetype                             x86_64 2.13.3-1.fc41          fedora     850.5 KiB
+ fribidi                              x86_64 1.0.15-2.fc41          fedora     368.4 KiB
+ gd                                   x86_64 2.3.3-17.fc41          fedora     403.7 KiB
+ gdb-headless                         x86_64 15.2-3.fc41            updates     15.3 MiB
+ gdk-pixbuf2                          x86_64 2.42.12-6.fc41         fedora       2.5 MiB
+ gettext-envsubst                     x86_64 0.22.5-6.fc41          fedora      74.9 KiB
+ gettext-libs                         x86_64 0.22.5-6.fc41          fedora       1.7 MiB
+ gettext-runtime                      x86_64 0.22.5-6.fc41          fedora     481.3 KiB
+ google-droid-sans-fonts              noarch 20200215-21.fc41       fedora       6.3 MiB
+ gpgmepp                              x86_64 1.23.2-5.fc41          fedora     424.2 KiB
+ graphite2                            x86_64 1.3.14-16.fc41         fedora     192.0 KiB
+ graphviz                             x86_64 12.1.0-1.fc41          fedora      20.8 MiB
+ graphviz-libs                        x86_64 12.1.0-1.fc41          fedora       1.2 MiB
+ gts                                  x86_64 0.7.6-49.20121130.fc41 fedora     650.2 KiB
+ harfbuzz                             x86_64 9.0.0-3.fc41           fedora       2.6 MiB
+ jbig2dec-libs                        x86_64 0.20-5.fc41            fedora     169.0 KiB
+ jbigkit-libs                         x86_64 2.1-30.fc41            fedora     117.6 KiB
+ kernel-headers                       x86_64 6.12.4-200.fc41        updates      6.4 MiB
+ lasi                                 x86_64 1.1.3-14.fc41          fedora     130.8 KiB
+ lcms2                                x86_64 2.16-4.fc41            fedora     424.9 KiB
+ libXft                               x86_64 2.3.8-7.fc41           fedora     164.5 KiB
+ libXpm                               x86_64 3.5.17-4.fc41          fedora     148.4 KiB
+ libXrender                           x86_64 0.9.11-7.fc41          fedora      50.1 KiB
+ libaom                               x86_64 3.9.0-3.fc41           fedora       5.1 MiB
+ libavif                              x86_64 1.0.4-7.fc41           fedora     183.8 KiB
+ libbabeltrace                        x86_64 1.5.11-9.fc41          fedora     519.3 KiB
+ libdatrie                            x86_64 0.2.13-10.fc41         fedora      57.9 KiB
+ libdav1d                             x86_64 1.5.0-1.fc41           updates      1.7 MiB
+ libgs                                x86_64 10.03.1-4.fc41         updates     23.3 MiB
+ libicu                               x86_64 74.2-2.fc41            fedora      34.9 MiB
+ libijs                               x86_64 0.35-23.fc41           fedora      61.6 KiB
+ libimagequant                        x86_64 4.0.3-5.fc41           fedora     666.7 KiB
+ libipt                               x86_64 2.1.1-2.fc41           fedora     113.4 KiB
+ libjpeg-turbo                        x86_64 3.0.2-3.fc41           fedora     776.9 KiB
+ liblerc                              x86_64 4.0.0-7.fc41           fedora     607.5 KiB
+ libmpc                               x86_64 1.3.1-6.fc41           fedora     164.7 KiB
+ libpaper                             x86_64 1:2.1.1-7.fc41         fedora      48.9 KiB
+ libpng                               x86_64 2:1.6.40-4.fc41        fedora     245.8 KiB
+ librsvg2                             x86_64 2.59.2-1.fc41          updates      4.5 MiB
+ libserf                              x86_64 1.3.10-7.fc41          updates    133.7 KiB
+ libstdc++-devel                      x86_64 14.2.1-3.fc41          fedora      15.4 MiB
+ libtextstyle                         x86_64 0.22.5-6.fc41          fedora     195.6 KiB
+ libthai                              x86_64 0.1.29-9.fc41          fedora     783.5 KiB
+ libtiff                              x86_64 4.6.0-6.fc41           fedora     606.0 KiB
+ libtraceevent                        x86_64 1.8.2-4.fc41           fedora       1.5 MiB
+ libvmaf                              x86_64 3.0.0-2.fc41           fedora     823.0 KiB
+ libwebp                              x86_64 1.5.0-1.fc41           updates    814.4 KiB
+ libxcrypt-devel                      x86_64 4.4.37-1.fc41          updates     30.5 KiB
+ libzstd-devel                        x86_64 1.5.6-2.fc41           fedora     202.4 KiB
+ lmdb-libs                            x86_64 0.9.33-2.fc41          fedora     109.6 KiB
+ m4                                   x86_64 1.4.19-10.fc41         fedora     592.9 KiB
+ mokutil                              x86_64 2:0.7.1-2.fc41         fedora     102.8 KiB
+ netpbm                               x86_64 11.02.00-7.fc41        fedora     577.1 KiB
+ nspr                                 x86_64 4.36.0-2.fc41          updates    309.9 KiB
+ nss                                  x86_64 3.107.0-1.fc41         updates      1.8 MiB
+ nss-softokn                          x86_64 3.107.0-1.fc41         updates      1.8 MiB
+ nss-softokn-freebl                   x86_64 3.107.0-1.fc41         updates    830.8 KiB
+ nss-sysinit                          x86_64 3.107.0-1.fc41         updates     21.1 KiB
+ nss-util                             x86_64 3.107.0-1.fc41         updates    200.2 KiB
+ numactl-libs                         x86_64 2.0.19-1.fc41          updates     61.0 KiB
+ openjpeg                             x86_64 2.5.3-2.fc41           updates    451.4 KiB
+ pango                                x86_64 1.54.0-2.fc41          fedora     996.2 KiB
+ perl-File-Compare                    noarch 1.100.800-512.fc41     updates      5.6 KiB
+ perl-File-Copy                       noarch 2.41-512.fc41          updates     19.6 KiB
+ perl-Thread-Queue                    noarch 3.14-511.fc41          fedora      28.9 KiB
+ perl-threads                         x86_64 1:2.40-511.fc41        fedora     115.1 KiB
+ perl-threads-shared                  x86_64 1.69-511.fc41          fedora      83.7 KiB
+ pixman                               x86_64 0.44.2-1.fc41          updates    664.5 KiB
+ poppler                              x86_64 24.08.0-1.fc41         fedora       3.6 MiB
+ poppler-data                         noarch 0.4.11-8.fc41          fedora      12.3 MiB
+ poppler-glib                         x86_64 24.08.0-1.fc41         fedora     586.9 KiB
+ rav1e-libs                           x86_64 0.7.1-4.fc41           fedora       3.0 MiB
+ rsvg-pixbuf-loader                   x86_64 2.59.2-1.fc41          updates    330.6 KiB
+ shared-mime-info                     x86_64 2.3-6.fc41             fedora       5.2 MiB
+ slang                                x86_64 2.3.3-6.fc41           fedora       1.4 MiB
+ source-highlight                     x86_64 3.1.9-23.fc41          fedora       3.1 MiB
+ subversion-libs                      x86_64 1.14.5-1.fc41          updates      4.4 MiB
+ svt-av1-libs                         x86_64 2.1.0-2.fc41           fedora       7.1 MiB
+ systemtap-client                     x86_64 5.2-1.fc41             updates     11.6 MiB
+ systemtap-devel                      x86_64 5.2-1.fc41             updates      9.0 MiB
+ systemtap-runtime                    x86_64 5.2-1.fc41             updates      1.0 MiB
+ tbb                                  x86_64 2021.13.0-2.fc41       fedora     440.8 KiB
+ urw-base35-bookman-fonts             noarch 20200910-23.fc41       fedora       1.4 MiB
+ urw-base35-c059-fonts                noarch 20200910-23.fc41       fedora       1.4 MiB
+ urw-base35-d050000l-fonts            noarch 20200910-23.fc41       fedora      84.3 KiB
+ urw-base35-fonts                     noarch 20200910-23.fc41       fedora       5.3 KiB
+ urw-base35-fonts-common              noarch 20200910-23.fc41       fedora      37.4 KiB
+ urw-base35-gothic-fonts              noarch 20200910-23.fc41       fedora       1.2 MiB
+ urw-base35-nimbus-mono-ps-fonts      noarch 20200910-23.fc41       fedora       1.0 MiB
+ urw-base35-nimbus-roman-fonts        noarch 20200910-23.fc41       fedora       1.4 MiB
+ urw-base35-nimbus-sans-fonts         noarch 20200910-23.fc41       fedora       2.4 MiB
+ urw-base35-p052-fonts                noarch 20200910-23.fc41       fedora       1.5 MiB
+ urw-base35-standard-symbols-ps-fonts noarch 20200910-23.fc41       fedora      64.9 KiB
+ urw-base35-z003-fonts                noarch 20200910-23.fc41       fedora     390.8 KiB
+ utf8proc                             x86_64 2.7.0-8.fc41           fedora     362.4 KiB
+ xapian-core-libs                     x86_64 1.4.26-1.fc41          fedora       2.1 MiB
+ xml-common                           noarch 0.6.3-65.fc41          fedora      78.4 KiB
+ xz-devel                             x86_64 1:5.6.2-2.fc41         fedora     255.6 KiB
+ zlib-ng-compat-devel                 x86_64 2.1.7-3.fc41           fedora     106.8 KiB
+Installing weak dependencies:
+ apr-util-lmdb                        x86_64 1.6.3-21.fc41          fedora      15.2 KiB
+ apr-util-openssl                     x86_64 1.6.3-21.fc41          fedora      23.5 KiB
+ elfutils-debuginfod-client-devel     x86_64 0.192-7.fc41           updates     10.3 KiB
+Installing groups:
+ Development Tools                                                                      
+ C Development Tools and Libraries                                                      
+
+Transaction Summary:
+ Installing:       153 packages
+
+Package                     Arch   Version       Repository      Size
+Installing:
+ python3-doit               noarch 0.36.0-3.fc41 fedora     690.8 KiB
+Installing dependencies:
+ python3-cloudpickle        noarch 3.1.0-1.fc41  updates    127.8 KiB
+ python3-importlib-metadata noarch 8.2.0-1.fc41  fedora     213.3 KiB
+ python3-zipp               noarch 3.20.0-1.fc41 fedora      57.5 KiB
+
+Transaction Summary:
+ Installing:         4 packages
+
+--> df684ca6e06a
+STEP 6/35: RUN echo "---- CLI Tools ------------"     && dnf install -y     btop     clifm     fish     httpie     hwinfo     micro     nu     tldr
+---- CLI Tools ------------
+Package                     Arch   Version        Repository      Size
+Installing:
+ btop                       x86_64 1.4.0-1.fc41   updates      1.6 MiB
+ clifm                      x86_64 1.19-2.fc41    fedora       1.5 MiB
+ fish                       x86_64 3.7.0-4.fc41   fedora      14.0 MiB
+ httpie                     noarch 3.2.3-1.fc41   fedora     864.5 KiB
+ hwinfo                     x86_64 23.2-3.fc41    fedora     281.3 KiB
+ micro                      x86_64 2.0.11-10.fc41 fedora      12.4 MiB
+ nu                         x86_64 0.99.1-5.fc41  updates     34.7 MiB
+ tldr                       noarch 3.3.0-3.fc41   fedora      82.9 KiB
+Installing dependencies:
+ hicolor-icon-theme         noarch 0.17-19.fc41   fedora      72.2 KiB
+ hwinfo-libs                x86_64 23.2-3.fc41    fedora       3.3 MiB
+ libx86emu                  x86_64 3.5-4.fc39     fedora     183.6 KiB
+ pcre2-utf32                x86_64 10.44-1.fc41.1 fedora     562.0 KiB
+ python3-charset-normalizer noarch 3.3.2-5.fc41   fedora     314.8 KiB
+ python3-colorama           noarch 0.4.6-9.fc41   fedora     191.6 KiB
+ python3-defusedxml         noarch 0.7.1-15.fc41  fedora     198.2 KiB
+ python3-idna               noarch 3.7-4.fc41     fedora     595.8 KiB
+ python3-markdown-it-py     noarch 3.0.0-7.fc41   fedora     500.0 KiB
+ python3-mdurl              noarch 0.1.2-8.fc41   fedora      41.4 KiB
+ python3-multidict          x86_64 6.0.5-3.fc41   fedora     162.9 KiB
+ python3-pip                noarch 24.2-1.fc41    fedora      11.4 MiB
+ python3-pygments           noarch 2.18.0-2.fc41  fedora      10.6 MiB
+ python3-pysocks            noarch 1.7.1-25.fc41  fedora     101.5 KiB
+ python3-requests           noarch 2.32.3-3.fc41  fedora     485.9 KiB
+ python3-requests+socks     noarch 2.32.3-3.fc41  fedora      14.5 KiB
+ python3-requests-toolbelt  noarch 1.0.0-7.fc41   fedora     299.1 KiB
+ python3-rich               noarch 13.7.1-5.fc41  fedora       2.5 MiB
+ python3-setuptools         noarch 69.2.0-8.fc41  fedora       7.2 MiB
+ python3-shtab              noarch 1.7.1-3.fc41   fedora     127.1 KiB
+ python3-termcolor          noarch 2.3.0-7.fc41   fedora      28.5 KiB
+ python3-urllib3            noarch 1.26.20-1.fc41 fedora       1.0 MiB
+Installing weak dependencies:
+ python3-urllib3+socks      noarch 1.26.20-1.fc41 fedora      50.1 KiB
+
+Transaction Summary:
+ Installing:        31 packages
+
+--> 1d1dbacd3e58
+STEP 7/35: RUN echo "---- Database Specific Tools ------------"
+---- Database Specific Tools ------------
+--> 78239cf58d77
+STEP 8/35: RUN echo "---- DuckDB"
+---- DuckDB
+--> 5f84aca8ed87
+STEP 9/35: ADD https://github.com/duckdb/duckdb/releases/download/v1.1.3/duckdb_cli-linux-amd64.zip /usr/local/bin
+--> e2f993ac5090
+STEP 10/35: RUN echo "---- SQLite"     && dnf install -y litecli sqlite
+---- SQLite
+Package                     Arch   Version        Repository      Size
+Installing:
+ litecli                    noarch 1.9.0-8.fc41   fedora     958.0   B
+ sqlite                     x86_64 3.46.1-1.fc41  fedora       1.8 MiB
+Installing dependencies:
+ python3-cli-helpers        noarch 2.3.1-3.fc41   fedora     115.5 KiB
+ python3-cli-helpers+styles noarch 2.3.1-3.fc41   fedora       3.8 KiB
+ python3-click              noarch 8.1.7-6.fc41   fedora       1.1 MiB
+ python3-configobj          noarch 5.0.8-10.fc41  fedora     401.1 KiB
+ python3-litecli            noarch 1.9.0-8.fc41   fedora     295.7 KiB
+ python3-prompt-toolkit     noarch 3.0.41-5.fc41  fedora       3.7 MiB
+ python3-sqlparse           noarch 0.4.2-11.fc41  fedora     359.9 KiB
+ python3-tabulate           noarch 0.9.0-10.fc41  fedora     342.0 KiB
+ python3-tabulate+widechars noarch 0.9.0-10.fc41  fedora      34.5 KiB
+ python3-terminaltables     noarch 3.1.10-14.fc41 fedora      93.1 KiB
+ python3-wcwidth            noarch 0.2.13-5.fc41  fedora     559.8 KiB
+
+Transaction Summary:
+ Installing:        13 packages
+
+--> 69ac920adfbe
+STEP 11/35: RUN echo "---- Postgres"     && dnf install -y pgcli postgresql
+---- Postgres
+Package                    Arch   Version       Repository      Size
+Installing:
+ pgcli                     noarch 4.1.0-1.fc41  updates    620.1 KiB
+ postgresql                x86_64 16.3-3.fc41   fedora       7.6 MiB
+Installing dependencies:
+ libpq                     x86_64 16.4-1.fc41   fedora     965.4 KiB
+ postgresql-private-libs   x86_64 16.3-3.fc41   fedora     335.6 KiB
+ python3-pgspecial         noarch 2.1.3-1.fc41  updates    365.5 KiB
+ python3-psycopg3          noarch 3.2.1-3.fc41  fedora       1.9 MiB
+ python3-setproctitle      x86_64 1.3.3-2.fc41  fedora      39.3 KiB
+ python3-typing-extensions noarch 4.12.2-3.fc41 fedora     464.5 KiB
+
+Transaction Summary:
+ Installing:         8 packages
+
+--> 499f5e35166a
+STEP 12/35: RUN echo "---- Git Tools ------------"     && dnf install -y gitui tig
+---- Git Tools ------------
+Package  Arch   Version       Repository      Size
+Installing:
+ gitui   x86_64 0.26.3-4.fc41 updates      8.0 MiB
+ tig     x86_64 2.5.10-2.fc41 fedora     915.0 KiB
+Installing dependencies:
+ libssh2 x86_64 1.11.0-8.fc41 fedora     293.6 KiB
+
+Transaction Summary:
+ Installing:         3 packages
+
+--> 0c67b1dc8b71
+STEP 13/35: RUN echo "==== Programming Languages ============"
+==== Programming Languages ============
+--> b84dded19f1e
+STEP 14/35: RUN echo "---- Julia ------------"     && dnf install -y julia
+---- Julia ------------
+Package              Arch   Version            Repository      Size
+Installing:
+ julia               x86_64 1.11.0-11.rc3.fc41 fedora     557.0 MiB
+Installing dependencies:
+ dSFMT               x86_64 2.2.3-24.fc41      fedora      34.8 KiB
+ julia-common        noarch 1.11.0-11.rc3.fc41 fedora      23.3 MiB
+ libatomic           x86_64 14.2.1-3.fc41      fedora      40.7 KiB
+ libgfortran         x86_64 14.2.1-3.fc41      fedora       3.0 MiB
+ libgit2             x86_64 1.8.4-1.fc41       updates      1.3 MiB
+ libquadmath         x86_64 14.2.1-3.fc41      fedora     325.9 KiB
+ llhttp              x86_64 9.2.1-2.fc41       fedora      72.6 KiB
+ openblas            x86_64 0.3.26-5.fc41      fedora      96.0 KiB
+ openblas-serial     x86_64 0.3.26-5.fc41      fedora      37.9 MiB
+ openblas-threads64_ x86_64 0.3.26-5.fc41      fedora      39.5 MiB
+ openlibm            x86_64 0.7.5-9.fc41       fedora     204.0 KiB
+ p7zip-plugins       x86_64 16.02-31.fc41      fedora       2.6 MiB
+ suitesparse64_      x86_64 7.7.0-2.fc41       fedora     139.9 MiB
+
+Transaction Summary:
+ Installing:        14 packages
+
+--> 692ef8f63b38
+STEP 15/35: RUN echo "---- Julia ------------"     && dnf install -y lua
+---- Julia ------------
+Package Arch   Version      Repository      Size
+Installing:
+ lua    x86_64 5.4.6-6.fc41 fedora     601.7 KiB
+
+Transaction Summary:
+ Installing:         1 package
+
+--> 3dbbaa3867e5
+STEP 16/35: RUN echo "---- Node.js ------------"     && dnf install -y nodejs npm
+---- Node.js ------------
+Package           Arch   Version                   Repository      Size
+Installing:
+ nodejs           x86_64 1:22.11.0-3.fc41          updates    148.5 KiB
+ nodejs-npm       x86_64 1:10.9.0-1.22.11.0.3.fc41 updates      9.4 MiB
+Installing dependencies:
+ libuv            x86_64 1:1.49.2-1.fc41           updates    565.0 KiB
+ nodejs-libs      x86_64 1:22.11.0-3.fc41          updates     73.8 MiB
+Installing weak dependencies:
+ nodejs-docs      noarch 1:22.11.0-3.fc41          updates     91.9 MiB
+ nodejs-full-i18n x86_64 1:22.11.0-3.fc41          updates     29.3 MiB
+
+Transaction Summary:
+ Installing:         6 packages
+
+--> 5c565ac7ab8d
+STEP 17/35: RUN echo "---- Python ------------"     && dnf install -y uv pipx     && pipx ensurepath
+---- Python ------------
+Package               Arch   Version      Repository      Size
+Installing:
+ pipx                 noarch 1.7.1-1.fc41 fedora     682.5 KiB
+ uv                   x86_64 0.5.7-2.fc41 updates     28.5 MiB
+Installing dependencies:
+ python3-argcomplete  noarch 3.5.2-1.fc41 updates    312.7 KiB
+ python3-packaging    noarch 24.1-2.fc41  fedora     422.3 KiB
+ python3-platformdirs noarch 4.2.2-2.fc41 fedora     168.6 KiB
+ python3-userpath     noarch 1.9.2-3.fc41 fedora      56.4 KiB
+
+Transaction Summary:
+ Installing:         6 packages
+
+Success! Added /root/.local/bin to the PATH environment variable.
+
+Consider adding shell completions for pipx. Run 'pipx completions' for
+instructions.
+
+You will need to open a new terminal or re-login for the PATH changes to take
+effect. Alternatively, you can source your shell's config file with e.g.
+'source ~/.bashrc'.
+
+Otherwise pipx is ready to go! ✨ 🌟 ✨
+--> eb8025cf78ee
+STEP 18/35: RUN echo "---- R ------------"     && dnf copr enable -y iucar/cran     && dnf install -y     R-CoprManager R-flexiblas     R-CRAN-httpgd R-CRAN-tidyverse     R-CRAN-tinytex  
+---- R ------------
+Package                    Arch   Version                          Repository                                     Size
+Installing:
+ R-CRAN-httpgd             x86_64 2.0.2-1.fc41.copr7538181         copr:copr.fedorainfracloud.org:iucar:cran   1.2 MiB
+ R-CRAN-tidyverse          noarch 2.0.0-1.fc41.copr7368818         copr:copr.fedorainfracloud.org:iucar:cran 620.5 KiB
+ R-CRAN-tinytex            noarch 0.54-1.fc41.copr8201698          copr:copr.fedorainfracloud.org:iucar:cran 191.2 KiB
+ R-CoprManager             noarch 0.5.7-1.fc41.copr8193539         copr:copr.fedorainfracloud.org:iucar:cran 112.0 KiB
+ R-flexiblas               x86_64 3.4.0-5.fc41                     fedora                                     51.0 KiB
+Installing dependencies:
+ R-CRAN-DBI                noarch 1.2.3-1.fc41.copr7522874         copr:copr.fedorainfracloud.org:iucar:cran   1.9 MiB
+ R-CRAN-MASS               x86_64 7.3.61-1.fc41.copr7613806        copr:copr.fedorainfracloud.org:iucar:cran   1.8 MiB
+ R-CRAN-Matrix             x86_64 1.7.1-1.fc41.copr8157422         copr:copr.fedorainfracloud.org:iucar:cran   8.2 MiB
+ R-CRAN-R6                 noarch 2.5.1-1.fc41.copr7349938         copr:copr.fedorainfracloud.org:iucar:cran 115.9 KiB
+ R-CRAN-RColorBrewer       noarch 1.1.3-1.fc41.copr7349948         copr:copr.fedorainfracloud.org:iucar:cran  63.6 KiB
+ R-CRAN-askpass            x86_64 1.2.1-1.fc41.copr8109609         copr:copr.fedorainfracloud.org:iucar:cran  40.5 KiB
+ R-CRAN-backports          x86_64 1.5.0-1.fc41.copr7483453         copr:copr.fedorainfracloud.org:iucar:cran 211.8 KiB
+ R-CRAN-base64enc          x86_64 0.1.3-3.fc41.copr7349951         copr:copr.fedorainfracloud.org:iucar:cran  51.7 KiB
+ R-CRAN-bit                x86_64 4.5.0.1-1.fc41.copr8339980       copr:copr.fedorainfracloud.org:iucar:cran   1.6 MiB
+ R-CRAN-bit64              x86_64 4.5.2-1.fc41.copr8059694         copr:copr.fedorainfracloud.org:iucar:cran 909.6 KiB
+ R-CRAN-blob               noarch 1.2.4-1.fc41.copr7357934         copr:copr.fedorainfracloud.org:iucar:cran  58.8 KiB
+ R-CRAN-broom              noarch 1.0.7-1.fc41.copr8079037         copr:copr.fedorainfracloud.org:iucar:cran   3.4 MiB
+ R-CRAN-bslib              noarch 0.8.0-1.fc41.copr7803003         copr:copr.fedorainfracloud.org:iucar:cran  10.0 MiB
+ R-CRAN-cachem             x86_64 1.1.0-1.fc41.copr7452047         copr:copr.fedorainfracloud.org:iucar:cran 104.7 KiB
+ R-CRAN-callr              noarch 3.7.6-1.fc41.copr7356069         copr:copr.fedorainfracloud.org:iucar:cran 711.7 KiB
+ R-CRAN-cellranger         noarch 1.1.0-3.fc41.copr7361232         copr:copr.fedorainfracloud.org:iucar:cran 177.7 KiB
+ R-CRAN-cli                x86_64 3.6.3-1.fc41.copr7649835         copr:copr.fedorainfracloud.org:iucar:cran   2.4 MiB
+ R-CRAN-clipr              noarch 0.8.0-1.fc41.copr7349958         copr:copr.fedorainfracloud.org:iucar:cran  85.0 KiB
+ R-CRAN-colorspace         x86_64 2.1.1-1.fc41.copr7795131         copr:copr.fedorainfracloud.org:iucar:cran   4.0 MiB
+ R-CRAN-conflicted         noarch 1.2.0-1.fc41.copr7358096         copr:copr.fedorainfracloud.org:iucar:cran  68.7 KiB
+ R-CRAN-crayon             noarch 1.5.3-1.fc41.copr7633037         copr:copr.fedorainfracloud.org:iucar:cran 235.8 KiB
+ R-CRAN-curl               x86_64 6.0.1-1.fc41.copr8264073         copr:copr.fedorainfracloud.org:iucar:cran   2.1 MiB
+ R-CRAN-data.table         x86_64 1.16.4-1.fc41.copr8353644        copr:copr.fedorainfracloud.org:iucar:cran   4.5 MiB
+ R-CRAN-dbplyr             noarch 2.5.0-1.fc41.copr7364937         copr:copr.fedorainfracloud.org:iucar:cran   1.8 MiB
+ R-CRAN-digest             x86_64 0.6.37-1.fc41.copr7936834        copr:copr.fedorainfracloud.org:iucar:cran 495.7 KiB
+ R-CRAN-dplyr              x86_64 1.1.4-1.fc41.copr7361225         copr:copr.fedorainfracloud.org:iucar:cran   2.6 MiB
+ R-CRAN-dtplyr             noarch 1.3.1-1.fc41.copr7362432         copr:copr.fedorainfracloud.org:iucar:cran 522.6 KiB
+ R-CRAN-evaluate           noarch 1.0.1-1.fc41.copr8128148         copr:copr.fedorainfracloud.org:iucar:cran 147.8 KiB
+ R-CRAN-fansi              x86_64 1.0.6-1.fc41.copr7349952         copr:copr.fedorainfracloud.org:iucar:cran 625.8 KiB
+ R-CRAN-farver             x86_64 2.1.2-1.fc41.copr7442181         copr:copr.fedorainfracloud.org:iucar:cran   2.1 MiB
+ R-CRAN-fastmap            x86_64 1.2.0-1.fc41.copr7447859         copr:copr.fedorainfracloud.org:iucar:cran 108.5 KiB
+ R-CRAN-fontawesome        noarch 0.5.3-1.fc41.copr8272230         copr:copr.fedorainfracloud.org:iucar:cran   2.0 MiB
+ R-CRAN-forcats            noarch 1.0.0-1.fc41.copr7361229         copr:copr.fedorainfracloud.org:iucar:cran 568.9 KiB
+ R-CRAN-fs                 x86_64 1.6.5-1.fc41.copr8192618         copr:copr.fedorainfracloud.org:iucar:cran 597.2 KiB
+ R-CRAN-gargle             noarch 1.5.2-1.fc41.copr7359696         copr:copr.fedorainfracloud.org:iucar:cran   1.3 MiB
+ R-CRAN-generics           noarch 0.1.3-1.fc41.copr7350006         copr:copr.fedorainfracloud.org:iucar:cran 160.2 KiB
+ R-CRAN-ggplot2            noarch 3.5.1-1.fc41.copr7361224         copr:copr.fedorainfracloud.org:iucar:cran   7.1 MiB
+ R-CRAN-glue               x86_64 1.8.0-1.fc41.copr8094211         copr:copr.fedorainfracloud.org:iucar:cran 345.1 KiB
+ R-CRAN-googledrive        noarch 2.1.1-1.fc41.copr7361387         copr:copr.fedorainfracloud.org:iucar:cran   2.1 MiB
+ R-CRAN-googlesheets4      noarch 1.1.1-1.fc41.copr7363412         copr:copr.fedorainfracloud.org:iucar:cran 716.2 KiB
+ R-CRAN-gtable             noarch 0.3.6-1.fc41.copr8178682         copr:copr.fedorainfracloud.org:iucar:cran 337.9 KiB
+ R-CRAN-haven              x86_64 2.5.4-1.fc41.copr7364939         copr:copr.fedorainfracloud.org:iucar:cran 923.9 KiB
+ R-CRAN-highr              noarch 0.11-1.fc41.copr7494448          copr:copr.fedorainfracloud.org:iucar:cran  65.2 KiB
+ R-CRAN-hms                noarch 1.1.3-1.fc41.copr7357932         copr:copr.fedorainfracloud.org:iucar:cran 132.4 KiB
+ R-CRAN-htmltools          x86_64 0.5.8.1-1.fc41.copr7353596       copr:copr.fedorainfracloud.org:iucar:cran 522.9 KiB
+ R-CRAN-httr               noarch 1.4.7-1.fc41.copr7357937         copr:copr.fedorainfracloud.org:iucar:cran 752.3 KiB
+ R-CRAN-ids                noarch 1.0.1-3.fc41.copr7358226         copr:copr.fedorainfracloud.org:iucar:cran 185.4 KiB
+ R-CRAN-isoband            x86_64 0.2.7-1.fc41.copr7351195         copr:copr.fedorainfracloud.org:iucar:cran   1.9 MiB
+ R-CRAN-jquerylib          noarch 0.1.4-1.fc41.copr7357136         copr:copr.fedorainfracloud.org:iucar:cran   1.5 MiB
+ R-CRAN-jsonlite           x86_64 1.8.9-1.fc41.copr8046217         copr:copr.fedorainfracloud.org:iucar:cran   2.3 MiB
+ R-CRAN-knitr              noarch 1.49-1.fc41.copr8232802          copr:copr.fedorainfracloud.org:iucar:cran   1.7 MiB
+ R-CRAN-labeling           noarch 0.4.3-1.fc41.copr7349947         copr:copr.fedorainfracloud.org:iucar:cran  92.7 KiB
+ R-CRAN-lattice            x86_64 0.22.6-1.fc41.copr7352639        copr:copr.fedorainfracloud.org:iucar:cran   2.0 MiB
+ R-CRAN-lifecycle          noarch 1.0.4-1.fc41.copr7354340         copr:copr.fedorainfracloud.org:iucar:cran 282.7 KiB
+ R-CRAN-lubridate          x86_64 1.9.4-1.fc41.copr8364580         copr:copr.fedorainfracloud.org:iucar:cran   1.7 MiB
+ R-CRAN-magrittr           x86_64 2.0.3-1.fc41.copr7349936         copr:copr.fedorainfracloud.org:iucar:cran 417.3 KiB
+ R-CRAN-memoise            noarch 2.0.1-1.fc41.copr7356088         copr:copr.fedorainfracloud.org:iucar:cran  83.7 KiB
+ R-CRAN-mgcv               x86_64 1.9.1-1.fc41.copr7357272         copr:copr.fedorainfracloud.org:iucar:cran   4.5 MiB
+ R-CRAN-mime               x86_64 0.12-1.fc41.copr7349941          copr:copr.fedorainfracloud.org:iucar:cran  55.1 KiB
+ R-CRAN-modelr             noarch 0.1.11-1.fc41.copr7367172        copr:copr.fedorainfracloud.org:iucar:cran 263.8 KiB
+ R-CRAN-munsell            noarch 0.5.1-1.fc41.copr7353599         copr:copr.fedorainfracloud.org:iucar:cran 379.0 KiB
+ R-CRAN-nlme               x86_64 3.1.166-1.fc41.copr7936970       copr:copr.fedorainfracloud.org:iucar:cran   3.8 MiB
+ R-CRAN-openssl            x86_64 2.3.0-1.fc41.copr8401830         copr:copr.fedorainfracloud.org:iucar:cran   3.2 MiB
+ R-CRAN-pillar             noarch 1.10.0-1.fc41.copr8405713        copr:copr.fedorainfracloud.org:iucar:cran 719.2 KiB
+ R-CRAN-pkgconfig          noarch 2.0.3-3.fc41.copr7349937         copr:copr.fedorainfracloud.org:iucar:cran  34.0 KiB
+ R-CRAN-processx           x86_64 3.8.4-1.fc41.copr7353601         copr:copr.fedorainfracloud.org:iucar:cran 547.3 KiB
+ R-CRAN-ps                 x86_64 1.8.1-1.fc41.copr8184952         copr:copr.fedorainfracloud.org:iucar:cran 702.6 KiB
+ R-CRAN-purrr              x86_64 1.0.2-1.fc41.copr7357927         copr:copr.fedorainfracloud.org:iucar:cran 878.1 KiB
+ R-CRAN-ragg               x86_64 1.3.3-1.fc41.copr8010592         copr:copr.fedorainfracloud.org:iucar:cran   1.6 MiB
+ R-CRAN-rappdirs           x86_64 0.3.3-1.fc41.copr8099955         copr:copr.fedorainfracloud.org:iucar:cran  87.3 KiB
+ R-CRAN-readr              x86_64 2.1.5-1.fc41.copr7362418         copr:copr.fedorainfracloud.org:iucar:cran   1.4 MiB
+ R-CRAN-readxl             x86_64 1.4.3-1.fc41.copr7362443         copr:copr.fedorainfracloud.org:iucar:cran   1.5 MiB
+ R-CRAN-rematch            noarch 2.0.0-1.fc41.copr7350057         copr:copr.fedorainfracloud.org:iucar:cran  25.3 KiB
+ R-CRAN-rematch2           noarch 2.1.2-3.fc41.copr7361231         copr:copr.fedorainfracloud.org:iucar:cran  72.4 KiB
+ R-CRAN-reprex             noarch 2.1.1-1.fc41.copr7713768         copr:copr.fedorainfracloud.org:iucar:cran 581.9 KiB
+ R-CRAN-rlang              x86_64 1.1.4-1.fc41.copr7531082         copr:copr.fedorainfracloud.org:iucar:cran   2.6 MiB
+ R-CRAN-rmarkdown          noarch 2.29-1.fc41.copr8210728          copr:copr.fedorainfracloud.org:iucar:cran   6.8 MiB
+ R-CRAN-rstudioapi         noarch 0.17.1-1.fc41.copr8168060        copr:copr.fedorainfracloud.org:iucar:cran 720.0 KiB
+ R-CRAN-rvest              noarch 1.0.4-1.fc41.copr7361235         copr:copr.fedorainfracloud.org:iucar:cran 429.3 KiB
+ R-CRAN-sass               x86_64 0.4.9-1.fc41.copr7356969         copr:copr.fedorainfracloud.org:iucar:cran   4.2 MiB
+ R-CRAN-scales             noarch 1.3.0-1.fc41.copr7356067         copr:copr.fedorainfracloud.org:iucar:cran   1.1 MiB
+ R-CRAN-selectr            noarch 0.4.2-3.fc41.copr7359536         copr:copr.fedorainfracloud.org:iucar:cran 503.0 KiB
+ R-CRAN-stringi            x86_64 1.8.4-1.fc41.copr7422034         copr:copr.fedorainfracloud.org:iucar:cran   2.0 MiB
+ R-CRAN-stringr            noarch 1.5.1-1.fc41.copr7357924         copr:copr.fedorainfracloud.org:iucar:cran 646.8 KiB
+ R-CRAN-sys                x86_64 3.4.3-1.fc41.copr8109592         copr:copr.fedorainfracloud.org:iucar:cran  79.9 KiB
+ R-CRAN-systemfonts        x86_64 1.1.0-1.fc41.copr7447890         copr:copr.fedorainfracloud.org:iucar:cran 517.4 KiB
+ R-CRAN-textshaping        x86_64 0.4.1-1.fc41.copr8353666         copr:copr.fedorainfracloud.org:iucar:cran 271.9 KiB
+ R-CRAN-tibble             x86_64 3.2.1-1.fc41.copr7359525         copr:copr.fedorainfracloud.org:iucar:cran   1.7 MiB
+ R-CRAN-tidyr              x86_64 1.3.1-1.fc41.copr7362421         copr:copr.fedorainfracloud.org:iucar:cran   1.8 MiB
+ R-CRAN-tidyselect         noarch 1.2.1-1.fc41.copr7357928         copr:copr.fedorainfracloud.org:iucar:cran 433.3 KiB
+ R-CRAN-timechange         x86_64 0.3.0-1.fc41.copr8100479         copr:copr.fedorainfracloud.org:iucar:cran 348.5 KiB
+ R-CRAN-tzdb               x86_64 0.4.0-1.fc41.copr7355368         copr:copr.fedorainfracloud.org:iucar:cran   2.1 MiB
+ R-CRAN-unigd              x86_64 0.1.2-1.fc41.copr7538177         copr:copr.fedorainfracloud.org:iucar:cran   1.6 MiB
+ R-CRAN-utf8               x86_64 1.2.4-1.fc41.copr7349954         copr:copr.fedorainfracloud.org:iucar:cran 470.9 KiB
+ R-CRAN-uuid               x86_64 1.2.1-1.fc41.copr7803040         copr:copr.fedorainfracloud.org:iucar:cran  96.7 KiB
+ R-CRAN-vctrs              x86_64 0.6.5-1.fc41.copr7356070         copr:copr.fedorainfracloud.org:iucar:cran   2.3 MiB
+ R-CRAN-viridisLite        noarch 0.4.2-1.fc41.copr7349928         copr:copr.fedorainfracloud.org:iucar:cran   1.3 MiB
+ R-CRAN-vroom              x86_64 1.6.5-1.fc41.copr7361506         copr:copr.fedorainfracloud.org:iucar:cran   1.7 MiB
+ R-CRAN-withr              noarch 3.0.2-1.fc41.copr8184963         copr:copr.fedorainfracloud.org:iucar:cran 396.0 KiB
+ R-CRAN-xfun               x86_64 0.49-1.fc41.copr8197470          copr:copr.fedorainfracloud.org:iucar:cran 941.1 KiB
+ R-CRAN-xml2               x86_64 1.3.6-1.fc41.copr7353644         copr:copr.fedorainfracloud.org:iucar:cran 509.0 KiB
+ R-CRAN-yaml               x86_64 2.3.10-1.fc41.copr7795167        copr:copr.fedorainfracloud.org:iucar:cran 276.1 KiB
+ R-core                    x86_64 4.4.2-1.fc41                     updates                                   101.6 MiB
+ dejavu-sans-fonts         noarch 2.37-24.fc41                     fedora                                      5.5 MiB
+ desktop-file-utils        x86_64 0.27-2.fc41                      fedora                                    230.4 KiB
+ flexiblas                 x86_64 3.4.4-3.fc41                     fedora                                     48.5 KiB
+ flexiblas-netlib          x86_64 3.4.4-3.fc41                     fedora                                     10.7 MiB
+ flexiblas-openblas-openmp x86_64 3.4.4-3.fc41                     fedora                                     43.3 KiB
+ gobject-introspection     x86_64 1.82.0-1.fc41                    fedora                                    396.2 KiB
+ libRmath                  x86_64 4.4.2-1.fc41                     updates                                   250.8 KiB
+ libdeflate                x86_64 1.23-1.fc41                      updates                                   117.2 KiB
+ libraqm                   x86_64 0.8.0-8.fc41                     fedora                                     28.6 KiB
+ openblas-openmp           x86_64 0.3.26-5.fc41                    fedora                                     39.4 MiB
+ pandoc-common             noarch 3.1.11.1-31.fc41                 fedora                                      1.9 MiB
+ python3-cairo             x86_64 1.25.1-5.fc41                    fedora                                    492.5 KiB
+ python3-chardet           noarch 5.2.0-14.fc41                    fedora                                      2.1 MiB
+ python3-docutils          noarch 0.20.1-6.fc41                    fedora                                      4.8 MiB
+ python3-gobject-base      x86_64 3.48.2-3.fc41                    fedora                                      1.4 MiB
+ python3-jinja2            noarch 3.1.4-5.fc41                     fedora                                      2.9 MiB
+ python3-markupsafe        x86_64 2.1.5-3.fc41                     fedora                                     57.5 KiB
+ python3-olefile           noarch 0.47-5.fc41                      fedora                                    340.4 KiB
+ python3-pillow            x86_64 11.0.0-1.fc41                    updates                                     4.0 MiB
+ python3-pyyaml            x86_64 6.0.1-18.fc41                    fedora                                    791.1 KiB
+ python3-reportlab         noarch 4.2.4-1.fc41                     fedora                                     10.9 MiB
+ python3-smartypants       noarch 2.0.1-21.fc41                    fedora                                     51.4 KiB
+ tcl                       x86_64 1:8.6.14-2.fc41                  fedora                                      4.2 MiB
+ tk                        x86_64 1:8.6.14-2.fc41                  fedora                                      3.6 MiB
+ tre                       x86_64 0.8.0-45.20140228gitc2f5d13.fc41 fedora                                     75.9 KiB
+ tre-common                noarch 0.8.0-45.20140228gitc2f5d13.fc41 fedora                                     81.0 KiB
+ xclip                     x86_64 0.13-22.git11cba61.fc41          fedora                                     62.4 KiB
+ xdg-utils                 noarch 1.2.1-2.fc41                     fedora                                    346.3 KiB
+Installing weak dependencies:
+ flexiblas-openblas-serial x86_64 3.4.4-3.fc41                     fedora                                     43.3 KiB
+ pandoc                    x86_64 3.1.11.1-32.fc41                 fedora                                    185.0 MiB
+ python3-gobject           x86_64 3.48.2-3.fc41                    fedora                                     23.9 KiB
+ rst2pdf                   noarch 0.102-2.fc41                     fedora                                      1.1 MiB
+
+Transaction Summary:
+ Installing:       140 packages
+
+--> d8d3dd3bd203
+STEP 19/35: RUN echo "---- Database Packages"     && dnf install -y     R-CRAN-bigrquery     R-CRAN-duckdb R-CRAN-duckplyr     R-CRAN-RPostgres
+---- Database Packages
+Package             Arch   Version                    Repository                                     Size
+Installing:
+ R-CRAN-RPostgres   x86_64 1.4.7-1.fc41.copr7497067   copr:copr.fedorainfracloud.org:iucar:cran 717.0 KiB
+ R-CRAN-bigrquery   x86_64 1.5.1-1.fc41.copr7361329   copr:copr.fedorainfracloud.org:iucar:cran 777.3 KiB
+ R-CRAN-duckdb      x86_64 1.1.3.1-1.fc41.copr8364576 copr:copr.fedorainfracloud.org:iucar:cran  33.9 MiB
+ R-CRAN-duckplyr    noarch 0.4.1-1.fc41.copr7730336   copr:copr.fedorainfracloud.org:iucar:cran 574.3 KiB
+Installing dependencies:
+ R-CRAN-brio        x86_64 1.1.5-1.fc41.copr7352484   copr:copr.fedorainfracloud.org:iucar:cran  76.7 KiB
+ R-CRAN-clock       x86_64 0.7.1-1.fc41.copr7752146   copr:copr.fedorainfracloud.org:iucar:cran   3.9 MiB
+ R-CRAN-collections x86_64 0.3.7-1.fc41.copr7350702   copr:copr.fedorainfracloud.org:iucar:cran 131.6 KiB
+ R-CRAN-prettyunits noarch 1.2.0-1.fc41.copr7349962   copr:copr.fedorainfracloud.org:iucar:cran 191.8 KiB
+
+Transaction Summary:
+ Installing:         8 packages
+
+--> 3dad6644edbd
+STEP 20/35: RUN echo "---- JupyteR Package"     && dnf install -y R-CRAN-IRkernel
+---- JupyteR Package
+Package                    Arch   Version                   Repository                                     Size
+Installing:
+ R-CRAN-IRkernel           noarch 1.3.2-1.fc41.copr7362453  copr:copr.fedorainfracloud.org:iucar:cran 246.5 KiB
+Installing dependencies:
+ R-CRAN-IRdisplay          noarch 1.1-1.fc41.copr7361257    copr:copr.fedorainfracloud.org:iucar:cran  52.3 KiB
+ R-CRAN-pbdZMQ             x86_64 0.3.13-1.fc41.copr8029446 copr:copr.fedorainfracloud.org:iucar:cran 689.8 KiB
+ R-CRAN-repr               noarch 1.1.7-1.fc41.copr7359572  copr:copr.fedorainfracloud.org:iucar:cran 239.4 KiB
+ libsodium                 x86_64 1.0.20-2.fc41             fedora                                    393.0 KiB
+ libunwind                 x86_64 1.8.0-5.fc41              updates                                   186.8 KiB
+ openpgm                   x86_64 5.2.122-35.fc41           fedora                                    300.3 KiB
+ python-jupyter-filesystem noarch 5.7.2-3.fc41              fedora                                      0.0   B
+ zeromq                    x86_64 4.3.5-17.fc41             fedora                                    885.4 KiB
+
+Transaction Summary:
+ Installing:         9 packages
+
+--> e28098c28695
+STEP 21/35: RUN echo "---- Learning Packages"     && dnf install -y R-CRAN-learnr R-CRAN-swirl
+---- Learning Packages
+Package             Arch   Version                      Repository                                     Size
+Installing:
+ R-CRAN-learnr      noarch 0.11.5-1.fc41.copr7362445    copr:copr.fedorainfracloud.org:iucar:cran   2.8 MiB
+ R-CRAN-swirl       noarch 2.4.5-3.fc41.copr7367593     copr:copr.fedorainfracloud.org:iucar:cran 477.9 KiB
+Installing dependencies:
+ R-CRAN-RCurl       x86_64 1.98.1.16-1.fc41.copr7726674 copr:copr.fedorainfracloud.org:iucar:cran   2.1 MiB
+ R-CRAN-Rcpp        x86_64 1.0.13.1-1.fc41.copr8204071  copr:copr.fedorainfracloud.org:iucar:cran   8.4 MiB
+ R-CRAN-bitops      x86_64 1.0.9-1.fc41.copr8106788     copr:copr.fedorainfracloud.org:iucar:cran  61.8 KiB
+ R-CRAN-checkmate   x86_64 2.3.2-1.fc41.copr7803006     copr:copr.fedorainfracloud.org:iucar:cran   1.4 MiB
+ R-CRAN-commonmark  x86_64 1.9.2-1.fc41.copr8109546     copr:copr.fedorainfracloud.org:iucar:cran 317.2 KiB
+ R-CRAN-desc        noarch 1.4.3-1.fc41.copr7353609     copr:copr.fedorainfracloud.org:iucar:cran 514.2 KiB
+ R-CRAN-diffobj     x86_64 0.3.5-1.fc41.copr7353680     copr:copr.fedorainfracloud.org:iucar:cran   1.6 MiB
+ R-CRAN-ellipsis    x86_64 0.3.2-1.fc41.copr7353604     copr:copr.fedorainfracloud.org:iucar:cran  62.9 KiB
+ R-CRAN-htmlwidgets noarch 1.6.4-1.fc41.copr7361223     copr:copr.fedorainfracloud.org:iucar:cran   2.0 MiB
+ R-CRAN-httpuv      x86_64 1.6.15-1.fc41.copr7357930    copr:copr.fedorainfracloud.org:iucar:cran   1.0 MiB
+ R-CRAN-later       x86_64 1.4.1-1.fc41.copr8320991     copr:copr.fedorainfracloud.org:iucar:cran 314.1 KiB
+ R-CRAN-markdown    noarch 1.13-1.fc41.copr7531066      copr:copr.fedorainfracloud.org:iucar:cran 185.0 KiB
+ R-CRAN-pkgbuild    noarch 1.4.5-1.fc41.copr8184949     copr:copr.fedorainfracloud.org:iucar:cran 261.7 KiB
+ R-CRAN-pkgload     noarch 1.4.0-1.fc41.copr7689995     copr:copr.fedorainfracloud.org:iucar:cran 291.5 KiB
+ R-CRAN-praise      noarch 1.0.0-3.fc41.copr7350046     copr:copr.fedorainfracloud.org:iucar:cran  24.8 KiB
+ R-CRAN-promises    x86_64 1.3.2-1.fc41.copr8324802     copr:copr.fedorainfracloud.org:iucar:cran   2.6 MiB
+ R-CRAN-renv        noarch 1.0.10-1.fc41.copr8111054    copr:copr.fedorainfracloud.org:iucar:cran   2.7 MiB
+ R-CRAN-rprojroot   noarch 2.0.4-1.fc41.copr7349963     copr:copr.fedorainfracloud.org:iucar:cran 198.2 KiB
+ R-CRAN-shiny       noarch 1.10.0-1.fc41.copr8391677    copr:copr.fedorainfracloud.org:iucar:cran  13.6 MiB
+ R-CRAN-sourcetools x86_64 0.1.7.1-1.fc41.copr7349949   copr:copr.fedorainfracloud.org:iucar:cran 133.5 KiB
+ R-CRAN-testthat    x86_64 3.2.2-1.fc41.copr8382643     copr:copr.fedorainfracloud.org:iucar:cran   3.1 MiB
+ R-CRAN-waldo       noarch 0.6.1-1.fc41.copr8230116     copr:copr.fedorainfracloud.org:iucar:cran 158.2 KiB
+ R-CRAN-xtable      noarch 1.8.4-3.fc41.copr7349933     copr:copr.fedorainfracloud.org:iucar:cran 895.3 KiB
+ R-littler          x86_64 0.3.19-5.fc41                fedora                                    158.1 KiB
+
+Transaction Summary:
+ Installing:        26 packages
+
+--> 23516d82d3a2
+STEP 22/35: RUN echo "---- Package Management Packages"     && dnf install -y R-CRAN-usethis R-CRAN-pacman
+---- Package Management Packages
+Package             Arch   Version                  Repository                                     Size
+Installing:
+ R-CRAN-pacman      noarch 0.5.1-3.fc41.copr7354646 copr:copr.fedorainfracloud.org:iucar:cran 944.7 KiB
+ R-CRAN-usethis     noarch 3.1.0-1.fc41.copr8317509 copr:copr.fedorainfracloud.org:iucar:cran   1.4 MiB
+Installing dependencies:
+ R-CRAN-credentials noarch 2.0.2-1.fc41.copr8109616 copr:copr.fedorainfracloud.org:iucar:cran 296.0 KiB
+ R-CRAN-gert        x86_64 2.1.4-1.fc41.copr8136495 copr:copr.fedorainfracloud.org:iucar:cran 434.8 KiB
+ R-CRAN-gh          noarch 1.4.1-1.fc41.copr7359544 copr:copr.fedorainfracloud.org:iucar:cran 182.3 KiB
+ R-CRAN-gitcreds    noarch 0.1.2-1.fc41.copr8099665 copr:copr.fedorainfracloud.org:iucar:cran 236.3 KiB
+ R-CRAN-httr2       noarch 1.0.7-1.fc41.copr8317489 copr:copr.fedorainfracloud.org:iucar:cran 976.6 KiB
+ R-CRAN-ini         noarch 0.3.1-3.fc41.copr7350016 copr:copr.fedorainfracloud.org:iucar:cran  19.7 KiB
+ R-CRAN-remotes     noarch 2.5.0-1.fc41.copr7350088 copr:copr.fedorainfracloud.org:iucar:cran 741.4 KiB
+ R-CRAN-whisker     noarch 0.4.1-1.fc41.copr7350078 copr:copr.fedorainfracloud.org:iucar:cran 190.7 KiB
+ R-CRAN-zip         x86_64 2.3.1-1.fc41.copr7350080 copr:copr.fedorainfracloud.org:iucar:cran 238.0 KiB
+
+Transaction Summary:
+ Installing:        11 packages
+
+--> f9b6a8dabc09
+STEP 23/35: RUN echo "---- Plotting Packages"     && dnf install -y     R-CRAN-cowplot     R-CRAN-gganimate     R-CRAN-ggnewscale     R-CRAN-gghighlight     R-CRAN-ggrepel     R-CRAN-RColorBrewer
+---- Plotting Packages
+Package                      Arch   Version                    Repository                                     Size
+Installing:
+ R-CRAN-cowplot              noarch 1.1.3-1.fc41.copr7362489   copr:copr.fedorainfracloud.org:iucar:cran   2.1 MiB
+ R-CRAN-gganimate            noarch 1.0.9-1.fc41.copr7362438   copr:copr.fedorainfracloud.org:iucar:cran   2.8 MiB
+ R-CRAN-gghighlight          noarch 0.4.1-1.fc41.copr7364938   copr:copr.fedorainfracloud.org:iucar:cran   1.1 MiB
+ R-CRAN-ggnewscale           noarch 0.5.0-1.fc41.copr7763451   copr:copr.fedorainfracloud.org:iucar:cran 604.1 KiB
+ R-CRAN-ggrepel              x86_64 0.9.6-1.fc41.copr7995994   copr:copr.fedorainfracloud.org:iucar:cran 454.2 KiB
+Installing dependencies:
+ R-CRAN-KernSmooth           x86_64 2.23.24-1.fc41.copr7456099 copr:copr.fedorainfracloud.org:iucar:cran 145.3 KiB
+ R-CRAN-class                x86_64 7.3.22-1.fc41.copr7355270  copr:copr.fedorainfracloud.org:iucar:cran 160.1 KiB
+ R-CRAN-classInt             x86_64 0.4.10-1.fc41.copr7357941  copr:copr.fedorainfracloud.org:iucar:cran 818.4 KiB
+ R-CRAN-e1071                x86_64 1.7.16-1.fc41.copr8025724  copr:copr.fedorainfracloud.org:iucar:cran 993.4 KiB
+ R-CRAN-lpSolve              x86_64 5.6.23-1.fc41.copr8391672  copr:copr.fedorainfracloud.org:iucar:cran 772.1 KiB
+ R-CRAN-progress             noarch 1.2.3-1.fc41.copr7359533   copr:copr.fedorainfracloud.org:iucar:cran 118.0 KiB
+ R-CRAN-proxy                x86_64 0.4.27-1.fc41.copr7350441  copr:copr.fedorainfracloud.org:iucar:cran 245.5 KiB
+ R-CRAN-s2                   x86_64 1.1.7-1.fc41.copr7745426   copr:copr.fedorainfracloud.org:iucar:cran   3.6 MiB
+ R-CRAN-sf                   x86_64 1.0.19-1.fc41.copr8337021  copr:copr.fedorainfracloud.org:iucar:cran   7.5 MiB
+ R-CRAN-transformr           x86_64 0.1.5-1.fc41.copr7361463   copr:copr.fedorainfracloud.org:iucar:cran 272.9 KiB
+ R-CRAN-tweenr               x86_64 2.0.3-1.fc41.copr7357946   copr:copr.fedorainfracloud.org:iucar:cran 663.9 KiB
+ R-CRAN-units                x86_64 0.8.5-1.fc41.copr7353642   copr:copr.fedorainfracloud.org:iucar:cran 767.0 KiB
+ R-CRAN-wk                   x86_64 0.9.4-1.fc41.copr8130691   copr:copr.fedorainfracloud.org:iucar:cran   2.1 MiB
+ SuperLU                     x86_64 6.0.1-6.fc41               fedora                                    490.3 KiB
+ abseil-cpp                  x86_64 20240722.0-1.fc41          fedora                                      2.6 MiB
+ armadillo                   x86_64 12.8.1-2.fc41              fedora                                     90.4 KiB
+ arpack                      x86_64 3.9.1-4.fc41               fedora                                    650.0 KiB
+ blosc                       x86_64 1.21.6-1.fc41              fedora                                    126.3 KiB
+ boost-program-options       x86_64 1.83.0-8.fc41              fedora                                    272.7 KiB
+ cfitsio                     x86_64 4.5.0-4.fc41               fedora                                      1.8 MiB
+ flexiblas-netlib64          x86_64 3.4.4-3.fc41               fedora                                     10.8 MiB
+ flexiblas-openblas-openmp64 x86_64 3.4.4-3.fc41               fedora                                     43.3 KiB
+ freexl                      x86_64 2.0.0-8.fc41               fedora                                     93.4 KiB
+ gdal-libs                   x86_64 3.9.3-1.fc41               updates                                    29.5 MiB
+ geos                        x86_64 3.12.2-2.fc41              fedora                                      3.6 MiB
+ giflib                      x86_64 5.2.2-2.fc41               fedora                                    112.2 KiB
+ hdf-libs                    x86_64 4.2.16.2-2.fc41            fedora                                    691.6 KiB
+ hdf5                        x86_64 1.12.1-20.fc41             fedora                                      8.4 MiB
+ imath                       x86_64 3.1.12-1.fc41              fedora                                    375.8 KiB
+ libaec                      x86_64 1.1.3-1.fc41               fedora                                     98.1 KiB
+ libarrow                    x86_64 16.1.0-12.fc41             updates                                    22.8 MiB
+ libarrow-acero-libs         x86_64 16.1.0-12.fc41             updates                                     1.4 MiB
+ libarrow-dataset-libs       x86_64 16.1.0-12.fc41             updates                                     1.5 MiB
+ libarrow-doc                noarch 16.1.0-12.fc41             updates                                   115.7 KiB
+ libgeotiff                  x86_64 1.7.3-2.fc41               fedora                                    311.9 KiB
+ libgta                      x86_64 1.2.1-13.fc41              fedora                                     70.2 KiB
+ libkml                      x86_64 1.3.0-49.fc41              fedora                                      1.2 MiB
+ liborc2                     x86_64 2.0.3-1.fc41               updates                                     1.6 MiB
+ libqhull_r                  x86_64 1:8.0.2-5.fc41             fedora                                    483.4 KiB
+ librttopo                   x86_64 1.1.0-15.fc41              fedora                                    508.8 KiB
+ libspatialite               x86_64 5.1.0-7.fc41               fedora                                     15.3 MiB
+ mariadb-connector-c         x86_64 3.3.10-1.fc41              fedora                                    529.2 KiB
+ mariadb-connector-c-config  noarch 3.3.10-1.fc41              fedora                                    497.0   B
+ metis                       x86_64 5.1.0.3-6.fc41             fedora                                    985.2 KiB
+ minizip-ng-compat           x86_64 4.0.7-1.fc41               fedora                                    158.6 KiB
+ netcdf                      x86_64 4.9.2-6.fc41               fedora                                      2.4 MiB
+ ogdi                        x86_64 4.1.1-2.fc41               fedora                                    801.1 KiB
+ openblas-openmp64           x86_64 0.3.26-5.fc41              fedora                                     39.5 MiB
+ openexr-libs                x86_64 3.2.4-3.fc41               fedora                                      6.5 MiB
+ parquet-libs                x86_64 16.1.0-12.fc41             updates                                     3.3 MiB
+ proj                        x86_64 9.4.1-2.fc41               fedora                                      4.4 MiB
+ proj-data                   noarch 9.4.1-2.fc41               fedora                                      9.0 MiB
+ protobuf                    x86_64 3.19.6-10.fc41             fedora                                      3.3 MiB
+ re2                         x86_64 1:20240702-19.fc41         fedora                                    557.0 KiB
+ snappy                      x86_64 1.2.1-2.fc41               fedora                                     71.1 KiB
+ thrift                      x86_64 0.20.0-3.fc41              fedora                                      4.8 MiB
+ udunits2                    x86_64 2.2.28-10.fc41             fedora                                      1.0 MiB
+ unixODBC                    x86_64 2.3.12-5.fc41              fedora                                      1.0 MiB
+ uriparser                   x86_64 0.9.8-2.fc41               fedora                                    141.9 KiB
+ xerces-c                    x86_64 3.2.5-5.fc41               fedora                                      3.6 MiB
+Installing weak dependencies:
+ proj-data-ar                noarch 9.4.1-2.fc41               fedora                                      6.1 MiB
+ proj-data-at                noarch 9.4.1-2.fc41               fedora                                     15.2 MiB
+ proj-data-au                noarch 9.4.1-2.fc41               fedora                                    117.9 MiB
+ proj-data-be                noarch 9.4.1-2.fc41               fedora                                    949.2 KiB
+ proj-data-br                noarch 9.4.1-2.fc41               fedora                                      1.0 MiB
+ proj-data-ca                noarch 9.4.1-2.fc41               fedora                                    105.7 MiB
+ proj-data-ch                noarch 9.4.1-2.fc41               fedora                                      2.1 MiB
+ proj-data-cz                noarch 9.4.1-2.fc41               fedora                                    104.8 KiB
+ proj-data-de                noarch 9.4.1-2.fc41               fedora                                     76.4 MiB
+ proj-data-dk                noarch 9.4.1-2.fc41               fedora                                     13.3 MiB
+ proj-data-es                noarch 9.4.1-2.fc41               fedora                                      1.0 MiB
+ proj-data-eur               noarch 9.4.1-2.fc41               fedora                                      1.0 MiB
+ proj-data-fi                noarch 9.4.1-2.fc41               fedora                                    288.5 KiB
+ proj-data-fo                noarch 9.4.1-2.fc41               fedora                                      1.5 KiB
+ proj-data-fr                noarch 9.4.1-2.fc41               fedora                                      1.9 MiB
+ proj-data-is                noarch 9.4.1-2.fc41               fedora                                      5.5 MiB
+ proj-data-jp                noarch 9.4.1-2.fc41               fedora                                    420.4 KiB
+ proj-data-mx                noarch 9.4.1-2.fc41               fedora                                    554.0 KiB
+ proj-data-nc                noarch 9.4.1-2.fc41               fedora                                      1.5 MiB
+ proj-data-nl                noarch 9.4.1-2.fc41               fedora                                    874.0 KiB
+ proj-data-no                noarch 9.4.1-2.fc41               fedora                                      9.2 MiB
+ proj-data-nz                noarch 9.4.1-2.fc41               fedora                                     13.7 MiB
+ proj-data-pl                noarch 9.4.1-2.fc41               fedora                                      2.3 MiB
+ proj-data-pt                noarch 9.4.1-2.fc41               fedora                                    511.7 KiB
+ proj-data-se                noarch 9.4.1-2.fc41               fedora                                      2.2 MiB
+ proj-data-si                noarch 9.4.1-2.fc41               fedora                                    142.8 KiB
+ proj-data-sk                noarch 9.4.1-2.fc41               fedora                                      1.2 MiB
+ proj-data-uk                noarch 9.4.1-2.fc41               fedora                                      4.8 MiB
+ proj-data-us                noarch 9.4.1-2.fc41               fedora                                    318.9 MiB
+ proj-data-za                noarch 9.4.1-2.fc41               fedora                                    295.7 KiB
+
+Transaction Summary:
+ Installing:        95 packages
+
+--> 686938c86693
+STEP 24/35: RUN echo "---- Project & File Management Packages"     && dnf install -y     R-CRAN-here R-CRAN-nanoparquet R-CRAN-rio R-CRAN-openxlsx
+---- Project & File Management Packages
+Package             Arch   Version                    Repository                                     Size
+Installing:
+ R-CRAN-here        noarch 1.0.1-1.fc41.copr7353623   copr:copr.fedorainfracloud.org:iucar:cran 138.9 KiB
+ R-CRAN-nanoparquet x86_64 0.3.1-1.fc41.copr8099865   copr:copr.fedorainfracloud.org:iucar:cran   1.9 MiB
+ R-CRAN-openxlsx    x86_64 4.2.7.1-1.fc41.copr8046231 copr:copr.fedorainfracloud.org:iucar:cran   2.9 MiB
+ R-CRAN-rio         noarch 1.2.3-1.fc41.copr8072471   copr:copr.fedorainfracloud.org:iucar:cran   1.6 MiB
+Installing dependencies:
+ R-CRAN-R.methodsS3 noarch 1.8.2-1.fc41.copr7350089   copr:copr.fedorainfracloud.org:iucar:cran 131.6 KiB
+ R-CRAN-R.oo        noarch 1.27.0-1.fc41.copr8201688  copr:copr.fedorainfracloud.org:iucar:cran   1.6 MiB
+ R-CRAN-R.utils     noarch 2.12.3-1.fc41.copr7356133  copr:copr.fedorainfracloud.org:iucar:cran   2.4 MiB
+ R-CRAN-foreign     x86_64 0.8.87-1.fc41.copr7673464  copr:copr.fedorainfracloud.org:iucar:cran 525.8 KiB
+ R-CRAN-writexl     x86_64 1.5.1-1.fc41.copr8109606   copr:copr.fedorainfracloud.org:iucar:cran 279.8 KiB
+
+Transaction Summary:
+ Installing:         9 packages
+
+--> 539136a46f19
+STEP 25/35: RUN echo "---- Reporting Packages"     && dnf install -y pandoc R-CRAN-knitr R-CRAN-quarto
+---- Reporting Packages
+Package        Arch   Version                  Repository                                     Size
+Installing:
+ R-CRAN-quarto noarch 1.4.4-1.fc41.copr7766599 copr:copr.fedorainfracloud.org:iucar:cran 220.8 KiB
+
+Transaction Summary:
+ Installing:         1 package
+
+--> d3e9f5888dc4
+STEP 26/35: RUN echo "---- Dashboard Packages"     && dnf install -y     R-CRAN-plotly     R-CRAN-quarto     R-CRAN-shiny     R-CRAN-radiant     R-CRAN-rsconnect
+---- Dashboard Packages
+Package                      Arch   Version                       Repository                                     Size
+Installing:
+ R-CRAN-plotly               noarch 4.10.4-1.fc41.copr7364942     copr:copr.fedorainfracloud.org:iucar:cran   6.7 MiB
+ R-CRAN-radiant              noarch 1.6.6-1.fc41.copr7937281      copr:copr.fedorainfracloud.org:iucar:cran   4.9 MiB
+ R-CRAN-rsconnect            noarch 1.3.3-1.fc41.copr8283083      copr:copr.fedorainfracloud.org:iucar:cran   1.1 MiB
+Installing dependencies:
+ R-CRAN-AlgDesign            x86_64 1.2.1.1-1.fc41.copr8053240    copr:copr.fedorainfracloud.org:iucar:cran 696.9 KiB
+ R-CRAN-DT                   noarch 0.33-1.fc41.copr7362423       copr:copr.fedorainfracloud.org:iucar:cran   5.3 MiB
+ R-CRAN-Deriv                noarch 4.1.6-1.fc41.copr8019418      copr:copr.fedorainfracloud.org:iucar:cran 180.6 KiB
+ R-CRAN-DiagrammeR           noarch 1.0.11-1.fc41.copr7364931     copr:copr.fedorainfracloud.org:iucar:cran   5.1 MiB
+ R-CRAN-Formula              noarch 1.2.5-1.fc41.copr7350002      copr:copr.fedorainfracloud.org:iucar:cran 205.4 KiB
+ R-CRAN-GPArotation          noarch 2024.3.1-1.fc41.copr7351062   copr:copr.fedorainfracloud.org:iucar:cran 507.6 KiB
+ R-CRAN-MatrixModels         noarch 0.5.3-1.fc41.copr7356087      copr:copr.fedorainfracloud.org:iucar:cran 520.9 KiB
+ R-CRAN-NeuralNetTools       noarch 1.5.3-1.fc41.copr7365352      copr:copr.fedorainfracloud.org:iucar:cran 354.0 KiB
+ R-CRAN-PKI                  x86_64 0.1.14-1.fc41.copr7617909     copr:copr.fedorainfracloud.org:iucar:cran 223.4 KiB
+ R-CRAN-SparseM              x86_64 1.84.2-1.fc41.copr7745418     copr:copr.fedorainfracloud.org:iucar:cran   1.6 MiB
+ R-CRAN-abind                noarch 1.4.8-1.fc41.copr8016475      copr:copr.fedorainfracloud.org:iucar:cran  96.2 KiB
+ R-CRAN-admisc               x86_64 0.37-1.fc41.copr8364572       copr:copr.fedorainfracloud.org:iucar:cran 509.2 KiB
+ R-CRAN-boot                 noarch 1.3.31-1.fc41.copr7951483     copr:copr.fedorainfracloud.org:iucar:cran   1.1 MiB
+ R-CRAN-car                  noarch 3.1.3-1.fc41.copr8086679      copr:copr.fedorainfracloud.org:iucar:cran   2.1 MiB
+ R-CRAN-carData              noarch 3.0.5-1.fc41.copr7349971      copr:copr.fedorainfracloud.org:iucar:cran   2.3 MiB
+ R-CRAN-clustMixType         noarch 0.4.2-1.fc41.copr7697261      copr:copr.fedorainfracloud.org:iucar:cran 270.9 KiB
+ R-CRAN-codetools            noarch 0.2.20-1.fc41.copr7352636     copr:copr.fedorainfracloud.org:iucar:cran 106.3 KiB
+ R-CRAN-combinat             noarch 0.0.8-3.fc41.copr7350097      copr:copr.fedorainfracloud.org:iucar:cran  64.7 KiB
+ R-CRAN-crosstalk            noarch 1.2.1-1.fc41.copr7356073      copr:copr.fedorainfracloud.org:iucar:cran   1.0 MiB
+ R-CRAN-data.tree            noarch 1.1.0-1.fc41.copr8099455      copr:copr.fedorainfracloud.org:iucar:cran   3.1 MiB
+ R-CRAN-doBy                 noarch 4.6.24-1.fc41.copr8116441     copr:copr.fedorainfracloud.org:iucar:cran   5.1 MiB
+ R-CRAN-foreach              noarch 1.5.2-1.fc41.copr7353650      copr:copr.fedorainfracloud.org:iucar:cran 378.1 KiB
+ R-CRAN-gower                x86_64 1.0.2-1.fc41.copr8405696      copr:copr.fedorainfracloud.org:iucar:cran 243.2 KiB
+ R-CRAN-hardhat              noarch 1.4.0-1.fc41.copr7522879      copr:copr.fedorainfracloud.org:iucar:cran   1.3 MiB
+ R-CRAN-igraph               x86_64 2.1.2-1.fc41.copr8363064      copr:copr.fedorainfracloud.org:iucar:cran  10.2 MiB
+ R-CRAN-import               noarch 1.3.2-1.fc41.copr7350109      copr:copr.fedorainfracloud.org:iucar:cran 172.5 KiB
+ R-CRAN-iterators            noarch 1.0.14-1.fc41.copr7350017     copr:copr.fedorainfracloud.org:iucar:cran 438.6 KiB
+ R-CRAN-lazyeval             x86_64 0.2.2-3.fc41.copr7349927      copr:copr.fedorainfracloud.org:iucar:cran 362.3 KiB
+ R-CRAN-lme4                 x86_64 1.1.35.5-1.fc41.copr7705961   copr:copr.fedorainfracloud.org:iucar:cran   5.8 MiB
+ R-CRAN-microbenchmark       x86_64 1.5.0-1.fc41.copr7984394      copr:copr.fedorainfracloud.org:iucar:cran 118.8 KiB
+ R-CRAN-minqa                x86_64 1.2.8-1.fc41.copr7936838      copr:copr.fedorainfracloud.org:iucar:cran 237.2 KiB
+ R-CRAN-mnormt               x86_64 2.1.1-1.fc41.copr7352549      copr:copr.fedorainfracloud.org:iucar:cran 291.3 KiB
+ R-CRAN-mvtnorm              x86_64 1.3.2-1.fc41.copr8210719      copr:copr.fedorainfracloud.org:iucar:cran   1.4 MiB
+ R-CRAN-nloptr               x86_64 2.1.1-1.fc41.copr7668603      copr:copr.fedorainfracloud.org:iucar:cran   1.2 MiB
+ R-CRAN-nnet                 x86_64 7.3.19-1.fc41.copr7352641     copr:copr.fedorainfracloud.org:iucar:cran 167.6 KiB
+ R-CRAN-numDeriv             noarch 2016.8.1.1-3.fc41.copr7350037 copr:copr.fedorainfracloud.org:iucar:cran 151.0 KiB
+ R-CRAN-packrat              noarch 0.9.2-1.fc41.copr7349944      copr:copr.fedorainfracloud.org:iucar:cran   1.4 MiB
+ R-CRAN-patchwork            noarch 1.3.0-1.fc41.copr8025740      copr:copr.fedorainfracloud.org:iucar:cran   4.1 MiB
+ R-CRAN-pbkrtest             noarch 0.5.3-1.fc41.copr7673479      copr:copr.fedorainfracloud.org:iucar:cran 288.1 KiB
+ R-CRAN-pdp                  x86_64 0.8.2-1.fc41.copr8184946      copr:copr.fedorainfracloud.org:iucar:cran   1.6 MiB
+ R-CRAN-plyr                 x86_64 1.8.9-1.fc41.copr7353597      copr:copr.fedorainfracloud.org:iucar:cran   1.1 MiB
+ R-CRAN-png                  x86_64 0.1.8-1.fc41.copr7350042      copr:copr.fedorainfracloud.org:iucar:cran  70.1 KiB
+ R-CRAN-polycor              noarch 0.8.1-1.fc41.copr7356655      copr:copr.fedorainfracloud.org:iucar:cran 104.8 KiB
+ R-CRAN-psych                noarch 2.4.12-1.fc41.copr8443089     copr:copr.fedorainfracloud.org:iucar:cran   5.5 MiB
+ R-CRAN-pwr                  noarch 1.3.0-3.fc41.copr7350509      copr:copr.fedorainfracloud.org:iucar:cran 287.2 KiB
+ R-CRAN-quantreg             x86_64 5.99.1-1.fc41.copr8305276     copr:copr.fedorainfracloud.org:iucar:cran   1.9 MiB
+ R-CRAN-radiant.basics       noarch 1.6.6-1.fc41.copr7937276      copr:copr.fedorainfracloud.org:iucar:cran   3.7 MiB
+ R-CRAN-radiant.data         noarch 1.6.7-1.fc41.copr8170934      copr:copr.fedorainfracloud.org:iucar:cran   3.4 MiB
+ R-CRAN-radiant.design       noarch 1.6.6-1.fc41.copr7937277      copr:copr.fedorainfracloud.org:iucar:cran   1.6 MiB
+ R-CRAN-radiant.model        noarch 1.6.7-1.fc41.copr8130682      copr:copr.fedorainfracloud.org:iucar:cran   2.5 MiB
+ R-CRAN-radiant.multivariate noarch 1.6.6-1.fc41.copr7937280      copr:copr.fedorainfracloud.org:iucar:cran   4.4 MiB
+ R-CRAN-randomizr            x86_64 1.0.0-1.fc41.copr7351614      copr:copr.fedorainfracloud.org:iucar:cran 541.0 KiB
+ R-CRAN-ranger               x86_64 0.17.0-1.fc41.copr8232814     copr:copr.fedorainfracloud.org:iucar:cran 862.2 KiB
+ R-CRAN-reshape2             x86_64 1.4.4-3.fc41.copr7359520      copr:copr.fedorainfracloud.org:iucar:cran 215.1 KiB
+ R-CRAN-rpart                x86_64 4.1.23-1.fc41.copr7352642     copr:copr.fedorainfracloud.org:iucar:cran 959.6 KiB
+ R-CRAN-sandwich             noarch 3.1.1-1.fc41.copr8337020      copr:copr.fedorainfracloud.org:iucar:cran   1.8 MiB
+ R-CRAN-shinyAce             noarch 0.4.3-1.fc41.copr8157438      copr:copr.fedorainfracloud.org:iucar:cran   7.0 MiB
+ R-CRAN-shinyFiles           noarch 0.9.3-1.fc41.copr7361318      copr:copr.fedorainfracloud.org:iucar:cran 590.8 KiB
+ R-CRAN-survival             x86_64 3.8.3-1.fc41.copr8405722      copr:copr.fedorainfracloud.org:iucar:cran   9.9 MiB
+ R-CRAN-vip                  noarch 0.4.1-1.fc41.copr7366892      copr:copr.fedorainfracloud.org:iucar:cran   3.2 MiB
+ R-CRAN-visNetwork           noarch 2.1.2-1.fc41.copr7362417      copr:copr.fedorainfracloud.org:iucar:cran  10.6 MiB
+ R-CRAN-xgboost              x86_64 1.7.8.1-1.fc41.copr7783801    copr:copr.fedorainfracloud.org:iucar:cran   4.3 MiB
+ R-CRAN-yardstick            x86_64 1.3.1-1.fc41.copr7363058      copr:copr.fedorainfracloud.org:iucar:cran   1.6 MiB
+ R-CRAN-zoo                  x86_64 1.8.12-1.fc41.copr7353591     copr:copr.fedorainfracloud.org:iucar:cran   1.5 MiB
+ glpk                        x86_64 5.0-12.fc41                   fedora                                    878.8 KiB
+ suitesparse                 x86_64 7.7.0-2.fc41                  fedora                                    139.9 MiB
+
+Transaction Summary:
+ Installing:        69 packages
+
+--> b56bb1221615
+STEP 27/35: RUN echo "---- Statistics Packages"     && dnf install -y     R-CRAN-broom     R-CRAN-gtsummary     R-CRAN-janitor     R-CRAN-lmtest     R-CRAN-tidymodels
+---- Statistics Packages
+Package              Arch   Version                       Repository                                     Size
+Installing:
+ R-CRAN-gtsummary    noarch 2.0.4-1.fc41.copr8330722      copr:copr.fedorainfracloud.org:iucar:cran   2.3 MiB
+ R-CRAN-janitor      noarch 2.2.1-1.fc41.copr8439812      copr:copr.fedorainfracloud.org:iucar:cran 559.3 KiB
+ R-CRAN-lmtest       x86_64 0.9.40-1.fc41.copr7356084     copr:copr.fedorainfracloud.org:iucar:cran 565.6 KiB
+ R-CRAN-tidymodels   noarch 1.2.0-1.fc41.copr7370383      copr:copr.fedorainfracloud.org:iucar:cran 116.1 KiB
+Installing dependencies:
+ R-CRAN-DiceDesign   x86_64 1.10-1.fc41.copr7350308       copr:copr.fedorainfracloud.org:iucar:cran 485.5 KiB
+ R-CRAN-GPfit        noarch 1.0.8-3.fc41.copr7356283      copr:copr.fedorainfracloud.org:iucar:cran 121.0 KiB
+ R-CRAN-SQUAREM      noarch 2021.1-1.fc41.copr7350068     copr:copr.fedorainfracloud.org:iucar:cran 242.7 KiB
+ R-CRAN-V8           x86_64 6.0.0-1.fc41.copr8132151      copr:copr.fedorainfracloud.org:iucar:cran   2.0 MiB
+ R-CRAN-bigD         noarch 0.3.0-1.fc41.copr8232783      copr:copr.fedorainfracloud.org:iucar:cran   1.2 MiB
+ R-CRAN-cards        noarch 0.4.0-1.fc41.copr8320978      copr:copr.fedorainfracloud.org:iucar:cran 785.2 KiB
+ R-CRAN-diagram      noarch 1.6.5-1.fc41.copr7354103      copr:copr.fedorainfracloud.org:iucar:cran 911.1 KiB
+ R-CRAN-dials        noarch 1.3.0-1.fc41.copr7807048      copr:copr.fedorainfracloud.org:iucar:cran 731.7 KiB
+ R-CRAN-doFuture     noarch 1.0.1-1.fc41.copr7359773      copr:copr.fedorainfracloud.org:iucar:cran 219.1 KiB
+ R-CRAN-furrr        noarch 0.3.1-1.fc41.copr7359529      copr:copr.fedorainfracloud.org:iucar:cran   1.1 MiB
+ R-CRAN-future       noarch 1.34.0-1.fc41.copr7803014     copr:copr.fedorainfracloud.org:iucar:cran   1.2 MiB
+ R-CRAN-future.apply noarch 1.11.3-1.fc41.copr8181593     copr:copr.fedorainfracloud.org:iucar:cran 234.7 KiB
+ R-CRAN-globals      noarch 0.16.3-1.fc41.copr7353590     copr:copr.fedorainfracloud.org:iucar:cran 137.2 KiB
+ R-CRAN-gt           noarch 0.11.1-1.fc41.copr8109611     copr:copr.fedorainfracloud.org:iucar:cran   8.2 MiB
+ R-CRAN-infer        noarch 1.0.7-1.fc41.copr7367306      copr:copr.fedorainfracloud.org:iucar:cran   3.4 MiB
+ R-CRAN-ipred        x86_64 0.9.15-1.fc41.copr7752161     copr:copr.fedorainfracloud.org:iucar:cran 560.2 KiB
+ R-CRAN-juicyjuice   noarch 0.1.0-1.fc41.copr7357661      copr:copr.fedorainfracloud.org:iucar:cran   1.8 MiB
+ R-CRAN-lava         noarch 1.8.0-1.fc41.copr7359546      copr:copr.fedorainfracloud.org:iucar:cran   3.2 MiB
+ R-CRAN-lhs          x86_64 1.2.0-1.fc41.copr7695292      copr:copr.fedorainfracloud.org:iucar:cran 782.9 KiB
+ R-CRAN-listenv      noarch 0.9.1-1.fc41.copr7349926      copr:copr.fedorainfracloud.org:iucar:cran 157.8 KiB
+ R-CRAN-modeldata    noarch 1.4.0-1.fc41.copr7629047      copr:copr.fedorainfracloud.org:iucar:cran   5.1 MiB
+ R-CRAN-modelenv     noarch 0.2.0-1.fc41.copr8136502      copr:copr.fedorainfracloud.org:iucar:cran 148.5 KiB
+ R-CRAN-parallelly   x86_64 1.41.0-1.fc41.copr8414035     copr:copr.fedorainfracloud.org:iucar:cran 805.8 KiB
+ R-CRAN-parsnip      noarch 1.2.1-1.fc41.copr7365500      copr:copr.fedorainfracloud.org:iucar:cran   2.4 MiB
+ R-CRAN-prodlim      x86_64 2024.06.25-1.fc41.copr7663375 copr:copr.fedorainfracloud.org:iucar:cran 613.8 KiB
+ R-CRAN-progressr    noarch 0.15.1-1.fc41.copr8305275     copr:copr.fedorainfracloud.org:iucar:cran   1.5 MiB
+ R-CRAN-reactR       noarch 0.6.1-1.fc41.copr8021318      copr:copr.fedorainfracloud.org:iucar:cran   1.7 MiB
+ R-CRAN-reactable    noarch 0.4.4-1.fc41.copr7363417      copr:copr.fedorainfracloud.org:iucar:cran   3.4 MiB
+ R-CRAN-recipes      noarch 1.1.0-1.fc41.copr7709482      copr:copr.fedorainfracloud.org:iucar:cran   2.8 MiB
+ R-CRAN-rsample      noarch 1.2.1-1.fc41.copr7365022      copr:copr.fedorainfracloud.org:iucar:cran 955.8 KiB
+ R-CRAN-sfd          noarch 0.1.0-1.fc41.copr7362355      copr:copr.fedorainfracloud.org:iucar:cran   2.4 MiB
+ R-CRAN-shape        noarch 1.4.6.1-1.fc41.copr7350223    copr:copr.fedorainfracloud.org:iucar:cran 877.2 KiB
+ R-CRAN-slider       x86_64 0.3.2-1.fc41.copr8178704      copr:copr.fedorainfracloud.org:iucar:cran 642.9 KiB
+ R-CRAN-snakecase    noarch 0.11.1-1.fc41.copr7359686     copr:copr.fedorainfracloud.org:iucar:cran 248.8 KiB
+ R-CRAN-timeDate     noarch 4041.110-1.fc41.copr8059721   copr:copr.fedorainfracloud.org:iucar:cran   2.0 MiB
+ R-CRAN-tune         noarch 1.2.1-1.fc41.copr7369124      copr:copr.fedorainfracloud.org:iucar:cran   2.3 MiB
+ R-CRAN-warp         x86_64 0.2.1-1.fc41.copr7352425      copr:copr.fedorainfracloud.org:iucar:cran 155.1 KiB
+ R-CRAN-workflows    noarch 1.1.4-1.fc41.copr7367656      copr:copr.fedorainfracloud.org:iucar:cran 335.2 KiB
+ R-CRAN-workflowsets noarch 1.1.0-1.fc41.copr7370036      copr:copr.fedorainfracloud.org:iucar:cran   3.1 MiB
+
+Transaction Summary:
+ Installing:        43 packages
+
+--> 8a9c3b5d027b
+STEP 28/35: RUN echo "==== Editors/GUI Tools ============"
+==== Editors/GUI Tools ============
+--> 35523f43ba6b
+STEP 29/35: RUN echo "---- Gnome Themes ------------"     && dnf install -y gnome-themes-extra
+---- Gnome Themes ------------
+Package                    Arch   Version      Repository      Size
+Installing:
+ gnome-themes-extra        x86_64 3.28-20.fc41 fedora      47.6 KiB
+Installing dependencies:
+ adwaita-cursor-theme      noarch 47.0-1.fc41  fedora      10.0 MiB
+ adwaita-icon-theme        noarch 47.0-1.fc41  fedora       1.2 MiB
+ adwaita-icon-theme-legacy noarch 46.2-2.fc41  fedora       2.1 MiB
+ highcontrast-icon-theme   noarch 3.28-20.fc41 fedora       4.2 MiB
+
+Transaction Summary:
+ Installing:         5 packages
+
+--> d6374705b46b
+STEP 30/35: RUN echo "---- Neovim ------------"     && dnf install -y     cascadia-code-fonts cascadia-code-nf-fonts     fd-find     neovim neovim-ale python3-neovim     luarocks     ripgrep     tree-sitter-cli
+---- Neovim ------------
+Package                 Arch   Version               Repository      Size
+Installing:
+ cascadia-code-fonts    noarch 2404.23-2.fc41        fedora       3.6 MiB
+ cascadia-code-nf-fonts noarch 2404.23-2.fc41        fedora      25.3 MiB
+ fd-find                x86_64 10.1.0-2.fc41         fedora       3.3 MiB
+ luarocks               noarch 3.9.2-6.fc41          fedora     692.5 KiB
+ neovim                 x86_64 0.10.2-1.fc41         fedora      29.1 MiB
+ neovim-ale             noarch 3.3.0-3.fc41          fedora       1.8 MiB
+ python3-neovim         noarch 0.5.0-7.fc41          fedora     330.7 KiB
+ ripgrep                x86_64 14.1.1-1.fc41         updates      4.7 MiB
+ tree-sitter-cli        x86_64 0.23.2-1.fc41         updates     12.4 MiB
+Installing dependencies:
+ cmake-data             noarch 3.30.5-1.fc41         updates      8.2 MiB
+ compat-lua-libs        x86_64 5.1.5-26.fc41         fedora     498.2 KiB
+ jsoncpp                x86_64 1.9.5-8.fc41          fedora     253.4 KiB
+ libluv                 x86_64 1.48.0.2-2.fc41       fedora     207.9 KiB
+ libtree-sitter         x86_64 0.23.0-2.fc41         fedora     213.4 KiB
+ libvterm               x86_64 0.3.3-4.fc41          fedora      78.2 KiB
+ lua-socket             x86_64 3.1.0-6.fc41          fedora     389.3 KiB
+ lua5.1-lpeg            x86_64 1.1.0-2.fc41          fedora      67.2 KiB
+ luajit                 x86_64 2.1.1720049189-1.fc41 fedora       1.4 MiB
+ luajit2.1-luv          x86_64 1.48.0.2-2.fc41       fedora     190.9 KiB
+ msgpack                x86_64 3.1.0-16.fc41         fedora      59.3 KiB
+ python3-greenlet       x86_64 3.1.1-1.fc41          fedora     943.2 KiB
+ python3-msgpack        x86_64 1.0.7-5.fc41          fedora     419.8 KiB
+ rhash                  x86_64 1.4.4-2.fc41          fedora     349.9 KiB
+ unibilium              x86_64 2.1.1-8.fc41          fedora      69.8 KiB
+ vim-filesystem         noarch 2:9.1.919-1.fc41      updates     40.0   B
+Installing weak dependencies:
+ cmake                  x86_64 3.30.5-1.fc41         updates     32.5 MiB
+ compat-lua-devel       x86_64 5.1.5-26.fc41         fedora      40.1 KiB
+ lua-devel              x86_64 5.4.6-6.fc41          fedora      48.9 KiB
+ lua-sec                x86_64 1.3.2-4.fc41          fedora     105.1 KiB
+ mailcap                noarch 2.1.54-7.fc41         fedora      86.0 KiB
+ wl-clipboard           x86_64 2.2.1-3.fc41          fedora     140.9 KiB
+ xsel                   x86_64 1.2.1-2.fc41          fedora      47.9 KiB
+
+Transaction Summary:
+ Installing:        32 packages
+
+--> 62a5655d29c6
+STEP 31/35: RUN echo "---- RStudio ------------"     && dnf copr enable -y iucar/rstudio     && dnf install -y rstudio-desktop
+---- RStudio ------------
+Package                                  Arch   Version                         Repository                                        Size
+Installing:
+ rstudio-desktop                         x86_64 2024.12.0+467-1.fc41            copr:copr.fedorainfracloud.org:iucar:rstudio 255.3 MiB
+Installing dependencies:
+ ModemManager-glib                       x86_64 1.22.0-4.fc41                   fedora                                         1.4 MiB
+ NetworkManager-libnm                    x86_64 1:1.50.0-1.fc41                 fedora                                         9.9 MiB
+ alsa-lib                                x86_64 1.2.13-3.fc41                   updates                                        1.4 MiB
+ at-spi2-atk                             x86_64 2.54.0-1.fc41                   fedora                                       283.8 KiB
+ at-spi2-core                            x86_64 2.54.0-1.fc41                   fedora                                         1.5 MiB
+ atk                                     x86_64 2.54.0-1.fc41                   fedora                                       252.7 KiB
+ avahi-glib                              x86_64 0.8-29.fc41                     fedora                                        19.6 KiB
+ bluez-libs                              x86_64 5.79-1.fc41                     updates                                      202.4 KiB
+ boost-chrono                            x86_64 1.83.0-8.fc41                   fedora                                        37.6 KiB
+ boost-iostreams                         x86_64 1.83.0-8.fc41                   fedora                                        94.8 KiB
+ cdparanoia-libs                         x86_64 10.2-45.fc41                    fedora                                       113.7 KiB
+ clang                                   x86_64 19.1.5-1.fc41                   updates                                      181.5 KiB
+ clang-libs                              x86_64 19.1.5-1.fc41                   updates                                      123.3 MiB
+ clang-resource-filesystem               x86_64 19.1.5-1.fc41                   updates                                       15.3 KiB
+ clang-tools-extra                       x86_64 19.1.5-1.fc41                   updates                                       67.9 MiB
+ colord-libs                             x86_64 1.4.7-5.fc41                    fedora                                       847.0 KiB
+ exempi                                  x86_64 2.6.4-6.fc41                    fedora                                         1.4 MiB
+ exiv2-libs                              x86_64 0.28.3-1.fc41                   fedora                                         2.8 MiB
+ fdk-aac-free                            x86_64 2.0.0-14.fc41                   fedora                                       607.2 KiB
+ flac-libs                               x86_64 1.4.3-5.fc41                    fedora                                       674.2 KiB
+ fuse-common                             x86_64 3.16.2-4.fc41                   fedora                                        38.0   B
+ fuse3                                   x86_64 3.16.2-4.fc41                   fedora                                       126.0 KiB
+ fuse3-libs                              x86_64 3.16.2-4.fc41                   fedora                                       281.5 KiB
+ gdk-pixbuf2-modules                     x86_64 2.42.12-6.fc41                  fedora                                        55.6 KiB
+ geoclue2                                x86_64 2.7.0-6.fc41                    fedora                                       387.9 KiB
+ glib-networking                         x86_64 2.80.0-4.fc41                   fedora                                       722.6 KiB
+ glyphography-newscycle-fonts            noarch 0.5.2-14.fc41                   fedora                                       273.9 KiB
+ graphene                                x86_64 1.10.6-9.fc41                   fedora                                       162.6 KiB
+ gsettings-desktop-schemas               x86_64 47.1-1.fc41                     fedora                                         5.4 MiB
+ gsm                                     x86_64 1.0.22-7.fc41                   fedora                                        68.8 KiB
+ gstreamer1                              x86_64 1.24.10-1.fc41                  updates                                        5.2 MiB
+ gstreamer1-plugins-base                 x86_64 1.24.10-1.fc41                  updates                                        7.3 MiB
+ gtk-update-icon-cache                   x86_64 3.24.43-2.fc41                  fedora                                        66.3 KiB
+ gtk3                                    x86_64 3.24.43-2.fc41                  fedora                                        22.4 MiB
+ highway                                 x86_64 1.2.0-3.fc41                    fedora                                         4.5 MiB
+ inih                                    x86_64 58-2.fc41                       fedora                                        26.5 KiB
+ inih-cpp                                x86_64 58-2.fc41                       fedora                                        28.1 KiB
+ iso-codes                               noarch 4.16.0-5.fc41                   fedora                                        18.8 MiB
+ json-glib                               x86_64 1.10.0-1.fc41                   fedora                                       558.2 KiB
+ lame-libs                               x86_64 3.100-18.fc41                   fedora                                         1.2 MiB
+ lato-fonts                              noarch 2.015-22.fc41                   fedora                                        11.3 MiB
+ libXcomposite                           x86_64 0.4.6-4.fc41                    fedora                                        44.5 KiB
+ libXcursor                              x86_64 1.2.3-1.fc41                    updates                                       57.5 KiB
+ libXdamage                              x86_64 1.1.6-4.fc41                    fedora                                        43.7 KiB
+ libXfixes                               x86_64 6.0.1-4.fc41                    fedora                                        30.3 KiB
+ libXi                                   x86_64 1.8.2-1.fc41                    fedora                                        76.7 KiB
+ libXinerama                             x86_64 1.1.5-7.fc41                    fedora                                        19.0 KiB
+ libXrandr                               x86_64 1.5.4-4.fc41                    fedora                                        51.9 KiB
+ libXtst                                 x86_64 1.2.5-1.fc41                    fedora                                        33.6 KiB
+ libXv                                   x86_64 1.0.13-1.fc41                   updates                                       28.7 KiB
+ libXxf86vm                              x86_64 1.1.5-7.fc41                    fedora                                        25.4 KiB
+ libasyncns                              x86_64 0.8-29.fc41                     fedora                                        59.4 KiB
+ libcamera                               x86_64 0.3.2-1.fc41                    fedora                                         1.8 MiB
+ libcanberra                             x86_64 0.30-36.fc41                    fedora                                       274.6 KiB
+ libcloudproviders                       x86_64 0.3.5-5.fc41                    fedora                                       128.3 KiB
+ libcue                                  x86_64 2.3.0-8.fc41                    fedora                                        89.9 KiB
+ libepoxy                                x86_64 1.5.10-8.fc41                   fedora                                         1.1 MiB
+ libexif                                 x86_64 0.6.24-8.fc41                   fedora                                         2.4 MiB
+ libgexiv2                               x86_64 0.14.3-2.fc41                   fedora                                       282.6 KiB
+ libglvnd                                x86_64 1:1.7.0-5.fc41                  fedora                                       530.2 KiB
+ libglvnd-egl                            x86_64 1:1.7.0-5.fc41                  fedora                                        68.8 KiB
+ libglvnd-glx                            x86_64 1:1.7.0-5.fc41                  fedora                                       605.5 KiB
+ libgrss                                 x86_64 0.7.0-21.fc41                   fedora                                       174.6 KiB
+ libgsf                                  x86_64 1.14.53-2.fc41                  updates                                      969.7 KiB
+ libgudev                                x86_64 238-6.fc41                      fedora                                        87.9 KiB
+ libgusb                                 x86_64 0.4.9-2.fc41                    fedora                                       162.1 KiB
+ libgxps                                 x86_64 0.3.2-9.fc41                    fedora                                       192.2 KiB
+ libimobiledevice                        x86_64 1.3.0^20230705git6fc41f5-5.fc41 fedora                                       300.4 KiB
+ libimobiledevice-glue                   x86_64 1.0.0-4.fc41                    fedora                                        73.3 KiB
+ libiptcdata                             x86_64 1.0.5-19.fc41                   fedora                                       164.2 KiB
+ libjxl                                  x86_64 1:0.10.3-5.fc41                 updates                                        3.4 MiB
+ liblc3                                  x86_64 1.1.1-3.fc41                    fedora                                       170.9 KiB
+ libldac                                 x86_64 2.0.2.3-16.fc41                 fedora                                        82.4 KiB
+ libnotify                               x86_64 0.8.3-4.fc41                    fedora                                       128.5 KiB
+ libogg                                  x86_64 2:1.3.5-9.fc41                  fedora                                        49.4 KiB
+ libosinfo                               x86_64 1.11.0-7.fc41                   fedora                                         1.2 MiB
+ libplist                                x86_64 2.3.0-6.fc41                    fedora                                       231.8 KiB
+ libproxy                                x86_64 0.5.8-1.fc41                    fedora                                       110.4 KiB
+ libsbc                                  x86_64 2.0-5.fc41                      fedora                                        93.5 KiB
+ libsndfile                              x86_64 1.2.2-5.fc41                    updates                                      534.0 KiB
+ libsoup                                 x86_64 2.74.3-7.fc41                   fedora                                         1.2 MiB
+ libsoup3                                x86_64 3.6.0-1.fc41                    fedora                                         1.1 MiB
+ libtdb                                  x86_64 1.4.12-3.fc41                   fedora                                        97.1 KiB
+ libtheora                               x86_64 1:1.1.1-38.fc41                 fedora                                       477.6 KiB
+ libtracker-sparql                       x86_64 3.7.3-3.fc41                    fedora                                         1.0 MiB
+ libusbmuxd                              x86_64 2.0.2^20230620git8d30a55-6.fc41 fedora                                        71.1 KiB
+ libvisual                               x86_64 1:0.4.1-5.fc41                  fedora                                       451.4 KiB
+ libvorbis                               x86_64 1:1.3.7-11.fc41                 fedora                                       833.6 KiB
+ libwayland-cursor                       x86_64 1.23.0-2.fc41                   fedora                                        37.4 KiB
+ libwayland-egl                          x86_64 1.23.0-2.fc41                   fedora                                        16.5 KiB
+ libxkbcommon                            x86_64 1.7.0-4.fc41                    fedora                                       336.4 KiB
+ libxslt                                 x86_64 1.1.42-2.fc41                   fedora                                       483.1 KiB
+ lttng-ust                               x86_64 2.13.8-3.fc41                   fedora                                         1.1 MiB
+ mathjax                                 noarch 2.7.4-16.fc41                   fedora                                        25.4 MiB
+ mathjax-ams-fonts                       noarch 2.7.4-16.fc41                   fedora                                       267.1 KiB
+ mathjax-caligraphic-fonts               noarch 2.7.4-16.fc41                   fedora                                        97.9 KiB
+ mathjax-fraktur-fonts                   noarch 2.7.4-16.fc41                   fedora                                       224.6 KiB
+ mathjax-main-fonts                      noarch 2.7.4-16.fc41                   fedora                                       558.3 KiB
+ mathjax-math-fonts                      noarch 2.7.4-16.fc41                   fedora                                       347.7 KiB
+ mathjax-sansserif-fonts                 noarch 2.7.4-16.fc41                   fedora                                       240.0 KiB
+ mathjax-script-fonts                    noarch 2.7.4-16.fc41                   fedora                                        60.0 KiB
+ mathjax-size1-fonts                     noarch 2.7.4-16.fc41                   fedora                                        36.9 KiB
+ mathjax-size2-fonts                     noarch 2.7.4-16.fc41                   fedora                                        34.4 KiB
+ mathjax-size3-fonts                     noarch 2.7.4-16.fc41                   fedora                                        16.4 KiB
+ mathjax-size4-fonts                     noarch 2.7.4-16.fc41                   fedora                                        29.2 KiB
+ mathjax-stixweb-fonts                   noarch 2.7.4-16.fc41                   fedora                                         3.1 MiB
+ mathjax-typewriter-fonts                noarch 2.7.4-16.fc41                   fedora                                       105.7 KiB
+ mathjax-vector-fonts                    noarch 2.7.4-16.fc41                   fedora                                        12.9 KiB
+ mathjax-winchrome-fonts                 noarch 2.7.4-16.fc41                   fedora                                         8.9 KiB
+ mathjax-winie6-fonts                    noarch 2.7.4-16.fc41                   fedora                                        56.4 KiB
+ mesa-libEGL                             x86_64 24.2.8-1.fc41                   updates                                      340.2 KiB
+ mesa-libGL                              x86_64 24.2.8-1.fc41                   updates                                      457.8 KiB
+ mpg123-libs                             x86_64 1.32.9-1.fc41                   updates                                      801.7 KiB
+ nodejs20                                x86_64 1:20.18.1-1.fc41                updates                                      148.4 KiB
+ nodejs20-libs                           x86_64 1:20.18.1-1.fc41                updates                                       60.7 MiB
+ opus                                    x86_64 1.5.2-1.fc41                    fedora                                       411.7 KiB
+ orc                                     x86_64 0.4.39-1.fc41                   fedora                                       759.7 KiB
+ osinfo-db                               noarch 20240701-2.fc41                 fedora                                         3.7 MiB
+ osinfo-db-tools                         x86_64 1.12.0-1.fc41                   updates                                      207.5 KiB
+ pipewire-jack-audio-connection-kit-libs x86_64 1.2.7-1.fc41                    updates                                      464.7 KiB
+ pipewire-libs                           x86_64 1.2.7-1.fc41                    updates                                        7.3 MiB
+ pulseaudio-libs                         x86_64 17.0-2.fc41                     fedora                                         3.4 MiB
+ quarto                                  x86_64 1.6.39-1.fc41                   copr:copr.fedorainfracloud.org:iucar:rstudio 259.2 MiB
+ rstudio-common                          x86_64 2024.12.0+467-1.fc41            copr:copr.fedorainfracloud.org:iucar:rstudio  87.9 MiB
+ rtkit                                   x86_64 0.11-65.fc41                    updates                                      146.4 KiB
+ soci                                    x86_64 4.0.3-10.fc41                   updates                                      370.9 KiB
+ soci-sqlite3                            x86_64 4.0.3-10.fc41                   updates                                      146.3 KiB
+ sound-theme-freedesktop                 noarch 0.8-22.fc41                     fedora                                       460.4 KiB
+ totem-pl-parser                         x86_64 3.26.6-10.fc41                  fedora                                       304.5 KiB
+ tracker                                 x86_64 3.7.3-3.fc41                    fedora                                         2.3 MiB
+ uchardet                                x86_64 0.0.8-6.fc41                    fedora                                       275.9 KiB
+ upower-libs                             x86_64 1.90.6-3.fc41                   updates                                      174.7 KiB
+ web-assets-filesystem                   noarch 5-22.fc41                       fedora                                        34.0   B
+ webrtc-audio-processing                 x86_64 1.3-3.fc41                      fedora                                         1.3 MiB
+ wireplumber                             x86_64 0.5.7-1.fc41                    updates                                      368.0 KiB
+ wireplumber-libs                        x86_64 0.5.7-1.fc41                    updates                                        1.2 MiB
+ xdg-desktop-portal                      x86_64 1.18.4-3.fc41                   updates                                        2.2 MiB
+ xkeyboard-config                        noarch 2.42-2.fc41                     fedora                                         6.5 MiB
+ xprop                                   x86_64 1.2.7-2.fc41                    fedora                                        58.8 KiB
+ yaml-cpp                                x86_64 0.7.0-6.fc41                    fedora                                       325.6 KiB
+Installing weak dependencies:
+ adobe-source-code-pro-fonts             noarch 2.042.1.062.1.026-5.fc41        fedora                                         1.6 MiB
+ avif-pixbuf-loader                      x86_64 1.0.4-7.fc41                    fedora                                        23.6 KiB
+ clang-devel                             x86_64 19.1.5-1.fc41                   updates                                       25.4 MiB
+ compiler-rt                             x86_64 19.1.5-1.fc41                   updates                                       36.3 MiB
+ dconf                                   x86_64 0.40.0-14.fc41                  fedora                                       315.8 KiB
+ exiv2                                   x86_64 0.28.3-1.fc41                   fedora                                        12.2 MiB
+ jxl-pixbuf-loader                       x86_64 1:0.10.3-5.fc41                 updates                                       33.2 KiB
+ libcamera-ipa                           x86_64 0.3.2-1.fc41                    fedora                                       487.8 KiB
+ libcanberra-gtk3                        x86_64 0.30-36.fc41                    fedora                                        66.9 KiB
+ libomp                                  x86_64 19.1.5-1.fc41                   updates                                       49.8 MiB
+ libomp-devel                            x86_64 19.1.5-1.fc41                   updates                                       31.2 MiB
+ low-memory-monitor                      x86_64 2.1-11.fc41                     fedora                                        70.1 KiB
+ nodejs20-docs                           noarch 1:20.18.1-1.fc41                updates                                       89.5 MiB
+ nodejs20-full-i18n                      x86_64 1:20.18.1-1.fc41                updates                                       29.3 MiB
+ nodejs20-npm                            x86_64 1:10.8.2-1.20.18.1.1.fc41       updates                                        7.8 MiB
+ pipewire                                x86_64 1.2.7-1.fc41                    updates                                      401.8 KiB
+ pipewire-alsa                           x86_64 1.2.7-1.fc41                    updates                                      138.0 KiB
+ pipewire-jack-audio-connection-kit      x86_64 1.2.7-1.fc41                    updates                                       30.0   B
+ pipewire-plugin-libcamera               x86_64 1.2.7-1.fc41                    updates                                      134.5 KiB
+ pipewire-pulseaudio                     x86_64 1.2.7-1.fc41                    updates                                      423.9 KiB
+ tracker-miners                          x86_64 3.7.4-2.fc41                    updates                                        4.3 MiB
+ upower                                  x86_64 1.90.6-3.fc41                   updates                                      505.3 KiB
+ usbmuxd                                 x86_64 1.1.1^20230720git61b99ab-3.fc41 fedora                                       152.8 KiB
+ webp-pixbuf-loader                      x86_64 0.2.7-2.fc41                    fedora                                        32.7 KiB
+ xdg-desktop-portal-gtk                  x86_64 1.15.1-6.fc41                   fedora                                       477.8 KiB
+
+Transaction Summary:
+ Installing:       166 packages
+
+--> b7d3ce094ac7
+STEP 32/35: RUN echo "---- Positron ------------"     && dnf copr enable -y iucar/posit-dev     && dnf install -y ark-kernel positron
+---- Positron ------------
+Package                           Arch   Version                         Repository                                          Size
+Installing:
+ ark-kernel                       x86_64 0.1.159-1.fc41                  copr:copr.fedorainfracloud.org:iucar:posit-dev  19.6 MiB
+ positron                         x86_64 2025.01.0+39-1.fc41             copr:copr.fedorainfracloud.org:iucar:posit-dev   1.0 GiB
+Installing dependencies:
+ biber                            noarch 2.19-6.fc41                     fedora                                           1.3 MiB
+ blosc2                           x86_64 2.15.1-1.fc41                   fedora                                         552.2 KiB
+ c-ares                           x86_64 1.34.4-1.fc41                   updates                                        268.7 KiB
+ double-conversion                x86_64 3.3.0-4.fc41                    fedora                                          96.6 KiB
+ glx-utils                        x86_64 9.0.0-8.fc41                    fedora                                         431.1 KiB
+ google-crc32c                    x86_64 1.1.2-10.fc41                   fedora                                          24.1 KiB
+ grpc                             x86_64 1.48.4-41.fc41                  fedora                                          10.6 MiB
+ grpc-cpp                         x86_64 1.48.4-41.fc41                  fedora                                           3.0 MiB
+ grpc-data                        noarch 1.48.4-41.fc41                  fedora                                          29.6 KiB
+ libarrow-flight-libs             x86_64 16.1.0-12.fc41                  updates                                          1.4 MiB
+ libarrow-glib-libs               x86_64 16.1.0-12.fc41                  updates                                          1.4 MiB
+ libevdev                         x86_64 1.13.3-1.fc41                   fedora                                          86.1 KiB
+ libinput                         x86_64 1.27.0-2.fc41                   updates                                        587.8 KiB
+ libwacom                         x86_64 2.13.0-1.fc41                   fedora                                          98.7 KiB
+ libwacom-data                    noarch 2.13.0-1.fc41                   fedora                                           1.2 MiB
+ libxkbcommon-x11                 x86_64 1.7.0-4.fc41                    fedora                                          39.6 KiB
+ libxkbfile                       x86_64 1.1.3-2.fc41                    fedora                                         202.0 KiB
+ lzo                              x86_64 2.10-13.fc41                    fedora                                         166.9 KiB
+ mtdev                            x86_64 1.1.6-9.fc41                    fedora                                          25.3 KiB
+ pcre2-utf16                      x86_64 10.44-1.fc41.1                  fedora                                         590.1 KiB
+ perl-Authen-SASL                 noarch 2.1700-4.fc41                   fedora                                         116.6 KiB
+ perl-B-Hooks-EndOfScope          noarch 0.28-2.fc41                     fedora                                          69.3 KiB
+ perl-Business-ISBN               noarch 3.009-5.fc41                    fedora                                          53.7 KiB
+ perl-Business-ISBN-Data          noarch 20240930.001-1.fc41             fedora                                         286.5 KiB
+ perl-Business-ISMN               noarch 1.204-2.fc41                    fedora                                          35.9 KiB
+ perl-Business-ISSN               noarch 1.005-12.fc41                   fedora                                          20.8 KiB
+ perl-Class-Accessor              noarch 0.51-21.fc41                    fedora                                          40.8 KiB
+ perl-Class-Data-Inheritable      noarch 0.09-9.fc41                     fedora                                           6.3 KiB
+ perl-Class-Inspector             noarch 1.36-17.fc41                    fedora                                          57.5 KiB
+ perl-Class-Method-Modifiers      noarch 2.15-5.fc41                     fedora                                         102.5 KiB
+ perl-Class-Singleton             noarch 1.6-12.fc41                     fedora                                          39.7 KiB
+ perl-Clone                       x86_64 0.47-1.fc41                     fedora                                          36.5 KiB
+ perl-Compress-Raw-Bzip2          x86_64 2.212-512.fc41                  fedora                                          69.5 KiB
+ perl-Compress-Raw-Zlib           x86_64 2.212-512.fc41                  fedora                                         162.4 KiB
+ perl-Convert-ASN1                noarch 0.34-4.fc41                     fedora                                         170.0 KiB
+ perl-Data-Compare                noarch 1.29-5.fc41                     fedora                                          55.5 KiB
+ perl-Data-Dump                   noarch 1.25-11.fc41                    fedora                                          50.2 KiB
+ perl-Data-OptList                noarch 0.114-5.fc41                    fedora                                          50.1 KiB
+ perl-Data-Uniqid                 noarch 0.12-34.fc41                    fedora                                           4.2 KiB
+ perl-Date-ISO8601                noarch 0.005-21.fc41                   fedora                                          24.5 KiB
+ perl-Date-Manip                  noarch 6.96-1.fc41                     updates                                         10.7 MiB
+ perl-DateTime                    x86_64 2:1.65-6.fc41                   fedora                                         383.0 KiB
+ perl-DateTime-Calendar-Julian    noarch 0.107-8.fc41                    fedora                                          32.8 KiB
+ perl-DateTime-Format-Builder     noarch 0.8300-14.fc41                  fedora                                         202.3 KiB
+ perl-DateTime-Format-Strptime    noarch 1:1.79-11.fc41                  fedora                                          96.3 KiB
+ perl-DateTime-Locale             noarch 1.44-1.fc41                     updates                                         22.5 MiB
+ perl-DateTime-TimeZone           noarch 2.63-1.fc41                     fedora                                           6.0 MiB
+ perl-DateTime-TimeZone-SystemV   noarch 0.010-22.fc41                   fedora                                          28.4 KiB
+ perl-DateTime-TimeZone-Tzfile    noarch 0.011-22.fc41                   fedora                                          24.6 KiB
+ perl-Devel-CallChecker           x86_64 0.009-7.fc41                    fedora                                          37.3 KiB
+ perl-Devel-Caller                x86_64 2.07-7.fc41                     fedora                                          27.4 KiB
+ perl-Devel-GlobalDestruction     noarch 0.14-25.fc41                    fedora                                          16.6 KiB
+ perl-Devel-LexAlias              x86_64 0.05-38.fc41                    fedora                                          19.2 KiB
+ perl-Devel-StackTrace            noarch 1:2.05-4.fc41                   fedora                                          48.9 KiB
+ perl-Digest-HMAC                 noarch 1.04-11.fc41                    fedora                                          28.1 KiB
+ perl-Digest-SHA                  x86_64 1:6.04-512.fc41                 fedora                                         116.6 KiB
+ perl-Dist-CheckConflicts         noarch 0.11-31.fc41                    fedora                                          31.7 KiB
+ perl-DynaLoader-Functions        noarch 0.004-5.fc41                    fedora                                          19.7 KiB
+ perl-Email-Date-Format           noarch 1.008-5.fc41                    fedora                                          24.8 KiB
+ perl-Encode-Locale               noarch 1.05-30.fc41                    fedora                                          19.0 KiB
+ perl-English                     noarch 1.11-512.fc41                   updates                                          6.2 KiB
+ perl-Eval-Closure                noarch 0.14-24.fc41                    fedora                                          33.3 KiB
+ perl-Exception-Class             noarch 1.45-11.fc41                    fedora                                          92.4 KiB
+ perl-Exporter-Tiny               noarch 1.006002-5.fc41                 fedora                                          88.3 KiB
+ perl-ExtUtils-MM-Utils           noarch 2:7.70-512.fc41                 fedora                                           2.9 KiB
+ perl-File-Find-Rule              noarch 0.34-29.fc41                    fedora                                          42.3 KiB
+ perl-File-Listing                noarch 6.16-4.fc41                     fedora                                          41.2 KiB
+ perl-File-ShareDir               noarch 1.118-12.fc41                   fedora                                          56.2 KiB
+ perl-File-Slurper                noarch 0.014-6.fc41                    fedora                                          28.7 KiB
+ perl-Filter                      x86_64 2:1.64-512.fc41                 fedora                                         165.2 KiB
+ perl-GD                          x86_64 2.83-2.fc41                     fedora                                         403.3 KiB
+ perl-GSSAPI                      x86_64 0.28-47.fc41                    fedora                                         120.9 KiB
+ perl-HTML-Parser                 x86_64 3.83-1.fc41                     fedora                                         281.8 KiB
+ perl-HTML-Tagset                 noarch 3.24-2.fc41                     fedora                                          18.7 KiB
+ perl-HTTP-Cookies                noarch 6.11-4.fc41                     fedora                                          73.4 KiB
+ perl-HTTP-Date                   noarch 6.06-5.fc41                     fedora                                          41.2 KiB
+ perl-HTTP-Message                noarch 6.46-2.fc41                     fedora                                         215.3 KiB
+ perl-HTTP-Negotiate              noarch 6.01-39.fc41                    fedora                                          27.6 KiB
+ perl-Hash-Util-FieldHash         x86_64 1.27-512.fc41                   updates                                         66.6 KiB
+ perl-I18N-LangTags               noarch 0.45-512.fc41                   updates                                         82.3 KiB
+ perl-I18N-Langinfo               x86_64 0.24-512.fc41                   updates                                         38.8 KiB
+ perl-IO-Compress                 noarch 2.212-513.fc41                  updates                                          1.0 MiB
+ perl-IO-HTML                     noarch 1.004-13.fc41                   fedora                                          45.2 KiB
+ perl-IO-String                   noarch 1.08-51.fc41                    fedora                                          16.8 KiB
+ perl-IPC-Cmd                     noarch 2:1.04-512.fc41                 fedora                                          84.9 KiB
+ perl-IPC-Run3                    noarch 0.049-2.fc41                    fedora                                          60.3 KiB
+ perl-IPC-SysV                    x86_64 2.09-512.fc41                   fedora                                          73.9 KiB
+ perl-IPC-System-Simple           noarch 1.30-14.fc41                    fedora                                          71.7 KiB
+ perl-JSON                        noarch 4.10-6.fc41                     fedora                                         270.5 KiB
+ perl-LDAP                        noarch 1:0.68-14.fc41                  fedora                                         938.1 KiB
+ perl-LWP-MediaTypes              noarch 6.04-19.fc41                    fedora                                          79.0 KiB
+ perl-LWP-Protocol-https          noarch 6.14-2.fc41                     fedora                                          29.7 KiB
+ perl-Lexical-SealRequireHints    x86_64 0.012-8.fc41                    fedora                                          47.0 KiB
+ perl-Lingua-Translit             noarch 0.29-7.fc41                     fedora                                         177.5 KiB
+ perl-List-AllUtils               noarch 0.19-13.fc41                    fedora                                         134.3 KiB
+ perl-List-MoreUtils-XS           x86_64 0.430-15.fc41                   fedora                                         166.7 KiB
+ perl-List-SomeUtils              noarch 0.59-6.fc41                     fedora                                         107.2 KiB
+ perl-List-UtilsBy                noarch 0.12-10.fc41                    fedora                                          55.8 KiB
+ perl-Locale-Maketext             noarch 1.33-512.fc41                   fedora                                         171.3 KiB
+ perl-Locale-Maketext-Simple      noarch 1:0.21-512.fc41                 updates                                         12.8 KiB
+ perl-Log-Dispatch                noarch 2.71-5.fc41                     fedora                                         143.0 KiB
+ perl-Log-Dispatch-FileRotate     noarch 1.38-10.fc41                    fedora                                          52.6 KiB
+ perl-Log-Log4perl                noarch 1.57-6.fc41                     fedora                                         879.3 KiB
+ perl-MIME-Charset                noarch 1.013.1-6.fc41                  fedora                                         104.4 KiB
+ perl-MIME-Lite                   noarch 3.033-11.fc41                   fedora                                         245.9 KiB
+ perl-MIME-Types                  noarch 2.26-2.fc41                     fedora                                         182.4 KiB
+ perl-MRO-Compat                  noarch 0.15-10.fc41                    fedora                                          43.0 KiB
+ perl-Mail-Sender                 noarch 1:0.903-25.fc41                 fedora                                         160.6 KiB
+ perl-Mail-Sendmail               noarch 0.80-21.fc41                    fedora                                          65.0 KiB
+ perl-MailTools                   noarch 2.21-17.fc41                    fedora                                         203.6 KiB
+ perl-Math-BigInt                 noarch 1:2.0030.03-3.fc41              fedora                                         957.7 KiB
+ perl-Math-Complex                noarch 1.62-512.fc41                   updates                                         85.0 KiB
+ perl-Module-CoreList             noarch 1:5.20241120-1.fc41             updates                                          1.2 MiB
+ perl-Module-Implementation       noarch 0.09-40.fc41                    fedora                                          24.7 KiB
+ perl-Module-Load                 noarch 1:0.36-511.fc41                 fedora                                          14.9 KiB
+ perl-Module-Load-Conditional     noarch 0.74-511.fc41                   fedora                                          28.7 KiB
+ perl-Module-Metadata             noarch 1.000038-511.fc41               fedora                                          67.5 KiB
+ perl-Module-Runtime              noarch 0.016-23.fc41                   fedora                                          30.4 KiB
+ perl-Mozilla-CA                  noarch 20240730-1.fc41                 fedora                                           9.8 KiB
+ perl-NTLM                        noarch 1.09-39.fc41                    fedora                                          31.2 KiB
+ perl-Net-HTTP                    noarch 6.23-5.fc41                     fedora                                          74.7 KiB
+ perl-Net-SMTP-SSL                noarch 1.04-25.fc41                    fedora                                           4.2 KiB
+ perl-Number-Compare              noarch 0.03-39.fc41                    fedora                                           4.5 KiB
+ perl-Opcode                      x86_64 1.65-512.fc41                   updates                                         52.5 KiB
+ perl-Package-Generator           noarch 1.106-32.fc41                   fedora                                          29.9 KiB
+ perl-Package-Stash               noarch 0.40-8.fc41                     fedora                                          55.9 KiB
+ perl-Package-Stash-XS            x86_64 0.30-9.fc41                     fedora                                          68.3 KiB
+ perl-PadWalker                   x86_64 2.5-15.fc41                     fedora                                          45.1 KiB
+ perl-Params-Check                noarch 1:0.38-511.fc41                 fedora                                          27.6 KiB
+ perl-Params-Classify             x86_64 0.015-24.fc41                   fedora                                          47.6 KiB
+ perl-Params-Util                 x86_64 1.102-16.fc41                   fedora                                          54.6 KiB
+ perl-Params-Validate             x86_64 1.31-9.fc41                     fedora                                         153.0 KiB
+ perl-Params-ValidationCompiler   noarch 0.31-6.fc41                     fedora                                          91.1 KiB
+ perl-Parse-RecDescent            noarch 1.967015-23.fc41                fedora                                         522.0 KiB
+ perl-Pod-Html                    noarch 1.35-512.fc41                   updates                                         42.2 KiB
+ perl-Ref-Util                    noarch 0.204-21.fc41                   fedora                                          31.5 KiB
+ perl-Ref-Util-XS                 x86_64 0.117-24.fc41                   fedora                                          42.2 KiB
+ perl-Regexp-Common               noarch 2024080801-1.fc41               fedora                                         462.1 KiB
+ perl-Role-Tiny                   noarch 2.002004-12.fc41                fedora                                          61.7 KiB
+ perl-Safe                        noarch 2.46-512.fc41                   updates                                         30.6 KiB
+ perl-Sort-Key                    x86_64 1.33-32.fc41                    fedora                                          81.9 KiB
+ perl-Specio                      noarch 0.48-7.fc41                     fedora                                         329.7 KiB
+ perl-Sub-Exporter                noarch 0.991-4.fc41                    fedora                                         194.9 KiB
+ perl-Sub-Exporter-Progressive    noarch 0.001013-25.fc41                fedora                                          27.3 KiB
+ perl-Sub-Identify                x86_64 0.14-28.fc41                    fedora                                          31.9 KiB
+ perl-Sub-Install                 noarch 0.929-6.fc41                    fedora                                          35.9 KiB
+ perl-Sys-Hostname                x86_64 1.25-512.fc41                   updates                                         19.9 KiB
+ perl-Sys-Syslog                  x86_64 0.36-512.fc41                   fedora                                          94.8 KiB
+ perl-Text-Balanced               noarch 2.06-511.fc41                   fedora                                         111.4 KiB
+ perl-Text-BibTeX                 x86_64 0.89-7.fc41                     fedora                                         514.6 KiB
+ perl-Text-CSV                    noarch 2.04-2.fc41                     fedora                                         348.1 KiB
+ perl-Text-Glob                   noarch 0.11-24.fc41                    fedora                                           8.4 KiB
+ perl-Text-Roman                  noarch 3.5-28.fc41                     fedora                                          33.1 KiB
+ perl-Text-Soundex                x86_64 3.05-32.fc41                    fedora                                          50.9 KiB
+ perl-Text-Unidecode              noarch 1.30-25.fc41                    fedora                                         448.7 KiB
+ perl-Tie                         noarch 4.6-512.fc41                    updates                                         32.0 KiB
+ perl-Tie-Cycle                   noarch 1.228-3.fc41                    fedora                                          23.1 KiB
+ perl-Tie-RefHash                 noarch 1.41-1.fc41                     fedora                                          35.9 KiB
+ perl-Time-HiRes                  x86_64 4:1.9777-511.fc41               fedora                                         119.9 KiB
+ perl-TimeDate                    noarch 1:2.33-15.fc41                  fedora                                          95.2 KiB
+ perl-Try-Tiny                    noarch 0.32-1.fc41                     fedora                                          67.3 KiB
+ perl-Unicode-Collate             x86_64 1.31-511.fc41                   fedora                                           4.2 MiB
+ perl-Unicode-LineBreak           x86_64 2019.001-22.fc41                fedora                                         264.6 KiB
+ perl-Unicode-Normalize           x86_64 1.32-511.fc41                   fedora                                         465.2 KiB
+ perl-Unicode-UCD                 noarch 0.78-512.fc41                   updates                                        204.4 KiB
+ perl-Variable-Magic              x86_64 0.64-3.fc41                     fedora                                         130.6 KiB
+ perl-WWW-RobotRules              noarch 6.02-40.fc41                    fedora                                          24.3 KiB
+ perl-XML-LibXML                  x86_64 1:2.0210-3.fc41                 fedora                                         916.7 KiB
+ perl-XML-LibXML-Simple           noarch 1.01-15.fc41                    fedora                                          50.8 KiB
+ perl-XML-LibXSLT                 x86_64 2.003.000-2.fc41                fedora                                         141.3 KiB
+ perl-XML-NamespaceSupport        noarch 1.12-24.fc41                    fedora                                          44.7 KiB
+ perl-XML-Parser                  x86_64 2.47-5.fc41                     fedora                                         653.3 KiB
+ perl-XML-SAX                     noarch 1.02-17.fc41                    fedora                                         120.2 KiB
+ perl-XML-SAX-Base                noarch 1.09-24.fc41                    fedora                                         172.7 KiB
+ perl-XML-Writer                  noarch 0.900-15.fc41                   fedora                                          65.8 KiB
+ perl-XML-XPath                   noarch 1.48-7.fc41                     fedora                                         202.3 KiB
+ perl-XString                     x86_64 0.005-14.fc41                   fedora                                          37.0 KiB
+ perl-autodie                     noarch 2.37-512.fc41                   fedora                                         214.9 KiB
+ perl-autovivification            x86_64 0.18-24.fc41                    fedora                                          62.0 KiB
+ perl-deprecate                   noarch 0.04-512.fc41                   updates                                          6.5 KiB
+ perl-encoding                    x86_64 4:3.00-511.fc41                 fedora                                         149.5 KiB
+ perl-libwww-perl                 noarch 6.77-2.fc41                     fedora                                         521.0 KiB
+ perl-meta-notation               noarch 5.40.0-512.fc41                 updates                                          2.0 KiB
+ perl-namespace-autoclean         noarch 0.29-19.fc41                    fedora                                          41.1 KiB
+ perl-namespace-clean             noarch 0.27-27.fc41                    fedora                                          38.7 KiB
+ perl-open                        noarch 1.13-512.fc41                   updates                                         11.3 KiB
+ perl-sigtrap                     noarch 1.10-512.fc41                   updates                                         11.0 KiB
+ perl-subs                        noarch 1.04-512.fc41                   updates                                          2.1 KiB
+ perl-version                     x86_64 9:0.99.33-1.fc41                fedora                                         132.8 KiB
+ perltidy                         noarch 20240903-1.fc41                 fedora                                           3.9 MiB
+ protobuf-compiler                x86_64 3.19.6-10.fc41                  fedora                                           2.5 MiB
+ python-qt5-rpm-macros            noarch 5.15.10-11.fc41                 fedora                                         146.0   B
+ python3-Bottleneck               x86_64 1.3.7-7.fc41                    fedora                                         627.3 KiB
+ python3-aiodns                   noarch 3.2.0-1.fc41                    fedora                                          38.7 KiB
+ python3-aiohappyeyeballs         noarch 2.4.4-1.fc41                    updates                                         92.8 KiB
+ python3-aiohttp                  x86_64 3.10.5-3.fc41                   updates                                          3.1 MiB
+ python3-aiosignal                noarch 1.3.2-1.fc41                    updates                                         33.4 KiB
+ python3-appdirs                  noarch 1.4.4-23.fc41                   fedora                                          68.7 KiB
+ python3-asttokens                noarch 2.4.1-7.fc41                    fedora                                         209.1 KiB
+ python3-attrs                    noarch 24.2.0-1.fc41                   fedora                                         396.1 KiB
+ python3-blosc2                   x86_64 2.5.1-5.fc41                    fedora                                           1.0 MiB
+ python3-brotli                   x86_64 1.1.0-5.fc41                    fedora                                         836.0 KiB
+ python3-cachetools               noarch 5.4.0-2.fc41                    fedora                                         144.4 KiB
+ python3-cffi                     x86_64 1.17.0-1.fc41                   fedora                                           1.3 MiB
+ python3-comm                     noarch 0.2.2-3.fc41                    fedora                                          32.3 KiB
+ python3-contourpy                x86_64 1.3.1-1.fc41                    updates                                        822.6 KiB
+ python3-cpuinfo                  noarch 9.0.0-9.fc41                    fedora                                         309.7 KiB
+ python3-cycler                   noarch 0.11.0-13.fc41                  fedora                                          37.6 KiB
+ python3-decorator                noarch 5.1.1-11.fc41                   fedora                                          77.6 KiB
+ python3-devel                    x86_64 3.13.1-2.fc41                   updates                                          1.8 MiB
+ python3-et_xmlfile               noarch 1.1.0-10.fc41                   fedora                                          13.2 KiB
+ python3-executing                noarch 2.1.0^20240916git3f11fdc-1.fc41 fedora                                         265.2 KiB
+ python3-fonttools                x86_64 4.53.1-2.fc41                   fedora                                          18.2 MiB
+ python3-frozenlist               x86_64 1.5.0-2.fc41                    updates                                        154.8 KiB
+ python3-fs                       noarch 2.4.16-9.fc41                   fedora                                           1.3 MiB
+ python3-google-api-core          noarch 1:2.11.1-10.fc41                fedora                                         801.1 KiB
+ python3-google-auth              noarch 1:2.37.0-1.fc41                 updates                                          1.4 MiB
+ python3-google-auth-oauthlib     noarch 0.8.0-7.fc41                    fedora                                         103.3 KiB
+ python3-google-cloud-core        noarch 2.3.3-6.fc41                    fedora                                         179.4 KiB
+ python3-google-cloud-storage     noarch 2.14.0-6.fc41                   fedora                                           1.2 MiB
+ python3-google-crc32c            x86_64 1.6.0-1.fc41                    fedora                                          62.6 KiB
+ python3-google-resumable-media   noarch 2.7.2-1.fc41                    fedora                                         653.8 KiB
+ python3-googleapis-common-protos noarch 1.63.0-5.fc41                   fedora                                         778.1 KiB
+ python3-grpcio                   x86_64 1.48.4-41.fc41                  fedora                                           7.4 MiB
+ python3-grpcio-status            noarch 1.48.4-41.fc41                  fedora                                          14.0 KiB
+ python3-ipykernel                noarch 6.29.3-6.fc41                   fedora                                         957.5 KiB
+ python3-ipython                  noarch 8.26.0-2.fc41                   fedora                                           4.5 MiB
+ python3-jdcal                    noarch 1.4.1-12.fc41                   fedora                                          35.3 KiB
+ python3-jedi                     noarch 0.19.1-10.fc41                  fedora                                           5.6 MiB
+ python3-jupyter-client           noarch 8.6.1-6.fc41                    fedora                                         899.8 KiB
+ python3-jupyter-core             noarch 5.7.2-3.fc41                    fedora                                         198.7 KiB
+ python3-kiwisolver               x86_64 1.4.7-1.fc41                    fedora                                         153.9 KiB
+ python3-lxml                     x86_64 5.2.1-6.fc41                    fedora                                           4.9 MiB
+ python3-matplotlib-data          noarch 3.9.4-1.fc41                    updates                                        741.5 KiB
+ python3-matplotlib-data-fonts    noarch 3.9.4-1.fc41                    updates                                          7.9 MiB
+ python3-matplotlib-inline        noarch 0.1.7-3.fc41                    fedora                                          39.6 KiB
+ python3-matplotlib-tk            x86_64 3.9.4-1.fc41                    updates                                        257.3 KiB
+ python3-ndindex                  x86_64 1.7-13.fc41                     fedora                                           2.9 MiB
+ python3-nest-asyncio             noarch 1.6.0-4.fc41                    fedora                                          25.8 KiB
+ python3-numexpr                  x86_64 2.8.5-7.fc41                    fedora                                         574.8 KiB
+ python3-numpy-f2py               x86_64 1:1.26.4-8.fc41                 fedora                                           2.8 MiB
+ python3-oauthlib                 noarch 3.2.2-5.fc41                    fedora                                         993.9 KiB
+ python3-parso                    noarch 0.8.4-3.fc41                    fedora                                         896.3 KiB
+ python3-pexpect                  noarch 4.9.0-6.fc41                    fedora                                         625.4 KiB
+ python3-pillow-tk                x86_64 11.0.0-1.fc41                   updates                                         73.4 KiB
+ python3-ply                      noarch 3.11-25.fc41                    fedora                                         568.2 KiB
+ python3-pooch                    noarch 1.8.2-3.fc41                    fedora                                         625.5 KiB
+ python3-protobuf                 x86_64 3.19.6-10.fc41                  fedora                                           1.9 MiB
+ python3-psutil                   x86_64 5.9.8-4.fc41                    fedora                                           1.4 MiB
+ python3-ptyprocess               noarch 0.7.0-9.fc41                    fedora                                          79.8 KiB
+ python3-pure-eval                noarch 0.2.3-1.fc41                    fedora                                         100.3 KiB
+ python3-pyasn1                   noarch 0.6.0-3.fc41                    fedora                                         903.6 KiB
+ python3-pyasn1-modules           noarch 0.6.0-3.fc41                    fedora                                           1.7 MiB
+ python3-pycares                  x86_64 4.3.0-9.fc41                    fedora                                         228.2 KiB
+ python3-pycparser                noarch 2.20-18.fc41                    fedora                                         821.0 KiB
+ python3-pyparsing                noarch 3.1.2-7.fc41                    fedora                                           1.0 MiB
+ python3-pyqt5-sip                x86_64 12.15.0-2.fc41                  fedora                                         158.8 KiB
+ python3-pytz                     noarch 2024.2-1.fc41                   fedora                                         223.7 KiB
+ python3-pyzmq                    x86_64 25.1.2-1.fc41                   updates                                          1.6 MiB
+ python3-requests-oauthlib        noarch 1.3.1-10.fc41                   fedora                                         133.4 KiB
+ python3-rsa                      noarch 4.9-7.fc41                      fedora                                         239.0 KiB
+ python3-soupsieve                noarch 2.6-2.fc41                      fedora                                         294.5 KiB
+ python3-stack-data               noarch 0.6.3-10.fc41                   fedora                                         208.2 KiB
+ python3-tkinter                  x86_64 3.13.1-2.fc41                   updates                                          2.0 MiB
+ python3-tornado                  x86_64 6.3.3-8.fc41                    fedora                                           5.1 MiB
+ python3-traitlets                noarch 5.14.3-3.fc41                   fedora                                         966.9 KiB
+ python3-webencodings             noarch 0.5.1-26.fc41                   fedora                                          86.0 KiB
+ python3-yarl                     x86_64 1.9.4-2.fc41                    fedora                                         326.9 KiB
+ qt-settings                      noarch 41.2-1.fc41                     fedora                                           1.1 KiB
+ qt5-filesystem                   x86_64 5.15.15-1.fc41                  fedora                                           0.0   B
+ qt5-qtbase                       x86_64 5.15.15-3.fc41                  updates                                          9.7 MiB
+ qt5-qtbase-common                noarch 5.15.15-3.fc41                  updates                                         78.0   B
+ qt5-qtbase-gui                   x86_64 5.15.15-3.fc41                  updates                                         19.5 MiB
+ qt5-qtdeclarative                x86_64 5.15.15-1.fc41                  fedora                                          14.5 MiB
+ sombok                           x86_64 2.4.0-22.fc41                   fedora                                         131.7 KiB
+ texlive-algorithms               noarch 11:svn42428-73.fc41             fedora                                          38.2 KiB
+ texlive-alphalph                 noarch 11:svn53087-73.fc41             fedora                                         375.9 KiB
+ texlive-amscls                   noarch 11:svn55378-73.fc41             fedora                                           1.4 MiB
+ texlive-amsfonts                 noarch 11:svn61937-73.fc41             fedora                                           5.9 MiB
+ texlive-amsmath                  noarch 11:svn63514-73.fc41             fedora                                         266.6 KiB
+ texlive-atbegshi                 noarch 11:svn53051-73.fc41             fedora                                         443.4 KiB
+ texlive-attachfile               noarch 11:svn42099-73.fc41             fedora                                          32.0 KiB
+ texlive-atveryend                noarch 11:svn53108-73.fc41             fedora                                         409.9 KiB
+ texlive-auto-pst-pdf             noarch 11:svn56596-73.fc41             fedora                                          14.8 KiB
+ texlive-auxhook                  noarch 11:svn53173-73.fc41             fedora                                         301.9 KiB
+ texlive-avantgar                 noarch 11:svn61983-73.fc41             fedora                                           1.2 MiB
+ texlive-babel                    noarch 11:svn65823-73.fc41             fedora                                           2.1 MiB
+ texlive-babelbib                 noarch 11:svn57349-73.fc41             fedora                                         779.1 KiB
+ texlive-base                     x86_64 11:20230311-85.fc41             fedora                                          19.0 MiB
+ texlive-bera                     noarch 11:svn20031.0-73.fc41           fedora                                         772.9 KiB
+ texlive-biblatex                 noarch 11:svn66403-73.fc41             fedora                                           2.2 MiB
+ texlive-bidi                     noarch 11:svn65572-73.fc41             fedora                                           1.2 MiB
+ texlive-bigintcalc               noarch 11:svn53172-73.fc41             fedora                                         515.6 KiB
+ texlive-bitset                   noarch 11:svn53837-73.fc41             fedora                                         662.3 KiB
+ texlive-bookman                  noarch 11:svn61719-73.fc41             fedora                                           1.2 MiB
+ texlive-bookmark                 noarch 11:svn56885-73.fc41             fedora                                         569.3 KiB
+ texlive-booktabs                 noarch 11:svn53402-73.fc41             fedora                                          18.3 KiB
+ texlive-breakurl                 noarch 11:svn29901.1.40-73.fc41        fedora                                          17.1 KiB
+ texlive-caption                  noarch 11:svn66580-73.fc41             fedora                                         906.9 KiB
+ texlive-catchfile                noarch 11:svn53084-73.fc41             fedora                                         318.8 KiB
+ texlive-changepage               noarch 11:svn15878.1.0c-73.fc41        fedora                                          27.3 KiB
+ texlive-charter                  noarch 11:svn15878.0-73.fc41           fedora                                         404.0 KiB
+ texlive-cm                       noarch 11:svn57963-73.fc41             fedora                                         994.9 KiB
+ texlive-cm-super                 noarch 11:svn15878.0-73.fc41           fedora                                          65.0 MiB
+ texlive-colortbl                 noarch 11:svn64015-73.fc41             fedora                                          21.0 KiB
+ texlive-courier                  noarch 11:svn61719-73.fc41             fedora                                         915.1 KiB
+ texlive-csquotes                 noarch 11:svn64389-73.fc41             fedora                                         112.0 KiB
+ texlive-ctablestack              noarch 11:svn38514-73.fc41             fedora                                          20.1 KiB
+ texlive-currfile                 noarch 11:svn64673-73.fc41             fedora                                          34.0 KiB
+ texlive-dehyph                   noarch 11:svn48599-73.fc41             fedora                                         239.9 KiB
+ texlive-enumitem                 noarch 11:svn51423-73.fc41             fedora                                          59.4 KiB
+ texlive-epstopdf                 noarch 11:svn66461-85.fc41             fedora                                          39.3 KiB
+ texlive-epstopdf-pkg             noarch 11:svn53546-73.fc41             fedora                                         386.5 KiB
+ texlive-eso-pic                  noarch 11:svn56658-73.fc41             fedora                                          27.7 KiB
+ texlive-etex                     noarch 11:svn66203-73.fc41             fedora                                          41.0 KiB
+ texlive-etex-pkg                 noarch 11:svn41784-73.fc41             fedora                                          18.6 KiB
+ texlive-etexcmds                 noarch 11:svn53171-73.fc41             fedora                                         321.0 KiB
+ texlive-etoolbox                 noarch 11:svn56554-73.fc41             fedora                                          66.7 KiB
+ texlive-euenc                    noarch 11:svn19795.0.1h-73.fc41        fedora                                          39.3 KiB
+ texlive-fancyhdr                 noarch 11:svn64977-73.fc41             fedora                                          31.6 KiB
+ texlive-fancyvrb                 noarch 11:svn65585-73.fc41             fedora                                          66.2 KiB
+ texlive-filecontents             noarch 11:svn52142-73.fc41             fedora                                          12.2 KiB
+ texlive-filehook                 noarch 11:svn64822-73.fc41             fedora                                          55.2 KiB
+ texlive-float                    noarch 11:svn15878.1.3d-73.fc41        fedora                                          15.5 KiB
+ texlive-fontspec                 noarch 11:svn63386-73.fc41             fedora                                         329.1 KiB
+ texlive-footmisc                 noarch 11:svn62524-73.fc41             fedora                                          64.7 KiB
+ texlive-fp                       noarch 11:svn49719-73.fc41             fedora                                         124.9 KiB
+ texlive-fpl                      noarch 11:svn54512-73.fc41             fedora                                         647.6 KiB
+ texlive-geometry                 noarch 11:svn61719-73.fc41             fedora                                          49.5 KiB
+ texlive-gettitlestring           noarch 11:svn53170-73.fc41             fedora                                         338.8 KiB
+ texlive-graphics                 noarch 11:svn66204-73.fc41             fedora                                         124.5 KiB
+ texlive-graphics-cfg             noarch 11:svn41448-73.fc41             fedora                                           3.0 KiB
+ texlive-graphics-def             noarch 11:svn64487-73.fc41             fedora                                          98.2 KiB
+ texlive-gsftopk                  x86_64 11:svn52851-85.fc41             fedora                                          47.1 KiB
+ texlive-helvetic                 noarch 11:svn61719-73.fc41             fedora                                           1.8 MiB
+ texlive-hobsub                   noarch 11:svn52810-73.fc41             fedora                                          80.2 KiB
+ texlive-hologo                   noarch 11:svn61719-73.fc41             fedora                                         664.7 KiB
+ texlive-hycolor                  noarch 11:svn53584-73.fc41             fedora                                         411.7 KiB
+ texlive-hypdoc                   noarch 11:svn65678-73.fc41             fedora                                         358.3 KiB
+ texlive-hyperref                 noarch 11:svn65758-73.fc41             fedora                                         763.7 KiB
+ texlive-hyph-utf8                noarch 11:svn61719-73.fc41             fedora                                          73.9 KiB
+ texlive-hyphen-base              noarch 11:svn66413-73.fc41             fedora                                          63.7 KiB
+ texlive-ifmtarg                  noarch 11:svn47544-73.fc41             fedora                                           9.2 KiB
+ texlive-ifplatform               noarch 11:svn45533-73.fc41             fedora                                          12.7 KiB
+ texlive-iftex                    noarch 11:svn61910-73.fc41             fedora                                          28.7 KiB
+ texlive-infwarerr                noarch 11:svn53023-73.fc41             fedora                                         306.3 KiB
+ texlive-intcalc                  noarch 11:svn53168-73.fc41             fedora                                         471.6 KiB
+ texlive-kastrup                  noarch 11:svn15878.0-73.fc41           fedora                                           3.4 KiB
+ texlive-knuth-lib                noarch 11:svn57963-73.fc41             fedora                                          99.9 KiB
+ texlive-koma-script              noarch 11:svn64685-73.fc41             fedora                                           9.9 MiB
+ texlive-kpathsea                 x86_64 11:svn66209-85.fc41             fedora                                           2.1 MiB
+ texlive-kvdefinekeys             noarch 11:svn53193-73.fc41             fedora                                         314.2 KiB
+ texlive-kvoptions                noarch 11:svn63622-73.fc41             fedora                                         550.0 KiB
+ texlive-kvsetkeys                noarch 11:svn64632-73.fc41             fedora                                         427.4 KiB
+ texlive-l3backend                noarch 11:svn65573-73.fc41             fedora                                           1.1 MiB
+ texlive-l3kernel                 noarch 11:svn66094-73.fc41             fedora                                           1.4 MiB
+ texlive-l3packages               noarch 11:svn65722-73.fc41             fedora                                         262.4 KiB
+ texlive-latex                    noarch 11:svn65161-85.fc41             fedora                                          40.2 MiB
+ texlive-latex-fonts              noarch 11:svn28888.0-73.fc41           fedora                                         114.2 KiB
+ texlive-latexconfig              noarch 11:svn53525-73.fc41             fedora                                           8.3 KiB
+ texlive-letltxmacro              noarch 11:svn53022-73.fc41             fedora                                         311.2 KiB
+ texlive-lib                      x86_64 11:20230311-85.fc41             fedora                                           1.1 MiB
+ texlive-listings                 noarch 11:svn66222-73.fc41             fedora                                         580.0 KiB
+ texlive-lm                       noarch 11:svn65956-73.fc41             fedora                                          39.4 MiB
+ texlive-logreq                   noarch 11:svn53003-73.fc41             fedora                                          26.3 KiB
+ texlive-ltxcmds                  noarch 11:svn56421-73.fc41             fedora                                         424.3 KiB
+ texlive-lua-alt-getopt           noarch 11:svn56414-73.fc41             fedora                                           3.9 KiB
+ texlive-lua-uni-algos            noarch 11:svn62204-73.fc41             fedora                                         129.1 KiB
+ texlive-luabidi                  noarch 11:svn54512-73.fc41             fedora                                          25.3 KiB
+ texlive-lualibs                  noarch 11:svn64615-73.fc41             fedora                                         764.4 KiB
+ texlive-luaotfload               noarch 11:svn64616-85.fc41             fedora                                           8.2 MiB
+ texlive-luatex                   x86_64 11:svn66967-85.fc41             fedora                                           9.1 MiB
+ texlive-luatexbase               noarch 11:svn52663-73.fc41             fedora                                          12.8 KiB
+ texlive-makecmds                 noarch 11:svn15878.0-73.fc41           fedora                                          11.1 KiB
+ texlive-marginnote               noarch 11:svn48383-73.fc41             fedora                                          22.5 KiB
+ texlive-marvosym                 noarch 11:svn29349.2.2a-73.fc41        fedora                                         185.6 KiB
+ texlive-mathpazo                 noarch 11:svn52663-73.fc41             fedora                                         110.5 KiB
+ texlive-memoir                   noarch 11:svn65040-73.fc41             fedora                                         480.4 KiB
+ texlive-mparhack                 noarch 11:svn59066-73.fc41             fedora                                          20.3 KiB
+ texlive-ms                       noarch 11:svn57473-73.fc41             fedora                                          18.4 KiB
+ texlive-multido                  noarch 11:svn18302.1.42-73.fc41        fedora                                          18.5 KiB
+ texlive-natbib                   noarch 11:svn20668.8.31b-73.fc41       fedora                                         132.7 KiB
+ texlive-palatino                 noarch 11:svn61719-73.fc41             fedora                                           1.1 MiB
+ texlive-paralist                 noarch 11:svn43021-73.fc41             fedora                                          23.4 KiB
+ texlive-pdfcolmk                 noarch 11:svn52912-73.fc41             fedora                                          19.6 KiB
+ texlive-pdfescape                noarch 11:svn53082-73.fc41             fedora                                         375.9 KiB
+ texlive-pdftex                   x86_64 11:svn66243-85.fc41             fedora                                           4.6 MiB
+ texlive-pdftexcmds               noarch 11:svn55777-73.fc41             fedora                                         423.9 KiB
+ texlive-pgf                      noarch 11:svn65553-73.fc41             fedora                                           4.8 MiB
+ texlive-picture                  noarch 11:svn54867-73.fc41             fedora                                         323.3 KiB
+ texlive-placeins                 noarch 11:svn19848.2.2-73.fc41         fedora                                           4.6 KiB
+ texlive-plain                    noarch 11:svn57963-73.fc41             fedora                                         109.4 KiB
+ texlive-polyglossia              noarch 11:svn65792-73.fc41             fedora                                         715.0 KiB
+ texlive-psnfss                   noarch 11:svn54694-73.fc41             fedora                                         101.0 KiB
+ texlive-pst-3d                   noarch 11:svn17257.1.10-73.fc41        fedora                                          19.5 KiB
+ texlive-pst-coil                 noarch 11:svn62977-73.fc41             fedora                                          20.4 KiB
+ texlive-pst-eps                  noarch 11:svn15878.1.0-73.fc41         fedora                                          15.5 KiB
+ texlive-pst-fill                 noarch 11:svn60671-73.fc41             fedora                                          22.8 KiB
+ texlive-pst-grad                 noarch 11:svn15878.1.06-73.fc41        fedora                                          21.1 KiB
+ texlive-pst-math                 noarch 11:svn64732-73.fc41             fedora                                          22.3 KiB
+ texlive-pst-node                 noarch 11:svn61838-73.fc41             fedora                                         114.0 KiB
+ texlive-pst-ovl                  noarch 11:svn54963-73.fc41             fedora                                          12.4 KiB
+ texlive-pst-plot                 noarch 11:svn65346-73.fc41             fedora                                         129.7 KiB
+ texlive-pst-text                 noarch 11:svn49542-73.fc41             fedora                                          19.7 KiB
+ texlive-pst-tools                noarch 11:svn60621-73.fc41             fedora                                          26.8 KiB
+ texlive-pst-tree                 noarch 11:svn60421-73.fc41             fedora                                          42.6 KiB
+ texlive-pstricks                 noarch 11:svn65346-73.fc41             fedora                                         468.9 KiB
+ texlive-pstricks-add             noarch 11:svn65067-73.fc41             fedora                                         103.4 KiB
+ texlive-ragged2e                 noarch 11:svn66152-73.fc41             fedora                                         731.9 KiB
+ texlive-refcount                 noarch 11:svn53164-73.fc41             fedora                                         348.0 KiB
+ texlive-rerunfilecheck           noarch 11:svn63869-73.fc41             fedora                                         361.8 KiB
+ texlive-sauerj                   noarch 11:svn15878.0-73.fc41           fedora                                          27.0 KiB
+ texlive-setspace                 noarch 11:svn65206-73.fc41             fedora                                          22.0 KiB
+ texlive-showexpl                 noarch 11:svn57414-73.fc41             fedora                                          21.8 KiB
+ texlive-stringenc                noarch 11:svn52982-73.fc41             fedora                                           1.0 MiB
+ texlive-subfig                   noarch 11:svn15878.1.3-73.fc41         fedora                                          36.6 KiB
+ texlive-symbol                   noarch 11:svn61719-73.fc41             fedora                                          78.3 KiB
+ texlive-tex-ini-files            noarch 11:svn40533-73.fc41             fedora                                           8.1 KiB
+ texlive-texlive-scripts          noarch 11:svn66584-85.fc41             fedora                                         337.2 KiB
+ texlive-texlive.infra            noarch 11:svn66512-85.fc41             fedora                                           1.0 MiB
+ texlive-times                    noarch 11:svn61719-73.fc41             fedora                                         992.2 KiB
+ texlive-tipa                     noarch 11:svn29349.1.3-73.fc41         fedora                                           3.7 MiB
+ texlive-titlesec                 noarch 11:svn59845-73.fc41             fedora                                          97.8 KiB
+ texlive-tools                    noarch 11:svn64892-73.fc41             fedora                                         403.2 KiB
+ texlive-underscore               noarch 11:svn18261.0-73.fc41           fedora                                          19.3 KiB
+ texlive-unicode-data             noarch 11:svn64423-73.fc41             fedora                                           3.1 MiB
+ texlive-uniquecounter            noarch 11:svn53162-73.fc41             fedora                                         312.0 KiB
+ texlive-url                      noarch 11:svn32528.3.4-73.fc41         fedora                                          21.4 KiB
+ texlive-utopia                   noarch 11:svn15878.0-73.fc41           fedora                                         540.6 KiB
+ texlive-varwidth                 noarch 11:svn24104.0.92-73.fc41        fedora                                          19.5 KiB
+ texlive-xcolor                   noarch 11:svn63563-73.fc41             fedora                                          79.3 KiB
+ texlive-xifthen                  noarch 11:svn38929-73.fc41             fedora                                          14.4 KiB
+ texlive-xkeyval                  noarch 11:svn63616-73.fc41             fedora                                          69.3 KiB
+ texlive-xpatch                   noarch 11:svn54563-73.fc41             fedora                                          26.8 KiB
+ texlive-xstring                  noarch 11:svn65551-73.fc41             fedora                                          56.1 KiB
+ texlive-xunicode                 noarch 11:svn30466.0.981-73.fc41       fedora                                         219.6 KiB
+ texlive-zapfding                 noarch 11:svn61719-73.fc41             fedora                                          79.5 KiB
+ texlive-zref                     noarch 11:svn62977-73.fc41             fedora                                         816.8 KiB
+ xcb-util                         x86_64 0.4.1-6.fc41                    fedora                                          30.4 KiB
+ xcb-util-image                   x86_64 0.4.1-6.fc41                    fedora                                          22.2 KiB
+ xcb-util-keysyms                 x86_64 0.4.1-6.fc41                    fedora                                          16.8 KiB
+ xcb-util-renderutil              x86_64 0.3.10-6.fc41                   fedora                                          28.5 KiB
+ xcb-util-wm                      x86_64 0.4.2-6.fc41                    fedora                                          85.4 KiB
+ xpdf-libs                        x86_64 1:4.05-5.fc41                   fedora                                           1.7 MiB
+ zlib-ng                          x86_64 2.1.7-3.fc41                    fedora                                         153.4 KiB
+ zziplib                          x86_64 0.13.74-2.fc41                  fedora                                         233.7 KiB
+Installing weak dependencies:
+ perl-Class-XSAccessor            x86_64 1.19-36.fc41                    fedora                                          98.8 KiB
+ perl-GD-Barcode                  noarch 2.00-5.fc41                     fedora                                          10.5 MiB
+ perl-IO-Compress-Brotli          x86_64 0.004001-14.fc41                fedora                                          36.1 KiB
+ perl-Lexical-Var                 x86_64 0.010-7.fc41                    fedora                                          53.7 KiB
+ perl-List-MoreUtils              noarch 0.430-12.fc41                   fedora                                         162.6 KiB
+ perl-PerlIO-utf8_strict          x86_64 0.010-8.fc41                    fedora                                          42.0 KiB
+ python3-PyMySQL                  noarch 1.1.1-2.fc41                    fedora                                         398.9 KiB
+ python3-QtPy                     noarch 2.4.1-5.fc41                    fedora                                         621.8 KiB
+ python3-aiohttp+speedups         x86_64 3.10.5-3.fc41                   updates                                          8.0 KiB
+ python3-beautifulsoup4           noarch 4.12.3-7.fc41                   fedora                                           1.4 MiB
+ python3-fsspec                   noarch 2024.12.0-1.fc41                updates                                          1.7 MiB
+ python3-gcsfs                    noarch 2024.9.0-1.fc41                 fedora                                         331.0 KiB
+ python3-html5lib                 noarch 1:1.1-25.fc41                   fedora                                           1.5 MiB
+ python3-matplotlib               x86_64 3.9.4-1.fc41                    updates                                         21.1 MiB
+ python3-netifaces                x86_64 0.11.0-11.fc41                  fedora                                          44.6 KiB
+ python3-numpy                    x86_64 1:1.26.4-8.fc41                 fedora                                          43.8 MiB
+ python3-odfpy                    noarch 1.4.1-11.fc41                   fedora                                           1.4 MiB
+ python3-openpyxl                 noarch 3.1.2-7.fc41                    fedora                                           1.9 MiB
+ python3-pandas                   x86_64 2.2.1-7.fc41                    fedora                                          42.0 MiB
+ python3-psycopg2                 x86_64 2.9.9-7.fc41                    fedora                                         625.9 KiB
+ python3-pyarrow                  x86_64 16.1.0-12.fc41                  updates                                         14.3 MiB
+ python3-qt5-base                 x86_64 5.15.10-11.fc41                 fedora                                          15.5 MiB
+ python3-scipy                    x86_64 1.11.3-16.fc41                  updates                                         62.5 MiB
+ python3-sqlalchemy               x86_64 2.0.36-1.fc41                   updates                                         22.5 MiB
+ python3-tables                   x86_64 3.10.1-1.fc41                   fedora                                          10.2 MiB
+ python3-xarray                   noarch 2024.10.0-1.fc41                updates                                         17.9 MiB
+ python3-xlrd                     noarch 2.0.1-17.fc41                   fedora                                           1.0 MiB
+ python3-xlsxwriter               noarch 3.2.0-3.fc41                    fedora                                           1.5 MiB
+ python3-zstandard                x86_64 0.23.0-1.fc41                   fedora                                           2.0 MiB
+ qt5-qttranslations               noarch 5.15.15-1.fc41                  fedora                                          14.7 MiB
+ qt5-qtwayland                    x86_64 5.15.15-1.fc41                  fedora                                           4.6 MiB
+ texlive-dvipng                   x86_64 11:svn66203-85.fc41             fedora                                         438.3 KiB
+ xdriinfo                         x86_64 1.0.7-3.fc41                    fedora                                          34.0 KiB
+
+Transaction Summary:
+ Installing:       481 packages
+
+--> 654bbd6b6f14
+STEP 33/35: RUN echo "==== Cleanup ============"
+==== Cleanup ============
+--> 524a0db713b7
+STEP 34/35: RUN dnf clean all -y
+Removed 29 files, 23 directories. 0 errors occurred.
+--> 427cd20d6a95
+STEP 35/35: CMD ["/usr/bin/fish"]
+COMMIT fedora-dev-image
+--> 244f5ff30992
+Successfully tagged localhost/fedora-dev-image:latest
+244f5ff30992b6f18599709d4a552b4d67c7c16413699a695042dd049b9deb92

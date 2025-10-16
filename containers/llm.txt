@@ -1,0 +1,84 @@
+Matched fields: name, summary
+ R-CRAN-LLMTranslate.noarch	'shiny' App for TRAPD/ISPOR Survey Translation with LLMs
+ R-CRAN-LLMTranslate.src	'shiny' App for TRAPD/ISPOR Survey Translation with LLMs
+ R-CRAN-chatLLM.noarch	A Flexible Interface for 'LLM' API Interactions
+ R-CRAN-chatLLM.src	A Flexible Interface for 'LLM' API Interactions
+ R-CRAN-gllm-debuginfo.x86_64	Debug information for package R-CRAN-gllm
+ R-CRAN-gllm-debugsource.x86_64	Debug sources for package R-CRAN-gllm
+ gkrellm-sun.x86_64	Sun clock plugin for GKrellM
+ gkrellm-top.x86_64	GKrellM plugin which shows 3 most CPU intensive processes
+ gtkspellmm30-devel.i686	Development files for gtkspellmm30
+ gtkspellmm30-devel.x86_64	Development files for gtkspellmm30
+ gtkspellmm30-doc.noarch	Documentation for gtkspellmm30
+ mingw32-gtkspellmm30.noarch	MinGW Windows GtkSpellmm library
+ mingw64-gtkspellmm30.noarch	MinGW Windows GtkSpellmm library
+ texlive-fullminipage-doc.noarch	Documentation for fullminipage
+Matched fields: name
+ R-CRAN-AllMetrics.noarch	Calculating Multiple Performance Metrics of a Prediction Model
+ R-CRAN-AllMetrics.src	Calculating Multiple Performance Metrics of a Prediction Model
+ R-CRAN-BallMapper.noarch	The Ball Mapper Algorithm
+ R-CRAN-BallMapper.src	The Ball Mapper Algorithm
+ R-CRAN-ChillModels.noarch	Processing Chill and Heat Models for Temperate Fruit Trees
+ R-CRAN-ChillModels.src	Processing Chill and Heat Models for Temperate Fruit Trees
+ R-CRAN-LLM.noarch	Logit Leaf Model Classifier for Binary Classification
+ R-CRAN-LLM.src	Logit Leaf Model Classifier for Binary Classification
+ R-CRAN-LLMAgentR.noarch	Language Model Agents in R for AI Workflows and Research
+ R-CRAN-LLMAgentR.src	Language Model Agents in R for AI Workflows and Research
+ R-CRAN-LLMR.noarch	Interface for Large Language Model APIs in R
+ R-CRAN-LLMR.src	Interface for Large Language Model APIs in R
+ R-CRAN-PacketLLM.noarch	Interactive 'OpenAI' Model Integration in 'RStudio'
+ R-CRAN-PacketLLM.src	Interactive 'OpenAI' Model Integration in 'RStudio'
+ R-CRAN-allMT.noarch	Acute Lymphoblastic Leukemia Maintenance Therapy Analysis
+ R-CRAN-allMT.src	Acute Lymphoblastic Leukemia Maintenance Therapy Analysis
+ R-CRAN-callme.noarch	Easily Compile and Call Inline 'C' Functions
+ R-CRAN-callme.src	Easily Compile and Call Inline 'C' Functions
+ R-CRAN-ellmer.noarch	Chat with Large Language Models
+ R-CRAN-ellmer.src	Chat with Large Language Models
+ R-CRAN-gllm.src	Generalised log-Linear Model
+ R-CRAN-gllm.x86_64	Generalised log-Linear Model
+ R-CRAN-mLLMCelltype.noarch	Cell Type Annotation Using Large Language Models
+ R-CRAN-mLLMCelltype.src	Cell Type Annotation Using Large Language Models
+ R-CRAN-rollmatch.noarch	Rolling Entry Matching
+ R-CRAN-rollmatch.src	Rolling Entry Matching
+ R-CRAN-tidyllm.noarch	Tidy Integration of Large Language Models
+ R-CRAN-tidyllm.src	Tidy Integration of Large Language Models
+ gkrellm.x86_64	Multiple stacked system monitors in one process
+ gkrellm-daemon.x86_64	The GNU Krell Monitors Server
+ gkrellm-devel.i686	Development files for the GNU Krell Monitors
+ gkrellm-devel.x86_64	Development files for the GNU Krell Monitors
+ gkrellm-wifi.x86_64	Wireless monitor plugin for the GNU Krell Monitors
+ gtkspellmm30.i686	On-the-fly spell checking for GtkTextView widgets - C++ bindings
+ gtkspellmm30.x86_64	On-the-fly spell checking for GtkTextView widgets - C++ bindings
+ llmnrd.x86_64	Link-Local Multicast Resolution Daemon
+ nullmodem.x86_64	A utility to loopback pseudo-terminals
+ perl-Test-LoadAllModules.noarch	Do use_ok for the modules in a search path
+ perl-Test-UseAllModules.noarch	Do use_ok() for all the MANIFESTed modules
+ texlive-fullminipage.noarch	Minipage spanning a complete page
+Matched fields: summary
+ R-CRAN-TreeSimGM.noarch	Simulating Phylogenetic Trees under General Bellman Harris andLineage Shift Model
+ R-CRAN-TreeSimGM.src	Simulating Phylogenetic Trees under General Bellman Harris andLineage Shift Model
+ R-CRAN-UnplanSimon.noarch	Methods for Managing Enrollment Deviation in Simon's Two-Stage Design
+ R-CRAN-UnplanSimon.src	Methods for Managing Enrollment Deviation in Simon's Two-Stage Design
+ R-CRAN-promptr.noarch	Format and Complete Few-Shot LLM Prompts
+ R-CRAN-promptr.src	Format and Complete Few-Shot LLM Prompts
+ adcli.x86_64	Active Directory enrollment
+ cepces.noarch	Certificate Enrollment through CEP/CES
+ certmonger.x86_64	Certificate status monitor and PKI enrollment client
+ gkrellxmms2.x86_64	Gkrellm2 plugin client for XMMS2
+ ollama.x86_64	Get up and running AI LLMs
+ perl-Crypt-Curve25519.x86_64	Generate shared secret using elliptic-curve Diffie-Hellman function
+ perl-Crypt-DH.noarch	Perl module implementing the Diffie-Hellman key exchange system
+ python3-logdetective.noarch	Uses LLM AI to search for build/test failure and provide ideas how to fix it
+ python3-ramalama.noarch	RamaLama is a command line tool for working with AI LLM models
+ ramalama.noarch	Command line tool for working with AI LLM models
+ realmd.x86_64	Kerberos realm enrollment service
+ rust-x25519-dalek+alloc-devel.noarch	X25519 elliptic curve Diffie-Hellman key exchange
+ rust-x25519-dalek+default-devel.noarch	X25519 elliptic curve Diffie-Hellman key exchange
+ rust-x25519-dalek+getrandom-devel.noarch	X25519 elliptic curve Diffie-Hellman key exchange
+ rust-x25519-dalek+precomputed-tables-devel.noarch	X25519 elliptic curve Diffie-Hellman key exchange
+ rust-x25519-dalek+reusable_secrets-devel.noarch	X25519 elliptic curve Diffie-Hellman key exchange
+ rust-x25519-dalek+serde-devel.noarch	X25519 elliptic curve Diffie-Hellman key exchange
+ rust-x25519-dalek+static_secrets-devel.noarch	X25519 elliptic curve Diffie-Hellman key exchange
+ rust-x25519-dalek+zeroize-devel.noarch	X25519 elliptic curve Diffie-Hellman key exchange
+ rust-x25519-dalek-devel.noarch	X25519 elliptic curve Diffie-Hellman key exchange
+ texlive-light-latex-make.x86_64	llmk: A build tool for LaTeX documents

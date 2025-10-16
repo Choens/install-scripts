@@ -7,7 +7,6 @@
 ```bash
 
 # Install distrbox onto your local system.
-sudo dnf install distrobox
 distrobox create --pull --name rstudio
 distrobox enter rstudio
 

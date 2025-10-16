@@ -3,11 +3,9 @@
 - Gnome is awesome, but it needs some TLC to help it shine.
 - The following settings are grouped by tool and by order within that tool.
 
-
-
 # Fractional Scaling
 
-Gnome has not made this the default. Remember, after changing this setting, you must log out and then log back in to make it take effect. 
+Gnome has not made this the default. Remember, after changing this setting, you must log out and then log back in to make it take effect.
 
 ## Enable fractional scaling:
 
@@ -21,8 +19,6 @@ gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffe
 gsettings set org.gnome.mutter experimental-features "[]"
 ```
 
-
-
 # Gnome Extensions
 
 - Clipboard Indicator:
@@ -30,7 +26,6 @@ gsettings set org.gnome.mutter experimental-features "[]"
     - Install via Extension Manager
     - gnome-shell-extension-clipboard-indicator
     - https://github.com/Tudmotu/gnome-shell-extension-clipboard-indicator
-
 
 # Gnome Settings
 
@@ -86,8 +81,6 @@ gsettings set org.gnome.mutter experimental-features "[]"
 - System
     - Users: Give self a nice image.
 
-
-
 # Gnome Tweaks
 
 - Fonts: 
@@ -113,8 +106,6 @@ Using within GNOME Extension Manager, I install:
 - Clipboard Indicator
 - Tactile
 
-
-
 # Flat Seal
 
 - Are Flatpaks great? Yes
@@ -137,14 +128,10 @@ I have multiple profiles:
 Each email address has an Firefox account. FF will then send you the code.
 This will sync extensions, bookmarks, etc.
 
-
-
 # Mail
 
 - Use Gnome Online Accounts for Google/GMail.
 - Use MS Edge for Outlook (install a web-app)
-
-
 
 # VS Code (Flatpak)
 

@@ -4,8 +4,6 @@
 - Where possible, I install flatpaks. However, some apps work better when installed via rpm.
 - All installed flatpaks are from Flathub.
 
-
-
 # Dark Theme
 
 I like my themes dark, like me:
@@ -16,8 +14,6 @@ flatpak install org.gtk.Gtk3theme.Adwaita-dark
 
 If you install Flatpak apps while in light mode and then later try to move to dark, it doesn't work. Sigh.
 
-
-
 # Audio & Video
 
 ```bash
@@ -25,25 +21,18 @@ flatpak install -y \
     io.github.jliljebl.Flowblade
 ```
 
-
-
 # Development & Data Science Tools
 
 ## Neovim
 
-```bash
-sudo dnf install --setopt=install_weak_deps=False -y \
-    neovim neovim-qt\
-    python3-neovim
-```
-
+NA
 
 # Education
 
 - TODO: Documentation
 
 ```bash
-# Endless OS 
+# Endless OS
 flatpak install flathub --assumeyes \
     com.endlessnetwork.MidnightmareTeddy \
     com.endlessnetwork.aqueducts \
@@ -62,7 +51,7 @@ flatpak install flathub --assumeyes \
     org.gnome.gbrainy
 
 # KDE
-flatpak install flathub --assumeyes --user \
+flatpak install flathub --assumeyes \
     org.kde.blinken \
     #org.kde.gcompris \
     org.kde.kalgebra \
@@ -76,7 +65,7 @@ flatpak install flathub --assumeyes --user \
     org.kde.palapeli
 
 # Other
-flatpak install  flathub --assumeyes --user \
+flatpak install flathub --assumeyes \
     com.tux4kids.tuxmath \
     com.tux4kids.tuxtype \
     net.sourceforge.Klavaro
@@ -87,18 +76,16 @@ flatpak install flathub --assumeyes edu.mit.Scratch
 flatpak install flathub --assumeyes org.turbowarp.TurboWarp
 ```
 
-
-
 # Games
 
 - Chess: Play some chess, on GNOME!
-    - Available via the Fedora remote.
+  - Available via the Fedora remote.
 - Mahjongg:
-    - Available via the Fedora remote.
+  - Available via the Fedora remote.
 - Quadrapassel: What it says, for GNOME.
-    - Available via the Fedora remote.
+  - Available via the Fedora remote.
 - Reversi:
-    - Available via the Fedora remote.
+  - Available via the Fedora remote.
 
 ```bash
 # Gnome
@@ -125,7 +112,7 @@ flatpak install flathub --assumeyes \
     org.kde.kubrick \
     org.kde.granatier \
     org.kde.palapeli
-    
+
 flatpak install flathub --assumeyes \
     io.github.nokse22.ultimate-tic-tac-toe \
     net.tedomum.CapBattleship \
@@ -138,9 +125,7 @@ flatpak install flathub --assumeyes \
 
 ```
 
-
-
-# Graphics & Photography:
+# Graphics & Photography
 
 ```bash
 flatpak install flathub --assumeyes \
@@ -154,8 +139,6 @@ flatpak install flathub --assumeyes \
 # Set color theme to Acri
 ```
 
-
-
 # Internet & Networking
 
 ```bash
@@ -163,15 +146,10 @@ flatpak install flathub --assumeyes \
 flatpak install flathub --assumeyes com.google.Chrome
 ```
 
-
-
 # Office & Productivity
 
 NA
 
-
-
 # System & Utilities
 
 NA
-

@@ -1,0 +1,171 @@
+FROM registry.fedoraproject.org/fedora-toolbox:latest
+
+# Environment Varibales to help with desktop integration.
+# Not needed when using distrobox
+ENV GTK_THEME=Adwaita:dark
+
+
+
+
+# First Steps ==================================================================
+
+RUN echo "---- First Steps ------------" \
+    && dnf -y makecache \
+    && dnf -y upgrade \
+    && dnf install -y dnf-plugins-core
+
+
+
+# CLI Tools ====================================================================
+
+RUN echo "---- Build Tools ------------" \
+    && dnf group install -y c-development development-tools \
+    && dnf install -y python3-doit
+
+RUN echo "---- CLI Tools ------------" \
+    && dnf install -y \
+    btop \
+    clifm \
+    fish \
+    httpie \
+    hwinfo \
+    micro \
+    nu \
+    openssh-server \
+    poppler-utils \
+    tldr \
+    visidata
+
+RUN systemctl start sshd
+
+# Database Specific Tools ---------------------------------
+
+# This just craps up my home directory. .
+#RUN echo "---- DuckDB ------------"
+# https://duckdb.org/docs/installation/?version=stable&environment=cli&platform=linux&download_method=direct&architecture=x86_64
+#RUN curl https://install.duckdb.org | sh
+
+RUN echo "---- SQLite ------------" \
+    && dnf install -y litecli sqlite
+
+# RUN echo "---- MariaDB ------------" \
+#    && dnf install -y mariadb mycli
+
+RUN echo "---- Postgres" \
+    && dnf install -y pgcli postgresql
+
+RUN echo "---- Git Tools ------------" \
+    && dnf install -y gitui tig
+
+
+
+# Programming Languages ========================================================
+
+RUN echo "---- Go ------------" \
+    && dnf install --setopt=install_weak_deps=False -y \
+    golang
+
+# RUN echo "---- Julia ------------" \
+#     && dnf install -y julia
+
+RUN echo "---- Lua ------------" \
+    && dnf install -y ilua lua
+
+RUN echo "---- Node.js ------------" \
+    && dnf install -y nodejs npm \
+    && go install -tags most github.com/xo/usql@latest
+
+RUN echo "---- Python ------------" \
+    && dnf install -y ruff uv
+
+RUN echo "---- R ------------" \
+    && dnf copr enable -y iucar/cran \
+    && dnf install -y \
+    R-CoprManager R-flexiblas \
+    R-CRAN-httpgd R-CRAN-tidyverse \
+    R-CRAN-tinytex
+
+RUN echo "---- R Database Packages ------------" \
+    && dnf install -y \
+    R-CRAN-bigrquery \
+    R-CRAN-duckdb R-CRAN-duckplyr \
+    R-CRAN-RPostgres
+
+RUN echo "---- IRkernel Package ------------" \
+    && dnf install -y R-CRAN-IRkernel
+
+RUN echo "---- R Learning Packages ------------" \
+    && dnf install -y R-CRAN-learnr R-CRAN-swirl
+
+RUN echo "---- R Package Management Packages ------------" \
+    && dnf install -y R-CRAN-usethis R-CRAN-pacman
+
+RUN echo "---- R Plotting Packages ------------" \
+    && dnf install -y \
+    R-CRAN-cowplot \
+    R-CRAN-gganimate \
+    R-CRAN-ggnewscale \
+    R-CRAN-gghighlight \
+    R-CRAN-ggrepel \
+    R-CRAN-RColorBrewer
+
+RUN echo "---- R Project & File Management Packages ------------" \
+    && dnf install -y \
+    R-CRAN-here R-CRAN-nanoparquet R-CRAN-rio R-CRAN-openxlsx
+
+RUN echo "---- R Reporting Packages ------------" \
+    && dnf install -y pandoc R-CRAN-knitr R-CRAN-quarto
+
+RUN echo "---- R Dashboard Packages ------------" \
+    && dnf install -y \
+    R-CRAN-plotly \
+    R-CRAN-quarto \
+    R-CRAN-shiny \
+    R-CRAN-radiant \
+    R-CRAN-rsconnect
+
+RUN echo "---- R Statistics Packages ------------" \
+    && dnf install -y \
+    R-CRAN-broom \
+    R-CRAN-gtsummary \
+    R-CRAN-janitor \
+    R-CRAN-lmtest \
+    R-CRAN-tidymodels
+
+
+
+# Editors/GUI Tools ============================================================
+
+# Not needed if you use distrobox.
+RUN echo "---- Gnome Themes ------------" \
+    && dnf install -y gnome-themes-extra
+
+RUN echo "---- Emacs ------------" \
+    && dnf install -y \
+    PackageKit-gtk3-module \
+    cascadia-code-fonts cascadia-code-nf-fonts \
+    cmake \
+    emacs \
+    fd-find \
+    ghostscript \
+    poppler \
+    ripgrep \
+    tree-sitter-cli \
+    zeromq zeromq-devel
+
+RUN echo "---- RStudio ------------" \
+    && dnf copr enable -y iucar/rstudio \
+    && dnf install -y rstudio-desktop
+
+RUN echo "---- Positron ------------" \
+    && dnf copr enable -y iucar/posit-dev \
+    && dnf install -y ark-kernel positron
+
+
+# CLEANUP ======================================================================
+RUN dnf clean all -y
+
+
+# CMD/ENTRY ====================================================================
+#WORKDIR /root
+CMD ["/usr/bin/fish"]
